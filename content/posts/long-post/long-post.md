@@ -2,6 +2,7 @@
 title: Long Post
 date: 2020-07-28T22:40:32.169Z
 description: Who doesn't like a long post showcasing the different headings?
+category: moon
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

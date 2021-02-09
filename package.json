@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-blog-starter",
+  "name": "Firststepintospace",
   "version": "0.2.0",
-  "description": "A Next.js template for a blog website.",
+  "description": "A guide to space for humans",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",

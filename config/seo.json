@@ -1,15 +1,15 @@
 {
   "siteMetadata": {
-    "title": "Next.js Starter Blog",
+    "title": "Orbita Terrestre",
     "author": {
-      "name": "Jose Felix",
-      "summary": "who works building clean user interfaces with React."
+      "name": "Vincenzo Marcovecchio",
+      "summary": "Un umano come te"
     },
-    "description": "A blog created with Next.js and Tailwind.css",
-    "siteUrl": "https://nextjs-starter-blog-demo.netlify.app/",
-    "language": "en-US",
+    "description": "Mi piacerebbe pensare a questo sito come ad una guida allo spazio per umani, per cui la nostra intenzione e` quella di tenerci sempre aggiornati nell'ambito della esplorazione spaziale, nel caso in cui non si sa` mai in un vicino futuro dovessimo abbandonare il nostro splendido pianeta",
+    "siteUrl": "https://orbitaterrestre.it",
+    "language": "it-IT",
     "social": {
-      "twitter": "Jose_R_Felix"
+      "twitter": "_vinny_92"
     }
   }
 }

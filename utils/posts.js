@@ -1,5 +1,5 @@
-import matter from "gray-matter";
-import fs from "fs";
+import matter from 'gray-matter';
+import fs from 'fs';
 
 export function getPostsFolders() {
   // Get all posts folders located in `content/posts`
@@ -15,8 +15,8 @@ export function getPostsFolders() {
 
 // Get day in format: Month day, Year. e.g. April 19, 2020
 function getFormattedDate(date) {
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const formattedDate = date.toLocaleDateString("en-US", options);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
 
   return formattedDate;
 }
@@ -40,7 +40,7 @@ export function getSortedPosts() {
       };
 
       // Remove .md file extension from post name
-      const slug = filename.replace(".md", "");
+      const slug = filename.replace('.md', '');
 
       return {
         slug,
@@ -61,7 +61,7 @@ export function getPostsSlugs() {
 
   const paths = postFolders.map(({ filename }) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace('.md', ''),
     },
   }));
 
