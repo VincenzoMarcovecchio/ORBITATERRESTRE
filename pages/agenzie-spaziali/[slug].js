@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { useRouter } from 'next/router';
 function Page({ pageNumber, agenciesData }, props) {
+  console.log(agenciesData);
   const router = useRouter();
   return (
     <LayoutComponent>
@@ -36,6 +37,9 @@ function Page({ pageNumber, agenciesData }, props) {
                 <p className="mt-2 text-lg mb-3">
                   <b> Descrizione:</b>&nbsp;{data.description}
                 </p>
+                <p className="mt-2 text-lg mb-3">
+                  <b> Tipo:</b>&nbsp;{data.type}
+                </p>
 
                 <a
                   className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
@@ -65,7 +69,7 @@ function Page({ pageNumber, agenciesData }, props) {
               }
             }}
           >
-            Previous Page&nbsp;&nbsp;&nbsp;&nbsp;
+            Pagina Precedente&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
 
           <div>#{pageNumber}</div>
@@ -85,7 +89,7 @@ function Page({ pageNumber, agenciesData }, props) {
               }
             }}
           >
-            &nbsp;&nbsp;&nbsp;&nbsp;Next Page
+            &nbsp;&nbsp;&nbsp;&nbsp;Pagina Successiva
           </div>
         </div>
       </div>

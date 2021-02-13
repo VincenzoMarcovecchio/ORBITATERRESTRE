@@ -5,7 +5,7 @@ import { LayoutComponent, Bio, SEO } from '@components/common';
 function Page({ newsdata }) {
   return (
     <LayoutComponent>
-      <SEO title="News" />
+      <SEO title="News Astronautiche Internazionali " />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {newsdata.map((lol) => {

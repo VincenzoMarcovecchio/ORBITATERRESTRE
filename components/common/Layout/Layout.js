@@ -13,7 +13,7 @@ export function LayoutComponent({ children }) {
         <NavBar />
         <main>{children}</main>
         <footer className=" max-w-7xl mx-auto px-4 sm:px-6 text-lg font-light">
-          <Bio />© {new Date().getFullYear()}, Sito web creato con
+          <Bio />© {new Date().getFullYear()}, Sito web creato con&nbsp;
           <a href="https://nextjs.org/">Next.js</a>
           &#128293;
         </footer>

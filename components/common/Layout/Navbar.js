@@ -95,28 +95,28 @@ export const NavBar = () => {
               <div
                 className={
                   flyer
-                    ? '  opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
+                    ? ' z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
                     : '  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
                 }
               >
                 <div
                   className={
                     flyer
-                      ? 'rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
+                      ? 'z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
                       : 'max-h-0 max-w-0 opacity-0 hidden'
                   }
                 >
                   <div
                     className={
                       flyer
-                        ? 'relative grid gap-6 bg-white flyer-container px-5 py-6 sm:gap-8 sm:p-8'
+                        ? ' z-20 relative grid gap-6 bg-white flyer-container px-5 py-6 sm:gap-8 sm:p-8'
                         : 'hidden '
                     }
                   >
                     <div
                       className={
                         flyer
-                          ? '-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'
+                          ? 'z-20 -m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'
                           : 'hidden'
                       }
                     >
@@ -131,7 +131,7 @@ export const NavBar = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.1"
                         viewBox="0 0 470 470"
-                        enable-background="new 0 0 470 470"
+                        enableBackground="new 0 0 470 470"
                       >
                         <g>
                           <path d="m63.613,281.405c0,4.143 3.358,7.5 7.5,7.5h327.773c4.142,0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-327.773c-4.142,0-7.5,3.358-7.5,7.5z" />
@@ -140,13 +140,12 @@ export const NavBar = () => {
                       </svg>
 
                       <div className={flyer ? 'ml-4' : ' hidden'}>
-                        <p
-                          className={
-                            flyer ? 'text-base font-medium ' : 'hidden'
-                          }
+                        <Link
+                          href="/mappa-segnalazioni-ufo-abruzzo"
+                          as="/mappa-segnalazioni-ufo-abruzzo"
                         >
                           Segnalazioni UFO
-                        </p>
+                        </Link>
                         <p className={flyer ? 'mt-1 text-sm ' : 'none'}>
                           Segnalazioni avvenute nella regione Abruzzo
                         </p>
@@ -173,11 +172,13 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Engagement</p>
-                        <p className="mt-1 text-sm ">
-                          Speak directly to your customers in a more meaningful
-                          way.
-                        </p>
+                        <Link
+                          href="/nuove-scoperte-su-marte/3000"
+                          as="/nuove-scoperte-su-marte/3000"
+                        >
+                          Marte
+                        </Link>
+                        <p>Immagini del rover Curiosity</p>
                       </div>
                     </a>
                     <a
@@ -340,7 +341,7 @@ export const NavBar = () => {
                 <svg
                   className={
                     flyerTwo === true
-                      ? 'transform rotate-180 ml-2 h-5 w-5   transition ease-out duration-200'
+                      ? 'z-20 transform rotate-180 ml-2 h-5 w-5   transition ease-out duration-200'
                       : 'transform transition ease-out duration-200 rotate-0 ml-2 h-5 w-5  '
                   }
                   xmlns="http://www.w3.org/2000/svg"
@@ -359,14 +360,14 @@ export const NavBar = () => {
               <div
                 className={
                   flyerTwo
-                    ? '  opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
+                    ? ' z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
                     : '  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
                 }
               >
                 <div
                   className={
                     flyerTwo
-                      ? 'rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
+                      ? 'z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
                       : 'hidden opacity-0 '
                   }
                 >
@@ -534,7 +535,7 @@ export const NavBar = () => {
         <div
           className={
             open
-              ? 'block opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
+              ? 'block z-20 opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
               : 'opacity-0 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
           }
         >
@@ -547,9 +548,9 @@ export const NavBar = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                    className="cursor-pointer h-10 w-auto md:h-14"
+                    src={cosmos}
+                    alt="astronauta nello spazio"
                   />
                 </div>
                 <div className="-mr-2">
@@ -580,27 +581,33 @@ export const NavBar = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  <a
-                    href="#"
+                  <Link
+                    href="/mappa-segnalazioni-ufo-abruzzo"
+                    as="/mappa-segnalazioni-ufo-abruzzo"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/chart-bar */}
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
-                    </svg>
-                  </a>
+                    <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
+                      {/* Heroicon name: outline/chart-bar */}
+                      <svg
+                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                        />
+                      </svg>
+                      <span className="ml-3 text-base font-medium ">
+                        Mappa delle segnalazioni in Abruzzo
+                      </span>
+                    </a>
+                  </Link>
                   <a
                     href="#"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
@@ -648,21 +655,7 @@ export const NavBar = () => {
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/view-grid */}
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                      />
-                    </svg>
+
                     <span className="ml-3 text-base font-medium ">
                       Integrations
                     </span>
