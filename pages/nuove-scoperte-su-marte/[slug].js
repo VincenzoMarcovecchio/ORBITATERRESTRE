@@ -2,9 +2,8 @@ import { React, useState } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { useRouter } from 'next/router';
-import debounce from 'lodash.debounce';
+
 function Page({ curiosity }) {
-  console.log(curiosity);
   const router = useRouter();
   return (
     <LayoutComponent>
