@@ -13,8 +13,6 @@ function Page() {
 
   const [name, setName] = useState('Italian');
 
-  console.log(defaultResults);
-
   useEffect(() => {
     fetch(`https://ll.thespacedevs.com/2.1.0/astronaut/?nationality=${name}`)
       .then((res) => res.json())
