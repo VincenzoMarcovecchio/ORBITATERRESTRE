@@ -15,7 +15,7 @@ export default function Home() {
     <LayoutComponent>
       <SEO title="Home" />
 
-      <div className=" z-10 max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
+      <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
         <MapWithNoSSR />
       </div>
     </LayoutComponent>
