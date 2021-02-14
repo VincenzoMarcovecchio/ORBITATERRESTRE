@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useTheme } from 'next-themes';
-import cosmos from '../../../assets/cosmos.png';
 
 export const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +20,7 @@ export const NavBar = () => {
             <Link href={'/'} as={`/`}>
               <img
                 className="cursor-pointer h-10 w-auto md:h-14"
-                src={cosmos}
+                src={`/cosmos.png`}
                 alt="astronauta nello spazio"
               />
             </Link>
@@ -549,7 +548,7 @@ export const NavBar = () => {
                 <div>
                   <img
                     className="cursor-pointer h-10 w-auto md:h-14"
-                    src={cosmos}
+                    src={`/cosmos.png`}
                     alt="astronauta nello spazio"
                   />
                 </div>
