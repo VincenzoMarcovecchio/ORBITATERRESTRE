@@ -101,7 +101,7 @@ export default function Home({ posts, datas }) {
             );
           })}
         </div>
-        <div className="max-w-md mx-auto  sm:px-6  flex flex-col items-start">
+        <div className="max-w-md  sm:px-6  flex flex-col items-start">
           {currentCategory
             ? posts
                 .filter(

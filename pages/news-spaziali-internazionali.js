@@ -43,7 +43,6 @@ function Page({ newsdata }) {
   );
 }
 
-// This gets called on every request
 export async function getStaticProps() {
   const res = await fetch('https://spaceflightnewsapi.net/api/v2/articles');
 
