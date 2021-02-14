@@ -75,13 +75,12 @@ export default function Home({ datas }) {
           </figure>
         </section>
         <hr />
-        <section className=" ">
+        <section>
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
           <MapWithNoSSR />
         </section>
-        <div className="display  flex  space-x-2 mt-8 mb-8 md:space-x-8"></div>
       </div>
     </LayoutComponent>
   );

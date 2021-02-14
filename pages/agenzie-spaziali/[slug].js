@@ -3,13 +3,12 @@ import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { useRouter } from 'next/router';
 function Page({ pageNumber, agenciesData }, props) {
-
   const router = useRouter();
   return (
     <LayoutComponent>
       <SEO title="Agenzie Spaziale" />
 
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+      <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {agenciesData.results.map((data) => {
           return (
             <figure

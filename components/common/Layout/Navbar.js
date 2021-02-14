@@ -52,11 +52,10 @@ export const NavBar = () => {
           </div>
           <nav className="hidden md:flex space-x-10">
             <Link
-              className="inherit"
               href={'/news-spaziali-internazionali'}
               as={`/news-spaziali-internazionali`}
             >
-              News Internazionali
+              <a href="/news-spaziali-internazionali">News Internazionali</a>
             </Link>
             <div className="relative">
               <button
