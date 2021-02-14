@@ -1,19 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
-import { getSortedPosts } from '@utils/posts';
+
 import { setCORS } from 'google-translate-api-browser';
 import dynamic from 'next/dynamic';
 
-export default function Home({ posts, datas }) {
+export default function Home({ datas }) {
   const [currentCategory, setCurrentCategory] = useState(null);
-
-  let categories = [];
-  for (let i = 0; i < posts.length; i++) {
-    categories.push(posts[i].frontmatter.category);
-  }
-  let merged = [].concat.apply([], categories);
-  const uniquecat = [...new Set(merged)];
 
   const translateto = JSON.stringify(datas.explanation);
   const translatetwo = JSON.stringify(datas.title);
@@ -88,83 +81,7 @@ export default function Home({ posts, datas }) {
           </h2>
           <MapWithNoSSR />
         </section>
-        <div className="display  flex  space-x-2 mt-8 mb-8 md:space-x-8">
-          {uniquecat.map((cate, i) => {
-            return (
-              <span
-                className="cursor-pointer px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                key={i}
-                onClick={() => setCurrentCategory(cate)}
-              >
-                {cate}
-              </span>
-            );
-          })}
-        </div>
-        <div className="max-w-md  sm:px-6  flex flex-col items-start">
-          {currentCategory
-            ? posts
-                .filter(
-                  ({ frontmatter: { category } }) =>
-                    category === currentCategory
-                )
-                .map(
-                  ({
-                    frontmatter: { title, description, category, date },
-                    slug,
-                  }) => (
-                    <article key={slug}>
-                      <header className="mb-2">
-                        <h3 className="mb-2">
-                          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-                            <a className="text-4xl font-bold text-yellow-600 font-display">
-                              {title}
-                            </a>
-                          </Link>
-                        </h3>
-                        <span
-                          onClick={() => setCurrentCategory(category)}
-                          className="px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        >
-                          {category}
-                        </span>
-                        <span className="text-sm">&nbsp;&nbsp;{date}</span>
-                      </header>
-                      <section>
-                        <p className="mb-8 text-lg">{description}</p>
-                      </section>
-                    </article>
-                  )
-                )
-            : posts.map(
-                ({
-                  frontmatter: { title, description, category, date },
-                  slug,
-                }) => (
-                  <article key={slug}>
-                    <header className="mb-2">
-                      <h3 className="mb-2">
-                        <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-                          <a className="text-4xl font-bold text-yellow-600 font-display">
-                            {title}
-                          </a>
-                        </Link>
-                      </h3>
-                      <span
-                        onClick={() => setCurrentCategory(category)}
-                        className="px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded "
-                      >
-                        {category}
-                      </span>
-                      <span className="text-sm">&nbsp;&nbsp;{date}</span>
-                    </header>
-                    <section>
-                      <p className="mb-8 text-lg">{description}</p>
-                    </section>
-                  </article>
-                )
-              )}
-        </div>
+        <div className="display  flex  space-x-2 mt-8 mb-8 md:space-x-8"></div>
       </div>
     </LayoutComponent>
   );
@@ -172,7 +89,6 @@ export default function Home({ posts, datas }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const posts = await getSortedPosts();
   const res = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=lu9sT97c1NlwxywwfgHgQbqaxIXhfw6lMoT0B6nY`
   );
@@ -180,7 +96,6 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      posts,
       datas,
     },
   };
