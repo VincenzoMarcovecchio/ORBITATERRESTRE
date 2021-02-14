@@ -5,8 +5,6 @@
   publish = "out"
 
   # Default build command.
-  command = "npm run build && npx next export"
+  command = "npm run build "
 
-  environment = { NODE_VERSION = "12.13.1" }
-
-
+  environment = { NODE_VERSION = "14.3.0" }

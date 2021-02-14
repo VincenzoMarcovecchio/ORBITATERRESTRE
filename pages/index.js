@@ -172,12 +172,11 @@ export default function Home({ posts, datas }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const posts = await getSortedPosts();
   const res = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=lu9sT97c1NlwxywwfgHgQbqaxIXhfw6lMoT0B6nY`
   );
   const datas = await res.json();
-
+  const posts = await getSortedPosts();
   return {
     props: {
       posts,
