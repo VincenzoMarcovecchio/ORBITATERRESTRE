@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { useRouter } from 'next/router';
 function Page({ pageNumber, agenciesData }, props) {
-  console.log(agenciesData);
+
   const router = useRouter();
   return (
     <LayoutComponent>
