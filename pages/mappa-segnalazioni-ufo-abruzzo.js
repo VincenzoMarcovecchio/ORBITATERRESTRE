@@ -2,7 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
-import Map from '../Map';
+import Map from '../Map/Index';
+
 export default function Home() {
   return (
     <LayoutComponent>

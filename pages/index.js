@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { setCORS } from 'google-translate-api-browser';
-import Map from '../Map';
+import Map from '../Map/Index';
 
 export default function Home({ datas }) {
   const [currentCategory, setCurrentCategory] = useState(null);
