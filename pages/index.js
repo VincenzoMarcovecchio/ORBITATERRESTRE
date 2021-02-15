@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
-
 import { setCORS } from 'google-translate-api-browser';
-import dynamic from 'next/dynamic';
+import Map from '../Map';
 
 export default function Home({ datas }) {
   const [currentCategory, setCurrentCategory] = useState(null);
@@ -31,12 +30,6 @@ export default function Home({ datas }) {
       });
   }, []);
 
-  const MapWithNoSSR = useMemo(() =>
-    dynamic(() => import('../Map/Index'), {
-      loading: () => <p>A map is loading</p>,
-      ssr: false,
-    })
-  );
   return (
     <LayoutComponent>
       <SEO title="Home" />
@@ -79,7 +72,22 @@ export default function Home({ datas }) {
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
-          <MapWithNoSSR />
+          <Map center={[42.192, 13.7289]} zoom={8}>
+            {({ TileLayer, Marker, Popup }) => (
+              <>
+                <TileLayer
+                  style={{ height: '100vh' }}
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker animate={true} position={[41.8979, 14.4898]}>
+                  <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                  </Popup>
+                </Marker>
+              </>
+            )}
+          </Map>
         </section>
       </div>
     </LayoutComponent>
