@@ -10,7 +10,7 @@ const Map = () => {
       center={[42.192, 13.7289]}
       zoom={8}
       scrollWheelZoom={false}
-      className="w-full mx-auto h-full z-10"
+      className="w-full mx-auto  z-10"
       style={{ height: '100vh', width: 'inherith' }}
     >
       <TileLayer
