@@ -1,4 +1,4 @@
-export function addDataLayer(map, data) {
+export function AddDataLayer(map, data) {
   if (!map.getSource('dcmusic.live')) {
     map.addSource('dcmusic.live', {
       type: 'geojson',

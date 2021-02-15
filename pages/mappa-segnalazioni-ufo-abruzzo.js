@@ -5,7 +5,7 @@ import styles from '../assets/Home.module.css';
 import useSWR from 'swr';
 import { fetcher } from '../utils/fetcher';
 import Head from 'next/head';
-import { addDataLayer } from '../map/addDataLayer';
+import { AddDataLayer } from '../map/AddDataLayer';
 import { initializeMap } from '../map/initializeMap';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     if (pageIsMounted && data) {
       Map.on('load', function () {
-        addDataLayer(Map, data);
+        AddDataLayer(Map, data);
       });
     }
   }, [pageIsMounted, setMap, data, Map]);
