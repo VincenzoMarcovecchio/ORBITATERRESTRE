@@ -71,7 +71,7 @@ export default function Home({ datas }) {
           </figure>
         </section>
         <hr />
-        <section>
+        <section className={styles.container}>
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
