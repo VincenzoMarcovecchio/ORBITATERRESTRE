@@ -2,12 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { setCORS } from 'google-translate-api-browser';
-import Map from '../Map/Index';
-import styles from '../assets/Home.module.css';
 
 export default function Home({ datas }) {
-  const DEFAULT_CENTER = [42.192, 13.7289];
-
   const [currentCategory, setCurrentCategory] = useState(null);
 
   const translateto = JSON.stringify(datas.explanation);
@@ -36,7 +32,6 @@ export default function Home({ datas }) {
   return (
     <LayoutComponent>
       <SEO title="Home" />
-
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
         <section>
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
@@ -71,25 +66,10 @@ export default function Home({ datas }) {
           </figure>
         </section>
         <hr />
-        <section className={styles.container}>
+        <section>
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
-          <Map className={styles.homeMap} center={DEFAULT_CENTER} zoom={8}>
-            {({ TileLayer, Marker, Popup }) => (
-              <>
-                <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
-                <Marker position={DEFAULT_CENTER}>
-                  <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                  </Popup>
-                </Marker>
-              </>
-            )}
-          </Map>
         </section>
       </div>
     </LayoutComponent>

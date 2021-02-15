@@ -18,8 +18,6 @@
     "imagemin-optipng": "^8.0.0",
     "lazysizes": "^5.2.2",
     "leaflet": "^1.7.1",
-    "leaflet-defaulticon-compatibility": "^0.1.1",
-    "leaflet-geosearch": "^3.2.1",
     "lodash.debounce": "^4.0.8",
     "lqip-loader": "^2.2.1",
     "next": "10.0.3",
@@ -47,9 +45,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jfelix61/nextjs-starter-blog.git"
+    "url": "https://github.com/VincenzoMarcovecchio/ORBITATERRESTRE"
   },
-  "homepage": "https://github.com/Jfelix61/nextjs-starter-blog#readme",
+  "homepage": "https://orbitaterrestre.vercel.app/",
   "keywords": [
     "next.js",
     "blog",
