@@ -3,8 +3,11 @@ import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import { setCORS } from 'google-translate-api-browser';
 import Map from '../Map/Index';
+import styles from '../assets/Home.module.css';
 
 export default function Home({ datas }) {
+  const DEFAULT_CENTER = [42.192, 13.7289];
+
   const [currentCategory, setCurrentCategory] = useState(null);
 
   const translateto = JSON.stringify(datas.explanation);
@@ -72,20 +75,16 @@ export default function Home({ datas }) {
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
-          <Map
-            style={{ width: '100%', height: '30rem' }}
-            center={[42.192, 13.7289]}
-            zoom={8}
-          >
+          <Map className={styles.homeMap} center={DEFAULT_CENTER} zoom={8}>
             {({ TileLayer, Marker, Popup }) => (
               <>
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker animate={true} position={[41.8979, 14.4898]}>
+                <Marker position={DEFAULT_CENTER}>
                   <Popup>
-                    Segnalazione Fraine <br /> Easily customizable.
+                    A pretty CSS3 popup. <br /> Easily customizable.
                   </Popup>
                 </Marker>
               </>

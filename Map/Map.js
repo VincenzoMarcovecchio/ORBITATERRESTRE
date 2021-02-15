@@ -3,9 +3,17 @@ import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+import styles from './Map.module.css';
+
 const { MapContainer } = ReactLeaflet;
 
-const Map = ({ children, ...rest }) => {
+const Map = ({ children, className, ...rest }) => {
+  let mapClassName = styles.map;
+
+  if (className) {
+    mapClassName = `${mapClassName} ${className}`;
+  }
+
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;
 
@@ -17,7 +25,7 @@ const Map = ({ children, ...rest }) => {
   }, []);
 
   return (
-    <MapContainer style={{ width: '100%' }} {...rest}>
+    <MapContainer className={mapClassName} {...rest}>
       {children(ReactLeaflet)}
     </MapContainer>
   );
