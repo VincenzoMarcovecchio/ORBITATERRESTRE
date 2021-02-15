@@ -5,8 +5,8 @@ import styles from '../assets/Home.module.css';
 import useSWR from 'swr';
 import { fetcher } from '../utils/fetcher';
 import Head from 'next/head';
-import { AddDataLayer } from '../map/AddDataLayer';
-import { initializeMap } from '../map/initializeMap';
+import { AddDataLayer } from '../Map/AddDataLayer';
+import { initializeMap } from '../Map/initializeMap';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 export default function Home() {
