@@ -17,11 +17,7 @@ const Map = ({ children, ...rest }) => {
   }, []);
 
   return (
-    <MapContainer
-      style={{ height: '100vh' }}
-      className="w-full h-full"
-      {...rest}
-    >
+    <MapContainer style={{ width: '100%' }} {...rest}>
       {children(ReactLeaflet)}
     </MapContainer>
   );

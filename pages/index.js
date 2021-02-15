@@ -72,17 +72,20 @@ export default function Home({ datas }) {
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa delle segnalazioni
           </h2>
-          <Map center={[42.192, 13.7289]} zoom={8}>
+          <Map
+            style={{ width: '100%', height: '30rem' }}
+            center={[42.192, 13.7289]}
+            zoom={8}
+          >
             {({ TileLayer, Marker, Popup }) => (
               <>
                 <TileLayer
-                  style={{ height: '100vh' }}
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
                 <Marker animate={true} position={[41.8979, 14.4898]}>
                   <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Segnalazione Fraine <br /> Easily customizable.
                   </Popup>
                 </Marker>
               </>
