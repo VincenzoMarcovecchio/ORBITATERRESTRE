@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
 import styles from '../assets/Home.module.css';
 import useSWR from 'swr';
-import { addDataLayer } from '../map/addDataLayer';
-import { initializeMap } from '../map/initializeMap';
 import { fetcher } from '../utils/fetcher';
 import Head from 'next/head';
+import { addDataLayer } from '../map/addDataLayer';
+import { initializeMap } from '../map/initializeMap';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 export default function Home() {
