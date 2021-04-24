@@ -1,57 +1,418 @@
-import { React, useState, useEffect } from 'react';
-import Link from 'next/link';
-import { LayoutComponent, Bio, SEO } from '@components/common';
-import { useRouter } from 'next/router';
+import { React, useState } from "react";
+import Link from "next/link";
+import non from "../../content/assets/immagine-non-trovata.png";
+import { LayoutComponent, Bio, SEO } from "@components/common";
+import { useRouter } from "next/router";
+
 function Page({ pageNumber, agenciesData }, props) {
   const router = useRouter();
+
+  const [type, setType] = useState(1);
+
+  const set = [
+    "Governative",
+    "Multinazionali",
+    "Commerciali",
+    "Educazionali",
+    "Private",
+    "Sconosciute",
+  ];
+  console.log(agenciesData);
+
   return (
     <LayoutComponent>
       <SEO title="Agenzie Spaziale" />
-
+      <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
+        Dataset delle agenzie spaziali
+      </h1>
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex sm:flex-col md:flex-row w-full items-start">
+        {set.map((se, index) => (
+          <span
+            className={`${
+              type === index
+                ? " underline flex-wrap border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 flex-wrap cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setType(index)}
+          >
+            {se}
+          </span>
+        ))}
+      </div>
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {agenciesData.results.map((data) => {
-          return (
-            <figure
-              className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-              key={data.id}
-            >
-              {data.image_url && (
-                <img
-                  className="sm:w-full md:w-1/3 object-cover"
-                  src={data.image_url}
-                  alt={data.name}
-                />
-              )}
+        {type === 0
+          ? agenciesData.results
+              .filter((agency) => agency.type === "Government")
+              .map((data) => {
+                console.log(data);
+                return (
+                  <figure
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    key={data.id}
+                  >
+                    {data.image_url ? (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={data.image_url}
+                        alt={data.name}
+                      />
+                    ) : (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={non}
+                        alt={data.name}
+                      />
+                    )}
 
-              <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
-                <h1 className="text-3xl font-bold text-yellow-600 font-display">
-                  {data.name}
-                </h1>
-                <p className="mt-2 text-lg mb-3">
-                  <b> Amministatore:</b>&nbsp;{data.amministrator}
-                </p>
-                <p className="mt-2 text-lg mb-3">
-                  <b>Fondata nel:</b>&nbsp;{data.founding_year}
-                </p>
-                <p className="mt-2 text-lg mb-3">
-                  <b> Descrizione:</b>&nbsp;{data.description}
-                </p>
-                <p className="mt-2 text-lg mb-3">
-                  <b> Tipo:</b>&nbsp;{data.type}
-                </p>
+                    <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                        {data.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Descrizione:</b>&nbsp;{data.description}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Tipo:</b>&nbsp;{data.type}
+                      </p>
 
-                <a
-                  className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                  href={data.wiki_url}
-                  target="_blank"
-                  rel="noopener noreferrer canonical"
+                      <Link
+                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        replace
+                        target="_blank"
+                        rel="noopener noreferrer canonical"
+                      >
+                        Scopri di piu`
+                      </Link>
+                    </figcaption>
+                  </figure>
+                );
+              })
+          : type === 1
+          ? agenciesData.results
+              .filter((agency) => agency.type === "Multinational")
+              .map((data) => {
+                return (
+                  <figure
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    key={data.id}
+                  >
+                    {data.image_url ? (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={data.image_url}
+                        alt={data.name}
+                      />
+                    ) : (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={non}
+                        alt={data.name}
+                      />
+                    )}
+
+                    <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                        {data.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Descrizione:</b>&nbsp;{data.description}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Tipo:</b>&nbsp;{data.type}
+                      </p>
+
+                      <Link
+                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        replace
+                        target="_blank"
+                        rel="noopener noreferrer canonical"
+                      >
+                        Scopri di piu`
+                      </Link>
+                    </figcaption>
+                  </figure>
+                );
+              })
+          : type === 2
+          ? agenciesData.results
+              .filter((agency) => agency.type === "Commercial")
+              .map((data) => {
+                return (
+                  <figure
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    key={data.id}
+                  >
+                    {data.image_url ? (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={data.image_url}
+                        alt={data.name}
+                      />
+                    ) : (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={non}
+                        alt={data.name}
+                      />
+                    )}
+
+                    <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                        {data.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Descrizione:</b>&nbsp;{data.description}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Tipo:</b>&nbsp;{data.type}
+                      </p>
+
+                      <Link
+                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        replace
+                        target="_blank"
+                        rel="noopener noreferrer canonical"
+                      >
+                        Scopri di piu`
+                      </Link>
+                    </figcaption>
+                  </figure>
+                );
+              })
+          : type === 3
+          ? agenciesData.results
+              .filter((agency) => agency.type === "Educational")
+              .map((data) => {
+                return (
+                  <figure
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    key={data.id}
+                  >
+                    {data.image_url ? (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={data.image_url}
+                        alt={data.name}
+                      />
+                    ) : (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={non}
+                        alt={data.name}
+                      />
+                    )}
+
+                    <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                        {data.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Descrizione:</b>&nbsp;{data.description}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Tipo:</b>&nbsp;{data.type}
+                      </p>
+
+                      <Link
+                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        replace
+                        target="_blank"
+                        rel="noopener noreferrer canonical"
+                      >
+                        Scopri di piu`
+                      </Link>
+                    </figcaption>
+                  </figure>
+                );
+              })
+          : type === 4
+          ? agenciesData.results
+              .filter((agency) => agency.type === "private")
+              .map((data) => {
+                return (
+                  <>
+                    {data.id && (
+                      <figure
+                        className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                        key={data.id}
+                      >
+                        {data.image_url ? (
+                          <img
+                            className="sm:w-full md:w-1/3 object-cover"
+                            src={data.image_url}
+                            alt={data.name}
+                          />
+                        ) : (
+                          <img
+                            className="sm:w-full md:w-1/3 object-cover"
+                            src={non}
+                            alt={data.name}
+                          />
+                        )}
+
+                        <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                          <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                            {data.name}
+                          </h1>
+                          <p className="mt-2 text-lg mb-3">
+                            <b> Amministatore:</b>&nbsp;{data.amministrator}
+                          </p>
+                          <p className="mt-2 text-lg mb-3">
+                            <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                          </p>
+                          <p className="mt-2 text-lg mb-3">
+                            <b> Descrizione:</b>&nbsp;{data.description}
+                          </p>
+                          <p className="mt-2 text-lg mb-3">
+                            <b> Tipo:</b>&nbsp;{data.type}
+                          </p>
+
+                          <Link
+                            className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                            href={`/agenzie-spaziali/singola/${data.id}`}
+                            replace
+                            target="_blank"
+                            rel="noopener noreferrer canonical"
+                          >
+                            Scopri di piu`
+                          </Link>
+                        </figcaption>
+                      </figure>
+                    )}
+                  </>
+                );
+              })
+          : type === 5
+          ? agenciesData.results
+              .filter((agency) => agency.type === "Unknown")
+              .map((data) => {
+                return (
+                  <figure
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    key={data.id}
+                  >
+                    {data.image_url ? (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={data.image_url}
+                        alt={data.name}
+                      />
+                    ) : (
+                      <img
+                        className="sm:w-full md:w-1/3 object-cover"
+                        src={non}
+                        alt={data.name}
+                      />
+                    )}
+
+                    <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                        {data.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Descrizione:</b>&nbsp;{data.description}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b> Tipo:</b>&nbsp;{data.type}
+                      </p>
+
+                      <Link
+                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        replace
+                        target="_blank"
+                        rel="noopener noreferrer canonical"
+                      >
+                        Scopri di piu`
+                      </Link>
+                    </figcaption>
+                  </figure>
+                );
+              })
+          : agenciesData.results.map((data) => {
+              return (
+                <figure
+                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                  key={data.id}
                 >
-                  Scopri di piu`
-                </a>
-              </figcaption>
-            </figure>
-          );
-        })}
+                  {data.image_url ? (
+                    <img
+                      className="sm:w-full md:w-1/3 object-cover"
+                      src={data.image_url}
+                      alt={data.name}
+                    />
+                  ) : (
+                    <img
+                      className="sm:w-full md:w-1/3 object-cover"
+                      src={non}
+                      alt={data.name}
+                    />
+                  )}
+
+                  <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                    <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                      {data.name}
+                    </h1>
+                    <p className="mt-2 text-lg mb-3">
+                      <b> Amministatore:</b>&nbsp;{data.amministrator}
+                    </p>
+                    <p className="mt-2 text-lg mb-3">
+                      <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                    </p>
+                    <p className="mt-2 text-lg mb-3">
+                      <b> Descrizione:</b>&nbsp;{data.description}
+                    </p>
+                    <p className="mt-2 text-lg mb-3">
+                      <b> Tipo:</b>&nbsp;{data.type}
+                    </p>
+
+                    <Link
+                      className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                      href={`/agenzie-spaziali/singola/${data.id}`}
+                      replace
+                      target="_blank"
+                      rel="noopener noreferrer canonical"
+                    >
+                      Scopri di piu`
+                    </Link>
+                  </figcaption>
+                </figure>
+              );
+            })}
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex  items-center">
           <div
             className="cursor-pointer"
@@ -100,7 +461,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageNumber = pageContext.query.slug;
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.1.0/agencies/?limit=10&offset=${pageNumber}`
+    `https://ll.thespacedevs.com/2.1.0/agencies/?limit=200&offset=${pageNumber}`
   );
 
   const data = await apiResponse.json();

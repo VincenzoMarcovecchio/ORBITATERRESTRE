@@ -1,6 +1,6 @@
-import Document, { Head, Main, NextScript, Html } from 'next/document';
+import Document, { Head, Main, NextScript, Html } from "next/document";
 
-import { getSiteMetaData } from '@utils/helpers';
+import { getSiteMetaData } from "@utils/helpers";
 
 export default class MyDocument extends Document {
   render() {
@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.language}>
         <Head />
-        <body>
+        <body className="bg-gray-50">
           <Main />
           <NextScript />
         </body>

@@ -1,7 +1,10 @@
 a:hover {
   @apply underline;
+  
 }
-
+a {
+  cursor: pointer !important;
+}
 p {
   @apply font-light;
 }

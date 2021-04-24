@@ -1,28 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { useTheme } from 'next-themes';
+import React, { useState, useEffect } from "react";
+import clsx from "clsx";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { useTheme } from "next-themes";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 export const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
 
+  const ref = useOnclickOutside(() => {
+    setFlyer(false);
+    setFlyerTwo(false);
+  });
+
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className=" mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href={'/'} as={`/`}>
+            <Link href={"/"} as={`/`}>
               <img
                 className="cursor-pointer h-10 w-auto md:h-14"
                 src={`/cosmos.png`}
                 alt="astronauta nello spazio"
               />
+              {/* <span className="font-xl flex flex-col cursor-pointer uppercase font-bold">
+                <p></p>orbita terrestre
+              </span> */}
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -52,7 +61,7 @@ export const NavBar = () => {
           </div>
           <nav className="hidden md:flex space-x-10">
             <Link
-              href={'/news-spaziali-internazionali'}
+              href={"/news-spaziali-internazionali"}
               as={`/news-spaziali-internazionali`}
             >
               <a href="/news-spaziali-internazionali">News Internazionali</a>
@@ -74,8 +83,8 @@ export const NavBar = () => {
                 <svg
                   className={
                     flyer === true
-                      ? 'transform rotate-180 ml-2 h-5 w-5  transition ease-out duration-200'
-                      : ' transform rotate-0 transition ease-out duration-200 ml-2 h-5 w-5  '
+                      ? "transform rotate-180 ml-2 h-5 w-5  transition ease-out duration-200"
+                      : " transform rotate-0 transition ease-out duration-200 ml-2 h-5 w-5  "
                   }
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -91,36 +100,37 @@ export const NavBar = () => {
               </button>
 
               <div
+                ref={ref}
                 className={
                   flyer
-                    ? ' z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
-                    : '  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
+                    ? " z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                 }
               >
                 <div
                   className={
                     flyer
-                      ? 'z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
-                      : 'max-h-0 max-w-0 opacity-0 hidden'
+                      ? "z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+                      : "max-h-0 max-w-0 opacity-0 hidden"
                   }
                 >
                   <div
                     className={
                       flyer
-                        ? ' z-20 relative grid gap-6 bg-white flyer-container px-5 py-6 sm:gap-8 sm:p-8'
-                        : 'hidden '
+                        ? " z-20 relative grid gap-6 bg-white flyer-container px-5 py-6 sm:gap-8 sm:p-8"
+                        : "hidden "
                     }
                   >
-                    <div
+                    {/* <div
                       className={
                         flyer
-                          ? 'z-20 -m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'
-                          : 'hidden'
+                          ? "z-20 -m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          : "hidden"
                       }
-                    >
-                      {/* Heroicon name: outline/chart-bar */}
-                      <svg
-                        className={'flex-shrink-0 h-6 w-6 text-indigo-600'}
+                    > */}
+                    {/* Heroicon name: outline/chart-bar */}
+                    {/* <svg
+                        className={"flex-shrink-0 h-6 w-6 text-indigo-600"}
                         xmlns="http://www.w3.org/2000/svg"
                         fill="#4F46E5"
                         viewBox="0 0 24 24"
@@ -135,20 +145,20 @@ export const NavBar = () => {
                           <path d="m63.613,281.405c0,4.143 3.358,7.5 7.5,7.5h327.773c4.142,0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-327.773c-4.142,0-7.5,3.358-7.5,7.5z" />
                           <path d="m466.697,275.189c-31.474-21.253-71.588-37.993-116.197-48.561l-21.401-55.644c-5.063-13.163-20.076-23.475-34.18-23.475h-52.419v-34.52c0-4.143-3.358-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v34.52h-52.419c-14.104,0-29.117,10.312-34.18,23.475l-21.401,55.644c-44.609,10.568-84.724,27.308-116.197,48.561-2.065,1.395-3.303,3.724-3.303,6.216s1.238,4.821 3.303,6.216c28.176,19.027 63.597,34.577 102.724,45.161 0.476,17.564 17.098,31.728 37.477,31.728h182.992c20.379,0 37.001-14.164 37.477-31.728 39.127-10.583 74.548-26.134 102.724-45.161 2.065-1.395 3.303-3.724 3.303-6.216s-1.238-4.821-3.303-6.216zm-311.796-98.82c2.84-7.383 12.27-13.859 20.18-13.859h119.838c7.91,0 17.34,6.477 20.18,13.859l18.9,49.141h-197.998l18.9-49.141zm200.646,143.141h-182.043c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5 7.5,7.5h175.248c-1.614,8.353-11.149,15-22.256,15h-182.992c-11.108,0-20.642-6.647-22.256-15h22.256c4.142,0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-29.051c-34.926-9.024-66.83-22.105-93.069-38.105 29.12-17.768 64.989-31.819 104.543-40.895h218.146c39.554,9.075 75.423,23.127 104.543,40.895-26.239,15.999-58.143,29.08-93.069,38.105z" />
                         </g>
-                      </svg>
+                      </svg> */}
 
-                      <div className={flyer ? 'ml-4' : ' hidden'}>
+                    {/* <div className={flyer ? "ml-4" : " hidden"}>
                         <Link
                           href="/mappa-segnalazioni-ufo-abruzzo"
                           as="/mappa-segnalazioni-ufo-abruzzo"
                         >
                           Segnalazioni UFO
                         </Link>
-                        <p className={flyer ? 'mt-1 text-sm ' : 'none'}>
+                        <p className={flyer ? "mt-1 text-sm " : "none"}>
                           Segnalazioni avvenute nella regione Abruzzo
                         </p>
-                      </div>
-                    </div>
+                      </div> */}
+                    {/* </div> */}
                     <a
                       href="#"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -176,7 +186,12 @@ export const NavBar = () => {
                         >
                           Marte
                         </Link>
-                        <p>Immagini del rover Curiosity</p>
+                        <Link
+                          href="/nuove-scoperte-su-marte/3000"
+                          as="/nuove-scoperte-su-marte/3000"
+                        >
+                          <p> Immagini del rover Curiosity</p>
+                        </Link>
                       </div>
                     </a>
                     <a
@@ -339,8 +354,8 @@ export const NavBar = () => {
                 <svg
                   className={
                     flyerTwo === true
-                      ? 'z-20 transform rotate-180 ml-2 h-5 w-5   transition ease-out duration-200'
-                      : 'transform transition ease-out duration-200 rotate-0 ml-2 h-5 w-5  '
+                      ? "z-20 transform rotate-180 ml-2 h-5 w-5   transition ease-out duration-200"
+                      : "transform transition ease-out duration-200 rotate-0 ml-2 h-5 w-5  "
                   }
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -356,17 +371,18 @@ export const NavBar = () => {
               </button>
 
               <div
+                ref={ref}
                 className={
                   flyerTwo
-                    ? ' z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
-                    : '  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2'
+                    ? " z-20 opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "  translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                 }
               >
                 <div
                   className={
                     flyerTwo
-                      ? 'z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'
-                      : 'hidden opacity-0 '
+                      ? "z-20 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+                      : "hidden opacity-0 "
                   }
                 >
                   <div className="relative grid gap-6 flyer-container bg-white dark:bg-yellow px-5 py-6 sm:gap-8 sm:p-8">
@@ -445,7 +461,7 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <Link href="/eventi" as="/eventi">
+                        <Link href="/eventi-spaziali" as="/eventi-spaziali">
                           Eventi
                         </Link>
                         <p className="mt-1 text-sm ">
@@ -472,7 +488,10 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <Link href="/programmi" as="/programmi">
+                        <Link
+                          href="/lanci-missioni-spaziali"
+                          as="/lanci-missioni-spaziali"
+                        >
                           Programmi
                         </Link>
                         <p className="mt-1 text-sm ">
@@ -485,26 +504,32 @@ export const NavBar = () => {
                   <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                     <div>
                       <Link
-                        href="/spacecraft"
-                        as="/spacecraft"
+                        href="/stazione-spaziale"
+                        as="/stazione-spaziale"
                         className="text-sm tracking-wide font-medium  uppercase"
                       >
-                        Spacecraft
+                        Stazioni spaziali
                       </Link>
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
-                          <Link href="/pad" as="/pad">
+                          <Link
+                            href="/piattaforme-lancio-pad"
+                            as="/piattaforme-lancio-pad"
+                          >
                             Pad
                           </Link>
                         </li>
                         <li className="text-base truncate">
-                          <Link href="/starship" as="/starhip">
-                            Starship
+                          <Link href="/techport" as="/techport">
+                            TechPort
                           </Link>
                         </li>
                         <li className="text-base truncate">
-                          <Link href="/expedition" as="/expedition">
-                            Expedition
+                          <Link
+                            href="/monitorazioni-eventi-terrestri"
+                            as="/monitorazioni-eventi-terrestri"
+                          >
+                            Eventi Terrestri
                           </Link>
                         </li>
                       </ul>
@@ -531,15 +556,16 @@ export const NavBar = () => {
   */}
 
         <div
+          ref={ref}
           className={
             open
-              ? 'block z-20 opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
-              : 'opacity-0 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
+              ? "block z-20 opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              : "opacity-0 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           }
         >
           <div
             className={
-              'rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white flyer-container dark:bg-yellow divide-y-2 divide-gray-50'
+              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
@@ -693,7 +719,7 @@ export const NavBar = () => {
                 >
                   Pricing
                 </a>
-                <Link href={'/news'} as={`/news`}>
+                <Link href={"/news"} as={`/news`}>
                   <a
                     href="#"
                     className="text-base font-medium  hover:text-gray-700"
@@ -770,12 +796,12 @@ const Header = () => {
   const toggleDarkMode = (checked) => {
     const isDarkMode = checked;
 
-    if (isDarkMode) setTheme('dark');
-    else setTheme('light');
+    if (isDarkMode) setTheme("dark");
+    else setTheme("light");
   };
 
-  const isRoot = pathname === '/';
-  const isDarkMode = resolvedTheme === 'dark';
+  const isRoot = pathname === "/";
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <>

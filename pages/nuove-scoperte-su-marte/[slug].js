@@ -1,13 +1,24 @@
-import { React, useState } from 'react';
-import Link from 'next/link';
-import { LayoutComponent, Bio, SEO } from '@components/common';
-import { useRouter } from 'next/router';
+import { React, useState } from "react";
+import Link from "next/link";
+import { LayoutComponent, Bio, SEO } from "@components/common";
+import { useRouter } from "next/router";
 
-function Page({ curiosity }) {
+function Marte({ curiosity }) {
   const router = useRouter();
   return (
     <LayoutComponent>
       <SEO title="Gli occhi di Marte " />
+
+      <iframe
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        className="w-full flex mb-4"
+        width="420"
+        height="515"
+        src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
+        alt="punto di atterraggio di curiosity"
+      ></iframe>
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
@@ -45,38 +56,42 @@ function Page({ curiosity }) {
           <option value="4500"></option>
         </datalist>
 
-        {curiosity.photos.map((lol) => {
-          return (
-            <article
-              className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-              key={lol.id}
-            >
-              <img
-                className="sm:w-full md:w-1/3 object-cover"
-                src={lol.img_src}
-                alt={lol.camera.fullname}
-              />
+        {curiosity.photos.length > 1
+          ? curiosity.photos.map((lol) => {
+              return (
+                <article
+                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                  key={lol.id}
+                >
+                  <img
+                    className="sm:w-full md:w-1/3 object-cover"
+                    src={lol.img_src}
+                    alt={lol.camera.fullname}
+                  />
 
-              <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                <h2 className="text-3xl font-bold text-yellow-600 font-display">
-                  {lol.camera.full_name}
-                </h2>
-                <p className="mt-2 text-lg mb-3">
-                  <b>Data Terrestre:&nbsp;{lol.earth_date}</b>
-                </p>
-                <details>
-                  <summary>{lol.rover.name}</summary>
-                  <p>Giorno di atterraggio:&nbsp;{lol.rover.landing_date}</p>
-                  <p>
-                    Giorno in cui venne effettuato il lancio:&nbsp;
-                    {lol.rover.launch_date}
-                  </p>
-                  <p>Status:&nbsp;{lol.rover.status}</p>
-                </details>
-              </div>
-            </article>
-          );
-        })}
+                  <div className="sm:w-full md:w-2/3 px-4  py-6 ">
+                    <h2 className="text-3xl font-bold text-yellow-600 font-display">
+                      {lol.camera.full_name}
+                    </h2>
+                    <p className="mt-2 text-lg mb-3">
+                      <b>Data Terrestre:&nbsp;{lol.earth_date}</b>
+                    </p>
+                    <details>
+                      <summary>{lol.rover.name}</summary>
+                      <p>
+                        Giorno di atterraggio:&nbsp;{lol.rover.landing_date}
+                      </p>
+                      <p>
+                        Giorno in cui venne effettuato il lancio:&nbsp;
+                        {lol.rover.launch_date}
+                      </p>
+                      <p>Status:&nbsp;{lol.rover.status}</p>
+                    </details>
+                  </div>
+                </article>
+              );
+            })
+          : "niente qui"}
       </div>
     </LayoutComponent>
   );
@@ -101,4 +116,4 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
-export default Page;
+export default Marte;

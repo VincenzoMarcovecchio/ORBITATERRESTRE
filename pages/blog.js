@@ -1,15 +1,19 @@
-import { React, useState } from 'react';
-import Link from 'next/link';
-import { LayoutComponent, Bio, SEO } from '@components/common';
-import { getSortedPosts } from '@utils/posts';
+import { React, useState } from "react";
+import Link from "next/link";
+import { LayoutComponent, Bio, SEO } from "@components/common";
+import { getSortedPosts } from "@utils/posts";
 
-export default function Home({ posts }) {
+function Blog({ posts }) {
   const [currentCategory, setCurrentCategory] = useState(null);
+
   let categories = [];
+
   for (let i = 0; i < posts.length; i++) {
     categories.push(posts[i].frontmatter.category);
   }
+
   let merged = [].concat.apply([], categories);
+
   const uniquecat = [...new Set(merged)];
 
   return (
@@ -45,7 +49,7 @@ export default function Home({ posts }) {
                     <article key={slug}>
                       <header className="mb-2">
                         <h3 className="mb-2">
-                          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+                          <Link href={"/post/[slug]"} as={`/post/${slug}`}>
                             <a className="text-4xl font-bold text-yellow-600 font-display">
                               {title}
                             </a>
@@ -73,7 +77,7 @@ export default function Home({ posts }) {
                   <article key={slug}>
                     <header className="mb-2">
                       <h3 className="mb-2">
-                        <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+                        <Link href={"/post/[slug]"} as={`/post/${slug}`}>
                           <a className="text-4xl font-bold text-yellow-600 font-display">
                             {title}
                           </a>
@@ -98,6 +102,8 @@ export default function Home({ posts }) {
     </LayoutComponent>
   );
 }
+
+export default Blog;
 
 export async function getStaticProps() {
   const posts = getSortedPosts();
