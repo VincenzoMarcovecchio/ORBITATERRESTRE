@@ -10,7 +10,7 @@ export function QuickLinks() {
             <svg
               className="object-scale-down transform scale-50 h-18 w-full"
               xmlns="http://www.w3.org/2000/svg"
-              xmlnsxlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               style={{ isolation: "isolate" }}
               viewBox="0 0 174.873 200"
               width="174.873pt"

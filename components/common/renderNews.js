@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import loader from "../../content/assets/little-loader.gif";
+import useSWR from "swr"; //maybe??
+import Image from "next/image";
+
 export function RenderNews({ ids }) {
   const [articles, setArticles] = useState([]);
 
@@ -63,7 +66,8 @@ export function RenderNews({ ids }) {
             );
           })
         ) : (
-          <img
+          <Image
+            layout="fill"
             className="w-full min-h-screen object-cover"
             src={loader}
             alt="loader"

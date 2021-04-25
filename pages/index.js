@@ -23,6 +23,8 @@ function Home({ datas, lanci }) {
       .catch((err) => {
         console.error(err);
       });
+  }, []);
+  useEffect(() => {
     translate(translatetwo, { to: "it" })
       .then((res) => {
         setTitlet(JSON.parse(res.text));
@@ -31,7 +33,6 @@ function Home({ datas, lanci }) {
         console.error(err);
       });
   }, []);
-
   return (
     <LayoutComponent>
       <SEO title="Home" />
@@ -66,8 +67,8 @@ function Home({ datas, lanci }) {
                 {datas.copyright}
               </p>
             </figcaption>
-          </figure>{" "}
-          <QuickLinks />{" "}
+          </figure>
+          <QuickLinks />
         </section>
 
         <hr />
@@ -149,16 +150,16 @@ function Home({ datas, lanci }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch(
-    `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
+  const resat = await fetch(
+    `http://mimmofranco.herokuapp.com/https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
   );
-  const datas = await res.json();
+  const datas = await resat.json();
 
-  const resa = await fetch(
-    `https://ll.thespacedevs.com/2.0.0/launch/upcoming?limit=10&offset=10`
+  const lanciIndex = await fetch(
+    "http://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?is_crewed=false&include_suborbital=true&related=false&hide_recent_previous=false"
   );
 
-  const lanci = await resa.json();
+  const lanci = await lanciIndex.json();
 
   return {
     props: {

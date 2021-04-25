@@ -606,8 +606,8 @@ export const NavBar = () => {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   <Link
-                    href="/mappa-segnalazioni-ufo-abruzzo"
-                    as="/mappa-segnalazioni-ufo-abruzzo"
+                    href="/eventi-spaziali"
+                    as="/eventi-spaziali"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
@@ -624,11 +624,11 @@ export const NavBar = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                          d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium ">
-                        Mappa delle segnalazioni in Abruzzo
+                        Eventi
                       </span>
                     </a>
                   </Link>
@@ -636,22 +636,25 @@ export const NavBar = () => {
                     href="#"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/cursor-click */}
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                      />
-                    </svg>
+                    <div>
+                      {/* Heroicon name: outline/cursor-click */}
+                      <svg
+                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="ml-3 text-base font-medium ">test</span>
+                    </div>
                   </a>
                   <a
                     href="#"
@@ -672,7 +675,12 @@ export const NavBar = () => {
                         strokeWidth={2}
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
-                    </svg>
+                    </svg>{" "}
+                    <Link href="/astronauti" as="/astronauti">
+                      <span className="ml-3 text-base font-medium ">
+                        Astronauti
+                      </span>
+                    </Link>
                   </a>
                   <a
                     href="#"
@@ -719,14 +727,13 @@ export const NavBar = () => {
                 >
                   Pricing
                 </a>
-                <Link href={"/news"} as={`/news`}>
-                  <a
-                    href="#"
-                    className="text-base font-medium  hover:text-gray-700"
-                  >
-                    News
-                  </a>
-                </Link>
+                <a
+                  className="text-base font-medium  hover:text-gray-700"
+                  href={"/news-spaziali-internazionali"}
+                  as={`/news-spaziali-internazionali`}
+                >
+                  News
+                </a>
                 <a
                   href="#"
                   className="text-base font-medium  hover:text-gray-700"

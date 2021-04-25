@@ -27,7 +27,10 @@ function Asteroidi({ near }) {
         {newObject.map((element) => {
           return element.map((sol) => {
             return (
-              <div className=" border-solid border-4 border-light-blue-500 p-4 shadow-lg rounded-lg overflow-hidden  flex flex-col mb-8">
+              <div
+                key={sol.name}
+                className=" border-solid border-4 border-light-blue-500 p-4 shadow-lg rounded-lg overflow-hidden  flex flex-col mb-8"
+              >
                 <strong>Nome: </strong>
                 <span>{sol.name}</span>
                 <strong>Magnitudine assoluta: </strong>
