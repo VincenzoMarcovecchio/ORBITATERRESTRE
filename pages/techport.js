@@ -1,6 +1,6 @@
 import { React } from "react";
 import Link from "next/link";
-import Img from "react-optimized-image";
+
 import { LayoutComponent, SEO } from "@components/common";
 import { RenderNews } from "@components/common/renderNews";
 import { Countdown } from "../utils/countdown";
@@ -39,15 +39,13 @@ function Techport({ newsdata, lanci }) {
                         timeFormat={"YYYY MM DD, h:mm a"}
                       />
                       {la.image ? (
-                        <Img
-                          layout="fill"
+                        <img
                           className=" max-h-35 w-full"
                           src={la.image}
                           alt={la.name}
                         />
                       ) : (
-                        <Img
-                          layout="fill"
+                        <img
                           className=" max-h-35 w-full"
                           src={non}
                           alt={la.name}
