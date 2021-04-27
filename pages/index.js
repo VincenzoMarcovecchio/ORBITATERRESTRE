@@ -151,12 +151,24 @@ function Home({ datas, lanci }) {
 // This gets called on every request
 export async function getServerSideProps() {
   const resat = await fetch(
-    `http://mimmofranco.herokuapp.com/https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
+    `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`,
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent": "*",
+      },
+    }
   );
   const datas = await resat.json();
 
   const lanciIndex = await fetch(
-    "http://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?is_crewed=false&include_suborbital=true&related=false&hide_recent_previous=false"
+    "https://lldev.thespacedevs.com/2.2.0/launch/upcoming/",
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent": "*",
+      },
+    }
   );
 
   const lanci = await lanciIndex.json();

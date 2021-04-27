@@ -26,7 +26,7 @@ export function RenderNews({ ids }) {
   }, [ids]);
 
   return (
-    <>
+    <React.Fragment>
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white flex flex-wrap font-body">
         {articles.length > 2 ? (
           articles.map((ar) => {
@@ -66,14 +66,13 @@ export function RenderNews({ ids }) {
             );
           })
         ) : (
-          <Image
-            layout="fill"
+          <img
             className="w-full min-h-screen object-cover"
             src={loader}
             alt="loader"
           />
         )}
       </div>
-    </>
+    </React.Fragment>
   );
 }

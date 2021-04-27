@@ -18,7 +18,7 @@ function Techport({ newsdata, lanci }) {
           <h1 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Programmi NASA attivi nel 2021
           </h1>
-          <RenderNews ids={newsdata.projects} />
+          {newsdata.projects && <RenderNews ids={newsdata.projects} />}
         </section>
         <hr />
         <section className="flex">
@@ -103,7 +103,7 @@ export async function getStaticProps() {
   );
 
   const resa = await fetch(
-    `https://ll.thespacedevs.com/2.0.0/launch/upcoming?limit=10&offset=10`
+    `http://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.0.0/launch/upcoming?limit=10&offset=10`
   );
 
   const lanci = await resa.json();

@@ -9,9 +9,9 @@ function News({ newsdata }) {
   const url =
     "http://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.1.0/event/upcoming";
 
-  const { data, error } = useSWR(url, fetcher);
+  // const { data, error } = useSWR(url, fetcher);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <LayoutComponent>
@@ -55,7 +55,7 @@ function News({ newsdata }) {
               Eventi Prossimi
             </h3>
             <div className="px-4 flex flex-col">
-              {data != undefined ? (
+              {/* {data != undefined ? (
                 data.results.map((la) => {
                   return (
                     <figure
@@ -103,7 +103,7 @@ function News({ newsdata }) {
                 })
               ) : (
                 <b>{"errore nel caricamento"}</b>
-              )}
+              )} */}
             </div>
           </aside>
         </section>
