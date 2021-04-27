@@ -9,15 +9,15 @@ function News({ newsdata }) {
   const url =
     "http://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.1.0/event/upcoming";
 
-  // const { data, error } = useSWR(url, fetcher);
+  const { data, error } = useSWR(url, fetcher);
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <LayoutComponent>
       <SEO title="News Astronautiche Internazionali " />
-      <div className=" max-w-screen-2xl md:flex ">
-        <div className=" max-w-7xl mx-auto  px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+      <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
+        <section className="w-full md:max-w-screen-lg">
           {newsdata.map((lol) => {
             return (
               <article
@@ -48,14 +48,14 @@ function News({ newsdata }) {
               </article>
             );
           })}
-        </div>
-        <section className="flex min-w-full w-24 ">
+        </section>
+        <section className="flex ">
           <aside>
             <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Eventi Prossimi
+              Prossimi Eventi
             </h3>
             <div className="px-4 flex flex-col">
-              {/* {data != undefined ? (
+              {data != undefined ? (
                 data.results.map((la) => {
                   return (
                     <figure
@@ -78,7 +78,7 @@ function News({ newsdata }) {
                       )}
 
                       <figcaption className="z-20 p-2">
-                        <div className="flex flex-col">
+                        <div className="flex ">
                           <b>Nome:&nbsp;</b>
                           <Link
                             className="z-20"
@@ -102,8 +102,8 @@ function News({ newsdata }) {
                   );
                 })
               ) : (
-                <b>{"errore nel caricamento"}</b>
-              )} */}
+                <b>{"caricamento supersonico in corso..."}</b>
+              )}
             </div>
           </aside>
         </section>

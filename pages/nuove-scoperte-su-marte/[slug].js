@@ -4,23 +4,24 @@ import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Marte({ curiosity }) {
+  console.log(curiosity);
   const router = useRouter();
   return (
     <LayoutComponent>
       <SEO title="Gli occhi di Marte " />
-
-      <iframe
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        className="w-full flex mb-4"
-        width="420"
-        height="515"
-        src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
-        alt="punto di atterraggio di curiosity"
-      ></iframe>
-
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+      <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+        <iframe
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullscreen
+          className="w-full flex mb-4"
+          width="420"
+          height="515"
+          src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
+          alt="punto di atterraggio di curiosity"
+        ></iframe>
+      </div>
+      <section className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col w-full items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           Gli occhi di Curiosity
         </h1>
@@ -28,8 +29,8 @@ function Marte({ curiosity }) {
           Questo input range va da 0 a 4500 SOL (controlla URL)
         </label>
         <input
-          draggableTrack
-          formatLabel={(e) => e.target.value.toFixed(2)}
+          draggabletrack
+          formatlabel={(e) => e.target.value.toFixed(2)}
           list="tickmarks"
           onChange={(e) =>
             router
@@ -60,11 +61,11 @@ function Marte({ curiosity }) {
           ? curiosity.photos.map((lol) => {
               return (
                 <article
-                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                  className="sm:grid mx-auto md:flex sm:flex-col md:flex-row w-full max-w-4xl mb-12 shadow-lg rounded-lg overflow-hidden"
                   key={lol.id}
                 >
                   <img
-                    className="sm:w-full md:w-1/3 object-cover"
+                    className="sm:w-full md:w-2/3 object-cover"
                     src={lol.img_src}
                     alt={lol.camera.fullname}
                   />
@@ -85,6 +86,14 @@ function Marte({ curiosity }) {
                         Giorno in cui venne effettuato il lancio:&nbsp;
                         {lol.rover.launch_date}
                       </p>
+                      <p>
+                        Rover id:&nbsp;
+                        {lol.rover.id}
+                      </p>
+                      <p>
+                        Camera:&nbsp;
+                        {lol.camera.full_name}
+                      </p>
                       <p>Status:&nbsp;{lol.rover.status}</p>
                     </details>
                   </div>
@@ -92,7 +101,7 @@ function Marte({ curiosity }) {
               );
             })
           : "niente qui"}
-      </div>
+      </section>
     </LayoutComponent>
   );
 }

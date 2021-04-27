@@ -6,6 +6,8 @@ import Image from "next/image";
 export function RenderNews({ ids }) {
   const [articles, setArticles] = useState([]);
 
+  console.log(articles);
+
   useEffect(() => {
     const fetchData = () => {
       ids &&
@@ -49,18 +51,14 @@ export function RenderNews({ ids }) {
                       __html: ar.project?.description,
                     }}
                   ></div>
-                  <span
-                    onClick={() =>
-                      router
-                        .push(`/eventi-spaziali/`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
+                  <a
+                    href="https://etd.gsfc.nasa.gov/"
                     className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
                     Leggi di piu
-                  </span>
+                  </a>
                 </div>
               </article>
             );

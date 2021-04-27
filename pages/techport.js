@@ -6,7 +6,7 @@ import { RenderNews } from "@components/common/renderNews";
 import { Countdown } from "../utils/countdown";
 import non from "../content/assets/immagine-non-trovata.png";
 
-function Techport({ newsdata, lanci }) {
+function Techport({ newsdata }) {
   return (
     <LayoutComponent>
       <SEO
@@ -27,8 +27,8 @@ function Techport({ newsdata, lanci }) {
               Prossimi Lanci
             </h3>
             <div className="px-4 flex flex-col">
-              {lanci ? (
-                lanci?.results?.map((la) => {
+              {/* {lanci.results ? (
+                lanci.results.map((la) => {
                   return (
                     <figure
                       key={la.launch_service_provider.name}
@@ -83,7 +83,7 @@ function Techport({ newsdata, lanci }) {
                 })
               ) : (
                 <b>{lanci.detail || "errore nel caricamento"}</b>
-              )}
+              )} */}
               <div>
                 <Link href={`/lanci-di-missioni-spaziali`}>
                   Scopri di piu` sui lanci
@@ -102,12 +102,6 @@ export async function getStaticProps() {
     `https://api.nasa.gov/techport/api/projects?updatedSince=2021-01-01&api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
   );
 
-  const resa = await fetch(
-    `http://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.0.0/launch/upcoming?limit=10&offset=10`
-  );
-
-  const lanci = await resa.json();
-
   const news = await res.json();
 
   const newsdata = news;
@@ -117,7 +111,6 @@ export async function getStaticProps() {
   return {
     props: {
       newsdata,
-      lanci,
     },
   };
 }
