@@ -11,7 +11,7 @@ function Home({ datas, lanci }) {
 
   const translateto = JSON.stringify(datas.explanation);
   const translatetwo = JSON.stringify(datas.title);
-  const translate = setCORS("http://mimmofranco.herokuapp.com/");
+  const translate = setCORS("https://mimmofranco.herokuapp.com/");
   const [translated, setTranslated] = useState(null);
   const [titlet, setTitlet] = useState(null);
 

@@ -4,9 +4,9 @@ import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 //da modifare
-const Lanci = ({ lanci }) => {
+const Lanci = ({ lancid }) => {
   const router = useRouter();
-  console.log(lanci);
+  console.log(lancid);
 
   return (
     <LayoutComponent>
@@ -16,8 +16,8 @@ const Lanci = ({ lanci }) => {
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           Lanci
         </h1>
-        {lanci.results ? (
-          lanci.results.map((lol) => {
+        {lancid.results ? (
+          lancid.results.map((lol) => {
             return (
               <article
                 className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
@@ -76,9 +76,9 @@ export async function getServerSideProps(pageContext) {
     `https://ll.thespacedevs.com/2.0.0/launch/?limit=30&offset=30&ordering=name`
   );
 
-  const news = await res.json();
+  const newsq = await res.json();
 
-  const lanci = news;
+  const lancid = newsq;
 
   // Pass data to the page via props
 
