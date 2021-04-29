@@ -4,7 +4,7 @@ import non from "../../content/assets/immagine-non-trovata.png";
 import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
-function Page({ pageNumber, agenciesData }, props) {
+function Page({ agenciesData, pageNumber }) {
   const router = useRouter();
 
   const [type, setType] = useState(1);
@@ -17,11 +17,12 @@ function Page({ pageNumber, agenciesData }, props) {
     "Private",
     "Sconosciute",
   ];
+
   console.log(agenciesData);
 
   return (
     <LayoutComponent>
-      <SEO title="Agenzie Spaziale" />
+      <SEO title="Agenzie Spaziali" />
       <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
         Dataset delle agenzie spaziali
       </h1>
@@ -40,7 +41,8 @@ function Page({ pageNumber, agenciesData }, props) {
         ))}
       </div>
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {type === 0
+        {!agenciesData && "errore nel caricamento"}
+        {agenciesData && type === 0
           ? agenciesData.results
               .filter((agency) => agency.type === "Government")
               .map((data) => {
@@ -83,7 +85,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                       <Link
                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
@@ -136,7 +138,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                       <Link
                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
@@ -189,7 +191,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                       <Link
                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
@@ -242,7 +244,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                       <Link
                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
@@ -297,7 +299,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                           <Link
                             className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                            href={`/agenzie-spaziali/singola/${data.id}`}
+                            href={`/agenzia-spaziale/${data.id}/`}
                             replace
                             target="_blank"
                             rel="noopener noreferrer canonical"
@@ -352,7 +354,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                       <Link
                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzie-spaziali/singola/${data.id}`}
+                        href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
@@ -402,7 +404,7 @@ function Page({ pageNumber, agenciesData }, props) {
 
                     <Link
                       className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                      href={`/agenzie-spaziali/singola/${data.id}`}
+                      href={`/agenzia-spaziale/${data.id}/`}
                       replace
                       target="_blank"
                       rel="noopener noreferrer canonical"

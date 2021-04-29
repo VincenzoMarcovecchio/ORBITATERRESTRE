@@ -87,6 +87,7 @@ export async function getServerSideProps(pageContext) {
   return {
     props: {
       eventi,
+      pageNumber: Number.parseInt(pageNumber),
     },
   };
 }

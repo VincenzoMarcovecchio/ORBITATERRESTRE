@@ -1,12 +1,24 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import Link from "next/link";
 import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
-
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import non from "../../content/assets/immagine-non-trovata.png";
 //da modifare
-const Lanci = ({ lancid }) => {
+const LanciIndex = () => {
   const router = useRouter();
+  const [name, setName] = useState("");
+  const [lancid, setLancid] = useState([]);
+  const [crewed, setCrewed] = useState(false);
   console.log(lancid);
+
+  useEffect(() => {
+    fetch(
+      `https://ll.thespacedevs.com/2.2.0/launch/?mode=list&search=${name}&is_crewed=${crewed}&limit=50&offset=50&include_suborbital=true&related=false`
+    )
+      .then((data) => data.json())
+      .then((res) => setLancid(res));
+  }, [crewed, name]);
 
   return (
     <LayoutComponent>
@@ -14,48 +26,125 @@ const Lanci = ({ lancid }) => {
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-          Lanci
+          Lanci Di Missioni Spaziali
         </h1>
+        <span
+          className={`${
+            crewed
+              ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+              : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+          }`}
+          onClick={() => setCrewed(true)}
+        >
+          Con equipaggio
+        </span>
+        <span
+          className={`${
+            !crewed
+              ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+              : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+          }`}
+          onClick={() => setCrewed(false)}
+        >
+          Senza equipaggio
+        </span>
+        <div className=" y flex flex-col items-start">
+          <Formik
+            enableReinitialize
+            initialValues={{ nationality: "" }}
+            validate={(values) => {
+              const errors = {};
+              if (!values.nationality) {
+                errors.name = "Oops ??";
+              }
+              return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                setSubmitting(false);
+                setName(values.nationality);
+              }, 400);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+              <form
+                className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
+                onSubmit={handleSubmit}
+              >
+                <label htmlFor="nationality">Cerca nel dataset</label>
+                <input
+                  className="input mt-2 p-2 text-black text-lg mb-3"
+                  type="text"
+                  name="nationality"
+                  placeholder="es SpaceX"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                />
+                {errors.nationality &&
+                  touched.nationality &&
+                  errors.nationality}
+                <button
+                  type="submit"
+                  className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  disabled={isSubmitting}
+                >
+                  Cerca
+                </button>
+              </form>
+            )}
+          </Formik>
+        </div>
         {lancid.results ? (
-          lancid.results.map((lol) => {
+          lancid?.results.map((lol) => {
             return (
               <article
                 className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                 key={lol.id}
               >
-                <img
-                  className="sm:w-full md:w-1/3 object-cover"
-                  src={lol.image}
-                  alt={lol.name}
-                />
+                {lol.image ? (
+                  <img
+                    className="sm:w-full md:w-1/3 object-cover"
+                    src={lol.image}
+                    alt={lol.name}
+                  />
+                ) : (
+                  <img
+                    className="sm:w-full md:w-1/3 object-cover"
+                    src={non}
+                    alt={lol.name}
+                  />
+                )}
 
                 <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                  <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                  <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <b>Location:</b>
-                  <Link to={`piattaforme-lancio-pad/${lol.pad.location.id}`}>
-                    {lol.pad.location.name}
-                  </Link>
-                  <b>Parte del programma:</b>
-                  <Link to={`programma/${lol.program.id}`}>
-                    {lol.program.name}
-                  </Link>
-
-                  <p className="mt-2 text-lg mb-3">{lol.description}</p>
-
-                  <span
-                    onClick={() =>
-                      router
-                        .push(`/lanci-di-missioni-spaziali/${lol.slug}`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
-                    className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                    target="_blank"
-                    rel="noopener noreferrer canonical"
-                  >
-                    Leggi di piu
-                  </span>
+                  <div className="flex">
+                    <b>Status:</b>&nbsp;
+                    <p className="">{lol.status.abbrev}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Descrizione:</b>&nbsp;
+                    <p className="">{lol.status.description}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Piattaforma di lancio:</b>&nbsp;
+                    <p className=""> {lol.pad}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Location:</b>&nbsp;
+                    <p>{lol.location}</p>
+                  </div>
                 </div>
               </article>
             );
@@ -68,24 +157,4 @@ const Lanci = ({ lancid }) => {
   );
 };
 
-// This gets called on every request
-export async function getServerSideProps(pageContext) {
-  const pageNumber = pageContext.query.slug;
-
-  const res = await fetch(
-    `https://ll.thespacedevs.com/2.0.0/launch/?limit=30&offset=30&ordering=name`
-  );
-
-  const newsq = await res.json();
-
-  const lancid = newsq;
-
-  // Pass data to the page via props
-
-  return {
-    props: {
-      lanci,
-    },
-  };
-}
-export default Lanci;
+export default LanciIndex;

@@ -242,10 +242,9 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Integrations</p>
+                        <p className="text-base font-medium ">Techport</p>
                         <p className="mt-1 text-sm ">
-                          Connect with third-party tools that you're already
-                          using.
+                          Ufficiali programmi NASA attivi in 2021
                         </p>
                       </div>
                     </a>
@@ -284,7 +283,6 @@ export const NavBar = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100"
                       >
-                        {/* Heroicon name: outline/play */}
                         <svg
                           className="flex-shrink-0 h-6 w-6 "
                           xmlns="http://www.w3.org/2000/svg"
@@ -612,6 +610,36 @@ export const NavBar = () => {
                   >
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
                       {/* Heroicon name: outline/chart-bar */}
+
+                      <svg
+                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="ml-3 text-base font-medium ">
+                        Eventi
+                      </span>
+                    </a>
+                  </Link>
+                  <Link
+                    href="nuove-scoperte-su-marte/3000"
+                    as="nuove-scoperte-su-marte/3000"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                  >
+                    <a
+                      href="#"
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    >
                       <svg
                         className="flex-shrink-0 h-6 w-6 text-indigo-600"
                         xmlns="http://www.w3.org/2000/svg"
@@ -628,34 +656,10 @@ export const NavBar = () => {
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium ">
-                        Eventi
+                        Scoperte Su Marte
                       </span>
                     </a>
                   </Link>
-                  <a
-                    href="#"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    <div>
-                      {/* Heroicon name: outline/cursor-click */}
-                      <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <span className="ml-3 text-base font-medium ">test</span>
-                    </div>
-                  </a>
                   <a
                     href="#"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
@@ -721,31 +725,31 @@ export const NavBar = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
+                <Link
+                  href="/piattaforme-lancio-pad/10"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Pricing
-                </a>
-                <a
+                  Piattaforme
+                </Link>
+                <Link
                   className="text-base font-medium  hover:text-gray-700"
                   href={"/news-spaziali-internazionali"}
                   as={`/news-spaziali-internazionali`}
                 >
-                  News
-                </a>
-                <a
-                  href="#"
+                  News Internazionali
+                </Link>
+                <Link
+                  href="/prime-fasi-riutilizzabili"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Enterprise
-                </a>
-                <a
-                  href="#"
+                  Prime Fasi Riutilizzabili
+                </Link>
+                <Link
+                  href="/blog"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Blog
-                </a>
+                </Link>
                 <a
                   href="#"
                   className="text-base font-medium  hover:text-gray-700"

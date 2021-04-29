@@ -83,33 +83,32 @@ function Home({ datas, lanci }) {
                   lanci.results?.map((la) => {
                     return (
                       <figure
-                        key={la.launch_service_provider.name}
-                        className=" relative w-full shadow-lg  mb-8 md:max-w-md"
+                        className="flex mb-8 flex-col justify-between w-72 sm:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
+                        style={{
+                          backgroundImage: `url(${la.image})`,
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                        key={la.id}
                       >
-                        <Countdown
-                          timeTillDate={la.window_end}
-                          timeFormat={"YYYY MM DD, h:mm a"}
-                        />
-                        {la.image ? (
-                          <img
-                            className=" max-h-35 w-full"
-                            src={la.image}
-                            alt={la.name}
-                          />
-                        ) : (
-                          <img
-                            className=" max-h-35 w-full"
-                            src={non}
-                            alt={la.name}
-                          />
-                        )}
+                        <div className="flex justify-between items-center ml-4 pr-8">
+                          <div className="bg-indigo-500 bg-opacity-95 text-grey-darker bg-opacity-95 shadow px-2 py-1 flex items-center font-bold text-xs rounded">
+                            <Countdown
+                              timeTillDate={la.window_end}
+                              timeFormat={"YYYY MM DD, h:mm a"}
+                            />
+                          </div>
+                          <small className="bg-white bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-red-400 ">
+                            {la.mission?.type || "non specificato"}
+                          </small>
+                        </div>
 
-                        <figcaption className="z-20 p-2">
-                          <div className="flex">
+                        <figcaption className="bg-white bg-opacity-75  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
+                          <div className="flex ">
                             <b>Agenzia:&nbsp;</b>
                             <Link
-                              className="z-20"
-                              href={`/agenzie-spaziali/singola/${la.launch_service_provider.id}`}
+                              className=" z-20"
+                              href={`/agenzia-spaziale/${la.launch_service_provider.id}`}
                             >
                               <a>{la.launch_service_provider.name}</a>
                             </Link>
@@ -117,15 +116,18 @@ function Home({ datas, lanci }) {
                           <div className="flex">
                             <b>Dove:&nbsp;</b>
                             <Link
-                              className="z-20"
-                              href={`/piattaforme-lancio-pad/${la.pad.id}`}
+                              className="truncate text-gray-500 text-sm"
+                              href={`/piattaforma-lancio-pad/${la.pad.id}`}
                             >
                               <a>{la.pad.name}</a>
                             </Link>
                           </div>
                           <div className="flex">
                             <b>Nome Missione:&nbsp;</b>
-                            <Link className="z-20" href={`/#`}>
+                            <Link
+                              className="truncate text-gray-500 text-sm"
+                              href={`/#`}
+                            >
                               <a>{la.mission?.name}</a>
                             </Link>
                           </div>
@@ -134,7 +136,7 @@ function Home({ datas, lanci }) {
                     );
                   })
                 ) : (
-                  <b>{lanci.detail || "errore nel caricamento"}</b>
+                  <b>{lanci.detail || "caricamento supersonico in corso..."}</b>
                 )}
                 <div>
                   <Link

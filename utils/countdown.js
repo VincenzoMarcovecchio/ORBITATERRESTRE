@@ -34,7 +34,7 @@ export class Countdown extends React.Component {
     const { days, hours, minutes, seconds } = this.state;
 
     return (
-      <div className="absolute backdrop-filter  backdrop-opacity-80 max-h-11  -top-0 inset-1 ">
+      <div className="">
         <div className="countdown-wrapper">
           <div className="countdown-item">
             {days}&nbsp;

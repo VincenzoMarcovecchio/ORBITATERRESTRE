@@ -8,6 +8,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 function Pagina() {
   const defaultEndpoint =
     "https://ll.thespacedevs.com/2.1.0/astronaut/?limit=10&offset=10";
+
   const [defaultResults, setDefaultResults] = useState([]);
   const astronauti = ["All", "American", "Russian", "European", "Others"];
   const [name, setName] = useState("");
