@@ -5,14 +5,13 @@ import fasi from "../../content/assets/fasi-riutilizzabili.jpg";
 import stazione from "../../content/assets/stazione-spaziale.jpg";
 export function QuickLinks() {
   return (
-    <div className="grid place-items-center   p-5">
+    <div className="grid place-items-center mt-4">
       <div>
         <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {""}
-          <div className="bg-gray-900 h-80  shadow-lg rounded p-3">
+          <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
             <div className="group relative">
               <img
-                className="w-full object-cover h-40  md:w-72 block rounded"
+                className="w-full object-cover h-full md:h-40  md:w-72 block rounded"
                 src={equipaggio}
                 alt="lanci previsti di equipaggio"
               />
@@ -33,10 +32,10 @@ export function QuickLinks() {
               <p class="text-gray-400">I lanci previsti di equipaggio e non</p>
             </div>
           </div>
-          <div className="bg-gray-900 h-80  shadow-lg rounded p-3">
+          <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
             <div className="group relative">
               <img
-                className="w-full h-full  object-cover md:w-72  block rounded"
+                className="w-full h-full md:h-40  object-cover md:w-72  block rounded"
                 src={fasi}
                 alt="fasi riutilizzabili"
               />
@@ -51,10 +50,10 @@ export function QuickLinks() {
               <p class="text-gray-400">I lanciatori in grado di riatterrare</p>
             </div>
           </div>
-          <div className="bg-gray-900  h-80 shadow-lg rounded p-3">
+          <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
             <div className="group relative">
               <img
-                className="w-full h-full object-cover md:w-72 h-7 block rounded"
+                className="w-full h-full md:h-40  object-cover md:w-72  block rounded"
                 src={stazione}
                 height="400"
                 width="400"
@@ -71,10 +70,6 @@ export function QuickLinks() {
               <p class="text-gray-400">La storia delle stazioni spaziali</p>
             </div>
           </div>
-
-          {/* <Link href="#">
-        <div className="flex-auto">Fasi riutilizzabili</div>
-      </Link> */}
         </section>
       </div>
     </div>

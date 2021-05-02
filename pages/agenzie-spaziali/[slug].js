@@ -26,7 +26,7 @@ function Page({ agenciesData, pageNumber }) {
       <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
         Dataset delle agenzie spaziali
       </h1>
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex sm:flex-col md:flex-row w-full items-start">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex flex-wrap sm:flex-col md:flex-row w-full items-start">
         {set.map((se, index) => (
           <span
             className={`${

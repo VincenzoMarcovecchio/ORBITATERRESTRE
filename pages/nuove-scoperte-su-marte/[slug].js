@@ -8,7 +8,10 @@ function Marte({ curiosity }) {
   const router = useRouter();
   return (
     <LayoutComponent>
-      <SEO title="Gli occhi di Marte " />
+      <SEO
+        title="Gli occhi di Marte "
+        description="Telecamere installate su marte"
+      />
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <iframe
           frameBorder="0"
@@ -41,7 +44,7 @@ function Marte({ curiosity }) {
           name="sol"
           type="range"
           min="1000"
-          max="3020"
+          max="4500"
         />
 
         <datalist id="tickmarks">

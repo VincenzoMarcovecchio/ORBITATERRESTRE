@@ -15,17 +15,21 @@ function Slug({ curiosity }) {
           {curiosity.results[0]?.name}
         </h1>
         <img
+          className="mb-8"
           src={curiosity.results[0]?.feature_image}
           alt={curiosity.results[0]?.name}
         />
-        <h2>
+        <h2 className="mb-8">
+          <b>Descrizione:</b>&nbsp;{curiosity.results[0]?.description}
+        </h2>
+        <h2 className="mb-8">
           <b>Un evento di tipo:</b>&nbsp;{curiosity.results[0]?.type.name}
         </h2>
-        <h2>
+        <h2 className="mb-8">
           <strong>Location:</strong>&nbsp;{curiosity.results[0]?.location}
         </h2>
-        {curiosity.results[0]?.video_url.length > 1 ? (
-          <pre> {curiosity.results[0]?.video_url}</pre>
+        {curiosity.results.video_url ? (
+          <pre className="mb-8"> {curiosity.results[0]?.video_url}</pre>
         ) : (
           "il video non si e`caricato oppure non c'e`"
         )}

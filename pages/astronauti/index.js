@@ -15,14 +15,16 @@ function Pagina() {
   const [nationality, setNationality] = useState("All");
 
   useEffect(() => {
-    fetch(`https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}`)
+    fetch(
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&limit=50&offset=50`
+    )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
   }, [name]);
 
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?nationality=${nationality}`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?nationality=${nationality}&limit=50&offset=50)`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -114,6 +116,7 @@ function Pagina() {
           {defaultResults
             ? defaultResults.map((result) => {
                 const { name, profile_image, nationality, bio } = result;
+                console.log(result);
                 return (
                   <li key={name}>
                     <figure className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden key={name}">
@@ -128,15 +131,28 @@ function Pagina() {
                         <h3 className="text-3xl font-bold text-yellow-600 font-display">
                           {name}
                         </h3>
-                        <p className="mt-2 text-lg mb-3">{nationality}</p>
-                        <p className="mt-2 text-lg mb-3">{bio}</p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u> Nazionalita`</u>:&nbsp;{nationality}
+                        </p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u>Nato il</u>:&nbsp;{result.date_of_birth}
+                        </p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u>Descrizione:</u>&nbsp;{bio}
+                        </p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u>Primo Volo:&nbsp;</u>
+                          {result.first_flight}
+                        </p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u>Instagram:&nbsp;</u>
+                          {result.instagram}
+                        </p>
+                        <p className="mt-2 text-lg mb-3">
+                          <u>Twitter:&nbsp;</u>
+                          {result.twitter}
+                        </p>
                       </figcaption>
-                      <a
-                        href="#"
-                        className="px-3 mt-4  py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                      >
-                        Scopri di piu
-                      </a>
                     </figure>
                   </li>
                 );

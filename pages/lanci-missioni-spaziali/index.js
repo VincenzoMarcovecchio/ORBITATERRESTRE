@@ -4,7 +4,7 @@ import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import non from "../../content/assets/immagine-non-trovata.png";
-//da modifare
+
 const LanciIndex = () => {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -145,6 +145,9 @@ const LanciIndex = () => {
                     <b>Location:</b>&nbsp;
                     <p>{lol.location}</p>
                   </div>
+                  <Link href={`/lancio-missione-spaziale/${lol.id}/`}>
+                    Scopri di piu
+                  </Link>
                 </div>
               </article>
             );

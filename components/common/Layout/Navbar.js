@@ -24,14 +24,17 @@ export const NavBar = () => {
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href={"/"} as={`/`}>
-              <img
-                className="cursor-pointer h-10 w-auto md:h-14"
-                src={`/cosmos.png`}
-                alt="astronauta nello spazio"
-              />
-              {/* <span className="font-xl flex flex-col cursor-pointer uppercase font-bold">
-                <p></p>orbita terrestre
-              </span> */}
+              <div className="flex">
+                <img
+                  className="cursor-pointer h-10 w-auto md:h-14"
+                  src={`/cosmos.png`}
+                  alt="astronauta nello spazio"
+                />
+                <span className="font-xl ml-4 mt-2 flex flex-col cursor-pointer uppercase font-bold">
+                  <p className="font-xl uppercase font-bold">orbita</p>{" "}
+                  terrestre
+                </span>
+              </div>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -64,7 +67,7 @@ export const NavBar = () => {
               href={"/news-spaziali-internazionali"}
               as={`/news-spaziali-internazionali`}
             >
-              <a href="/news-spaziali-internazionali">News Internazionali</a>
+              News Internazionali
             </Link>
             <div className="relative">
               <button
@@ -215,9 +218,10 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Security</p>
+                        <p className="text-base font-medium ">Cyber Spazio</p>
                         <p className="mt-1 text-sm ">
-                          Your customers' data will be safe and secure.
+                          Dominii e scambi di informazioni attraverso le reti
+                          informatiche e le loro infrastrutture fisiche.
                         </p>
                       </div>
                     </a>
@@ -242,10 +246,14 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Techport</p>
-                        <p className="mt-1 text-sm ">
-                          Ufficiali programmi NASA attivi in 2021
-                        </p>
+                        <Link href="/techport" as="/techport">
+                          <p className="text-base font-medium ">Techport</p>
+                        </Link>
+                        <Link href="/techport" as="/techport">
+                          <p className="mt-1 text-sm ">
+                            Programmi ufficiali NASA attivi in 2021
+                          </p>
+                        </Link>
                       </div>
                     </a>
                     <a
@@ -269,43 +277,42 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Automations</p>
+                        <p className="text-base font-medium ">Telescopi</p>
                         <p className="mt-1 text-sm ">
-                          Build strategic funnels that will drive your customers
-                          to convert
+                          Telescopi usati per l'esplorazioni di esopianeti ed
+                          altro
                         </p>
                       </div>
                     </a>
                   </div>
                   <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                     <div className="flow-root">
-                      <a
-                        href="#"
-                        className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100"
-                      >
-                        <svg
-                          className="flex-shrink-0 h-6 w-6 "
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        <span className="ml-3">Watch Demo</span>
-                      </a>
+                      <Link as="nasa-live" href="/nasa-live">
+                        <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100">
+                          <svg
+                            className="flex-shrink-0 h-6 w-6 "
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span className="ml-3">NASA Live</span>
+                        </a>
+                      </Link>
                     </div>
                     <div className="flow-root">
                       <a
@@ -538,6 +545,86 @@ export const NavBar = () => {
             </div>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {/* <div className="flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 72 72"
+                version="1.1"
+              >
+                <title>Facebook</title>
+                <desc>Created with Sketch.</desc>
+                <defs />
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g
+                    id="Social-Icons---Circle"
+                    transform="translate(-152.000000, -43.000000)"
+                  >
+                    <g
+                      id="Facebook"
+                      transform="translate(152.000000, 43.000000)"
+                    >
+                      <rect
+                        id="Oval"
+                        fill="#4460A0"
+                        x="0"
+                        y="0"
+                        width="72"
+                        height="72"
+                        rx="8"
+                      />
+                      <path
+                        d="M60.4641463,13.4173171 L60.4641463,22.7278049 L54.9382927,22.7421951 C50.6068293,22.7421951 49.7721951,24.8 49.7721951,27.807561 L49.7721951,34.4702439 L60.09,34.4702439 L58.7517073,44.8887805 L49.7721951,44.8887805 L49.7721951,72 L39.0097317,72 L39.0097317,44.8887805 L30,44.8887805 L30,34.4702439 L39.0097317,34.4702439 L39.0097317,26.7858537 C39.0097317,17.8639024 44.4478049,13 52.42,13 C56.2204634,13 59.5,13.2878049 60.4641463,13.4173171 Z"
+                        fill="#FFFFFF"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 72 72"
+                version="1.1"
+              >
+                <title>Twitter</title>
+                <desc>Created with Sketch.</desc>
+                <defs />
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g
+                    id="Social-Icons---Rounded"
+                    transform="translate(-264.000000, -43.000000)"
+                  >
+                    <g
+                      id="Twitter"
+                      transform="translate(264.000000, 43.000000)"
+                    >
+                      <path
+                        d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                        id="Rounded"
+                        fill="#4DC8F1"
+                      />
+                      <path
+                        d="M55.0865399,25.7148754 C55.7080938,39.5659738 45.3799204,55.0092879 27.0953855,55.0092879 C21.5344243,55.0092879 16.3579537,53.3781513 12,50.5841073 C17.2236474,51.1997641 22.4390388,49.7514374 26.5787999,46.505676 C22.2703818,46.4266549 18.6330532,43.5795371 17.3805101,39.6674038 C18.9231903,39.9622586 20.4411028,39.876161 21.8269202,39.4999263 C17.090373,38.5469556 13.8222026,34.2809966 13.9283503,29.7190034 C15.2563762,30.4561404 16.7754681,30.8996019 18.3900929,30.9491375 C14.0038331,28.0194604 12.7619048,22.2285125 15.3424738,17.8021524 C20.1981424,23.7605779 27.4539289,27.6809671 35.6390977,28.0925844 C34.2037447,21.9312988 38.8766033,16 45.232493,16 C48.0654578,16 50.6247973,17.1947516 52.4198732,19.1089488 C54.6631284,18.6678461 56.7707504,17.8481498 58.6731535,16.7194457 C57.9383754,19.019313 56.3768244,20.9500221 54.3435058,22.1671827 C56.3355447,21.9301194 58.2332301,21.4005602 60,20.6174259 C58.68023,22.592953 57.0101725,24.3266991 55.0865399,25.7148754"
+                        fill="#FFFFFF"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div> */}
             <Header />
           </div>
         </div>
@@ -763,10 +850,10 @@ export const NavBar = () => {
                   Guides
                 </a>
                 <a
-                  href="#"
+                  href="/nasa-live"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Security
+                  NASA Live
                 </a>
                 <a
                   href="#"

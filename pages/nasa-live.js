@@ -1,11 +1,11 @@
 import { React, useState, useEffect } from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 import non from "../content/assets/immagine-non-trovata.png";
 
-function News({ newsdata }) {
+function NasaLive() {
   const url =
     "https://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.1.0/event/upcoming";
 
@@ -13,43 +13,25 @@ function News({ newsdata }) {
 
   return (
     <LayoutComponent>
-      <SEO title="News Astronautiche Internazionali " />
+      <SEO
+        title="Nasa Live "
+        description="La TV della NASA trasmette una varietà di programmi educativi e di pubbliche relazioni regolarmente programmati e preregistrati 24 ore al giorno sui suoi vari canali. La rete fornisce anche una serie di programmi in diretta, come la copertura di missioni, eventi (passeggiate nello spazio, interviste ai media, trasmissioni educative), conferenze stampa e lanci di razzi."
+      />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
-        <section className="w-full md:max-w-screen-lg">
-          {newsdata ? (
-            newsdata.map((lol) => {
-              return (
-                <article
-                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
-                  key={lol.id}
-                >
-                  <img
-                    className="sm:w-full md:w-1/3 object-cover"
-                    src={lol.imageUrl}
-                    alt={lol.titile}
-                  />
-
-                  <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                    <h1 className="text-3xl font-bold text-yellow-600 font-display">
-                      {lol.title}
-                    </h1>
-                    <p className="mt-2 text-lg mb-3">{lol.summary}</p>
-
-                    <a
-                      className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                      href={lol.url}
-                      target="_blank"
-                      rel="noopener noreferrer canonical"
-                    >
-                      Vai al sito
-                    </a>
-                  </div>
-                </article>
-              );
-            })
-          ) : (
-            <p>caricamento supersonico in corso...</p>
-          )}
+        <section className="w-full mt-8 md:max-w-screen-lg">
+          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            La TV della NASA
+          </h2>
+          <iframe
+            style={{ width: "100%" }}
+            width="760"
+            height="515"
+            src="https://www.youtube.com/embed/21X5lGlDOfg"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </section>
         <section className="flex ">
           <aside>
@@ -114,19 +96,4 @@ function News({ newsdata }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://spaceflightnewsapi.net/api/v2/articles");
-
-  const news = await res.json();
-
-  const newsdata = news;
-
-  // Pass data to the page via props
-
-  return {
-    props: {
-      newsdata,
-    },
-  };
-}
-export default News;
+export default NasaLive;
