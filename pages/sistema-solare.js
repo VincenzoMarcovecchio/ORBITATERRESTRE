@@ -6,8 +6,8 @@ export default function Errores() {
   return (
     <LayoutComponent>
       <SEO
-        title="Esplorazione Esopianeti"
-        description="In media, si stima che esista almeno un pianeta per ogni stella della galassia. Ciò significa che c'è qualcosa nell'ordine di miliardi di pianeti solo nella nostra galassia, molti nella gamma di dimensioni della Terra. Questi pianeti al di fuori del nostro sistema solare sono noti come pianeti extrasolari."
+        title="Il tuo vicinato galattico"
+        description="Questa vista simulata del nostro sistema solare funziona su dati reali. Le posizioni dei pianeti, delle lune e dei veicoli spaziali vengono mostrate dove si trovano in questo momento. Questo orrery digitale è una versione leggera e ottimizzata per i dispositivi mobili del software Eyes della NASA."
       />
 
       <div className="bg-gradient-to-r from-purple-300 to-blue-200">
@@ -18,8 +18,8 @@ export default function Errores() {
           className="w-full min-h-screen flex mb-4"
           width="420"
           height="515"
-          src="https://exoplanets.nasa.gov/eyes-on-exoplanets/"
-          alt="NASA esplorazione esopianeti"
+          src="https://eyes.nasa.gov/apps/orrery/#/home"
+          alt="Il sistema solare"
         ></iframe>
       </div>
     </LayoutComponent>

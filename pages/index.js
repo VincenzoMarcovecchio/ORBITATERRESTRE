@@ -12,15 +12,6 @@ function Home({ datas }) {
   const [titlet, setTitlet] = useState(null);
 
   useEffect(() => {
-    translate(translateto, { to: "it" })
-      .then((res) => {
-        setTranslated(JSON.parse(res.text));
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-  useEffect(() => {
     translate(translatetwo, { to: "it" })
       .then((res) => {
         setTitlet(JSON.parse(res.text));
@@ -29,6 +20,17 @@ function Home({ datas }) {
         console.error(err);
       });
   }, []);
+
+  useEffect(() => {
+    translate(translateto, { to: "it" })
+      .then((res) => {
+        setTranslated(JSON.parse(res.text));
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
   return (
     <React.Fragment>
       <LayoutComponent>

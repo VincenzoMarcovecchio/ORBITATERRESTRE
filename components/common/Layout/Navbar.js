@@ -826,7 +826,7 @@ export const NavBar = () => {
                   News Internazionali
                 </Link>
                 <Link
-                  href="/prime-fasi-riutilizzabili"
+                  href="/prime-fasi-riutilizzabili/10"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Prime Fasi Riutilizzabili
@@ -856,10 +856,10 @@ export const NavBar = () => {
                   NASA Live
                 </a>
                 <a
-                  href="#"
+                  href="progetti-di-ricerca-esopianeti"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Events
+                  Esopianeti
                 </a>
               </div>
               <div>

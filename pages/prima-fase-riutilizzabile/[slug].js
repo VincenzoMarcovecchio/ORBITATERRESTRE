@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
-function PrimeFasi({ sta }) {
+function PrimeFasi({ sta, pageNumber }) {
   console.log(sta);
   const router = useRouter();
 
@@ -56,14 +56,55 @@ function PrimeFasi({ sta }) {
             </article>
           );
         })}
+        <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex  items-center">
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              if (pageNumber > 10) {
+                // As of the current version of Next.js the default behavior for router.push
+                // will leave the scroll where it is, so we have to manually call scrollTo.
+                // This however is being worked on and is fixed in canary.
+                // Show this in tutorial vid:
+                // https://github.com/vercel/next.js/issues/3249
+                router
+                  .push(`/prime-fasi-riutilizzabili/${pageNumber - 10}`)
+                  .then(() => window.scrollTo(0, 0));
+              }
+            }}
+          >
+            Pagina Precedente&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+
+          <div>#{pageNumber}</div>
+
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              if (pageNumber < 200) {
+                // As of the current version of Next.js the default behavior for router.push
+                // will leave the scroll where it is, so we have to manually call scrollTo.
+                // This however is being worked on and is fixed in canary.
+                // Show this in tutorial vid:
+                // https://github.com/vercel/next.js/issues/3249
+                router
+                  .push(`/prime-fasi-riutilizzabili/${pageNumber + 10}`)
+                  .then(() => window.scrollTo(0, 0));
+              }
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;Pagina Successiva
+          </div>
+        </div>
       </div>
     </LayoutComponent>
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(pageContext) {
+  const pageNumber = Number(pageContext.query.slug);
+
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launcher/?limit=10&offset=10`
+    `https://ll.thespacedevs.com/2.2.0/launcher/?limit=100&offset=${pageNumber}`
   );
 
   const data = await apiResponse.json();
@@ -71,7 +112,9 @@ export async function getServerSideProps() {
   return {
     props: {
       sta: data,
+      pageNumber,
     },
   };
 }
+
 export default PrimeFasi;

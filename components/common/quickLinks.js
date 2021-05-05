@@ -40,9 +40,15 @@ export function QuickLinks() {
                 alt="fasi riutilizzabili"
               />
               <div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
-                <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
-                  Scopri di piu'
-                </button>
+                <Link
+                  href="/prime-fasi-riutilizzabili/10"
+                  as="/prime-fasi-riutilizzabili/10"
+                  className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition"
+                >
+                  <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
+                    Scopri di piu'
+                  </button>
+                </Link>
               </div>
             </div>
             <div class="pt-4">
