@@ -3,7 +3,6 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function PrimeFasi({ sta, pageNumber }) {
-  console.log(sta);
   const router = useRouter();
 
   return (
@@ -35,15 +34,19 @@ function PrimeFasi({ sta, pageNumber }) {
                 <h1 className="text-3xl font-bold text-yellow-600 font-display">
                   {lol.details}
                 </h1>
-                <b>Voli:</b>
-                <p>{lol.flights}</p>
-                <b>Status:</b>
-                <p>{lol.status}</p>
-
+                <div className="flex">
+                  <b>Voli: &nbsp;</b>
+                  <p>{lol.flights}</p>
+                </div>
+                <div className="flex">
+                  <b>Status: &nbsp; </b>
+                  <p>{lol.status}</p>
+                </div>
                 <span
+                  className="mt-4"
                   onClick={() =>
                     router
-                      .push(`/prime-fasi-riutilizzabili/${lol.id}`)
+                      .push(`/prima-fase-riutilizzabile/${lol.id}`)
                       .then(() => window.scrollTo(0, 0))
                   }
                   className="px-3 mt-4 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"

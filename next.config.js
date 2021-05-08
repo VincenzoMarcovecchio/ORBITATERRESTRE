@@ -2,15 +2,25 @@ const withPlugins = require("next-compose-plugins");
 
 const optimizedImages = require("next-optimized-images");
 
-module.exports = withPlugins([
-  optimizedImages,
-  {
-    domains: ["mars.nasa.gov", "www.nasaspaceflight.com"],
-  },
-]);
-// next.config.js
-// module.exports = {
-//   images: {
-//     domains: ["localhost:3000"],
-//   },
-// };
+// const nextConfig = {
+
+//     webpack: (config, { isServer }) => {
+//       if (isServer) {
+//         require("./scripts/sitemap-common");
+//       }
+
+//       return config;
+//     },
+
+// }
+module.exports = withPlugins(
+
+  [
+    optimizedImages,
+    {
+      domains: ["mars.nasa.gov", "www.nasaspaceflight.com"],
+    },
+  ],
+
+
+);
