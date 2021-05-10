@@ -5,6 +5,7 @@ import { LayoutComponent, SEO } from "@components/common";
 import { RenderNews } from "@components/common/renderNews";
 import { Countdown } from "../utils/countdown";
 import non from "../content/assets/immagine-non-trovata.png";
+import { Lanci } from "../components/common/Lanci";
 
 function Techport({ newsdata }) {
   return (
@@ -26,70 +27,7 @@ function Techport({ newsdata }) {
             <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               Prossimi Lanci
             </h3>
-            <div className="px-4 flex flex-col">
-              {/* {lanci.results ? (
-                lanci.results.map((la) => {
-                  return (
-                    <figure
-                      key={la.launch_service_provider.name}
-                      className=" relative w-full shadow-lg  mb-8 md:max-w-md"
-                    >
-                      <Countdown
-                        timeTillDate={la.window_end}
-                        timeFormat={"YYYY MM DD, h:mm a"}
-                      />
-                      {la.image ? (
-                        <img
-                          className=" max-h-35 w-full"
-                          src={la.image}
-                          alt={la.name}
-                        />
-                      ) : (
-                        <img
-                          className=" max-h-35 w-full"
-                          src={non}
-                          alt={la.name}
-                        />
-                      )}
-
-                      <figcaption className="z-20 p-2">
-                        <div className="flex">
-                          <b>Agenzia Spaziale:&nbsp;</b>
-                          <Link
-                            className="z-20"
-                            href={`/agenzie-spaziali/singola/${la.launch_service_provider.id}`}
-                          >
-                            {la.launch_service_provider.name}
-                          </Link>
-                        </div>
-                        <div className="flex">
-                          <b>Dove:&nbsp;</b>
-                          <Link
-                            className="z-20"
-                            href={`/piattaforme-lancio-pad/${la.pad.id}`}
-                          >
-                            {la.pad.name}
-                          </Link>
-                        </div>
-                        <div className="flex">
-                          <b>Nome Missione:&nbsp;</b>
-                          <Link className="z-20" href={`/#`}>
-                            {la.mission?.name}
-                          </Link>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  );
-                })
-              ) : (
-                <b>{lanci.detail || "errore nel caricamento"}</b>
-              )} */}
-              <div>
-                <Link href={`/lanci-di-missioni-spaziali`}>
-                  Scopri di piu` sui lanci
-                </Link>
-              </div>
-            </div>
+            <Lanci />
           </aside>
         </section>
       </div>
@@ -112,6 +50,7 @@ export async function getStaticProps() {
     props: {
       newsdata,
     },
+    revalidate: 4000,
   };
 }
 

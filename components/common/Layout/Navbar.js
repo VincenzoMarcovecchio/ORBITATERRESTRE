@@ -24,13 +24,13 @@ export const NavBar = () => {
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href={"/"} as={`/`}>
-              <div className="flex">
+              <div className="flex ">
                 <img
                   className="cursor-pointer h-10 w-auto md:h-14"
                   src={`/cosmos.png`}
                   alt="astronauta nello spazio"
                 />
-                <span className="font-xl ml-4 flex flex-col cursor-pointer uppercase font-bold">
+                <span className="font-xl md:mt-2 ml-4 flex flex-col cursor-pointer uppercase font-bold">
                   <p className="font-xl uppercase font-bold">orbita</p>{" "}
                   terrestre
                 </span>
@@ -277,11 +277,21 @@ export const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Telescopi</p>
-                        <p className="mt-1 text-sm ">
-                          Telescopi usati per l'esplorazioni di esopianeti ed
-                          altro
-                        </p>
+                        <Link
+                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                        >
+                          <p className="text-base font-medium ">Telescopi</p>
+                        </Link>
+                        <Link
+                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                        >
+                          <p className="mt-1 text-sm ">
+                            Telescopi usati per l'esplorazioni di esopianeti ed
+                            altro
+                          </p>
+                        </Link>
                       </div>
                     </a>
                   </div>

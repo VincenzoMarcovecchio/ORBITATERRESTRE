@@ -15,7 +15,7 @@ function News({ newsdata }) {
     <LayoutComponent>
       <SEO title="News Astronautiche Internazionali " />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
-        <section className="w-full md:max-w-screen-lg">
+        <section className="w-full ">
           {newsdata ? (
             newsdata.map((lol) => {
               return (

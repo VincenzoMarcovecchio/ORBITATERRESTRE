@@ -63,9 +63,7 @@ function Asteroidi({ near }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(pageContext) {
-  const pageNumber = pageContext.query.slug;
-
+export async function getStaticProps() {
   const res = await fetch(
     `https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-01-01&end_date=2021-01-08&api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
   );
@@ -80,6 +78,7 @@ export async function getServerSideProps(pageContext) {
     props: {
       near,
     },
+    revalidate: 4000,
   };
 }
 export default Asteroidi;

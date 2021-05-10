@@ -85,8 +85,7 @@ function Home({ datas }) {
   );
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const resat = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`,
     {
@@ -102,6 +101,7 @@ export async function getServerSideProps() {
     props: {
       datas,
     },
+    revalidate: 46400,
   };
 }
 
