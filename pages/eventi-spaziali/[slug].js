@@ -19,13 +19,13 @@ function Slug({ curiosity }) {
           src={curiosity.results[0]?.feature_image}
           alt={curiosity.results[0]?.name}
         />
-        <h2 className="mb-8">
+        <h2 className="mb-6">
           <b>Descrizione:</b>&nbsp;{curiosity.results[0]?.description}
         </h2>
-        <h2 className="mb-8">
+        <h2 className="mb-6">
           <b>Un evento di tipo:</b>&nbsp;{curiosity.results[0]?.type.name}
         </h2>
-        <h2 className="mb-8">
+        <h2 className="mb-6">
           <strong>Location:</strong>&nbsp;{curiosity.results[0]?.location}
         </h2>
         {curiosity.results.video_url ? (

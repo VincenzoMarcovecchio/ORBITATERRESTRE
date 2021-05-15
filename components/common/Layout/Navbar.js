@@ -729,8 +729,9 @@ export const NavBar = () => {
                     </a>
                   </Link>
                   <Link
-                    href="nuove-scoperte-su-marte/3000"
-                    as="nuove-scoperte-su-marte/3000"
+                    replace
+                    href="/nuove-scoperte-su-marte/3000/"
+                    as="/nuove-scoperte-su-marte/3000"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     <a
@@ -777,7 +778,7 @@ export const NavBar = () => {
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>{" "}
-                    <Link href="/astronauti" as="/astronauti">
+                    <Link replace href="/astronauti/" as="/astronauti/">
                       <span className="ml-3 text-base font-medium ">
                         Astronauti
                       </span>
@@ -823,26 +824,30 @@ export const NavBar = () => {
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
-                  href="/piattaforme-lancio-pad/10"
+                  replace
+                  href="/piattaforme-lancio-pad/10/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Piattaforme
                 </Link>
                 <Link
+                  replace
                   className="text-base font-medium  hover:text-gray-700"
-                  href={"/news-spaziali-internazionali"}
-                  as={`/news-spaziali-internazionali`}
+                  href={"/news-spaziali-internazionali/"}
+                  as={`/news-spaziali-internazionali/`}
                 >
                   News Internazionali
                 </Link>
                 <Link
-                  href="/prime-fasi-riutilizzabili/10"
+                  replace
+                  href="/prime-fasi-riutilizzabili/10/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Prime Fasi Riutilizzabili
                 </Link>
                 <Link
-                  href="/blog"
+                  replace
+                  href="/blog/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Blog
@@ -859,18 +864,20 @@ export const NavBar = () => {
                 >
                   Guides
                 </a>
-                <a
-                  href="/nasa-live"
+                <Link
+                  replace
+                  href="/nasa-live/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   NASA Live
-                </a>
-                <a
-                  href="progetti-di-ricerca-esopianeti"
+                </Link>
+                <Link
+                  replace
+                  href="/progetti-di-ricerca-esopianeti/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Esopianeti
-                </a>
+                </Link>
               </div>
               <div>
                 <a
@@ -887,6 +894,7 @@ export const NavBar = () => {
                 </p>
               </div>
             </div>
+            <Header />
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ function Eventi({ eventi }) {
           Prossimi eventi
         </h1>
 
-        <div className=" max-w-7xl mx-auto  px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+        <div className=" max-w-7xl mx-auto  md:px-4 display flex flex-col items-start">
           {eventi.results?.map((lol) => {
             return (
               <article
@@ -29,14 +29,23 @@ function Eventi({ eventi }) {
                 />
 
                 <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                  <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                  <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
                     {lol.name}
                   </h1>
-                  <b>Location:</b>
-                  <p>{lol.location}</p>
-                  <b>Parte del programma:</b>
-                  <p>{lol.program[0]?.name}</p>
-                  <p className="mt-2 text-lg mb-3">{lol.description}</p>
+                  <div className="flex">
+                    <b>Location:</b>
+                    <p>{lol.location}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Parte del programma:</b>
+                    <p>{lol.program[0]?.name}</p>
+                  </div>
+                  <div className="flex">
+                    <p className="mt-2 text-lg mb-3">
+                      <strong>Descrizione:&nbsp;</strong>
+                      {lol.description}
+                    </p>
+                  </div>
                   <span
                     onClick={() =>
                       router
