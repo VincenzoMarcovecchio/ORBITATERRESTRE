@@ -18,11 +18,12 @@ function Page({ agenciesData, pageNumber }) {
     "Sconosciute",
   ];
 
-  console.log(agenciesData);
-
   return (
     <LayoutComponent>
-      <SEO title="Agenzie Spaziali" />
+      <SEO
+        title="Agenzie Spaziali"
+        description="Una lista di agenzie che si occupano di missioni nello spazio"
+      />
       <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
         Dataset delle agenzie spaziali
       </h1>

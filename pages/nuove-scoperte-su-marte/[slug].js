@@ -12,18 +12,7 @@ function Marte({ curiosity }) {
         title="Gli occhi di Marte "
         description="Telecamere installate su marte"
       />
-      <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        <iframe
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullscreen
-          className="w-full flex mb-4"
-          width="420"
-          height="515"
-          src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
-          alt="punto di atterraggio di curiosity"
-        ></iframe>
-      </div>
+
       <section className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col w-full items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           Gli occhi di Curiosity
@@ -105,6 +94,18 @@ function Marte({ curiosity }) {
             })
           : "niente qui"}
       </section>
+      <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+        <iframe
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullscreen
+          className="w-full flex mb-4"
+          width="420"
+          height="515"
+          src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
+          alt="punto di atterraggio di curiosity"
+        ></iframe>
+      </div>
     </LayoutComponent>
   );
 }

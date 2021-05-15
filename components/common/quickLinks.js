@@ -7,7 +7,7 @@ export function QuickLinks(props) {
   return (
     <div className="grid place-items-center mt-4">
       <div>
-        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
             <div className="group relative">
               <img
@@ -27,9 +27,11 @@ export function QuickLinks(props) {
                 </Link>
               </div>
             </div>
-            <div class="pt-4">
-              <h3 class="text-white text-lg">Lanci </h3>
-              <p class="text-gray-400">I lanci previsti di equipaggio e non</p>
+            <div className="pt-4">
+              <h3 className="text-white text-lg">Lanci </h3>
+              <p className="text-gray-400">
+                I lanci previsti di equipaggio e non
+              </p>
             </div>
           </div>
           <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
@@ -51,9 +53,11 @@ export function QuickLinks(props) {
                 </Link>
               </div>
             </div>
-            <div class="pt-4">
-              <h3 class="text-white text-lg">Fasi riutilizzabili </h3>
-              <p class="text-gray-400">I lanciatori in grado di riatterrare</p>
+            <div className="pt-4">
+              <h3 className="text-white text-lg">Fasi riutilizzabili </h3>
+              <p className="text-gray-400">
+                I lanciatori in grado di riatterrare
+              </p>
             </div>
           </div>
           <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
@@ -71,9 +75,11 @@ export function QuickLinks(props) {
                 </button>
               </div>
             </div>
-            <div class="pt-4">
-              <h3 class="text-white text-lg">Stazioni Spaziali </h3>
-              <p class="text-gray-400">La storia delle stazioni spaziali</p>
+            <div className="pt-4">
+              <h3 className="text-white text-lg">Stazioni Spaziali </h3>
+              <p className="text-gray-400">
+                Stazioni spaziali al momento in grado di ospitare equipaggio
+              </p>
             </div>
           </div>
         </section>

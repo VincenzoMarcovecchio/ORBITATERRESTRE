@@ -26,7 +26,7 @@ export const NavBar = () => {
             <Link href={"/"} as={`/`}>
               <div className="flex ">
                 <img
-                  className="cursor-pointer h-10 w-auto md:h-14"
+                  className="cursor-pointer h-12 w-auto md:h-14"
                   src={`/cosmos.png`}
                   alt="astronauta nello spazio"
                 />

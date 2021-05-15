@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 

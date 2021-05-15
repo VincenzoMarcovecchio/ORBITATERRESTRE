@@ -50,15 +50,19 @@ function Home({ datas }) {
                 ></iframe>
               )}
               {datas.media_type !== "video" && (
-                <img className="mb-4 flex " src={datas.url} alt={datas.title} />
+                <img
+                  className="mb-4 h-full  object-cover flex "
+                  src={datas.url}
+                  alt={datas.title}
+                />
               )}
               <figcaption>
                 <p className="mb-2">
-                  <b>Titolo:&nbsp;</b>
+                  <strong>Titolo:&nbsp;</strong>
                   {titlet || datas.title}
                 </p>
                 <p className="mb-2 pr-4">
-                  <b>Descrizione:&nbsp;</b>
+                  <strong>Descrizione:&nbsp;</strong>
                   {translated || datas.explanation}
                 </p>
                 <p className="mb-2">

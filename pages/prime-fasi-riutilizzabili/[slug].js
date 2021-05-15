@@ -31,14 +31,14 @@ function PrimeFasi({ sta, pageNumber }) {
               />
 
               <div className="sm:w-full md:w-2/3 px-4  py-6">
-                <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
                   {lol.details}
                 </h1>
                 <div className="flex">
                   <b>Voli: &nbsp;</b>
                   <p>{lol.flights}</p>
                 </div>
-                <div className="flex">
+                <div className="flex mb-4">
                   <b>Status: &nbsp; </b>
                   <p>{lol.status}</p>
                 </div>
@@ -49,7 +49,7 @@ function PrimeFasi({ sta, pageNumber }) {
                       .push(`/prima-fase-riutilizzabile/${lol.id}`)
                       .then(() => window.scrollTo(0, 0))
                   }
-                  className="px-3 mt-4 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   target="_blank"
                   rel="noopener noreferrer canonical"
                 >

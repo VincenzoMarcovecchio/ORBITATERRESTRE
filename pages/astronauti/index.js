@@ -32,7 +32,10 @@ function Pagina() {
 
   return (
     <LayoutComponent>
-      <SEO title="Anagrafe Astronauti" />
+      <SEO
+        title="Anagrafe Astronauti"
+        description="Incontra le persone eccezionali che si sono avventurate nello spazio 👨‍🚀"
+      />
       <div className=" max-w-7xl mx-auto px-4  sm:px-6 display flex flex-col items-start">
         <h1 className="text-4xl  font-bold text-yellow-600 font-display mt-8 mx-auto ">
           Astronauti ‎‍🚀
@@ -42,7 +45,7 @@ function Pagina() {
           spazio.👨‍🚀{" "}
         </h2>
 
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
+        <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
           {astronauti.map((li) => {
             return (
               <span
@@ -132,7 +135,8 @@ function Pagina() {
                           {name}
                         </h3>
                         <p className="mt-2 text-lg mb-3">
-                          <u> Nazionalita`</u>:&nbsp;{nationality}
+                          <strong>Nazionalita'</strong>
+                          :&nbsp;{nationality}
                         </p>
                         <p className="mt-2 text-lg mb-3">
                           <u>Nato il</u>:&nbsp;{result.date_of_birth}
@@ -157,7 +161,7 @@ function Pagina() {
                   </li>
                 );
               })
-            : "nope"}
+            : "ci sono stati dei problemi..."}
         </ul>
       </div>
     </LayoutComponent>
