@@ -10,7 +10,7 @@ export function Lanci() {
 
   const { data, error } = useSWR(url, fetcher);
   return (
-    <div className="px-4 flex flex-col">
+    <div className="md:px-4 flex flex-col">
       {data ? (
         data.results?.map((la) => {
           return (
