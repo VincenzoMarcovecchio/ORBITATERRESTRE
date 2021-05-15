@@ -13,7 +13,7 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
         description={frontmatter.description || post.excerpt}
       />
 
-      <article>
+      <article className="px-4  max-w-screen-2xl ">
         <header className="mb-8 mt-8">
           <h1 className="mb-2 text-6xl font-black leading-none font-display">
             {frontmatter.title}
