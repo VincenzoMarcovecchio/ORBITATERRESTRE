@@ -33,11 +33,11 @@ function Eventi({ eventi }) {
                     {lol.name}
                   </h1>
                   <div className="flex">
-                    <b>Location:</b>
+                    <b>Location:&nbsp;</b>
                     <p>{lol.location}</p>
                   </div>
                   <div className="flex">
-                    <b>Parte del programma:</b>
+                    <b>Parte del programma:&nbsp;</b>
                     <p>{lol.program[0]?.name}</p>
                   </div>
                   <div className="flex">
