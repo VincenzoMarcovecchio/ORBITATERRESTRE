@@ -1,13 +1,7 @@
-import { React, useState, useEffect } from "react";
-import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
-import useSWR from "swr";
-import { fetcher } from "../../utils/fetcher";
+import { React } from "react";
+import { LayoutComponent, SEO } from "@components/common";
 
 function StazioneSpaziale({ sta }) {
-  console.log(sta);
-
   return (
     <LayoutComponent>
       <SEO title={`${sta.name}`} description={`${sta.description}`} />
@@ -54,12 +48,17 @@ function StazioneSpaziale({ sta }) {
                 &nbsp;Metri
               </p>
             </div>
-            <b>Fondata nel:</b>
-            <p>{sta.founded}</p>
-            <b>Descrizione:</b>
-            <p>{sta.description}</p>
+            <div className="flex">
+              <b>Fondata nel:</b>
+              <p>{sta.founded}</p>
+            </div>
+            <div className="flex">
+              {" "}
+              <b>Descrizione:</b>
+              <p>{sta.description}</p>
+            </div>
           </div>
-        </article>{" "}
+        </article>
         <div className="flex flex-wrap">
           {sta.owners.map((lol) => {
             return (

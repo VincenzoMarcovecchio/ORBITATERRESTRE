@@ -64,10 +64,10 @@ function Pagina() {
 
         <Formik
           enableReinitialize
-          initialValues={{ nationality: "" }}
+          initialValues={{ name: "" }}
           validate={(values) => {
             const errors = {};
-            if (!values.nationality) {
+            if (!values.name) {
               errors.name = "Oops ??";
             }
             return errors;
@@ -75,7 +75,7 @@ function Pagina() {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               setSubmitting(false);
-              setName(values.nationality);
+              setName(values.name);
             }, 400);
           }}
         >
@@ -119,7 +119,7 @@ function Pagina() {
           {defaultResults
             ? defaultResults.map((result) => {
                 const { name, profile_image, nationality, bio } = result;
-                console.log(result);
+
                 return (
                   <li key={name}>
                     <figure className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden key={name}">

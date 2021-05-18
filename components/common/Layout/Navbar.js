@@ -535,8 +535,11 @@ export const NavBar = () => {
                           </Link>
                         </li>
                         <li className="text-base truncate">
-                          <Link href="/techport" as="/techport">
-                            TechPort
+                          <Link
+                            href="/la-storia-di-spaceX-in-timeline-component"
+                            as="/la-storia-di-spaceX-in-timeline-component"
+                          >
+                            SpaceX in timeline
                           </Link>
                         </li>
                         <li className="text-base truncate">

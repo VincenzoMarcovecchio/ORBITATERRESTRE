@@ -17,7 +17,7 @@ function NasaLive() {
         title="Nasa Live "
         description="La TV della NASA trasmette una varietà di programmi educativi e di pubbliche relazioni regolarmente programmati e preregistrati 24 ore al giorno sui suoi vari canali. La rete fornisce anche una serie di programmi in diretta, come la copertura di missioni, eventi (passeggiate nello spazio, interviste ai media, trasmissioni educative), conferenze stampa e lanci di razzi."
       />
-      <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
+      <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             La TV della NASA

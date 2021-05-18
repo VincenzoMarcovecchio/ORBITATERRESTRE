@@ -10,7 +10,7 @@ function StazioneSpaziale({ sta }) {
     <LayoutComponent>
       <SEO
         description="Lista completa delle stazioni spaziali attive e non "
-        title="tazioni spaziali"
+        title="Stazioni Spaziali"
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -34,20 +34,25 @@ function StazioneSpaziale({ sta }) {
                   <h1 className="text-3xl font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <b>Orbita:</b>
-                  <p>{lol.orbit}</p>
-                  <b>Tipo:</b>
-                  <p>{lol.type.name}</p>
-                  <b>Descrizione:</b>
-                  <p>{lol.description}</p>
-
+                  <div className="flex">
+                    <b>Orbita:</b>
+                    <p>{lol.orbit}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Tipo:</b>
+                    <p>{lol.type.name}</p>
+                  </div>
+                  <div className="flex">
+                    <b>Descrizione:</b>
+                    <p>{lol.description}</p>
+                  </div>
                   <span
                     onClick={() =>
                       router
                         .push(`/stazione-spaziale/${lol.id}`)
                         .then(() => window.scrollTo(0, 0))
                     }
-                    className="px-3 mt-4 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    className="px-3 mt-6 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
