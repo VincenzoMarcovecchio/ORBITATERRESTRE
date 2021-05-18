@@ -1,17 +1,16 @@
 import { React, useState, useEffect } from "react";
-import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 import { setCORS } from "google-translate-api-browser";
-import non from "../content/assets/immagine-non-trovata.png"; //not sure
+import moment from "moment";
 
 function SpaceXTimeline() {
   const url = "https://api.spacexdata.com/v4/history";
   const { data, error } = useSWR(url, fetcher);
   const translate = setCORS("https://mimmofranco.herokuapp.com/");
-  const [translated, setTranslated] = useState();
-  const [toBeTranslated, setToBeTranslated] = useState();
+  const [translated, setTranslated] = useState({});
+  const [toBeTranslated, setToBeTranslated] = useState([]);
   const translateplease = JSON.stringify(toBeTranslated);
 
   useEffect(() => {
@@ -19,25 +18,28 @@ function SpaceXTimeline() {
       fetch(`https://api.spacexdata.com/v4/history`)
         .then((res) => res.json())
         .then((results) => {
-          setToBeTranslated({
-            data1: results.map((item) => {
+          setToBeTranslated(
+            results.map((item) => {
               return [item.title, item.details, item.links.article];
-            }),
-          });
+            })
+          );
         })
         .catch((e) => e);
     };
     getData();
+  }, []);
+
+  useEffect(() => {
     translate(translateplease, { to: "it" })
       .then((res) => {
-        setTranslated(JSON.parse(res.text));
+        setTranslated(JSON.stringify(res));
       })
       .catch((err) => {
         console.error(err);
       });
   }, []);
+  let vaimo = translated.length > 1 && translated.substring(1);
 
-  console.log(translated);
   return (
     <LayoutComponent>
       <SEO
@@ -76,7 +78,11 @@ function SpaceXTimeline() {
                         >
                           {res.title}
                         </h3>
-                        <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                        <time datetime={res.event_date_utc}>
+                          {moment(res.event_date_utc).format("YYYY-MM-DD")}
+                        </time>
+
+                        <p className="text-sm mt-4 font-medium leading-snug tracking-wide text-white text-opacity-100">
                           {res.details}
                         </p>
 
