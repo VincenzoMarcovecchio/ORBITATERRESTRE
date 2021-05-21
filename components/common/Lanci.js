@@ -9,6 +9,7 @@ export function Lanci() {
     "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/";
 
   const { data, error } = useSWR(url, fetcher);
+  console.log(data);
   return (
     <div className="md:px-4 flex flex-col">
       {data ? (
@@ -58,7 +59,7 @@ export function Lanci() {
                   <b>Nome Missione:&nbsp;</b>
                   <Link
                     className="truncate text-gray-500 text-sm"
-                    href={`/lancio-missione-spaziale/${la.mission?.name}`}
+                    href={`/lancio-missione-spaziale/${la.id}`}
                   >
                     <a>{la.mission?.name}</a>
                   </Link>

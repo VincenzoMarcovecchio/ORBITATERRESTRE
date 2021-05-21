@@ -88,7 +88,7 @@ const LanciIndex = () => {
                   placeholder="es SpaceX"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.name}
+                  value={values.nationality}
                 />
                 {errors.nationality &&
                   touched.nationality &&

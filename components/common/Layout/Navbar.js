@@ -528,7 +528,7 @@ export const NavBar = () => {
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
                           <Link
-                            href="/piattaforme-lancio-pad"
+                            href="/piattaforme-lancio-pad/10"
                             as="/piattaforme-lancio-pad"
                           >
                             Pad

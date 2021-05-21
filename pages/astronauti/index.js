@@ -1,9 +1,5 @@
-import { React, useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
-import axios from "axios";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { React, useState, useEffect } from "react";
+import { LayoutComponent, SEO } from "@components/common";
 
 function Pagina() {
   const defaultEndpoint =
@@ -62,59 +58,17 @@ function Pagina() {
           })}
         </div>
 
-        <Formik
-          enableReinitialize
-          initialValues={{ name: "" }}
-          validate={(values) => {
-            const errors = {};
-            if (!values.name) {
-              errors.name = "Oops ??";
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              setSubmitting(false);
-              setName(values.name);
-            }, 400);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <form
-              className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
-              onSubmit={handleSubmit}
-            >
-              <label htmlFor="nationality">Cerca per nome</label>
-              <input
-                className="input mt-2 p-2 text-black text-lg mb-3"
-                type="text"
-                name="nationality"
-                placeholder="es Armstrong"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-              />
-              {errors.nationality && touched.nationality && errors.nationality}
-              <button
-                type="submit"
-                className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                disabled={isSubmitting}
-              >
-                Cerca
-              </button>
-            </form>
-          )}
-        </Formik>
-
+        <form className="form flex flex-col max-w-md mx-auto mt-12 mb-12">
+          <label htmlFor="nationality">Cerca per nome</label>
+          <input
+            className="input mt-2 p-2 text-black text-lg mb-3"
+            type="text"
+            name="nationality"
+            placeholder="es Armstrong"
+            onChange={(e) => setName(e.target.value)}
+            alue={name}
+          />
+        </form>
         <ul>
           {defaultResults
             ? defaultResults.map((result) => {

@@ -2,8 +2,10 @@ import { React, useState } from "react";
 import Link from "next/link";
 import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
+import non from "../../content/assets/immagine-non-trovata.png";
 
 function SingoloLancio({ newsar }) {
+  console.log(newsar);
   const router = useRouter();
   return (
     <LayoutComponent>
@@ -11,7 +13,7 @@ function SingoloLancio({ newsar }) {
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
-          {lol.newsar ? (
+          {newsar.length ? (
             <img
               className="sm:w-full md:w-1/3 object-cover"
               src={newsar.image}
