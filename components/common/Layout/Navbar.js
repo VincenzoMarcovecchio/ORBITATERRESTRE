@@ -486,7 +486,6 @@ export const NavBar = () => {
                       </div>
                     </div>
                     <div className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                      {/* Heroicon name: outline/shield-check */}
                       <svg
                         className="flex-shrink-0 h-6 w-6 text-indigo-600"
                         xmlns="http://www.w3.org/2000/svg"
@@ -528,8 +527,8 @@ export const NavBar = () => {
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
                           <Link
-                            href="/piattaforme-lancio-pad/10"
-                            as="/piattaforme-lancio-pad"
+                            href="/piattaforme-lancio-pad/10/"
+                            as="/piattaforme-lancio-pad/10"
                           >
                             Pad
                           </Link>
