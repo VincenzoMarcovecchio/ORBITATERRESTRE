@@ -16,65 +16,69 @@ function Eventi({ eventi }) {
         </h1>
 
         <div className=" max-w-7xl mx-auto  md:px-4 display flex flex-col items-start">
-          {eventi.results?.map((lol) => {
-            return (
-              <article
-                className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
-                key={lol.id}
-              >
-                <img
-                  className="sm:w-full md:w-1/3 object-cover"
-                  src={lol.feature_image}
-                  alt={lol.titile}
-                />
+          {eventi.results ? (
+            eventi.results?.map((lol) => {
+              return (
+                <article
+                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
+                  key={lol.id}
+                >
+                  <img
+                    className="sm:w-full md:w-1/3 object-cover"
+                    src={lol.feature_image}
+                    alt={lol.titile}
+                  />
 
-                <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                  <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
-                    {lol.name}
-                  </h1>
-                  <div className="flex">
-                    <b>Location:&nbsp;</b>
-                    <p>{lol.location}</p>
+                  <div className="sm:w-full md:w-2/3 px-4  py-6 ">
+                    <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
+                      {lol.name}
+                    </h1>
+                    <div className="flex">
+                      <b>Location:&nbsp;</b>
+                      <p>{lol.location}</p>
+                    </div>
+                    <div className="flex">
+                      <b>Parte del programma:&nbsp;</b>
+                      <p>{lol.program[0]?.name}</p>
+                    </div>
+                    <div className="flex">
+                      <p className="mt-2 text-lg mb-3">
+                        <strong>Descrizione:&nbsp;</strong>
+                        {lol.description}
+                      </p>
+                    </div>
+                    <span
+                      onClick={() =>
+                        router
+                          .push(`/eventi-spaziali/${lol.slug}`)
+                          .then(() => window.scrollTo(0, 0))
+                      }
+                      className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                      target="_blank"
+                      rel="noopener noreferrer canonical"
+                    >
+                      Leggi di piu
+                    </span>
+                    &nbsp;
+                    <span
+                      onClick={() =>
+                        router
+                          .push(`/eventi-spaziali/${lol.slug}`)
+                          .then(() => window.scrollTo(0, 0))
+                      }
+                      className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded"
+                      target="_blank"
+                      rel="noopener noreferrer canonical"
+                    >
+                      Video
+                    </span>
                   </div>
-                  <div className="flex">
-                    <b>Parte del programma:&nbsp;</b>
-                    <p>{lol.program[0]?.name}</p>
-                  </div>
-                  <div className="flex">
-                    <p className="mt-2 text-lg mb-3">
-                      <strong>Descrizione:&nbsp;</strong>
-                      {lol.description}
-                    </p>
-                  </div>
-                  <span
-                    onClick={() =>
-                      router
-                        .push(`/eventi-spaziali/${lol.slug}`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
-                    className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                    target="_blank"
-                    rel="noopener noreferrer canonical"
-                  >
-                    Leggi di piu
-                  </span>
-                  &nbsp;
-                  <span
-                    onClick={() =>
-                      router
-                        .push(`/eventi-spaziali/${lol.slug}`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
-                    className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded"
-                    target="_blank"
-                    rel="noopener noreferrer canonical"
-                  >
-                    Video
-                  </span>
-                </div>
-              </article>
-            );
-          })}
+                </article>
+              );
+            })
+          ) : (
+            <pre>{eventi.detail}</pre>
+          )}
         </div>
       </div>
     </LayoutComponent>

@@ -9,27 +9,31 @@ function Piattaforme({ pad, pageNumber }) {
   return (
     <LayoutComponent>
       <SEO title="Piattaforme di lancio" />
-      <section className=" max-w-7xl mx-auto px-4 sm:px-6 display flex sm:flex-col  w-full items-start">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 display flex sm:flex-col  w-full items-start">
         <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
           Piattaforme di lancio
         </h1>
-        {pad.results.map((pa) => {
-          return (
-            <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-              <img src={pa.map_image || nontrovata} alt={pa.name} />
-              <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
-                {pa.name}
-              </h1>
-              <h2>Totale lanci effetuati:&nbsp;{pa.total_launch_count}</h2>
-              <h2>Latitudine:&nbsp;{pa.latitude}</h2>
-              <h2>Longitudine:&nbsp;{pa.longitude}</h2>
+        {pad.results ? (
+          pad.results.map((pa) => {
+            return (
+              <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                <img src={pa.map_image || nontrovata} alt={pa.name} />
+                <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
+                  {pa.name}
+                </h1>
+                <h2>Totale lanci effetuati:&nbsp;{pa.total_launch_count}</h2>
+                <h2>Latitudine:&nbsp;{pa.latitude}</h2>
+                <h2>Longitudine:&nbsp;{pa.longitude}</h2>
 
-              <Link replace href={`/piattaforma-lancio-pad/${pa.id}`}>
-                Leggi di piu'
-              </Link>
-            </article>
-          );
-        })}
+                <Link replace href={`/piattaforma-lancio-pad/${pa.id}`}>
+                  Leggi di piu'
+                </Link>
+              </article>
+            );
+          })
+        ) : (
+          <pre>{pad.detail}</pre>
+        )}
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex w-full items-center">
           <div
             className="cursor-pointer"

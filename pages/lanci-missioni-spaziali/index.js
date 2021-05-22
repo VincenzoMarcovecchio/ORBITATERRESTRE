@@ -61,7 +61,7 @@ const LanciIndex = () => {
             }}
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
-                setSubmitting(false);
+                setSubmitting(true);
                 setName(values.nationality);
               }, 400);
             }}
@@ -153,7 +153,7 @@ const LanciIndex = () => {
             );
           })
         ) : (
-          <p>caricamento supersonico in corso...</p>
+          <p>{lancid.detail || "caricamento supersonico in corso..."}</p>
         )}
       </div>
     </LayoutComponent>

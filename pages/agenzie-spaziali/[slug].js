@@ -47,7 +47,6 @@ function Page({ agenciesData, pageNumber }) {
           ? agenciesData.results
               .filter((agency) => agency.type === "Government")
               .map((data) => {
-                console.log(data);
                 return (
                   <figure
                     className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"

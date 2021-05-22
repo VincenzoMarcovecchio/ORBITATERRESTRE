@@ -63,7 +63,7 @@ function StazioneSpaziale({ sta }) {
             );
           })
         ) : (
-          <p>caricamento supersonico in corso...</p>
+          <pre>{sta.detail}</pre>
         )}
       </div>
     </LayoutComponent>
