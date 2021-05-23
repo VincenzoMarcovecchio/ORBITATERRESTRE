@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent, SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { QuickLinks } from "../components/common/quickLinks";
 import { Lanci } from "../components/common/Lanci";

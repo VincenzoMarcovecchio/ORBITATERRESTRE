@@ -10,7 +10,6 @@ function Pagina() {
   const astronauti = ["All", "American", "Russian", "European", "Others"];
   const [name, setName] = useState("");
   const [nationality, setNationality] = useState("All");
-  const [submit, setSubmit] = useState(false);
 
   console.log(defaultResults);
 
@@ -37,18 +36,19 @@ function Pagina() {
         description="Incontra le persone eccezionali che si sono avventurate nello spazio 👨‍🚀"
       />
       <div className=" max-w-7xl mx-auto px-4  sm:px-6 display flex flex-col items-start">
-        <h1 className="text-4xl  font-bold text-yellow-600 font-display mt-8 mx-auto ">
+        <h1 className="text-4xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto ">
           Astronauti ‎‍🚀
         </h1>
-        <h2 className="text-2xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+        <h2 className="text-2xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
           👨‍🚀 Incontra le persone eccezionali che si sono avventurate nello
-          spazio.👨‍🚀{" "}
+          spazio.👨‍🚀
         </h2>
 
         <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
           {astronauti.map((li) => {
             return (
               <span
+                key={li}
                 className={`${
                   String(nationality.toLowerCase()) === String(li.toLowerCase())
                     ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
@@ -114,17 +114,17 @@ function Pagina() {
           )}
         </Formik>
 
-        <ul>
-          {defaultResults !== undefined ? (
+        <ul className="w-full">
+          {defaultResults ? (
             defaultResults.map((result) => {
-              const { name, profile_image, nationality, bio } = result;
+              const { name, id, profile_image, nationality, bio } = result;
 
               return (
-                <li key={name}>
+                <li key={id}>
                   <figure className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden key={name}">
                     {profile_image && (
                       <img
-                        className="sm:w-full md:w-1/3 object-cover"
+                        className="w-full md:w-1/3 object-cover"
                         src={profile_image}
                         alt={`${name}-thumb`}
                       />
@@ -134,7 +134,7 @@ function Pagina() {
                         {name}
                       </h3>
                       <p className="mt-2 text-lg mb-3">
-                        <strong>Nazionalita'</strong>
+                        <strong>Nazionalitá</strong>
                         :&nbsp;{nationality}
                       </p>
                       <p className="mt-2 text-lg mb-3">
@@ -161,7 +161,7 @@ function Pagina() {
               );
             })
           ) : (
-            <li>"ci sono stati dei problemi..."</li>
+            <li>ci sono stati dei problemi...</li>
           )}
         </ul>
       </div>

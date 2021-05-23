@@ -676,7 +676,7 @@ export const NavBar = () => {
         >
           <div
             className={
-              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-50 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
@@ -687,6 +687,10 @@ export const NavBar = () => {
                     src={`/cosmos.png`}
                     alt="astronauta nello spazio"
                   />
+                </div>
+                <div>
+                  {" "}
+                  <Header />
                 </div>
                 <div className="-mr-2">
                   <button
@@ -811,7 +815,7 @@ export const NavBar = () => {
                     </span>
                   </a>
                   <a
-                    href="#"
+                    href="/sistema-solare"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/refresh */}
@@ -831,7 +835,7 @@ export const NavBar = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium ">
-                      Automations
+                      Sistema Solare
                     </span>
                   </a>
                 </nav>
@@ -910,7 +914,6 @@ export const NavBar = () => {
                 </p>
               </div>
             </div>
-            <Header />
           </div>
         </div>
       </div>

@@ -18,10 +18,10 @@ function Blog({ posts }) {
 
   return (
     <LayoutComponent>
-      <SEO title="Il blog " />
+      <SEO title="Il blog " description="Notizie e news dallo spazio" />
 
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
-        <div className="display flex  space-x-2 md:space-x-8">
+      <div className="w-full md:max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
+        <div className="display flex mb-8 mt-4 space-x-2 md:space-x-8">
           {uniquecat.map((cate, i) => {
             return (
               <span
@@ -34,7 +34,7 @@ function Blog({ posts }) {
             );
           })}
         </div>
-        <div className="max-w-md mx-auto px-4 sm:px-6 display flex flex-col items-start">
+        <div className="w-full md:max-w-md mx-auto display flex flex-col items-start">
           {currentCategory
             ? posts
                 .filter(
