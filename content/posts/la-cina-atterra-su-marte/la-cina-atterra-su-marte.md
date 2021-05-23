@@ -2,7 +2,7 @@
 title: La Cina atterra la sua prima sonda su Marte
 description: L'agenzia spaziale cinese ha annunciato ufficialmente che venerdì 14 Maggio 2021 il primo rover su Marte del paese è atterrato in sicurezza...
 date: 2021-05-15T11:00:00.000Z
-category: mars
+category: marte
 ---
 
 <img src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2020/07/tianwen1.jpg" alt="Artists illustration of the Tianwen 1 orbiter and rover at Mars. Credit: CNSA / Chinese Academy of Sciences / Nature Astronomy " title="Artists illustration of the Tianwen 1 orbiter and rover at Mars. Credit: CNSA / Chinese Academy of Sciences / Nature Astronomy">

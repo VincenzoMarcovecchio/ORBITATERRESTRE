@@ -569,6 +569,9 @@ export const NavBar = () => {
                 </div>
               </div>
             </div>
+            <Link href={"/blog"} as={`/blog`}>
+              Blog
+            </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             {/* <div className="flex">
