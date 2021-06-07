@@ -2,17 +2,17 @@ const withPlugins = require("next-compose-plugins");
 
 const optimizedImages = require("next-optimized-images");
 
-// const nextConfig = {
+const nextConfig = {
 
-//     webpack: (config, { isServer }) => {
-//       if (isServer) {
-//         require("./scripts/sitemap-common");
-//       }
+    webpack: (config, { isServer }) => {
+      if (isServer) {
+        require("./scripts/sitemap-common");
+      }
 
-//       return config;
-//     },
+      return config;
+    },
 
-// }
+}
 module.exports = withPlugins(
 
   [

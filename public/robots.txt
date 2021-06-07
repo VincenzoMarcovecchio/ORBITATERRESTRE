@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://orbitaterrestre.com
+
+# Sitemaps
+Sitemap: https://orbitaterrestre.com/sitemap.xml

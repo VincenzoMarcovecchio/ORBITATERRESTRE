@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://firststepintospace.com",
+  siteUrl: "https://orbitaterrestre.com",
   generateRobotsTxt: true,
   sitemapSize: 7000,
 };

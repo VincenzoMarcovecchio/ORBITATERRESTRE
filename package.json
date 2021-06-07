@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build":  "next build",
     "start": "next start",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "serve": "next serve"
   },
   "dependencies": {
@@ -52,7 +52,7 @@
     "type": "git",
     "url": "https://github.com/VincenzoMarcovecchio/ORBITATERRESTRE"
   },
-  "homepage": "https://orbitaterrestre.vercel.app/",
+  "homepage": "https://orbitaterrestre.com/",
   "keywords": [
     "next.js",
     "blog",

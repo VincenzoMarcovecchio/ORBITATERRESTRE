@@ -10,7 +10,6 @@ const LanciIndex = () => {
   const [name, setName] = useState("");
   const [lancid, setLancid] = useState([]);
   const [crewed, setCrewed] = useState(false);
-  console.log(lancid);
 
   useEffect(() => {
     fetch(
