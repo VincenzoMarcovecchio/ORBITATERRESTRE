@@ -10,7 +10,7 @@ category: hacking
 
 La finale per la sfida di hacking satellitare, che ha offerto ingenti premi in denaro, si è anche quest'anno svolta virtualmente ma l'obbiettivo finale è rimasto sempre lo stesso: esporre problemi di sicurezza informatica e vulnerabilità delle risorse spaziali ed allo stesso tempo dei sistemi di controllo di terra.
 
-<blockquote>Dobbiamo abbracciare questa comunità esterna per aiutarci a capire come utilizzare... i bug bounties e gli eventi di hacking per affrontare i problemi di sicurezza prima di portare (i sistemi) sul campo di battaglia", Will Roper, assistente segretario dell'Aeronautica per l'acquisizione, la tecnologia e logistica ha detto ai giornalisti a maggio.</blockquote>
+<blockquote>"Dobbiamo abbracciare questa comunità esterna per aiutarci a capire come utilizzare... i bug bounties e gli eventi di hacking per affrontare i problemi di sicurezza prima di portare (i sistemi) sul campo di battaglia", Will Roper, assistente segretario dell'Aeronautica per l'acquisizione, la tecnologia e logistica ha detto ai giornalisti a maggio.</blockquote>
 
 Il ritmo con cui stanno avanzando le capacità di sicurezza informatica e guerra elettronica di diverse nazioni e attori non statali rappresenta una sfida monumentale per i proprietari delle risorse spaziali in orbita. Prendere il controllo di un satellite da parte di individui malvagi potrebbe avere conseguenze disastrose.
 
