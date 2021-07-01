@@ -31,33 +31,33 @@ function StazioneSpaziale({ sta }) {
                 />
 
                 <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                  <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                  <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <div className="flex">
-                    <b>Orbita:</b>
+                  <div className="flex mb-2">
+                    <b>Orbita:&nbsp;</b>
                     <p>{lol.orbit}</p>
                   </div>
-                  <div className="flex">
-                    <b>Tipo:</b>
+                  <div className="flex mb-2">
+                    <b>Tipo:&nbsp;</b>
                     <p>{lol.type.name}</p>
                   </div>
-                  <div className="flex">
-                    <b>Descrizione:</b>
+                  <div className="flex mb-6 flex-col">
+                    <b>Descrizione:&nbsp;</b>
                     <p>{lol.description}</p>
                   </div>
-                  <span
+                  <a
                     onClick={() =>
                       router
                         .push(`/stazione-spaziale/${lol.id}`)
                         .then(() => window.scrollTo(0, 0))
                     }
-                    className="px-3 mt-6 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    className="px-3 mt-8 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
                     Leggi di piu
-                  </span>
+                  </a>
                 </div>
               </article>
             );

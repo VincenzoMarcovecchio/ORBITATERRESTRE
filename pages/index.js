@@ -51,7 +51,7 @@ function Home({ datas }) {
               )}
               {datas.media_type !== "video" && (
                 <img
-                  className="mb-4 h-full  object-cover flex "
+                  className="mb-4   object-cover flex "
                   src={datas.url}
                   alt={datas.title}
                 />

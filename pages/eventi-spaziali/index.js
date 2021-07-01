@@ -42,7 +42,7 @@ function Eventi({ eventi }) {
                       <p>{lol.program[0]?.name}</p>
                     </div>
                     <div className="flex">
-                      <p className="mt-2 text-lg mb-3">
+                      <p className=" text-lg mb-3">
                         <strong>Descrizione:&nbsp;</strong>
                         {lol.description}
                       </p>
