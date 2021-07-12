@@ -2,14 +2,18 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
-import { LayoutComponent, Image, SEO, Bio } from "@components/common";
+import { LayoutComponent, Image, SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 function Post({ post, frontmatter, nextPost, previousPost }) {
+
+  console.log(frontmatter)
+
   return (
     <LayoutComponent>
       <SEO
         title={frontmatter.title}
+         imageUrl={`../../content/assets/${frontmatter.title}.jpg` || null}
         description={frontmatter.description || post.excerpt}
       />
 
@@ -20,13 +24,16 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
           </h1>
           <p className="text-sm">{frontmatter.date}</p>
         </header>
+
         <ReactMarkdown
           className="mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
           renderers={{ code: CodeBlock, image: MarkdownImage }}
         />
+
         <hr className="mt-4" />
+
       </article>
 
       <nav className="flex flex-wrap justify-between mb-10">
@@ -47,20 +54,26 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
           <div />
         )}
       </nav>
+
     </LayoutComponent>
   );
 }
+
 export default Post;
+
 export async function getStaticPaths() {
-  const paths = getPostsSlugs();
+
+const paths = getPostsSlugs();
 
   return {
     paths,
     fallback: false,
   };
+
 }
 
 export async function getStaticProps({ params: { slug } }) {
+
   const postData = getPostBySlug(slug);
 
   if (!postData.previousPost) {

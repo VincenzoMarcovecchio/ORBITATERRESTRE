@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent,  SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
 
 function Blog({ posts }) {

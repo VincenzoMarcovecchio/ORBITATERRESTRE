@@ -16,7 +16,7 @@ export function Lanci() {
         data.results?.map((la) => {
           return (
             <figure
-              className="flex mb-8 flex-col justify-between w-72 sm:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
+              className="flex mb-8 flex-col justify-between max-w-72 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
               style={{
                 backgroundImage: `url(${la.image})`,
                 backgroundSize: "cover",

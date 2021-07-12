@@ -51,18 +51,18 @@ function Home({ datas }) {
               )}
               {datas.media_type !== "video" && (
                 <img
-                  className="mb-4   object-cover flex "
+                  className="mb-4 sm:h-full md:h-5/6  object-cover flex "
                   src={datas.url}
                   alt={datas.title}
                 />
               )}
               <figcaption>
-                <p className="mb-2">
-                  <strong>Titolo:&nbsp;</strong>
+                <p className="">
+                  <strong className="font-extrabold">Titolo:&nbsp;</strong>
                   {titlet || datas.title}
                 </p>
                 <p className="mb-2 pr-4">
-                  <strong>Descrizione:&nbsp;</strong>
+                  <strong className="font-extrabold">Descrizione:&nbsp;</strong>
                   {translated || datas.explanation}
                 </p>
                 <p className="mb-2">
@@ -77,7 +77,7 @@ function Home({ datas }) {
           <hr />
           <section className="flex">
             <aside>
-              <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              <h3 className=" text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
                 Prossimi Lanci
               </h3>
               <Lanci />
