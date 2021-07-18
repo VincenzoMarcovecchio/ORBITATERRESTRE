@@ -5,7 +5,7 @@ import "typeface-merriweather";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider defaultTheme="dark" enableSystem={true} attribute="class">
+    <ThemeProvider defaultTheme="light" enableSystem={true} attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   );

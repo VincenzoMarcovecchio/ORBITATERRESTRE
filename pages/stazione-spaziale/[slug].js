@@ -49,12 +49,12 @@ function StazioneSpaziale({ sta }) {
               </p>
             </div>
             <div className="flex">
-              <b>Fondata nel:</b>
+              <b>Fondata nel:&nbsp;</b>
               <p>{sta.founded}</p>
             </div>
-            <div className="flex">
+            <div className="flex flex-col">
               {" "}
-              <b>Descrizione:</b>
+              <b>Descrizione:&nbsp;</b>
               <p>{sta.description}</p>
             </div>
           </div>

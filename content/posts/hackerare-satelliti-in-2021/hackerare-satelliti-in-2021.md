@@ -24,7 +24,7 @@ Si ritiene che Cina e Russia stiano lavorando allo sviluppo di armi a energia di
 
 Gli esperti avvertono che le minacce dell'hacking satellitare stanno crescendo con l'aumento delle capacità di guerra informatica e la corsa agli armamenti globale. Il portale Defense One citando Brian Weeden, direttore della pianificazione del programma per Secure World Foundation, ha dichiarato:
 
-<blockquote>I satelliti e i loro sistemi di terra sono sempre più solo computer che eseguono software specializzato, ma spesso eseguono sistemi operativi comuni come Unix o Linux. Sono vulnerabili a molti degli stessi attacchi informatici di ogni altro sistema informatico là fuori</blockquote>.
+<blockquote>I satelliti e i loro sistemi di terra sono sempre più solo computer che eseguono software specializzato, ma spesso eseguono sistemi operativi comuni come Unix o Linux. Sono vulnerabili a molti degli stessi attacchi informatici di ogni altro sistema informatico là fuori</blockquote>
 
 <blockquote>In genere è necessario accedere a un'antenna di terra specializzata e attendere che il satellite passi sopra la testa prima di inviargli i comandi. Ma se riesci ad hackerare i computer che controllano quell'antenna, allora potresti essere in affari", ha aggiunto.</blockquote>
 

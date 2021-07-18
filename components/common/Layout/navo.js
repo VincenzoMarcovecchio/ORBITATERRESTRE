@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
@@ -492,7 +491,7 @@ export const NavBar = () => {
         >
           <div
             className={
-              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-400 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
@@ -736,11 +735,14 @@ const Header = () => {
   return (
     <>
       {mounted && (
+        <div    className={`border-gray-900`}>
         <DarkModeSwitch
           checked={isDarkMode}
           onChange={toggleDarkMode}
           className={isRoot ? 28 : 24}
+
         />
+        </div>
       )}
     </>
   );

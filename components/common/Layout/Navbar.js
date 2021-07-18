@@ -679,7 +679,7 @@ export const NavBar = () => {
         >
           <div
             className={
-              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-50 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-30,0 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
