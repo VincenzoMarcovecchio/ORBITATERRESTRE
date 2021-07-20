@@ -14,7 +14,7 @@ function StazioneSpaziale({ sta }) {
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
+      <h1 className="text-4xl font-bold text-yellow-600 font-display mt-6 mx-auto mb-8">
           Stazioni Spaziali
         </h1>
         {sta.results ? (

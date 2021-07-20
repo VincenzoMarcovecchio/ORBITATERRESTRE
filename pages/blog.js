@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import Link from "next/link";
 import { LayoutComponent,  SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
-
+import moment from "moment";
 function Blog({ posts }) {
   const [currentCategory, setCurrentCategory] = useState(null);
 
@@ -20,7 +20,7 @@ function Blog({ posts }) {
     <LayoutComponent>
       <SEO title="Il blog " description="Notizie e news dallo spazio" />
 
-      <div className="w-full md:max-w-7xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
+      <div className="w-full md:max-w-8xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
         <div className="display flex mb-8 mt-4 space-x-2 md:space-x-8">
           {uniquecat.map((cate, i) => {
             return (
@@ -61,7 +61,7 @@ function Blog({ posts }) {
                         >
                           {category}
                         </span>
-                        <span className="text-sm">&nbsp;&nbsp;{date}</span>
+                        <time datetime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
                       </header>
                       <section>
                         <p className="mb-8 text-lg">{description}</p>
@@ -89,7 +89,7 @@ function Blog({ posts }) {
                       >
                         {category}
                       </span>
-                      <span className="text-sm">&nbsp;&nbsp;{date}</span>
+                      <time datetime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
                     </header>
                     <section>
                       <p className="mb-8 text-lg">{description}</p>

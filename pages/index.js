@@ -77,9 +77,9 @@ function Home({ datas }) {
           <hr />
           <section className="flex">
             <aside>
-              <h3 className=" text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
                 Prossimi Lanci
-              </h3>
+              </h2>
               <Lanci />
             </aside>
           </section>

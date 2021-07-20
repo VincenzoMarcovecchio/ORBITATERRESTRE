@@ -403,7 +403,7 @@ export const NavBar = () => {
                           Eventi
                         </Link>
                         <p className="mt-1 text-sm ">
-                          Eventi passati e futuri su tutto quello che riguarda
+                          Eventi passati e futuri che riguardano
                           l'esplorazione spaziale
                         </p>
                       </div>

@@ -409,7 +409,7 @@ function Page({ agenciesData, pageNumber }) {
                       target="_blank"
                       rel="noopener noreferrer canonical"
                     >
-                      Scopri di piu`
+                      Scopri di più
                     </Link>
                   </figcaption>
                 </figure>

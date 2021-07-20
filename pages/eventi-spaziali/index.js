@@ -41,9 +41,9 @@ function Eventi({ eventi }) {
                       <b>Parte del programma:&nbsp;</b>
                       <p>{lol.program[0]?.name}</p>
                     </div>
-                    <div className="flex">
-                      <p className=" text-lg mb-3">
-                        <strong>Descrizione:&nbsp;</strong>
+                    <div className="flex mb-6">
+                    <b>Descrizione:&nbsp;</b>
+                      <p>
                         {lol.description}
                       </p>
                     </div>
