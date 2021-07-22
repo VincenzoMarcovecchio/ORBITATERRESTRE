@@ -6,7 +6,7 @@ import { fetcher } from "../../utils/fetcher";
 
 export function Lanci() {
   const url =
-    "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/";
+    "https://lldev.thespacedevs.com/2.2.0/launch/upcoming/";
 
   const { data, error } = useSWR(url, fetcher);
 
