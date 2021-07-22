@@ -13,7 +13,8 @@ export default class MyDocument extends Document {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-185731147-1"
           />
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v11.0&appId=167048748417291&autoLogAppEvents=1" nonce="MZFmb3rK"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `

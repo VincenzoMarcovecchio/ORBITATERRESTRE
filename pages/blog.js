@@ -61,7 +61,7 @@ function Blog({ posts }) {
                         >
                           {category}
                         </span>
-                        <time datetime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
+                        <time dateTime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
                       </header>
                       <section>
                         <p className="mb-8 text-lg">{description}</p>
