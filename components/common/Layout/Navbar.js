@@ -123,44 +123,7 @@ export const NavBar = () => {
                         : "hidden "
                     }
                   >
-                    {/* <div
-                      className={
-                        flyer
-                          ? "z-20 -m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                          : "hidden"
-                      }
-                    > */}
-                    {/* Heroicon name: outline/chart-bar */}
-                    {/* <svg
-                        className={"flex-shrink-0 h-6 w-6 text-indigo-600"}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#4F46E5"
-                        viewBox="0 0 24 24"
-                        stroke="i#4F46E5"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        version="1.1"
-                        viewBox="0 0 470 470"
-                        enableBackground="new 0 0 470 470"
-                      >
-                        <g>
-                          <path d="m63.613,281.405c0,4.143 3.358,7.5 7.5,7.5h327.773c4.142,0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-327.773c-4.142,0-7.5,3.358-7.5,7.5z" />
-                          <path d="m466.697,275.189c-31.474-21.253-71.588-37.993-116.197-48.561l-21.401-55.644c-5.063-13.163-20.076-23.475-34.18-23.475h-52.419v-34.52c0-4.143-3.358-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v34.52h-52.419c-14.104,0-29.117,10.312-34.18,23.475l-21.401,55.644c-44.609,10.568-84.724,27.308-116.197,48.561-2.065,1.395-3.303,3.724-3.303,6.216s1.238,4.821 3.303,6.216c28.176,19.027 63.597,34.577 102.724,45.161 0.476,17.564 17.098,31.728 37.477,31.728h182.992c20.379,0 37.001-14.164 37.477-31.728 39.127-10.583 74.548-26.134 102.724-45.161 2.065-1.395 3.303-3.724 3.303-6.216s-1.238-4.821-3.303-6.216zm-311.796-98.82c2.84-7.383 12.27-13.859 20.18-13.859h119.838c7.91,0 17.34,6.477 20.18,13.859l18.9,49.141h-197.998l18.9-49.141zm200.646,143.141h-182.043c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5 7.5,7.5h175.248c-1.614,8.353-11.149,15-22.256,15h-182.992c-11.108,0-20.642-6.647-22.256-15h22.256c4.142,0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-29.051c-34.926-9.024-66.83-22.105-93.069-38.105 29.12-17.768 64.989-31.819 104.543-40.895h218.146c39.554,9.075 75.423,23.127 104.543,40.895-26.239,15.999-58.143,29.08-93.069,38.105z" />
-                        </g>
-                      </svg> */}
 
-                    {/* <div className={flyer ? "ml-4" : " hidden"}>
-                        <Link
-                          href="/mappa-segnalazioni-ufo-abruzzo"
-                          as="/mappa-segnalazioni-ufo-abruzzo"
-                        >
-                          Segnalazioni UFO
-                        </Link>
-                        <p className={flyer ? "mt-1 text-sm " : "none"}>
-                          Segnalazioni avvenute nella regione Abruzzo
-                        </p>
-                      </div> */}
-                    {/* </div> */}
                     <a
                       style={{ textDecoration: "none" }}
                       href="/nuove-scoperte-su-marte/3000"
@@ -574,86 +537,7 @@ export const NavBar = () => {
             </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            {/* <div className="flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 72 72"
-                version="1.1"
-              >
-                <title>Facebook</title>
-                <desc>Created with Sketch.</desc>
-                <defs />
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Social-Icons---Circle"
-                    transform="translate(-152.000000, -43.000000)"
-                  >
-                    <g
-                      id="Facebook"
-                      transform="translate(152.000000, 43.000000)"
-                    >
-                      <rect
-                        id="Oval"
-                        fill="#4460A0"
-                        x="0"
-                        y="0"
-                        width="72"
-                        height="72"
-                        rx="8"
-                      />
-                      <path
-                        d="M60.4641463,13.4173171 L60.4641463,22.7278049 L54.9382927,22.7421951 C50.6068293,22.7421951 49.7721951,24.8 49.7721951,27.807561 L49.7721951,34.4702439 L60.09,34.4702439 L58.7517073,44.8887805 L49.7721951,44.8887805 L49.7721951,72 L39.0097317,72 L39.0097317,44.8887805 L30,44.8887805 L30,34.4702439 L39.0097317,34.4702439 L39.0097317,26.7858537 C39.0097317,17.8639024 44.4478049,13 52.42,13 C56.2204634,13 59.5,13.2878049 60.4641463,13.4173171 Z"
-                        fill="#FFFFFF"
-                      />
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 72 72"
-                version="1.1"
-              >
-                <title>Twitter</title>
-                <desc>Created with Sketch.</desc>
-                <defs />
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Social-Icons---Rounded"
-                    transform="translate(-264.000000, -43.000000)"
-                  >
-                    <g
-                      id="Twitter"
-                      transform="translate(264.000000, 43.000000)"
-                    >
-                      <path
-                        d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
-                        id="Rounded"
-                        fill="#4DC8F1"
-                      />
-                      <path
-                        d="M55.0865399,25.7148754 C55.7080938,39.5659738 45.3799204,55.0092879 27.0953855,55.0092879 C21.5344243,55.0092879 16.3579537,53.3781513 12,50.5841073 C17.2236474,51.1997641 22.4390388,49.7514374 26.5787999,46.505676 C22.2703818,46.4266549 18.6330532,43.5795371 17.3805101,39.6674038 C18.9231903,39.9622586 20.4411028,39.876161 21.8269202,39.4999263 C17.090373,38.5469556 13.8222026,34.2809966 13.9283503,29.7190034 C15.2563762,30.4561404 16.7754681,30.8996019 18.3900929,30.9491375 C14.0038331,28.0194604 12.7619048,22.2285125 15.3424738,17.8021524 C20.1981424,23.7605779 27.4539289,27.6809671 35.6390977,28.0925844 C34.2037447,21.9312988 38.8766033,16 45.232493,16 C48.0654578,16 50.6247973,17.1947516 52.4198732,19.1089488 C54.6631284,18.6678461 56.7707504,17.8481498 58.6731535,16.7194457 C57.9383754,19.019313 56.3768244,20.9500221 54.3435058,22.1671827 C56.3355447,21.9301194 58.2332301,21.4005602 60,20.6174259 C58.68023,22.592953 57.0101725,24.3266991 55.0865399,25.7148754"
-                        fill="#FFFFFF"
-                      />
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div> */}
+
             <Header />
           </div>
         </div>
@@ -677,10 +561,10 @@ export const NavBar = () => {
               : "opacity-0 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           }
         >
-          <div
-            className={
-              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-30,0 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
-            }
+          <div style={{background:"whitesmoke"}}
+           className={
+            "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+          }
           >
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">

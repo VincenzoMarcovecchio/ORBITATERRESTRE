@@ -1,10 +1,4 @@
-import { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { useTheme } from 'next-themes';
-import { NavBar } from './Navbar.js';
+import { NavBar } from './Navbar';
 import { Bio } from '../Bio';
 export function LayoutComponent({ children }) {
   return (

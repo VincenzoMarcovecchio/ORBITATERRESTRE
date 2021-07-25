@@ -22,7 +22,7 @@ export function QuickLinks(props) {
                   className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition"
                 >
                   <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
-                    Scopri di piu'
+                  Scopri di più
                   </button>
                 </Link>
               </div>
@@ -48,7 +48,7 @@ export function QuickLinks(props) {
                   className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition"
                 >
                   <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
-                    Scopri di piu'
+                  Scopri di più
                   </button>
                 </Link>
               </div>
@@ -70,15 +70,21 @@ export function QuickLinks(props) {
                 alt="stazioni spaziali"
               />
               <div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
+              <Link
+                  href="/stazione-spaziale"
+                  as="/stazione-spaziale"
+                  className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition"
+                >
                 <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
-                  Scopri di piu'
+                Scopri di più
                 </button>
+                </Link>
               </div>
             </div>
             <div className="pt-4">
               <h3 className="text-white text-lg">Stazioni Spaziali </h3>
               <p className="text-gray-400">
-                Stazioni spaziali al momento in grado di ospitare equipaggio
+                Stazioni spaziali in grado di ospitare equipaggio
               </p>
             </div>
           </div>
