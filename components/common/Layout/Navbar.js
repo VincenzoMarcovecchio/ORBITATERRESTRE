@@ -455,7 +455,7 @@ export const NavBar = () => {
                         <div className="ml-4">
                           Eventi
                           <p className="mt-1 text-sm innerlink">
-                            Eventi passati e futuri che riguardano
+                            Eventi  futuri che riguardano
                             l'esplorazione spaziale
                           </p>
                         </div>

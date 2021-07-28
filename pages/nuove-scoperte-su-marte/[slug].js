@@ -18,7 +18,11 @@ function Marte({ curiosity }) {
           Gli occhi di Curiosity
         </h1>
         <label htmlFor="sol">
-          Questo input range va da 0 a 4500 SOL (controlla URL)
+          Questo input range va da 0 a 4500{" "}
+          <Link replace to="post/come-si-misurano-i-giorni-su-marte/">
+            SOL
+          </Link>{" "}
+          (controlla URL)
         </label>
         <input
           draggabletrack

@@ -49,11 +49,10 @@ function Pagina() {
             return (
               <span
                 key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
+                className={`${String(nationality.toLowerCase()) === String(li.toLowerCase())
                     ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
                     : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
+                  }`}
                 onClick={() => setNationality(li)}
               >
                 {li}
@@ -134,25 +133,25 @@ function Pagina() {
                         {name}
                       </h3>
                       <p className="mt-2 text-lg mb-3">
-                        <strong>Nazionalitá</strong>
+                        <strong className="font-extrabold">Nazionalità </strong>
                         :&nbsp;{nationality}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <u>Nato il</u>:&nbsp;{result.date_of_birth}
+                        <strong className="font-extrabold" >Nato il</strong>:&nbsp;{result.date_of_birth}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <u>Descrizione:</u>&nbsp;{bio}
+                        <strong className="font-extrabold" >Descrizione:</strong>&nbsp;{bio}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <u>Primo Volo:&nbsp;</u>
+                        <strong className="font-extrabold" >Primo Volo:&nbsp;</strong>
                         {result.first_flight}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <u>Instagram:&nbsp;</u>
+                        <strong className="font-extrabold" >   Instagram:&nbsp;</strong>
                         {result.instagram}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <u>Twitter:&nbsp;</u>
+                        <strong className="font-extrabold"  >   Twitter:&nbsp;</strong>
                         {result.twitter}
                       </p>
                     </figcaption>
