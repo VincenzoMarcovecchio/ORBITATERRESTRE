@@ -5,19 +5,18 @@ import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import { LayoutComponent, Image, SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
-function Post({ post, frontmatter, nextPost, previousPost }) {
-
-
-
+function Post({ post, slug, frontmatter, nextPost, previousPost }) {
+  
+  
   return (
     <LayoutComponent>
       <SEO
         title={frontmatter.title}
-         imageUrl={`./${frontmatter.title}.jpg` || null}
+        imageUrl={`${slug}.jpg`}
         description={frontmatter.description || post.excerpt}
       />
 
-      <article className="px-4  max-w-screen-2xl ">
+      <article className="px-4  max-w-screen-2xl">
         <header className="mb-8 mt-8">
           <h1 className="mb-2 text-6xl font-black leading-none font-display">
             {frontmatter.title}
@@ -33,10 +32,9 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
         />
 
         <hr className="mt-4" />
-
       </article>
 
-      <nav className="flex flex-wrap justify-between mb-10">
+      <nav className="flex px-4 flex-wrap justify-between mb-10">
         {previousPost ? (
           <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
             <a className="text-lg font-bold">
@@ -54,7 +52,6 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
           <div />
         )}
       </nav>
-
     </LayoutComponent>
   );
 }
@@ -62,18 +59,15 @@ function Post({ post, frontmatter, nextPost, previousPost }) {
 export default Post;
 
 export async function getStaticPaths() {
-
-const paths = getPostsSlugs();
+  const paths = getPostsSlugs();
 
   return {
     paths,
     fallback: false,
   };
-
 }
 
 export async function getStaticProps({ params: { slug } }) {
-
   const postData = getPostBySlug(slug);
 
   if (!postData.previousPost) {

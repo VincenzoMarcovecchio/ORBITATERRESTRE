@@ -3,6 +3,8 @@ import Link from "next/link";
 import equipaggio from "../../content/assets/lanci-con-equipaggio.jpg";
 import fasi from "../../content/assets/fasi-riutilizzabili.jpg";
 import stazione from "../../content/assets/stazione-spaziale.jpg";
+
+
 export function QuickLinks(props) {
   return (
     <div className="grid place-items-center mt-4">
