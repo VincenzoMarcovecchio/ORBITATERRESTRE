@@ -19,7 +19,7 @@ function Marte({ curiosity }) {
         </h1>
         <label htmlFor="sol">
           Questo input range va da 0 a 4500{" "}
-          <Link replace to="post/come-si-misurano-i-giorni-su-marte/">
+          <Link replace to="/post/come-si-misurano-i-giorni-su-marte/">
             SOL
           </Link>{" "}
           (controlla URL)
