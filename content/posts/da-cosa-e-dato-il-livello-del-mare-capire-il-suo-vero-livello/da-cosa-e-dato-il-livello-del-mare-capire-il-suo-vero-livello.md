@@ -10,6 +10,7 @@ category: scienza
 Sebbene i cambiamenti del livello medio globale del mare (GMSL) forniscano una misura importante del riscaldamento climatico, quando si valutano i potenziali impatti sulla costa, è il cambiamento del livello del mare relativo regionale che è più importante. 
 
 
+
 Il cambiamento relativo del livello del mare regionale è influenzato da molteplici processi fisici che variano sia nello spazio che nel tempo e possono portare a grandi scostamenti regionali dal tasso a lungo termine di innalzamento medio globale del livello del mare.
 
 Per ogni processo viene fornita una breve descrizione, oltre a un riepilogo dei sistemi di osservazione utilizzati per misurare tale processo e una prospettiva futura per la comprensione di tale processo. 
