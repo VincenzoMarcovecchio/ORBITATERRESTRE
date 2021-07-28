@@ -1,6 +1,6 @@
 ---
 title: Come funziona esattamente il livello del mare
-description: Il giorno solare ha una durata leggermente più lunga di quello siderale a causa dell'orbita del pianeta attorno al Sole, che implica una leggera rotazione extra sul proprio asse per raggiungere nuovamente la stessa posizione rispetto al Sole.
+description: Sebbene i cambiamenti del livello medio globale del mare (GMSL) forniscano una misura importante del riscaldamento climatico, quando si valutano i potenziali impatti sulla costa, è il cambiamento del livello del mare relativo regionale che è più importante. 
 date: 2021-07-28T11:00:00.000Z
 category: scienza
 ---
