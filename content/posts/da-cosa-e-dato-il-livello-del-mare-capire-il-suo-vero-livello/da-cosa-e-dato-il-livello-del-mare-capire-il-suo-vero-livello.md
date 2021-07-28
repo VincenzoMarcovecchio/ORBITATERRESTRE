@@ -7,7 +7,10 @@ category: scienza
 
 <img src="/da-cosa-e-dato-il-livello-del-mare-capire-il-suo-vero-livello.jpg" alt="il livello del mare datascience"/>
 <h2>Cambiamento regionale relativo al livello del mare</h2>
+
+
 Sebbene i cambiamenti del livello medio globale del mare (GMSL) forniscano una misura importante del riscaldamento climatico, quando si valutano i potenziali impatti sulla costa, è il cambiamento del livello del mare relativo regionale che è più importante. 
+
 
 
 
