@@ -1,4 +1,4 @@
-import { NavBar } from './NavBar';
+import { NavBar } from './Navbar';
 import { Bio } from '../Bio';
 export function LayoutComponent({ children }) {
   return (
