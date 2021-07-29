@@ -7,14 +7,14 @@ import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   
+  console.log(slug, frontmatter);
 
   return (
     <LayoutComponent>
-
       <SEO
         title={frontmatter.title}
         imageUrl={`${slug}.jpg`}
-        description={frontmatter.description || post.excerpt}
+        description={frontmatter.description}
       />
 
       <article className="px-4  max-w-screen-2xl">
