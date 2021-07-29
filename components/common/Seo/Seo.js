@@ -48,28 +48,7 @@ export function SEO({ title, imageUrl, description }) {
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
 
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-185731147-1"
-      />
-      <div id="fb-root"></div>
-      <script
-        async
-        defer
-        crossOrigin="anonymous"
-        src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v11.0&appId=167048748417291&autoLogAppEvents=1"
-        nonce="MZFmb3rK"
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-185731147-1');
-        `,
-        }}
-      />
+  
       <link
         rel="apple-touch-icon"
         sizes="180x180"
