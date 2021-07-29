@@ -20,6 +20,7 @@ export function SEO({ title, imageUrl, description = "" }) {
         property="og:description"
         content={metaDescription}
       />
+      <link rel="canonical" href={`/post/${imageUrl}`} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
       <meta property="og:url" content="https://orbitaterrestre.com"></meta>
