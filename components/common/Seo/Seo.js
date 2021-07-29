@@ -41,7 +41,7 @@ export function SEO({ title, imageUrl, description = "" }) {
       <script
         async
         defer
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v11.0&appId=167048748417291&autoLogAppEvents=1"
         nonce="MZFmb3rK"
       ></script>

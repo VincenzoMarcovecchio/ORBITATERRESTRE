@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LayoutComponent,  SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
 import moment from "moment";
+
 function Blog({ posts }) {
   const [currentCategory, setCurrentCategory] = useState(null);
 
@@ -57,7 +58,7 @@ function Blog({ posts }) {
                         </h3>
                         <span
                           onClick={() => setCurrentCategory(category)}
-                          className="px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                          className="cursor-pointer px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                         >
                           {category}
                         </span>

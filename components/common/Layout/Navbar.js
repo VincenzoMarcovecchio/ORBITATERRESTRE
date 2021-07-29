@@ -123,7 +123,6 @@ export const NavBar = () => {
                         : "hidden "
                     }
                   >
-
                     <a
                       style={{ textDecoration: "none" }}
                       href="/nuove-scoperte-su-marte/3000"
@@ -455,8 +454,7 @@ export const NavBar = () => {
                         <div className="ml-4">
                           Eventi
                           <p className="mt-1 text-sm innerlink">
-                            Eventi  futuri che riguardano
-                            l'esplorazione spaziale
+                            Eventi futuri che riguardano l'esplorazione spaziale
                           </p>
                         </div>
                       </a>
@@ -537,7 +535,6 @@ export const NavBar = () => {
             </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-
             <Header />
           </div>
         </div>
@@ -561,10 +558,11 @@ export const NavBar = () => {
               : "opacity-0 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           }
         >
-          <div style={{background:"whitesmoke"}}
-           className={
-            "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
-          }
+          <div
+            style={{ background: "whitesmoke" }}
+            className={
+              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+            }
           >
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -576,7 +574,7 @@ export const NavBar = () => {
                   />
                 </div>
                 <div>
-                  {" "}
+           
                   <Header />
                 </div>
                 <div className="-mr-2">
@@ -642,7 +640,7 @@ export const NavBar = () => {
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     <a
-                      href="#"
+                     
                       className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                     >
                       <svg
@@ -684,22 +682,34 @@ export const NavBar = () => {
                         strokeWidth={2}
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
-                    </svg>{" "}
+                    </svg>
                     <Link replace href="/astronauti/" as="/astronauti/">
                       <span className="ml-3 text-base font-medium ">
                         Astronauti
                       </span>
                     </Link>
                   </a>
-                  <a
-                    href="#"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    {/* Heroicon name: outline/view-grid */}
+                  <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
+                     
 
-                    <span className="ml-3 text-base font-medium ">
-                      Integrations
-                    </span>
+                      <svg
+                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                  <Link replace href={"/blog/"} as={`/blog`}>
+                    <span className="ml-3 text-base font-medium ">Blog</span>
+                  </Link>
                   </a>
                   <a
                     href="/sistema-solare"

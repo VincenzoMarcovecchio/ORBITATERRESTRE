@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import loader from "../../content/assets/little-loader.gif";
 
 export function RenderNews({ ids }) {
   const [articles, setArticles] = useState([]);
@@ -33,7 +32,7 @@ export function RenderNews({ ids }) {
                 className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                 key={ar.project?.projectId}
               >
-                <div className="sm:w-full md:w-2/3 px-4  py-6 ">
+                <div className=" px-4  py-6 ">
                   <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
                     {ar.project?.title}
                   </h1>
@@ -66,11 +65,7 @@ export function RenderNews({ ids }) {
             );
           })
         ) : (
-          <img
-            className="w-full min-h-screen object-cover"
-            src={loader}
-            alt="loader"
-          />
+       <p>Caricamento supersonico in corso...</p>
         )}
       </div>
     </React.Fragment>

@@ -7,9 +7,10 @@ import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   
-  
+
   return (
     <LayoutComponent>
+
       <SEO
         title={frontmatter.title}
         imageUrl={`${slug}.jpg`}

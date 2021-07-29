@@ -36,7 +36,7 @@ export function QuickLinks(props) {
               </p>
             </div>
           </div>
-          <div className="bg-gray-900 h-full md:h-80  shadow-lg rounded p-3">
+          <div className="bg-gray-900 h-full md:h-70  shadow-lg rounded p-3">
             <div className="group relative">
               <img
                 className="w-full h-full md:h-40  object-cover md:w-72  block rounded"
