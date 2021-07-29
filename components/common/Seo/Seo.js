@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { getSiteMetaData } from "@utils/helpers";
 
-export function SEO({ title, imageUrl, description = "" }) {
+export function SEO({ title, imageUrl, description }) {
   const siteMetadata = getSiteMetaData();
 
   const metaDescription = description || siteMetadata.description;
@@ -20,10 +20,24 @@ export function SEO({ title, imageUrl, description = "" }) {
         property="og:description"
         content={metaDescription}
       />
-      <link rel="canonical" href={`/post/${imageUrl}`} />
+      <link
+        rel="canonical"
+        href={`${
+          imageUrl
+            ? `https://orbitaterrestre.com/post/${imageUrl}`
+            : `https://orbitaterrestre.com/`
+        }`}
+      />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
-      <meta property="og:url" content="https://orbitaterrestre.com"></meta>
+      <meta
+        property="og:url"
+        content={`${
+          imageUrl
+            ? `https://orbitaterrestre.com/post/${imageUrl}`
+            : `https://orbitaterrestre.com/`
+        }`}
+      />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
