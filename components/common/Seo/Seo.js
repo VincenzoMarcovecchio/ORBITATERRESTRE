@@ -14,9 +14,8 @@ export function SEO({ title, imageUrl, description }) {
       </title>
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta name="og:title" property="og:title" content={title} />
+      <meta property="og:title" content={title} />
       <meta
-        name="og:description"
         property="og:description"
         content={metaDescription}
       />
@@ -28,7 +27,7 @@ export function SEO({ title, imageUrl, description }) {
             : `https://orbitaterrestre.com/`
         }`}
       />
-      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image" content={`https:/www.orbitaterrestre.com/${imageUrl}`}/>
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
       <meta
         property="og:url"
@@ -45,10 +44,10 @@ export function SEO({ title, imageUrl, description }) {
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image:alt" content={metaDescription}></meta>
+
+      
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
-
-  
       <link
         rel="apple-touch-icon"
         sizes="180x180"
