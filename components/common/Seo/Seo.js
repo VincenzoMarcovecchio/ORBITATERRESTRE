@@ -33,7 +33,7 @@ export function SEO({ title, imageUrl, description }) {
         property="og:url"
         content={`${
           imageUrl
-            ? `https://orbitaterrestre.com/post/${imageUrl}`
+            ? `/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}
       />
