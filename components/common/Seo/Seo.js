@@ -27,7 +27,11 @@ export function SEO({ title, imageUrl, description }) {
             : `https://orbitaterrestre.com/`
         }`}
       />
-      <meta property="og:image" content={`/${imageUrl}`}/>
+      <meta property="og:image" content={`${
+          imageUrl
+            ? `https://orbitaterrestre.com/${imageUrl}`
+            : `https://orbitaterrestre.com/`
+        }`}/>
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
       <meta
         property="og:url"
@@ -41,7 +45,11 @@ export function SEO({ title, imageUrl, description }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
-      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:image" content={`${
+          imageUrl
+            ? `https://orbitaterrestre.com/${imageUrl}`
+            : `https://orbitaterrestre.com/`
+        }`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image:alt" content={metaDescription}></meta>
 
@@ -65,6 +73,7 @@ export function SEO({ title, imageUrl, description }) {
         sizes="16x16"
         href="static/favicon-16x16.png"
       />
+      <meta property="fb:page_id" content="256677285815818" />
     </Head>
   );
 }
