@@ -1,11 +1,13 @@
 import Head from "next/head";
 
 import { getSiteMetaData } from "@utils/helpers";
+import { getPostsSlugs } from "@utils/posts";
 
-export function SEO({ title, imageUrl, description }) {
+export function SEO({ title, imageUrl, slug, description }) {
+  
   const siteMetadata = getSiteMetaData();
-  const slug = imageUrl && imageUrl.replace(/\.[^.]*$/,'')
   const metaDescription = description || siteMetadata.description;
+
 
   return (
     <Head>
@@ -29,7 +31,7 @@ export function SEO({ title, imageUrl, description }) {
       />
       <meta property="og:image" content={`${
           imageUrl
-            ? `/${imageUrl}`
+            ? `https://orbitaterrestre.com/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}/>
 
@@ -39,7 +41,7 @@ export function SEO({ title, imageUrl, description }) {
         content={`${
           imageUrl
             ? `https://orbitaterrestre.com/post/${slug}`
-            : `https://orbitaterrestre.com/`
+            : `https://orbitaterrestre.com/${slug}`
         }`}
       />
       <meta name="twitter:card" content="summary" />
@@ -48,7 +50,7 @@ export function SEO({ title, imageUrl, description }) {
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <meta name="twitter:image" content={`${
           imageUrl
-            ? `/${imageUrl}`
+            ? `https://orbitaterrestre.com/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`} />
       <meta name="twitter:card" content="summary_large_image" />

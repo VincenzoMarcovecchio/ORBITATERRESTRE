@@ -7,11 +7,12 @@ import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   
-  console.log(slug, frontmatter);
+
 
   return (
     <LayoutComponent>
       <SEO
+        slug
         title={frontmatter.title}
         imageUrl={`${slug}.jpg`}
         description={frontmatter.description}
