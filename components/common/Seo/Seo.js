@@ -4,7 +4,7 @@ import { getSiteMetaData } from "@utils/helpers";
 
 export function SEO({ title, imageUrl, description }) {
   const siteMetadata = getSiteMetaData();
-
+  const slug = imageUrl.replace(/\.[^.]*$/,'')
   const metaDescription = description || siteMetadata.description;
 
   return (
