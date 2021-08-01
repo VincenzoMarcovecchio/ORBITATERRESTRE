@@ -29,7 +29,7 @@ export function SEO({ title, imageUrl, description }) {
       />
       <meta property="og:image" content={`${
           imageUrl
-            ? `https://orbitaterrestre.com/${imageUrl}`
+            ? `/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}/>
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
@@ -47,7 +47,7 @@ export function SEO({ title, imageUrl, description }) {
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <meta name="twitter:image" content={`${
           imageUrl
-            ? `https://orbitaterrestre.com/${imageUrl}`
+            ? `/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -73,7 +73,7 @@ export function SEO({ title, imageUrl, description }) {
         sizes="16x16"
         href="static/favicon-16x16.png"
       />
-      <meta property="fb:page_id" content="256677285815818" />
+      <meta property="fb:app_id" content="256677285815818" />
     </Head>
   );
 }
