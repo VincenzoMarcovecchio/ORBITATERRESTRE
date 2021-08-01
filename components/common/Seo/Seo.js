@@ -1,13 +1,12 @@
 import Head from "next/head";
 
 import { getSiteMetaData } from "@utils/helpers";
-import { getPostsSlugs } from "@utils/posts";
 
 export function SEO({ title, imageUrl, slug, description }) {
   
   const siteMetadata = getSiteMetaData();
   const metaDescription = description || siteMetadata.description;
-
+  const sluga = slug || undefined
 
   return (
     <Head>
@@ -25,7 +24,7 @@ export function SEO({ title, imageUrl, slug, description }) {
         rel="canonical"
         href={`${
           imageUrl
-            ? `https://orbitaterrestre.com/post/${slug}`
+            ? `https://orbitaterrestre.com/post/${sluga}`
             : `https://orbitaterrestre.com/`
         }`}
       />
@@ -40,8 +39,8 @@ export function SEO({ title, imageUrl, slug, description }) {
         property="og:url"
         content={`${
           imageUrl
-            ? `https://orbitaterrestre.com/post/${slug}`
-            : `https://orbitaterrestre.com/${slug}`
+            ? `https://orbitaterrestre.com/post/${sluga}`
+            : `https://orbitaterrestre.com/${sluga}`
         }`}
       />
       <meta name="twitter:card" content="summary" />

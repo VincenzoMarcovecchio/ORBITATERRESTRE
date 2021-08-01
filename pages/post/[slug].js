@@ -12,7 +12,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   return (
     <LayoutComponent>
       <SEO
-        slug
+        slug={slug}
         title={frontmatter.title}
         imageUrl={`${slug}.jpg`}
         description={frontmatter.description}
