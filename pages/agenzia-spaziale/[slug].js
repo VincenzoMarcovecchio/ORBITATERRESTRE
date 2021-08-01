@@ -5,10 +5,10 @@ import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Pagetwo({ agenciesDatatwo }) {
-  console.log(agenciesDatatwo);
+
   return (
     <LayoutComponent>
-      <SEO title={`Agenzie Spaziale ${agenciesDatatwo.results} `} />
+      <SEO description={agenciesDatatwo.description} title={`Agenzie Spaziale ${agenciesDatatwo.results}`} />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {agenciesDatatwo ? (
