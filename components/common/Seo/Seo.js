@@ -4,7 +4,7 @@ import { getSiteMetaData } from "@utils/helpers";
 
 export function SEO({ title, imageUrl, description }) {
   const siteMetadata = getSiteMetaData();
-  const slug = imageUrl.replace(/\.[^.]*$/,'')
+  const slug = imageUrl && imageUrl.replace(/\.[^.]*$/,'')
   const metaDescription = description || siteMetadata.description;
 
   return (
@@ -23,7 +23,7 @@ export function SEO({ title, imageUrl, description }) {
         rel="canonical"
         href={`${
           imageUrl
-            ? `https://orbitaterrestre.com/post/${imageUrl}`
+            ? `https://orbitaterrestre.com/post/${slug}`
             : `https://orbitaterrestre.com/`
         }`}
       />
@@ -32,12 +32,13 @@ export function SEO({ title, imageUrl, description }) {
             ? `/${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}/>
+
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
       <meta
         property="og:url"
         content={`${
           imageUrl
-            ? `https://orbitaterrestre.com/post/${imageUrl}`
+            ? `https://orbitaterrestre.com/post/${slug}`
             : `https://orbitaterrestre.com/`
         }`}
       />
