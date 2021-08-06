@@ -6,7 +6,7 @@ category: orbita terrestre bassa
 ---
 
 
-<img src="https://spacenews.com/wp-content/uploads/2021/08/rsz_screen_shot_2021-08-05_at_11159_pm-879x485.png" alt="La Nuova Zelanda e LeoLabs firmano un accordo pluriennale per la piattaforma Space Regulatory"/>
+<img src="/La-Nuova-Zelanda-e-LeoLabs-firmano-un-accordo-pluriennale-per-la-piattaforma-Space-Regulatory.jpg" alt="La Nuova Zelanda e LeoLabs firmano un accordo pluriennale per la piattaforma Space Regulatory"/>
 
 
 SAN FRANCISCO – LeoLabs e la New Zealand Space Agency (NZSA) stanno lavorando insieme per sviluppare una piattaforma software basata su cloud per il monitoraggio dell'attività spaziale. Il Ministero degli Affari, dell'Innovazione e dell'Occupazione della Nuova Zelanda ha annunciato l'accordo pluriennale il 5 agosto, affermando che sarebbe allo stato attuale la "Piattaforma di regolamentazione e sostenibilità spaziale più avanzata al mondo".
