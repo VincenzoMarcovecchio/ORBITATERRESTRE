@@ -29,8 +29,9 @@ export const NavBar = () => {
                   src={`/cosmos.png`}
                   alt="astronauta nello spazio"
                 />
-                <span className="font-xl md:mt-2 ml-4 flex flex-col cursor-pointer uppercase font-bold">
-                  <p className="font-xl uppercase font-bold">orbita</p>{" "}
+                <span className="font-xl md:mt-2 ml-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
+                  <p className="font-black leading-none font-display
+                     font-xl uppercase font-bold">orbita</p>{" "}
                   terrestre
                 </span>
               </div>

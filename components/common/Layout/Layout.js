@@ -8,7 +8,7 @@ export function LayoutComponent({ children }) {
         <NavBar />
         <main className="container mx-auto">{children}</main>
         <footer className=" max-w-7xl mx-auto mt-12 px-4 sm:px-6 text-lg font-light">
-          <Bio />© {new Date().getFullYear()}, Sito web creato con&nbsp;
+          <Bio />© {new Date().getFullYear()}&nbsp;powered by 
           <a href="https://nextjs.org/">Next.js</a>
           &#128293;
         </footer>

@@ -50,8 +50,9 @@ function Home({ datas }) {
                 ></iframe>
               )}
               {datas.media_type !== "video" && (
+                
                 <img
-                  className="mb-4 sm:h-full md:h-5/6  object-cover flex "
+                  className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                   src={datas.url}
                   alt={datas.title}
                 />

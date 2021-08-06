@@ -14,7 +14,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
       <SEO
         slug={slug}
         title={frontmatter.title}
-        imageUrl={`${slug}.jpg`}
+        imageUrl={`${slug}.jpg `|| `${slug}.png` }
         description={frontmatter.description}
       />
 
@@ -23,7 +23,8 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
           <h1 className="mb-2 text-6xl font-black leading-none font-display">
             {frontmatter.title}
           </h1>
-          <p className="text-sm">{frontmatter.date}</p>
+          <time datetime={frontmatter.date.toLocaleString("it-IT")}
+           className="text-sm">{frontmatter.date.toLocaleString("it-IT")}</time>
         </header>
 
         <ReactMarkdown

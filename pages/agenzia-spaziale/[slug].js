@@ -30,7 +30,7 @@ function Pagetwo({ agenciesDatatwo }) {
                   "nessun amministratore trovato"}
               </p>
               <p className="mt-2 text-lg mb-3">
-                <b>Nazionalita':</b>&nbsp;{agenciesDatatwo.country_code}
+                <b>Nazionalità:</b>&nbsp;{agenciesDatatwo.country_code}
               </p>
               <p className="mt-2 text-lg mb-3">
                 <b>Descrizione:</b>&nbsp;{agenciesDatatwo.description}
