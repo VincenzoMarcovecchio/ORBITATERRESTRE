@@ -9,7 +9,7 @@ function SpaceXTimeline() {
   const url = "https://api.spacexdata.com/v4/history";
   const { data, error } = useSWR(url, fetcher);
   const translate = setCORS("https://mimmofranco.herokuapp.com/");
-  const [translated, setTranslated] = useState({});
+  const [translated, setTranslated] = useState([]);
   const [toBeTranslated, setToBeTranslated] = useState([]);
   const translateplease = JSON.stringify(toBeTranslated);
 
@@ -39,7 +39,7 @@ function SpaceXTimeline() {
       });
   }, []);
   let vaimo = translated.length > 1 && translated.substring(1);
-
+  console.log(vaimo);
   return (
     <LayoutComponent>
       <SEO
@@ -82,7 +82,7 @@ function SpaceXTimeline() {
                           {moment(res.event_date_utc).format("YYYY-MM-DD")}
                         </time>
 
-                        <p className="text-sm mt-4 font-medium leading-snug tracking-wide text-white text-opacity-100">
+                        <p className="text-sm mt-4 font-medium mb-4 leading-snug tracking-wide text-white text-opacity-100">
                           {res.details}
                         </p>
 
@@ -90,9 +90,9 @@ function SpaceXTimeline() {
                           href={res.links.article}
                           target="_blank"
                           rel="canonical noopener noreferrer"
-                          className="text-sm leading-snug tracking-wide  text-opacity-100"
+                          className="text-sm rounded-full py-1 px-2  mt-8 bg-gray-50 leading-snug tracking-wide font-white leading-none font-display  text-sm color-white"
                         >
-                          Scopri di piu'
+                          Scopri di più
                         </a>
                       </div>
                     </div>

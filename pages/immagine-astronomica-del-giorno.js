@@ -38,7 +38,7 @@ console.log(datas);
       <SEO
         title={`NASA Immagine astronomica del giorno`}
         description={datas.explanation}
-        imageUrl={datas.hdurl}
+    
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
