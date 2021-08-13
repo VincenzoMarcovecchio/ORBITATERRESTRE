@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { getSiteMetaData } from "@utils/helpers";
 
-export function SEO({ title, imageUrl, slug, description }) {
+export function SEO({ title, imageUrl, slug,cano, description }) {
   
   const siteMetadata = getSiteMetaData();
   const metaDescription = description || siteMetadata.description;
@@ -25,7 +25,7 @@ export function SEO({ title, imageUrl, slug, description }) {
         href={`${
           imageUrl
             ? `https://orbitaterrestre.com/post/${sluga}`
-            : `https://orbitaterrestre.com/`
+            : cano ? `https://orbitaterrestre.com/${cano}`  : `https://orbitaterrestre.com/`
         }`}
       />
       <meta property="og:image" content={`${
