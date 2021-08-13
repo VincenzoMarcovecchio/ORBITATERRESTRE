@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 import non from "../content/assets/immagine-non-trovata.png";
@@ -13,7 +13,7 @@ function News({ newsdata }) {
 
   return (
     <LayoutComponent>
-      <SEO title="News Astronautiche Internazionali " />
+      <SEO title="News Astronautiche Internazionali " description="News Astronautiche Internazionali da diverse fonti del web"/>
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           {newsdata ? (
@@ -129,4 +129,6 @@ export async function getStaticProps() {
     },
   };
 }
+
+
 export default News;

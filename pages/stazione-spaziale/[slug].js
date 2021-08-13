@@ -53,7 +53,7 @@ function StazioneSpaziale({ sta }) {
               <p>{sta.founded}</p>
             </div>
             <div className="flex flex-col">
-              {" "}
+             
               <b>Descrizione:&nbsp;</b>
               <p>{sta.description}</p>
             </div>
@@ -90,4 +90,5 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
+
 export default StazioneSpaziale;

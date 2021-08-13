@@ -3,7 +3,7 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function PrimeFasi({ sta, pageNumber }) {
-  console.log(sta);
+ 
   const router = useRouter();
 
   return (

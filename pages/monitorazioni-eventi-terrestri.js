@@ -1,5 +1,5 @@
 import { React } from "react";
-import Link from "next/link";
+
 import { LayoutComponent, SEO } from "@components/common";
 
 function Eventi() {

@@ -19,7 +19,7 @@ function Blog({ posts }) {
 
   return (
     <LayoutComponent>
-      <SEO title="Il blog " description="Notizie e news dallo spazio" />
+      <SEO title="Il blog " description="Notizie dallo spazio vicino e lontano" />
 
       <div className="w-full md:max-w-8xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
         <div className="display flex mb-8 mt-4 space-x-2 md:space-x-8">

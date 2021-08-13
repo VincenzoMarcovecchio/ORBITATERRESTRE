@@ -13,6 +13,8 @@ const nextConfig = {
     },
 
 }
+
+
 module.exports = withPlugins(
 
   [

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { LayoutComponent, Bio, SEO } from '@components/common';
-import styles from '../assets/Home.module.css';
+
 import useSWR from 'swr';
 import { fetcher } from '../utils/fetcher';
 import Head from 'next/head';

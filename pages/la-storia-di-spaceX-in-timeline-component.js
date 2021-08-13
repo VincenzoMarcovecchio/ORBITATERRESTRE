@@ -39,7 +39,7 @@ function SpaceXTimeline() {
       });
   }, []);
   let vaimo = translated.length > 1 && translated.substring(1);
-  console.log(vaimo);
+
   return (
     <LayoutComponent>
       <SEO

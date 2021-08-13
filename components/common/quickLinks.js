@@ -1,11 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import equipaggio from "../../content/assets/lanci-con-equipaggio.jpg";
-import fasi from "../../content/assets/fasi-riutilizzabili.jpg";
-import stazione from "../../content/assets/stazione-spaziale.jpg";
 
 
-export function QuickLinks(props) {
+export function QuickLinks() {
   return (
     <div className="grid place-items-center mt-4">
       <div>
@@ -14,7 +11,7 @@ export function QuickLinks(props) {
             <div className="group relative">
               <img
                 className="w-full object-cover h-full md:h-40  md:w-72 block rounded"
-                src={equipaggio}
+                src={"./lanci-con-equipaggio.jpg"}
                 alt="lanci previsti di equipaggio"
               />
               <div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
@@ -40,7 +37,7 @@ export function QuickLinks(props) {
             <div className="group relative">
               <img
                 className="w-full h-full md:h-40  object-cover md:w-72  block rounded"
-                src={fasi}
+                src={"./fasi-riutilizzabili.jpg"}
                 alt="fasi riutilizzabili"
               />
               <div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
@@ -66,7 +63,7 @@ export function QuickLinks(props) {
             <div className="group relative">
               <img
                 className="w-full h-full md:h-40  object-cover md:w-72  block rounded"
-                src={stazione}
+                src={"./stazione-spaziale.jpg"}
                 height="400"
                 width="400"
                 alt="stazioni spaziali"

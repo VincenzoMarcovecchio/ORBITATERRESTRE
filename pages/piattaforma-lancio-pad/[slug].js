@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 
 function Piattaforme({ pad }) {
-  console.log(pad);
+ 
   return (
     <LayoutComponent>
       <SEO

@@ -31,7 +31,7 @@ function Giorno({datas}) {
         });
     }, []);
 
-console.log(datas);
+
 
   return (
     <LayoutComponent>

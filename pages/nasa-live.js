@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import  React  from "react";
 import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";

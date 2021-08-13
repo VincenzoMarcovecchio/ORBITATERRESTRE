@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-function Pagina() {
+function Paginax() {
   const defaultEndpoint =
     "https://ll.thespacedevs.com/2.1.0/astronaut/?limit=10&offset=10";
 
@@ -11,7 +11,7 @@ function Pagina() {
   const [name, setName] = useState("");
   const [nationality, setNationality] = useState("All");
 
-  console.log(defaultResults);
+  
 
   useEffect(() => {
     fetch(
@@ -168,4 +168,4 @@ function Pagina() {
   );
 }
 
-export default Pagina;
+export default Paginax;

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React from "react";
 import { LayoutComponent, SEO } from "@components/common";
 
 export default function Errores() {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 
-export default function Errores() {
+ function Errorese() {
   return (
     <LayoutComponent>
       <SEO
@@ -25,3 +25,4 @@ export default function Errores() {
     </LayoutComponent>
   );
 }
+export default Errorese

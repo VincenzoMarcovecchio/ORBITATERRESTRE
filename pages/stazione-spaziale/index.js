@@ -4,7 +4,7 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function StazioneSpaziale({ sta }) {
-  console.log(sta);
+ 
   const router = useRouter();
   return (
     <LayoutComponent>

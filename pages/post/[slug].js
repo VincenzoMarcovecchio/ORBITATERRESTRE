@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown/with-html";
+import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import { LayoutComponent, Image, SEO } from "@components/common";
@@ -59,7 +59,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   );
 }
 
-export default Post;
+
 
 export async function getStaticPaths() {
   const paths = getPostsSlugs();
@@ -101,3 +101,5 @@ const MarkdownImage = ({ alt, src }) => (
     className="w-full"
   />
 );
+
+export default Post;
