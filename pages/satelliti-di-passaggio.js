@@ -44,7 +44,7 @@ function Testas() {
       cano="satelliti-di-passaggio"
       slug="satelliti-di-passaggio"
         title={`Satelliti sopra la mia testa in questo momento`}
-        description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamno in comune"
+        description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
