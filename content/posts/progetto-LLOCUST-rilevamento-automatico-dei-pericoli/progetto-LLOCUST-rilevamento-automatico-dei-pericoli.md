@@ -1,6 +1,6 @@
 ---
 title: Progetto L.O.C.U.S.T. 
-description: Progetto L.L.O.C.U.S.T. rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, sintonizziamo L.L.O.C.U.S.T. per creare una mappa termica delle aree più a rischio di infestazione di locuste. Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del nostro modello sotto forma di una mappa interattiva. 
+description: Progetto L.L.O.C.U.S.T. rileva e prevede la posizione delle locuste, i loro movimenti nelle aree  vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, sintonizziamo L.L.O.C.U.S.T. per creare una mappa termica delle aree più a rischio di infestazione di locuste. Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del nostro modello sotto forma di una mappa interattiva. 
 date: 2021-08-17T11:00:00.000Z
 category: spaceApps
 ---
@@ -9,11 +9,14 @@ category: spaceApps
 <img src="https://sa-2019.s3.amazonaws.com/media/images/97945216-ef2a-4dfe-ae25-e5c8b931804e.max-1000x1000.jpg" alt="invasione locouste">
 <blockquote>
 Video Link: https://youtu.be/RI2gLdX9DAE
+
 Live Website: https://determined-keller-5cbae8.netlify.app/
+
 Project Code
 https://github.com/kevin200617/Project-L.O.C.U.S.T/
 </blockquote>
 
+<h2>Questo progetto è stato vincitore in occasione della NASA Space App Challenge 2020</h2>
 Progetto L.L.O.C.U.S.T. [Locuste Locazione, Obliterazione e Coordinamento utilizzando i satelliti e l'equitazione] rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree di interesse caraterrizate come vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, si sintonizza L.L.O.C.U.S.T per creare una mappa termica delle aree più a rischio di infestazione di locuste.
 
 Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del modello sotto forma di una mappa interattiva.
