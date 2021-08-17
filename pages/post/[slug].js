@@ -20,7 +20,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
 
       <article className="px-4  max-w-screen-2xl">
         <header className="mb-8 mt-8">
-          <h1 className="mb-2 text-6xl font-black leading-none font-display">
+          <h1 className="mb-2 text-4xl font-black leading-none font-display">
             {frontmatter.title}
           </h1>
           <time datetime={frontmatter.date.toLocaleString("it-IT")}

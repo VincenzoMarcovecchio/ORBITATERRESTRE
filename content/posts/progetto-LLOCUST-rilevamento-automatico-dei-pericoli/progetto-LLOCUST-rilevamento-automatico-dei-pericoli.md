@@ -1,20 +1,28 @@
 ---
-title: Progetto L.O.C.U.S.T. [Locuste Locazione, Obliterazione e Coordinamento utilizzando i satelliti e l'equitazione]
+title: Progetto L.O.C.U.S.T. 
 description: Progetto L.L.O.C.U.S.T. rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, sintonizziamo L.L.O.C.U.S.T. per creare una mappa termica delle aree più a rischio di infestazione di locuste. Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del nostro modello sotto forma di una mappa interattiva. 
 date: 2021-08-17T11:00:00.000Z
 category: spaceApps
 ---
 
-Progetto L.L.O.C.U.S.T. rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree di interesse caraterrizate come vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, si sintonizza L.L.O.C.U.S.T per creare una mappa termica delle aree più a rischio di infestazione di locuste.
 
- Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del modello sotto forma di una mappa interattiva.
+<img src="https://sa-2019.s3.amazonaws.com/media/images/97945216-ef2a-4dfe-ae25-e5c8b931804e.max-1000x1000.jpg" alt="invasione locouste">
+<blockquote>
+Video Link: https://youtu.be/RI2gLdX9DAE
+Live Website: https://determined-keller-5cbae8.netlify.app/
+Project Code
+https://github.com/kevin200617/Project-L.O.C.U.S.T/
+</blockquote>
+
+Progetto L.L.O.C.U.S.T. [Locuste Locazione, Obliterazione e Coordinamento utilizzando i satelliti e l'equitazione] rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree di interesse caraterrizate come vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, si sintonizza L.L.O.C.U.S.T per creare una mappa termica delle aree più a rischio di infestazione di locuste.
+
+Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del modello sotto forma di una mappa interattiva.
 
 <h2>Come hanno affrontato questa sfida</h2>
 Il team ha sviluppato un modello di apprendimento automatico che è stato addestrato sui dati satellitari di vento, umidità, temperature superficiali e indice di vegetazione dai satelliti SMAP e Terra (strumento MODIS, strumento ASTER).
 
 Il prodotto finale viene mostrato come una mappa di un sito Web che aiuta a rilevare e valutare i livelli di rischio attuali e a prevedere le invasioni di locuste in un luogo e un'ora.
 
-<img src="https://sa-2019.s3.amazonaws.com/media/images/97945216-ef2a-4dfe-ae25-e5c8b931804e.max-1000x1000.jpg" alt="invasione locouste">
 Il progetto L.L.O.C.U.S.T. è fondamentale per mantenere una sicurezza alimentare. Quando sciamano, le locuste possono consumare quanto cibo potrebbero consumare 35.000 persone al giorno. Nel contesto dei luoghi in cui le locuste sono più abbondanti, come l'Africa orientale e l'India settentrionale, tale danno minaccia il sostentamento della gente comune e delle imprese. 
 
 Quando inizia la stagione riproduttiva delle locuste, gli agricoltori vengono avvisati dell'avvicinarsi di uno sciame solo quando si trovano faccia a faccia con esso sui loro terreni agricoli. Questo lascia loro poco tempo per prepararsi, l'unica opzione poi è quella di guardare le locuste consumare la loro unica fonte di reddito.
@@ -58,7 +66,7 @@ Nella terza fase, hanno concentrato i loro sforzi sull'essere in grado di visual
 
 <h2>Quali strumenti, linguaggi di codifica, hardware, software hanno utilizzato per sviluppare il questo progetto?</h2>
 
-Hanno utilizzato Python per creare una pipeline di dati, che li ha consentiti di raccogliere, manipolare e archiviare immagini satellitari utilizzando librerie come Pandas e Raster.io. Dopo aver ottenuto i dati nel formato giusto, hanno quindi utilizzato la libreria di apprendimento automatico Sklearn per creare un modello per prevedere se una locusta sarebbe stata presente in un dato luogo e momento date le caratteristiche come l'umidità del suolo, la temperatura, l'umidità, l'elevazione e la vegetazione .
+Hanno utilizzato Python per creare una pipeline di dati, che li ha consentiti di raccogliere, manipolare e archiviare immagini satellitari utilizzando librerie come Pandas e Raster.io. Dopo aver ottenuto i dati nel formato giusto, hanno quindi utilizzato la libreria di apprendimento automatico Sklearn per creare un modello per prevedere se una locusta sarebbe stata presente in un dato luogo e momento date le caratteristiche come l'umidità del suolo, la temperatura, l'umidità, l'elevazione e la vegetazione.
 
 Poiché il download e l'elaborazione delle immagini satellitari in formato TIFF richiedevano molto tempo e risorse di calcolo, hanno deciso di raccogliere una discreta quantità di dati per i luoghi in cui è avvenuta l'invasione delle locuste e anche per i luoghi in cui non è avvenuta. Dopo l'addestramento, il modello Random Forest e il modello SVC hanno avuto un'accuratezza del 100% durante i test (si sospetta che ciò sia dovuto alla quantità limitata di dati che avevamo circa 200 campioni per i test). Quindi questo modello è stato utilizzato dall'app frontend per visualizzare la probabilità di un'infestazione di locuste in una determinata posizione.
 
@@ -85,8 +93,9 @@ ASTER_GDEM_Color_Index (Elevazione)
 SMAP_L4_Soil_Temperature_Layer_1 (Temperatura del suolo)
 MODIS_Terra_NDVI_8Giorno
 
-<h2>Project Demo</h2>
+<blockquote>
 Video Link: https://youtu.be/RI2gLdX9DAE
 Live Website: https://determined-keller-5cbae8.netlify.app/
 Project Code
 https://github.com/kevin200617/Project-L.O.C.U.S.T/
+</blockquote>

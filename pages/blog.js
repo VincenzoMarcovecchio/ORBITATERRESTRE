@@ -22,11 +22,11 @@ function Blog({ posts }) {
       <SEO title="Il blog " description="Notizie dallo spazio vicino e lontano" />
 
       <div className="w-full md:max-w-8xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
-        <div className="display flex mb-8 mt-4 space-x-2 md:space-x-8">
+        <div className="display 	flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
           {uniquecat.map((cate, i) => {
             return (
               <span
-                className="cursor-pointer px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                className="cursor-pointer m-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                 key={i}
                 onClick={() => setCurrentCategory(cate)}
               >
