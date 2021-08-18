@@ -765,10 +765,10 @@ export const NavBar = () => {
                 </Link>
                 <Link
                   replace
-                  href="/blog/"
+                  href="/satelliti-di-passaggio/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Blog
+                  Satelliti sulla mia testa
                 </Link>
                 <a
                   href="#"

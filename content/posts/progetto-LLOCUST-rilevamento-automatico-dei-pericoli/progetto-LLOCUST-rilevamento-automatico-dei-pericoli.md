@@ -8,11 +8,7 @@ category: spaceApps
 
 <img src="https://sa-2019.s3.amazonaws.com/media/images/97945216-ef2a-4dfe-ae25-e5c8b931804e.max-1000x1000.jpg" alt="invasione locouste">
 <blockquote>
-Video Link: https://youtu.be/RI2gLdX9DAE
-
-Live Website: https://determined-keller-5cbae8.netlify.app/
-
-Project Code
+Video Link: https://youtu.be/RI2gLdX9DAE<br/>Live Website: https://determined-keller-5cbae8.netlify.app/<br/>Project Code
 https://github.com/kevin200617/Project-L.O.C.U.S.T/
 </blockquote>
 
@@ -37,21 +33,21 @@ Tuttavia, utilizzando L.L.O.C.U.S.T., gli agricoltori non solo sono in grado di 
 <img src="https://sa-2019.s3.amazonaws.com/media/images/ea2b99ea-1846-4a13-9aa8-c653b5644078.max-1000x1000.png" alt="invasione locouste">
 
 
-Per utilizzare L.L.O.C.U.S.T. è sufficiente specificare la propria posizione geografica. Da lì, L.L.O.C.U.S.T. estrarrà immagini satellitari dai satelliti Terra (strumento MODIS, strumento ASTER) e SMAP della NASA, esaminando in particolare l'umidità, l'umidità del suolo, la temperatura, l'altitudine e la vegetazione. Questi dati verranno quindi inseriti nel nostro modello, generando una mappa di calore che mostra la probabilità che uno sciame si formerà intorno alla posizione corrente.
+Per utilizzare L.L.O.C.U.S.T. è sufficiente specificare la propria posizione geografica. Da lì, L.L.O.C.U.S.T. estrarrà immagini satellitari dai satelliti Terra (strumento MODIS, strumento ASTER) e SMAP della NASA, esaminando in particolare l'umidità, l'umidità del suolo, la temperatura, l'altitudine e la vegetazione. Questi dati verranno quindi inseriti nel modello, generando una mappa di calore che mostra la probabilità che lo sciame si formi intorno alla posizione corrente.
 
-Oltre a ciò, L.L.O.C.U.S.T. utilizza anche i dati del vento di NOAA per calcolare dove molto probabilmente andrà uno sciame. Questa parte del progetto si basa sul fatto che gli sciami di locuste volano con il vento e non volano in giro a caso. Questo ci permette di proiettare un'area di sciamatura, simile a come un meteorologo potrebbe prevedere il percorso di un uragano.
+Oltre a ciò, L.L.O.C.U.S.T. utilizza anche i dati del vento di NOAA per calcolare dove molto probabilmente andrà uno sciame. Questa parte del progetto si basa sul fatto che gli sciami di locuste volano con il vento e non volano in giro a caso. Questo permette di proiettare un'area di sciamatura, simile a come un meteorologo potrebbe prevedere il percorso di un uragano.
 
 Insomma, il progetto L.L.O.C.U.S.T. spera di dare un'idea dello sciame di locuste, dando ai funzionari della città più tempo per pianificare e preparare un'infestazione, rafforzare l'agricoltura locale e dare agli agricoltori la possibilità tanto necessaria per proteggere i loro raccolti, risparmiando miliardi a lungo termine.
 
 <h2>Come hanno sviluppato questo progetto, cosa ha ispirato la squadra a scegliere questa sfida?</h2>
 
-Con il cambiamento climatico che crea discordia atmosferica e gli incendi che infuriano in tutto il mondo, il nostro team sapeva che il miglior uso delle nostre competenze sarebbe stato l'addestramento e l'applicazione di un modello ML per rilevare i pericoli.
+Con il cambiamento climatico che crea discordia atmosferica e gli incendi che infuriano in tutto il mondo, il team sapeva che il miglior uso delle competenze sarebbe dovuto essere l'addestramento e l'applicazione di un modello ML per rilevare i pericoli.
 
-Tuttavia, durante la ricerca sui pericoli su cui focalizzare il progetto, il team ha appreso che molti dei pericoli "comuni" che appaiono nelle notizie hanno già avuto una ricerca ampia e ben documentata. Questo ci ha portato a voler scegliere un pericolo che non fosse mainstream, un pericolo che è sempre più rilevante ma sotto il radar dei media e della stampa. Ciò ha ristretto la nostra ricerca direttamente alle locuste, che nel corso della tarda primavera fino all'inizio dell'estate, hanno devastato l'Africa orientale, la penisola arabica e l'India settentrionale.
+Tuttavia, durante la ricerca sui pericoli su cui focalizzare il progetto, il team ha appreso che molti dei pericoli "comuni" che appaiono nelle notizie hanno già avuto una ricerca ampia e ben documentata. Questo li ha portati a voler scegliere un pericolo che non fosse mainstream, un pericolo che è sempre più rilevante ma sotto il radar dei media e della stampa. Ciò ha ristretto la ricerca direttamente alle locuste, che nel corso della tarda primavera fino all'inizio dell'estate, hanno devastato l'Africa orientale, la penisola arabica e l'India settentrionale.
 
 <img src="https://sa-2019.s3.amazonaws.com/media/images/74b14eef-3ea4-400f-ad42-fd91a36fcbbb.max-1000x1000.jpg" alt="invasione locouste">
 
-Secondo alcune stime, nella sola Africa orientale si sono verificati danni per oltre 8,5 miliardi di dollari, causando l'insicurezza alimentare di 20 milioni di persone, rispettivamente secondo la Banca Mondiale. Tuttavia, c'è stata poca copertura da parte della stampa sul target, seduta all'ombra del COVID-19. La cosa più allarmante è che lo scorso anno c'è stato un aumento di 8.000 volte nella riproduzione delle locuste, causato da rare condizioni che i cambiamenti climatici hanno amplificato.
+Secondo alcune stime, nella sola Africa orientale si sono verificati danni per oltre 8,5 miliardi di dollari, causando l'insicurezza alimentare di 20 milioni di persone, rispettivamente secondo la Banca Mondiale. Tuttavia, c'è stata poca copertura da parte della stampa sul tema, seduta all'ombra del COVID-19. La cosa più allarmante è che lo scorso anno c'è stato un aumento di 8.000 volte nella riproduzione delle locuste, causato da rare condizioni che i cambiamenti climatici hanno amplificato.
 
 <h2>Qual è stato l' approccio allo sviluppo di questo progetto?</h2>
 
