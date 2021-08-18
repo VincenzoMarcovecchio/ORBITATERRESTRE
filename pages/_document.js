@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
 
     return (
       <Html lang={siteMetadata.language}>
-        <Head/>
+        <Head><script data-ad-client="ca-pub-7565213898571907" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></Head>
         <body className="bg-gray-50">
           <Main />
           <NextScript />
