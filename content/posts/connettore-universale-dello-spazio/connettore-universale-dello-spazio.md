@@ -5,7 +5,7 @@ date: 2021-08-21T11:00:00.000Z
 category: spaceApps
 ---
 
-<img src="https://sa-2019.s3.amazonaws.com/media/images/photo_2020-09-28_20-57-24.2e16d0ba.fill-1440x600.jpg" alt="connettori uneversali per satelliti"/>
+<iframe src="https://youtu.be/l7BzFrY0YKI" alt="connettori universali per satelliti" title="connettori universali per satelliti"></iframe>
 
 <blockquote>
 Connettiamoci
