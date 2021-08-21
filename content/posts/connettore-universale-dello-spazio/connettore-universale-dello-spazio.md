@@ -5,10 +5,10 @@ date: 2021-08-21T11:00:00.000Z
 category: spaceApps
 ---
 
-<iframe src="https://youtu.be/l7BzFrY0YKI" alt="connettori universali per satelliti" title="connettori universali per satelliti"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l7BzFrY0YKI" alt="connettori universali per satelliti"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="connettori universali per satelliti"></iframe>
+
 
 <blockquote>
-Connettiamoci
 Per veicoli spaziali più grandi in grado di eseguire missioni più grandi, parte dell'assemblaggio può essere effettuato nello spazio. La sfida è stata quella di progettare una soluzione semplice che consenta di assemblare i componenti nello spazio.
 </blockquote>
 
