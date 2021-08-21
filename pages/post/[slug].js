@@ -14,7 +14,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
       <SEO
         slug={slug}
         title={frontmatter.title}
-        imageUrl={`${slug}.jpg `|| `${slug}.png` }
+        imageUrl={`${slug}` }
         description={frontmatter.description}
       />
 
