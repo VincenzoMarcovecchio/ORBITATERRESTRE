@@ -1,10 +1,21 @@
-import { NavBar } from './Navbar';
-import { Bio } from '../Bio';
+import { NavBar } from "./Navbar";
+import { Bio } from "../Bio";
+import Link from "next/link";
 
 export function LayoutComponent({ children }) {
   return (
     <>
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white font-body">
+        <center>
+          {" "}
+          <span className="max-w-7xl mx-auto font-light text-center">
+            😮 hey cosa passa sopra la tua{" "}
+            <Link href={"/satelliti-di-passaggio/"} replace>
+              testa
+            </Link>
+            🛰️
+          </span>
+        </center>
         <NavBar />
         <main className="container mx-auto">{children}</main>
         <footer className=" max-w-7xl mx-auto mt-12 px-4 sm:px-6 text-lg font-light">
