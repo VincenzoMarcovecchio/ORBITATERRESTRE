@@ -11,7 +11,7 @@ export function LayoutComponent({ children }) {
           <span className="max-w-7xl mx-auto font-light text-center">
             😮 hey cosa passa sopra la tua{" "}
             <Link href={"/satelliti-di-passaggio/"} replace>
-              testa
+              testa&nbsp;
             </Link>
             🛰️
           </span>
