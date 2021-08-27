@@ -1,5 +1,5 @@
 ---
-title: Il primo NFT generatrore di entrate nell'universo!
+title: Il primo NFT generatore di entrate nell'universo!
 description: Un ecosistema incentrato su Marte in cui puoi esplorare il pianeta utilizzando la realtà virtuale, puoi possedere e personalizzare la tua proprietà terriera e persino raccogliere i frutti del primo NFT(Token non fungibile) al mondo che genera entrate!
 date: 2021-08-26T11:00:00.000Z
 category: crypto
