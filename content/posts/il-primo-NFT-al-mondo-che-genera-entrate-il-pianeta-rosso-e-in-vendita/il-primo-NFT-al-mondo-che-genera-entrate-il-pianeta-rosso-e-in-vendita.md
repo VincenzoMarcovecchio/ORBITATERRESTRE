@@ -23,10 +23,10 @@ Il nostro obiettivo, dicono gli sviluppatori, è rendere MARS4 un'organizzazione
 Coming soon...
 
 <h2>Qual è la dimensione di un appezzamento di terreno?</h2>
-1448 chilometro quadrato (559 miglia quadrate
+1448 chilometri quadrati (559 miglia quadrate)
 
 <h2>Che cos'è un token non fungibile (NFT)?</h2>
-Un token non fungibile (NFT) è un token crittografico che rappresenta una risorsa univoca. Funzionano come prove verificabili di autenticità e proprietà all'interno di una rete blockchain.
+Un token non fungibile (NFT) è un token crittografico che rappresenta una risorsa univoca. Funzionano come prove verificabili di autenticità e proprietà all'interno di una rete blockchain. Gli NFT non sono intercambiabili tra loro e introducono scarsità nel mondo digitale.
 
 <h2>Qual è l'indirizzo del contratto MARS Land NFT?</h2>
 https://etherscan.io/address/0xdf9Aa1012Fa49DC1d2a306e3e65EF1797d2b5fBb
@@ -42,3 +42,5 @@ Basta coniare un NFT e tenerlo stretto. Il semplice possesso di un NFT aggiunger
 
 
 La prevendita privata è ora attiva. Per saperne di più su come partecipare, inviare un'e-mail direttamente al team su: sales@mars4.me
+
+Puoi trovare le istruzioni e l'indirizzo del contratto smart nella pagina delle istruzioni https://mars4.me/instructions
