@@ -17,7 +17,7 @@ MARS4 utilizza due token: MARS$ e Mars Land NFT.
 MARS$ è la valuta nel metaverse MARS4 che viene utilizzata per il trading, per il gioco e per il conio NFT. MARS Land NFT rappresentano pezzi di terra su Marte.
 
 <h2>Cosa rende MARS4 unico?</h2>
-Il nostro obiettivo, dicono gli sviluppatori, è rendere MARS4 un'organizzazione autonoma decentralizzata (DAO) per proprietari di NFT capaci anche di controllare le decisioni di governance, come aggiornamenti delle politiche, aste e contratti. I nostri prossimi passi includono lo sviluppo di una piattaforma VR per esplorare e partecipare agli affari del mondo MARS4, ulteriore ludicizzazione e stabilire la Fondazione per il finanziamento delle potenziali startup spaziali nella loro fase pre-semina.
+Il nostro obiettivo, dicono gli sviluppatori, è rendere MARS4 un'organizzazione autonoma decentralizzata (DAO) per proprietari di NFT capaci anche di controllare le decisioni di governance, come aggiornamenti delle politiche, aste e contratti. I nostri prossimi passi includono lo sviluppo di una piattaforma VR per esplorare e partecipare agli affari del mondo MARS4, come anche finanziare potenziali startup spaziali nella loro fase pre-semina.
 
 <h2>Come posso acquistare MARS4?</h2>
 Coming soon...
