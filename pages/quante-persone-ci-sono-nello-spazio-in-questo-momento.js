@@ -6,6 +6,7 @@ function News({ newsdatal }) {
   return (
     <LayoutComponent>
       <SEO
+        slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
         title="Quanti astronauti ci sono nello Spazio adesso? "
         description="Aggiornamenti in tempo reale"
       />
