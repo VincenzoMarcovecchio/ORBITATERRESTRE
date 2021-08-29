@@ -16,7 +16,7 @@ function News({ newsdatal }) {
           </h2>
           <center>
             <h2 className="text-4xl mb-6 mt-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              👉 {newsdatal && newsdatal.number}👈
+              👉&nbsp;{newsdatal && newsdatal.number}&nbsp;👈
             </h2>
           </center>
           {newsdatal ? (
