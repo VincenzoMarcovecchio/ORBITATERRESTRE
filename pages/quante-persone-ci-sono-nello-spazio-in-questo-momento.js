@@ -12,11 +12,11 @@ function News({ newsdatal }) {
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-           Quante persone ci sono nello Spazio adesso? 👇👇
+           Quante persone ci sono nello Spazio adesso? 
             </h2>
           <center>
-            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              {newsdatal && newsdatal.number}
+            <h2 className="text-4xl mb-6 mt-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            👉 {newsdatal && newsdatal.number}👈
             </h2>
           </center>
           {newsdatal ? (
