@@ -1,9 +1,9 @@
-import { React } from "react";
+import  React  from "react";
 
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
-function StazioneSpaziale({ sta }) {
+function StazioneSpazialeIndex({ sta }) {
  
   const router = useRouter();
   return (
@@ -83,4 +83,4 @@ export async function getServerSideProps() {
     },
   };
 }
-export default StazioneSpaziale;
+export default StazioneSpazialeIndex;

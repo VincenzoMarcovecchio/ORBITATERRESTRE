@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import  React from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
@@ -107,7 +107,7 @@ export async function getServerSideProps(pageContext) {
   const pageNumber = Number(pageContext.query.slug);
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launcher/?limit=100&offset=${pageNumber}`
+    `https://ll.thespacedevs.com/2.2.0/launcher/?limit=30&offset=${pageNumber}`
   );
 
   const data = await apiResponse.json();

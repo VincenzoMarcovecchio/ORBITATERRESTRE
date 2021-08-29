@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 
- function Errorese() {
+ function Come() {
   return (
     <LayoutComponent>
       <SEO
@@ -25,4 +25,4 @@ import { LayoutComponent, SEO } from "@components/common";
     </LayoutComponent>
   );
 }
-export default Errorese
+export default Come

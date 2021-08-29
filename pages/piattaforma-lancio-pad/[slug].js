@@ -4,7 +4,7 @@ import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 
-function Piattaforme({ pad }) {
+function Piattaformalo({ pad }) {
  
   return (
     <LayoutComponent>
@@ -49,4 +49,4 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
-export default Piattaforme;
+export default Piattaformalo;

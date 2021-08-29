@@ -3,8 +3,8 @@ import Link from "next/link";
 import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
-function Slug({ curiosity }) {
-  console.log(curiosity);
+function Slugt({ curiosity }) {
+ 
   const router = useRouter();
   return (
     <LayoutComponent>
@@ -57,4 +57,4 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
-export default Slug;
+export default Slugt;

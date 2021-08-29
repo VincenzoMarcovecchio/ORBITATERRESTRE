@@ -1,4 +1,4 @@
-import { React } from "react";
+import  React  from "react";
 import { LayoutComponent, SEO } from "@components/common";
 
 function StazioneSpaziale({ sta }) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { LayoutComponent, SEO } from "@components/common";
 
- function Salve() {
+ function NoBueno() {
   return (
     <LayoutComponent>
       <SEO title="Oops qualcosa e' andato storto" />
@@ -32,4 +32,4 @@ import { LayoutComponent, SEO } from "@components/common";
   );
 }
 
-export default Salve
+export default NoBueno;

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { LayoutComponent, Bio, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
-function Eventi({ eventi }) {
+function Eventit({ eventi }) {
   const router = useRouter();
-  console.log(eventi);
+ 
   return (
     <LayoutComponent>
       <SEO title="Eventi Spaziali" />
@@ -104,4 +104,4 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
-export default Eventi;
+export default Eventit;

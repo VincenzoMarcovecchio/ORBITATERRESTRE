@@ -770,18 +770,20 @@ export const NavBar = () => {
                 >
                   Satelliti sulla mia testa
                 </Link>
-                <a
-                  href="#"
+                <Link
+                  replace
+                  href="/quante-persone-ci-sono-nello-spazio-in-questo-momento/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Help Center
-                </a>
-                <a
-                  href="#"
+                  Persone nello spazio
+                </Link>
+                <Link
+                  replace
+                  href="/posizione-dell-ISS-in-tempo-reale/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Guides
-                </a>
+                  ISS Live
+                </Link>
                 <Link
                   replace
                   href="/nasa-live/"
