@@ -6,7 +6,7 @@ function Newsz({ newsdatal }) {
   return (
     <LayoutComponent>
       <SEO
-        cano
+        cano="si"
         slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
         title="Quanti astronauti ci sono nello Spazio in questo momento? "
         imageUrl="quante-persone-ci-sono-nello-spazio-in-questo-momento.jpg"

@@ -3,10 +3,9 @@ import Head from "next/head";
 import { getSiteMetaData } from "@utils/helpers";
 
 export function SEO({ title, imageUrl, slug, cano, description }) {
-  
   const siteMetadata = getSiteMetaData();
   const metaDescription = description || siteMetadata.description;
-  const sluga = slug || undefined
+  const sluga = slug || undefined;
 
   return (
     <Head>
@@ -16,23 +15,25 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
-      <meta
-        property="og:description"
-        content={metaDescription}
-      />
+      <meta property="og:description" content={metaDescription} />
       <link
         rel="canonical"
         href={`${
-          imageUrl
+          imageUrl && cano.length < 1
             ? `https://orbitaterrestre.com/post/${sluga}`
-            : cano ? `https://orbitaterrestre.com/${cano}`  : `https://orbitaterrestre.com/`
+            : imageUrl && cano.lenght > 1
+            ? `https://orbitaterrestre.com/${sluga}`
+            : `https://orbitaterrestre.com/`
         }`}
       />
-      <meta property="og:image" content={`${
+      <meta
+        property="og:image"
+        content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
             : `https://orbitaterrestre.com/`
-        }`}/>
+        }`}
+      />
 
       <meta property="og:site_name" content="Orbita Terrestre"></meta>
       <meta
@@ -47,15 +48,17 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
-      <meta name="twitter:image" content={`${
+      <meta
+        name="twitter:image"
+        content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
             : `https://orbitaterrestre.com/`
-        }`} />
+        }`}
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image:alt" content={metaDescription}></meta>
 
-      
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
       <link
