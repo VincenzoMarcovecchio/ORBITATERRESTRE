@@ -6,8 +6,7 @@ export function LayoutComponent({ children }) {
   return (
     <>
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white font-body">
-        <center>
-          {" "}
+        <center style={{ background: "steelblue" }}>
           <span className="max-w-7xl mx-auto font-light text-center">
             😮 hey cosa passa sopra la tua{" "}
             <Link href={"/satelliti-di-passaggio/"} replace>

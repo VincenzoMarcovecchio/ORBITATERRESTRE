@@ -41,7 +41,16 @@ function Newsz({ newsdatal }) {
           ) : (
             <p>caricamento supersonico in corso...</p>
           )}
-          <p>Per ulteriori informazioni visitare il sito: <a href="http://open-notify.org/Open-Notify-API/People-In-Space/" rel="canonical noopener noreferrer" target="_blank">http://open-notify.org/Open-Notify-API/People-In-Space/</a></p>
+          <p>
+            Per ulteriori informazioni visitare il sito:{" "}
+            <a
+              href="http://open-notify.org/Open-Notify-API/People-In-Space/"
+              rel="canonical noopener noreferrer"
+              target="_blank"
+            >
+              http://open-notify.org/Open-Notify-API/People-In-Space/
+            </a>
+          </p>
         </section>
         <hr />
         <section className="flex">
