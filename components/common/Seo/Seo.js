@@ -19,10 +19,10 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <link
         rel="canonical"
         href={`${
-          imageUrl && !cano
-            ? `https://orbitaterrestre.com/post/${sluga}`
-            : imageUrl && cano && cano.lenght > 1
+          imageUrl && cano
             ? `https://orbitaterrestre.com/${sluga}`
+            : imageUrl && !cano
+            ? `https://orbitaterrestre.com/post/${sluga}`
             : `https://orbitaterrestre.com/`
         }`}
       />
@@ -39,11 +39,11 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <meta
         property="og:url"
         content={`${
-          imageUrl && !cano
-            ? `https://orbitaterrestre.com/post/${sluga}`
-            : imageUrl && cano && cano.lenght > 1
-            ? `https://orbitaterrestre.com/${sluga}`
-            : `https://orbitaterrestre.com/`
+          imageUrl && cano
+          ? `https://orbitaterrestre.com/${sluga}`
+          : imageUrl && !cano
+          ? `https://orbitaterrestre.com/post/${sluga}`
+          : `https://orbitaterrestre.com/`
         }`}
       />
       <meta name="twitter:card" content="summary" />
