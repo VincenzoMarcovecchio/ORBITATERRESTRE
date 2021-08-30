@@ -5,11 +5,10 @@ import { Lanci } from "../components/common/Lanci";
 function News({ newsdatal }) {
   return (
     <LayoutComponent>
-
       <SEO
         slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
         title="Quanti astronauti ci sono nello Spazio adesso? "
-        imageUrl="/quante-persone-ci-sono-nello-spazio-in-questo-momento.jpg"
+        imageUrl="quante-persone-ci-sono-nello-spazio-in-questo-momento.jpg"
         description="Aggiornamenti in tempo reale"
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
@@ -19,7 +18,7 @@ function News({ newsdatal }) {
           </h2>
           <center>
             <h2 className="text-4xl mb-6 mt-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-            👉&nbsp;{newsdatal && newsdatal.number}&nbsp;👈
+              👉&nbsp;{newsdatal && newsdatal.number}&nbsp;👈
             </h2>
           </center>
           {newsdatal ? (
