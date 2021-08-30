@@ -2,12 +2,13 @@ import React from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { Lanci } from "../components/common/Lanci";
 
-function News({ newsdatal }) {
+function Newsz({ newsdatal }) {
   return (
     <LayoutComponent>
       <SEO
+        cano
         slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
-        title="Quanti astronauti ci sono nello Spazio adesso? "
+        title="Quanti astronauti ci sono nello Spazio in questo momento? "
         imageUrl="quante-persone-ci-sono-nello-spazio-in-questo-momento.jpg"
         description="Aggiornamenti in tempo reale"
       />
@@ -71,4 +72,4 @@ export async function getStaticProps() {
   };
 }
 
-export default News;
+export default Newsz;

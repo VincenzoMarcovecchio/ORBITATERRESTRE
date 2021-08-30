@@ -14,7 +14,7 @@ function Thispage() {
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa di monitoraggio
           </h2>
-          <iframe
+          <iframe className="w-full"
             src="https://isstracker.spaceflight.esa.int/"
             id="iss-pos"
             width="625"
