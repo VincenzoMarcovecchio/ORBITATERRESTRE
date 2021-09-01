@@ -29,7 +29,7 @@ Coming soon...
 Un token non fungibile (NFT) è un token crittografico che rappresenta una risorsa univoca. Funzionano come prove verificabili di autenticità e proprietà all'interno di una rete blockchain. Gli NFT non sono intercambiabili tra loro e introducono scarsità nel mondo digitale.
 
 <h2>Qual è l'indirizzo del contratto MARS Land NFT?</h2>
-<a href="https://etherscan.io/address/0xdf9Aa1012Fa49DC1d2a306e3e65EF1797d2b5fBb" rel="canonical noopener noreferrer" target="_blank"> https://etherscan.io/address/0xdf9Aa1012Fa49DC1d2a306e3e65EF1797d2b5fBb</a>
+<a href="https://etherscan.io/address/0xdf9Aa1012Fa49DC1d2a306e3e65EF1797d2b5fBb" rel="canonical noopener noreferrer" target="_blank">etherscan.io/address/0xdf9Aa1012Fa49DC1d2a306e3e65EF1797d2b5fBb</a>
 
 <h2>Come funziona la tassa sulle transazioni?</h2>
 MARS4 Metaverse ha un costo di transazione del 4%. Il 2% del valore della transazione viene ridistribuito ai proprietari di NFT, il 2% viene aggiunto alla liquidità. 
