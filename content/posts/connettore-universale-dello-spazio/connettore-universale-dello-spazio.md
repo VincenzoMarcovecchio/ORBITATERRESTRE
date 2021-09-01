@@ -47,7 +47,7 @@ Per la modellazione 3d si utilizza SolidWorks. Il prototipo è stampato su stamp
 
 <h2>Come hanno utilizzato i dati dell'agenzia spaziale in questo progetto</h2>
 Abbiamo cercato missioni di rifornimento esistenti, raccontano i partecipanti - ora sono troppo complesse e costose. Abbiamo scoperto che alcuni satelliti di ricerca e comunicazione possono costare più di 500 milioni di dollari e la maggior parte di essi deve essere ritirata a causa dell'esaurimento del carburante. Al contrario, il lancio di razzi sta diventando più economico e può trasportare carburante extra per le missioni esistenti.
-
+<blockquote>
 Demo del progetto
 https://youtu.be/l7BzFrY0YKI
 
@@ -72,3 +72,4 @@ https://www.nasa.gov/mission_pages/kepler/overview/index.html
 
 Materiali di tenuta, istallati nello spazio: https://www.spacematdb.com/spacemat/datasearch.php?name=Viton%20B910
 
+</blockquote>

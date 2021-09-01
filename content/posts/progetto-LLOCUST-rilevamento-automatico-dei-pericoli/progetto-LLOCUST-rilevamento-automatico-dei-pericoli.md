@@ -86,12 +86,12 @@ Volevano aggiungere una funzionalità per prevedere il costo economico che un ce
 Hanno richiesto immagini dai satelliti Terra e SMAP della NASA in base a coordinate specifiche dal set di dati Locust Swarm (fornito dalla FAO) e quindi utilizzando Raster.io, hanno salvato i dati binari ricevuti in un file TIFF. Hanno quindi estratto i valori di pixel alle coordinate specifiche degli sciami di locuste e della posizione non sciame come valore esadecimale. Hanno quindi convertito questi valori in RGB per un ulteriore utilizzo durante l'addestramento e i test.
 
 Si sono utilizzati i seguenti livelli:
-
+<blockquote>
 SMAP_L4_Analyzed_Surface_Soil_Moisture (Soil_Moisture)
 ASTER_GDEM_Color_Index (Elevazione)
 SMAP_L4_Soil_Temperature_Layer_1 (Temperatura del suolo)
 MODIS_Terra_NDVI_8Giorno
-
+</blockquote>
 <blockquote>
 Video Link: https://youtu.be/RI2gLdX9DAE
 Live Website: https://determined-keller-5cbae8.netlify.app/
