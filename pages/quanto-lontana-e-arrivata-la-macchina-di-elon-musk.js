@@ -52,11 +52,12 @@ const Roadster = ({ roadster }) => {
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           <div className={"flex flex-col "}>
+         
             <img
               src="/quanto-lontana-e-arrivata-la-macchina-di-elon-musk.jpg"
               alt="elon musk roadster"
             />
-            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               {roadster.name}
             </h2>
             <p><b>Lanciata: {unixToLocal(roadster.launch_date_unix)}</b></p>
@@ -72,7 +73,7 @@ const Roadster = ({ roadster }) => {
               </b>
             </p>
           </div>
-          <table class="rounded-t-lg m-5 w-5/6 mx-auto text-gray-100 bg-black">
+          <table class="rounded-t-lg m-5 w-full mx-auto text-gray-100 bg-black">
             <thead>
               <tr className="text-left border-b-2 border-indigo-300">
                 <th>Statistiche</th>
