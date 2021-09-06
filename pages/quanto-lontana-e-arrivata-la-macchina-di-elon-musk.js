@@ -1,5 +1,6 @@
 import React from "react";
 import { LayoutComponent, SEO } from "@components/common";
+import { Lanci } from "../components/common/Lanci";
 
 const unixToLocal = (target, dateString, dateOnly = 0) => {
   let dateObject;
@@ -52,24 +53,28 @@ const Roadster = ({ roadster }) => {
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           <div className={"flex flex-col "}>
-         
+          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              {roadster.name}
+            </h2>
             <img
               src="/quanto-lontana-e-arrivata-la-macchina-di-elon-musk.jpg"
               alt="elon musk roadster"
+              className="mb-6"
             />
-             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              {roadster.name}
-            </h2>
-            <p><b>Lanciata: {unixToLocal(roadster.launch_date_unix)}</b></p>
-            <p><b>
-              La Tesla Roadster di Elon Musk è un'auto sportiva elettrica che è
-              stata usata come carico utile fittizio per il volo di prova Falcon
-              Heavy del febbraio 2018 ed è ora un satellite artificiale del
-              Sole. Starman, un manichino vestito con una tuta spaziale, occupa
-              il posto di guida. L'auto e il razzo sono prodotti di Tesla e
-              SpaceX. Questa Roadster modello 2008 è stata precedentemente
-              utilizzata da Musk per il pendolarismo ed è l'unica auto di
-              consumo inviata nello spazio.
+           
+            <p>
+              <b>Lanciata: {unixToLocal(roadster.launch_date_unix)}</b>
+            </p>
+            <p>
+              <b>
+                La Tesla Roadster di Elon Musk è un'auto sportiva elettrica che
+                è stata usata come carico utile fittizio per il volo di prova
+                Falcon Heavy del febbraio 2018 ed è ora un satellite artificiale
+                del Sole. Starman, un manichino vestito con una tuta spaziale,
+                occupa il posto di guida. L'auto e il razzo sono prodotti di
+                Tesla e SpaceX. Questa Roadster modello 2008 è stata
+                precedentemente utilizzata da Musk per il pendolarismo ed è
+                l'unica auto di consumo inviata nello spazio.
               </b>
             </p>
           </div>
@@ -134,6 +139,15 @@ const Roadster = ({ roadster }) => {
               </tr>
             </tbody>
           </table>
+        </section>
+        <hr />
+        <section className="flex">
+          <aside>
+            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              Prossimi Lanci
+            </h2>
+            <Lanci />
+          </aside>
         </section>
       </div>
     </LayoutComponent>
