@@ -1,14 +1,14 @@
-import { React, useState } from "react";
-import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import { LayoutComponent,  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Eventit({ eventi }) {
   const router = useRouter();
- 
+ console.log(eventi)
   return (
     <LayoutComponent>
-      <SEO title="Eventi Spaziali" />
+      <SEO cano="si" slug="eventi-spaziali" 
+      title="Eventi Spaziali"
+       description="Una lista di eventi spaziali futuri" />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">

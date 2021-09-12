@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 
 function Piattaformalo({ pad }) {
- 
+ console.log(pad)
   return (
     <LayoutComponent>
       <SEO
@@ -27,7 +25,7 @@ function Piattaformalo({ pad }) {
           <img src={pad.results[0]?.map_image} alt={pad.results[0]?.name} />
         </div>
       ) : (
-        "errore nel caricamento"
+        "errore nel caricamento (bisognerebbe supportare i ragazzi at the spacedevs)"
       )}
     </LayoutComponent>
   );
@@ -37,7 +35,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageNumber = pageContext.query.slug;
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad/?name=&id=${pageNumber}&location=`
+    `https://ll.thespacedevs.com/2.2.0/pad/?id=${pageNumber}`
   );
 
   const data = await apiResponse.json();

@@ -1,4 +1,3 @@
-import { React, useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import cheerio from "cheerio";
 import axios from "axios";

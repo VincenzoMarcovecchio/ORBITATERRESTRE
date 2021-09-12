@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import {  useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import moment from "moment";
 
@@ -41,7 +41,7 @@ function Testas() {
   return (
     <LayoutComponent>
       <SEO
-      cano="satelliti-di-passaggio"
+     cano="si"
       slug="satelliti-di-passaggio"
         title={`Satelliti sopra la mia testa in questo momento`}
         description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
