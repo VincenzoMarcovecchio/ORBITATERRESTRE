@@ -34,7 +34,7 @@ function Retrogrado() {
     <LayoutComponent>
       <SEO
         cano="si"
-        title="Mercurio retrogrado"
+        title="Il Retrogrado di Mercurio, le previsioni in tempo reale"
         imageUrl="mercurio-in-retrogrado-previsioni-astronomiche-in-tempo-reale.jpg"
         slug="mercurio-in-retrogrado-previsioni-astronomiche-in-tempo-reale"
         description="Poiché Mercurio è il pianeta situato più vicino al Sole, la sua orbita è molto più corta di quella terrestre. Circa tre o quattro volte l'anno, Mercurio supera la Terra, ed è allora che sperimentiamo un periodo retrogrado di Mercurio. Se fossi in una macchina e un'altra macchina ti sorpassasse, potevi dire che stava andando più veloce di te. Ma se ha rallentato e poi l'hai superato, sembrerebbe che quell'auto stesse effettivamente andando all'indietro."
@@ -137,7 +137,7 @@ function Retrogrado() {
           )}
           <article>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Mercurio si muove davvero all' indietro?
+              Mercurio si muove davvero all'indietro?
             </h2>
             <p>
               Mercurio in realtà non si muove all'indietro. Poiché Mercurio è il
@@ -155,7 +155,7 @@ function Retrogrado() {
               Mercurio crea quando retrograda potrebbe influenzare ciò che
               sentiamo sulla Terra nella nostra vita quotidiana.
             </p>
-            <p>
+            <blockquote>
               Uno dei migliori articoli a riguardo che ho trovato sul web è
               questo:{" "}
               <a
@@ -165,11 +165,11 @@ function Retrogrado() {
               >
                 qui
               </a>
-            </p>
+            </blockquote>
           </article>{" "}
         </section>
 
-        <hr />
+        <hr className="mt-4 mb-4"/>
         <section className="flex">
           <aside>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
