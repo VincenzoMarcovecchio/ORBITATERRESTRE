@@ -6,6 +6,8 @@ function Thispage() {
   return (
     <LayoutComponent>
       <SEO
+        cano="si"
+        slug="posizione-dell-ISS-in-tempo-reale"
         title="La posizione della stazione spaziale internazionale in tempo reale "
         description="Il tracker mostra dove si trova la Stazione Spaziale in questo momento e il suo percorso 90 minuti fa (-1,5 ore) e tra 90 minuti (+1,5 ore). La sovrapposizione scura indica dove è notte nel mondo."
       />
@@ -14,7 +16,8 @@ function Thispage() {
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Mappa di monitoraggio
           </h2>
-          <iframe className="w-full"
+          <iframe
+            className="w-full"
             src="https://isstracker.spaceflight.esa.int/"
             id="iss-pos"
             width="625"

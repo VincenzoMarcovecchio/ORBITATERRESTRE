@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+
 import { LayoutComponent, SEO } from "@components/common";
 
  function Come() {

@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import {Lanci} from "../components/common/Lanci";

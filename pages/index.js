@@ -34,7 +34,7 @@ function Home({ datas }) {
   return (
     <React.Fragment>
       <LayoutComponent>
-        <SEO title="Home" description="Guida allo spazio semplificata per noi umani" />
+        <SEO title="Home" description="Una guida allo spazio semplificata per noi comuni umani" />
         <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
           <section className="w-full md:max-w-screen-lg">
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">

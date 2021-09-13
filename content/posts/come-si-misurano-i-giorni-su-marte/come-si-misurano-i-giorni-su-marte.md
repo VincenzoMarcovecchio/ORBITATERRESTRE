@@ -3,6 +3,7 @@ title: Come si misurano i giorni su Marte
 description: Il giorno solare ha una durata leggermente più lunga di quello siderale a causa dell'orbita del pianeta attorno al Sole, che implica una leggera rotazione extra sul proprio asse per raggiungere nuovamente la stessa posizione rispetto al Sole.
 date: 2021-04-16T11:00:00.000Z
 category: marte
+
 ---
 
 <img src="/mars-time.jpg" alt="il tempo su marte"/>

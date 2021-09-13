@@ -1,40 +1,40 @@
-import React from "react";
 import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
+import { Lanci } from "../../components/common/Lanci";
 
 function Piattaforme({ pad, pageNumber }) {
   const router = useRouter();
   return (
     <LayoutComponent>
       <SEO title="Piattaforme di lancio" />
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 display flex sm:flex-col  w-full items-start">
-        <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
-          Piattaforme di lancio
-        </h1>
-        {pad.results ? (
-          pad.results.map((pa) => {
-            return (
-              <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-                <img src={pa.map_image || nontrovata} alt={pa.name} />
-                <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
-                  {pa.name}
-                </h1>
-                <h2>Totale lanci effetuati:&nbsp;{pa.total_launch_count}</h2>
-                <h2>Latitudine:&nbsp;{pa.latitude}</h2>
-                <h2>Longitudine:&nbsp;{pa.longitude}</h2>
+      <div className="px-4  max-w-screen-2xl md:flex ">
+        <section className="w-full mt-8 md:max-w-screen-lg">
+          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            Piattaforme di lancio
+          </h2>
+          {pad.results ? (
+            pad.results.map((pa) => {
+              return (
+                <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                  <img src={pa.map_image || nontrovata} alt={pa.name} />
+                  <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
+                    {pa.name}
+                  </h1>
+                  <h2>Totale lanci effetuati:&nbsp;{pa.total_launch_count}</h2>
+                  <h2>Latitudine:&nbsp;{pa.latitude}</h2>
+                  <h2>Longitudine:&nbsp;{pa.longitude}</h2>
 
-                <Link replace href={`/piattaforma-lancio-pad/${pa.id}`}>
-                  Leggi di piu'
-                </Link>
-              </article>
-            );
-          })
-        ) : (
-          <pre>{pad.detail}</pre>
-        )}
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex w-full items-center">
+                  <Link replace href={`/piattaforma-lancio-pad/${pa.id}`}>
+                    Leggi di più
+                  </Link>
+                </article>
+              );
+            })
+          ) : (
+            <pre>{pad.detail}</pre>
+          )}
           <div
             className="cursor-pointer"
             onClick={() => {
@@ -72,8 +72,17 @@ function Piattaforme({ pad, pageNumber }) {
           >
             &nbsp;&nbsp;&nbsp;&nbsp;Pagina Successiva
           </div>
-        </div>
-      </section>
+        </section>
+        <hr />
+        <section className="flex">
+          <aside>
+            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              Prossimi Lanci
+            </h2>
+            <Lanci />
+          </aside>
+        </section>
+      </div>
     </LayoutComponent>
   );
 }
@@ -82,7 +91,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageNumber = pageContext.query.slug;
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad?limit=100&offset=${pageNumber}`
+    `https://ll.thespacedevs.com/2.2.0/pad?limit=10&offset=${pageNumber}`
   );
 
   const data = await apiResponse.json();

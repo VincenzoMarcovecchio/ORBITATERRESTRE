@@ -2,7 +2,7 @@ import  React  from "react";
 
 import { LayoutComponent, SEO } from "@components/common";
 
-function Eventi() {
+function Eventiqq() {
   return (
     <LayoutComponent>
       <SEO
@@ -24,4 +24,4 @@ function Eventi() {
   );
 }
 
-export default Eventi;
+export default Eventiqq;
