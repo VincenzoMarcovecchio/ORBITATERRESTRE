@@ -128,13 +128,11 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults !== null && (
-            <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              {defaultResults !== null && defaultResults.is_retrograde === false
-                ? "FALSO"
-                : "VERO"}
-            </h3>
-          )}
+          <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            {defaultResults !== null && defaultResults.is_retrograde === false
+              ? "FALSO"
+              : "VERO"}
+          </h3>
           <article>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               Mercurio si muove davvero all'indietro?
@@ -155,7 +153,7 @@ function Retrogrado() {
               Mercurio crea quando retrograda potrebbe influenzare ciò che
               sentiamo sulla Terra nella nostra vita quotidiana.
             </p>
-            <blockquote>
+            <blockquote className="mt-4 mb-4">
               Uno dei migliori articoli a riguardo che ho trovato sul web è
               questo:{" "}
               <a
@@ -169,7 +167,7 @@ function Retrogrado() {
           </article>{" "}
         </section>
 
-        <hr className="mt-4 mb-4"/>
+        <hr className="mt-4 mb-4" />
         <section className="flex">
           <aside>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
