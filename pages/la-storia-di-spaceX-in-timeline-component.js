@@ -44,6 +44,7 @@ function SpaceXTimeline() {
     <LayoutComponent>
       <SEO
         cano="si"
+        imageUrl="la-storia-di-spaceX-in-timeline-component.png"
         slug="la-storia-di-spaceX-in-timeline-component"
         title="La storia di SpaceX in un timeline "
         description="Vi siete mai chiesti come l'agenzia spaziale spaceX..."
