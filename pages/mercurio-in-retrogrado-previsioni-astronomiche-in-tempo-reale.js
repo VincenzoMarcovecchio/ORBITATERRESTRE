@@ -16,16 +16,12 @@ function Retrogrado() {
     return () => {
       setSubmit(false);
     };
-  }, [submit === true]);
+  }, [submit]);
 
   useEffect(() => {
     fetch(`https://mercuryretrogradeapi.com`)
       .then((res) => res.json())
       .then((data) => setOggi(data));
-
-    return () => {
-      setSubmit(false);
-    };
   }, []);
 
   const handle = () => {
