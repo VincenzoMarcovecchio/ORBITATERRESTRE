@@ -4,7 +4,7 @@ import { Lanci } from "../components/common/Lanci";
 
 function Retrogrado() {
   const [data, setData] = useState("");
-  const [defaultResults, setDefaultResults] = useState(null);
+  const [defaultResults, setDefaultResults] = useState([]);
   const [submit, setSubmit] = useState(false);
   const [oggi, setOggi] = useState(null);
 
@@ -124,9 +124,9 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults.length > 2 && (
+          {defaultResults[0]?.is_retrograde.length > 2 && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
+              {defaultResults[0].is_retrograde === false ? "FALSO" : "VERO"}
             </h3>
           )}
           <article>
@@ -155,7 +155,7 @@ function Retrogrado() {
             </p>
             <blockquote className="mt-4 mb-4">
               Uno dei migliori articoli a riguardo che ho trovato sul web è
-              questo:
+              questo:&nbsp;
               <a
                 href="https://www.astrologyzone.com/everything-you-need-to-know-about-mercury-retrograde/"
                 rel="canonical noopener noreferrer"
