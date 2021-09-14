@@ -7,24 +7,20 @@ function Retrogrado() {
   const [defaultResults, setDefaultResults] = useState(null);
   const [submit, setSubmit] = useState(false);
   const [oggi, setOggi] = useState(null);
-  console.log(submit);
-  console.log(defaultResults);
 
   useEffect(() => {
-    
-      fetch(`https://mercuryretrogradeapi.com?date=${data}`)
+    fetch(`https://mercuryretrogradeapi.com?date=${data}`)
       .then((res) => res.json())
       .then((json) => setDefaultResults(json));
 
     return () => {
       setSubmit(false);
     };
-    
   }, [submit]);
 
   useEffect(() => {
     fetch(`https://mercuryretrogradeapi.com`)
-      .then((res) => res.json())
+      .then((resa) => resa.json())
       .then((data) => setOggi(data));
   }, []);
 
@@ -112,7 +108,6 @@ function Retrogrado() {
               placeholder="es 2016-10-01"
             />
             <button
-              type="submit"
               className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
               onClick={handle}
             >
@@ -129,7 +124,7 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults !== null && (
+          {submit !== false && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
             </h3>
@@ -160,7 +155,7 @@ function Retrogrado() {
             </p>
             <blockquote className="mt-4 mb-4">
               Uno dei migliori articoli a riguardo che ho trovato sul web è
-              questo:{" "}
+              questo:
               <a
                 href="https://www.astrologyzone.com/everything-you-need-to-know-about-mercury-retrograde/"
                 rel="canonical noopener noreferrer"
@@ -169,7 +164,7 @@ function Retrogrado() {
                 qui
               </a>
             </blockquote>
-          </article>{" "}
+          </article>
         </section>
 
         <hr className="mt-4 mb-4" />
