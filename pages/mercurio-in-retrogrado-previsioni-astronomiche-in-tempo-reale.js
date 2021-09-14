@@ -96,7 +96,7 @@ function Retrogrado() {
           </div>
           <form
             className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
-            onSubmit={((e) => e.preventDefault(), handle)}
+            onSubmit={(e) => e.preventDefault()}
           >
             <label htmlFor="data">Controlla altre date</label>
             <input
@@ -109,7 +109,7 @@ function Retrogrado() {
             />
             <button
               className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-              type="submit"
+              onClick={handle}
             >
               Cerca
             </button>
@@ -124,7 +124,7 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults !== null && (
+          {defaultResults  && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
             </h3>
