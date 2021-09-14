@@ -144,13 +144,15 @@ function Retrogrado() {
               pianeta situato più vicino al Sole, la sua orbita è molto più
               corta di quella terrestre. Circa tre o quattro volte all'anno,
               Mercurio supera la Terra, ed è allora che sperimentiamo il periodo
-              retrogrado di Mercurio.             
+              retrogrado di Mercurio.   
+
               Se tu ti trovassi in una macchina e
               un'altra macchina ti sorpassasse, potresti dire che stava andando
               più veloce di te. Invece se una macchina ha rallentato e poi l'hai
               superata, sembrerebbe che quell'auto stesse effettivamente andando
               all'indietro. Poi, quando la macchina accelera e ti supera di
               nuovo, solleva tutta la polvere sulla strada. 
+              
               Mentre Mercurio accelera, è come un treno che vola, creando una potente e
               turbolenta raffica di "vento" nella sua scia. La turbolenza che
               Mercurio crea quando retrograda potrebbe influenzare ciò che
