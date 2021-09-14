@@ -4,7 +4,7 @@ import { Lanci } from "../components/common/Lanci";
 
 function Retrogrado() {
   const [data, setData] = useState("");
-  const [defaultResults, setDefaultResults] = useState([]);
+  const [defaultResults, setDefaultResults] = useState(null);
   const [submit, setSubmit] = useState(false);
   const [oggi, setOggi] = useState(null);
 
