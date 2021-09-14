@@ -8,8 +8,6 @@ function Retrogrado() {
   const [submit, setSubmit] = useState(false);
   const [oggi, setOggi] = useState(null);
 
-  console.log(oggi);
-
   useEffect(() => {
     fetch(`https://mercuryretrogradeapi.com?date=${data}`)
       .then((res) => res.json())
@@ -30,6 +28,9 @@ function Retrogrado() {
     };
   }, []);
 
+  const handle = () => {
+    setSubmit(true);
+  };
   return (
     <LayoutComponent>
       <SEO
@@ -113,7 +114,7 @@ function Retrogrado() {
             <button
               type="submit"
               className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-              onClick={() => setSubmit(true)}
+              onClick={handle}
             >
               Cerca
             </button>
@@ -130,9 +131,7 @@ function Retrogrado() {
           </form>
           {defaultResults !== null && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              {defaultResults !== null && defaultResults.is_retrograde === false
-                ? "FALSO"
-                : "VERO"}
+              {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
             </h3>
           )}
           <article>
@@ -144,19 +143,20 @@ function Retrogrado() {
               pianeta situato più vicino al Sole, la sua orbita è molto più
               corta di quella terrestre. Circa tre o quattro volte all'anno,
               Mercurio supera la Terra, ed è allora che sperimentiamo il periodo
-              retrogrado di Mercurio.   
-
-              Se tu ti trovassi in una macchina e
-              un'altra macchina ti sorpassasse, potresti dire che stava andando
-              più veloce di te. Invece se una macchina ha rallentato e poi l'hai
-              superata, sembrerebbe che quell'auto stesse effettivamente andando
+              retrogrado di Mercurio.
+              <br />
+              Se tu ti trovassi in una macchina e un'altra macchina ti
+              sorpassasse, potresti dire che stava andando più veloce di te.
+              Invece se una macchina ha rallentato e poi l'hai superata,
+              sembrerebbe che quell'auto stesse effettivamente andando
               all'indietro. Poi, quando la macchina accelera e ti supera di
-              nuovo, solleva tutta la polvere sulla strada. 
-              
-              Mentre Mercurio accelera, è come un treno che vola, creando una potente e
-              turbolenta raffica di "vento" nella sua scia. La turbolenza che
-              Mercurio crea quando retrograda potrebbe influenzare ciò che
-              sentiamo sulla Terra nella nostra vita quotidiana.
+              nuovo, solleva tutta la polvere sulla strada.
+              <br />
+              Mentre Mercurio accelera, è come un treno che vola, creando una
+              potente e turbolenta raffica di "vento" nella sua scia. La
+              turbolenza che Mercurio crea quando retrograda potrebbe
+              influenzare ciò che sentiamo sulla Terra nella nostra vita
+              quotidiana.
             </p>
             <blockquote className="mt-4 mb-4">
               Uno dei migliori articoli a riguardo che ho trovato sul web è
