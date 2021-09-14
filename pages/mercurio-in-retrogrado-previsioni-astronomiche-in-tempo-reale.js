@@ -124,7 +124,7 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults.length  && (
+          {defaultResults !== null  && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
             </h3>
