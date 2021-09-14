@@ -7,15 +7,19 @@ function Retrogrado() {
   const [defaultResults, setDefaultResults] = useState(null);
   const [submit, setSubmit] = useState(false);
   const [oggi, setOggi] = useState(null);
+  console.log(submit);
+  console.log(defaultResults);
 
   useEffect(() => {
-    fetch(`https://mercuryretrogradeapi.com?date=${data}`)
+    
+      fetch(`https://mercuryretrogradeapi.com?date=${data}`)
       .then((res) => res.json())
       .then((json) => setDefaultResults(json));
 
     return () => {
       setSubmit(false);
     };
+    
   }, [submit]);
 
   useEffect(() => {

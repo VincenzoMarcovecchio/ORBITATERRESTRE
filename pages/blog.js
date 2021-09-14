@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import {  useState } from "react";
 import Link from "next/link";
 import { LayoutComponent,  SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
@@ -62,7 +62,7 @@ function Blog({ posts }) {
                         >
                           {category}
                         </span>
-                        <time dateTime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
+                        <time dateTime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('DD-MM-YYYY')}</time>
                       </header>
                       <section>
                         <p className="mb-8 text-lg">{description}</p>
@@ -90,7 +90,7 @@ function Blog({ posts }) {
                       >
                         {category}
                       </span>
-                      <time datetime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('YYYY-MM-DD')}</time>
+                      <time datetime={date} className="text-sm">&nbsp;&nbsp;{moment(date).format('DD-MM-YYYY')}</time>
                     </header>
                     <section>
                       <p className="mb-8 text-lg">{description}</p>
