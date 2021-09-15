@@ -1,6 +1,7 @@
 import {  useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import moment from "moment";
+import { Lanci } from "../components/common/Lanci";
 
 
 function Testas() {
@@ -46,7 +47,7 @@ function Testas() {
         title={`Satelliti sopra la mia testa in questo momento`}
         description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
       />
-      <div className="px-4  max-w-screen-2xl md:flex ">
+      <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
             Hey cosa passa sopra la tua testa? 😮 🛰️
@@ -71,6 +72,7 @@ function Testas() {
             <input
               className="input mt-2 p-2 text-black text-lg mb-3"
               type="number"
+              step="any"
               name="latitudine"
               placeholder="es 34.9112212"
               onChange={(e) => setLat(e.target.value)}
@@ -81,6 +83,7 @@ function Testas() {
             <input
               className="input mt-2 p-2 text-black text-lg mb-3"
               type="number"
+              step="any"
               name="longitudine"
               placeholder="es 57.9372988 "
               onChange={(e) => setLong(e.target.value)}
@@ -135,6 +138,15 @@ function Testas() {
               );
             })}
             <div><small>Per ulteriori informazioni: https://satellites.fly.dev/</small></div>
+        </section>
+          <hr />
+        <section className="flex">
+          <aside>
+            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              Prossimi Lanci
+            </h2>
+            <Lanci />
+          </aside>
         </section>
       </div>
     </LayoutComponent>
