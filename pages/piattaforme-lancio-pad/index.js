@@ -14,6 +14,7 @@ const router = useRouter();
     categories.push(pad.results[i].location.country_code);
   }
 
+  let merged = [].concat.apply([], categories);
 
 
   const uniquecat = [...new Set(merged)];
@@ -91,7 +92,7 @@ const router = useRouter();
 }
 
 export const getServerSideProps = async () => {
-  const apiResponse = await fetch(`https://ll.thespacedevs.com/2.2.0/pad`);
+  const apiResponse = await fetch(`https://ll.thespacedevs.com/2.2.0/pad?limit=10&offset=10`);
 
   const data = await apiResponse.json();
 
