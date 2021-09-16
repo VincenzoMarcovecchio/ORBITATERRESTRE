@@ -2,7 +2,7 @@ import  React from "react";
 import { LayoutComponent, SEO } from "@components/common";
 
 
-function PrimeFasi({ sta }) {
+function Primala({ sta }) {
  
 
   return (
@@ -81,4 +81,4 @@ export async function getServerSideProps(pageContext) {
   };
 }
 
-export default PrimeFasi;
+export default Primala;

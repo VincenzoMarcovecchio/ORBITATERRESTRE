@@ -3,21 +3,23 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
+import { renderSwitch } from "@utils/getFlags";
 
 function Piattaforme({ pad }) {
-  
+  const [currentCategory, setCurrentCategory] = useState(null);
   const [countryCode, setCountry] = useState(null);
 
   const router = useRouter();
 
-let categories = [];
+  let categories = [];
 
   for (let i = 0; i < pad.results.length; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
-  console.log(categories,pad )
+  console.log(categories, pad);
 
+  const uniquecat = [...new Set(merged)];
   return (
     <LayoutComponent>
       <SEO title="Piattaforme di lancio" />
@@ -29,7 +31,19 @@ let categories = [];
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
             Ci sono {pad.count} risultati
           </h3>
-        
+          <div className="display 	flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
+            {uniquecat.map((cate, i) => {
+              return (
+                <span
+                  className="cursor-pointer m-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  key={i}
+                  onClick={() => setCurrentCategory(cate)}
+                >
+                  {renderSwitch(cate)}
+                </span>
+              );
+            })}
+          </div>
           {pad.results ? (
             pad.results.map((pa) => {
               return (
@@ -38,25 +52,33 @@ let categories = [];
                   <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                     {pa.name}
                   </h1>
-                  <h2>Totale lanci effetuati:&nbsp;{pa.total_launch_count}</h2>
-                  <h2>Latitudine:&nbsp;{pa.latitude}</h2>
-                  <h2>Longitudine:&nbsp;{pa.longitude}</h2>
+                  <p className="mt-2 text-lg mb-3">
+                    <b>Totale lanci effetuati:&nbsp;</b>
+                    {pa.total_launch_count}
+                  </p>
+                  <p className="mt-2 text-lg mb-3">
+                    <b>Latitudine:&nbsp;</b>
+                    {pa.latitude}
+                  </p>
+                  <p className="mt-2 text-lg mb-3">
+                    <b>Longitudine:&nbsp;</b>
+                    {pa.longitude}
+                  </p>
+
                   <h2 onClick={() => setCountry(pa.location.country_code)}>
                     {pa.location.country_code}
                   </h2>
                   <span
-                        onClick={() =>
-                          router
-                            .push(`/piattaforma-lancio-pad/${pa.id}`)
-                            .then(() => window.scrollTo(0, 0))
-                        }
-                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        target="_blank"
-                        rel="noopener noreferrer canonical"
-                      >
-                        Leggi di più
-                      </span>
+                    onClick={() =>
+                      router
+                        .push(`/piattaforma-lancio-pad/${pa.id}`)
+                        .then(() => window.scrollTo(0, 0))
+                    }
+                    className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   
+                  >
+                    Leggi di più
+                  </span>
                 </article>
               );
             })
@@ -79,7 +101,9 @@ let categories = [];
 }
 
 export async function getStaticProps() {
-  const apiResponse = await fetch(`https://ll.thespacedevs.com/2.2.0/pad/?limit=20&offset=20`);
+  const apiResponse = await fetch(
+    `https://ll.thespacedevs.com/2.2.0/pad/?limit=20&offset=20`
+  );
 
   const data = await apiResponse.json();
 
@@ -88,6 +112,6 @@ export async function getStaticProps() {
       pad: data,
     },
   };
-};
+}
 
 export default Piattaforme;
