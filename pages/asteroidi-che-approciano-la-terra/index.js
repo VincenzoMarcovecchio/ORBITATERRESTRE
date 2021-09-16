@@ -1,14 +1,16 @@
-import { React, useState } from "react";
-import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import React, { useState, useEffect } from "react";
+import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Asteroidi({ near }) {
   const router = useRouter();
+  var newObject;
 
-  var newObject = Object.keys(near.near_earth_objects).map(function (key) {
-    return near.near_earth_objects[key];
-  });
+  useEffect(() => {
+    newObject = Object.keys(near.near_earth_objects).map(function (key) {
+      return near.near_earth_objects[key];
+    });
+  }, []);
 
   return (
     <LayoutComponent>
@@ -62,8 +64,8 @@ function Asteroidi({ near }) {
   );
 }
 
-// This gets called on every request
-export async function getStaticProps() {
+// This gets called on every request nooo
+export const getServerSideProps = async () => {
   const res = await fetch(
     `https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-01-01&end_date=2021-01-08&api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
   );
@@ -80,5 +82,6 @@ export async function getStaticProps() {
     },
     revalidate: 4000,
   };
-}
+};
+
 export default Asteroidi;

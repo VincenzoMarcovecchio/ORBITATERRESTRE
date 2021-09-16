@@ -503,8 +503,9 @@ export const NavBar = () => {
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
                           <Link
-                            href="/piattaforme-lancio-pad/10/"
-                            as="/piattaforme-lancio-pad/10"
+                          replace
+                            href="/piattaforme-lancio-pad/"
+                            as="/piattaforme-lancio-pad/"
                           >
                             Pad
                           </Link>
@@ -743,7 +744,7 @@ export const NavBar = () => {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
                   replace
-                  href="/piattaforme-lancio-pad/10/"
+                  href="/piattaforme-lancio-pad/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   Piattaforme
