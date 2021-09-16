@@ -19,7 +19,7 @@ function Piattaforme({ pad }) {
 
   console.log(categories, pad);
 
-  const uniquecat = [...new Set(merged)];
+  const uniquecat = [...new Set(categories)];
   return (
     <LayoutComponent>
       <SEO title="Piattaforme di lancio" />
@@ -60,14 +60,12 @@ function Piattaforme({ pad }) {
                     <b>Latitudine:&nbsp;</b>
                     {pa.latitude}
                   </p>
-                  <p className="mt-2 text-lg mb-3">
+                  <p className="mt-2 text-lg mb-4">
                     <b>Longitudine:&nbsp;</b>
                     {pa.longitude}
                   </p>
 
-                  <h2 onClick={() => setCountry(pa.location.country_code)}>
-                    {pa.location.country_code}
-                  </h2>
+                 
                   <span
                     onClick={() =>
                       router
@@ -75,7 +73,6 @@ function Piattaforme({ pad }) {
                         .then(() => window.scrollTo(0, 0))
                     }
                     className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                  
                   >
                     Leggi di più
                   </span>
