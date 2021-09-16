@@ -4,13 +4,13 @@ import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../../components/common/Lanci";
 
-function Piattaforme({ pad, pageNumber }) {
-  const router = useRouter();
+function Piattaforme({ pad }) {
+  
   const [countryCode, setCountry] = useState(null);
-
+const router = useRouter();
   let categories = [];
 
-  for (let i = 0; i < pad.results.count; i++) {
+  for (let i = 0; i < pad.count; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 

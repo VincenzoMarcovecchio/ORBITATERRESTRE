@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
 
 function Piattaformalo({ pad }) {
@@ -35,7 +34,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageNumber = pageContext.query.slug;
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad/?name=&id=${pageNumber}&location=?id=`
+    `https://ll.thespacedevs.com/2.2.0/pad/?name=&id=${pageNumber}&location=`
   );
 
   const data = await apiResponse.json();
