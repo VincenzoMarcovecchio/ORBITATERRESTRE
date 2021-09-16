@@ -3,7 +3,6 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
-import { renderSwitch } from "@utils/getFlags";
 
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState(null);
@@ -39,49 +38,84 @@ function Piattaforme({ pad }) {
                   key={i}
                   onClick={() => setCurrentCategory(cate)}
                 >
-                  {renderSwitch(cate)}
+                  {cate}
                 </span>
               );
             })}
           </div>
-          {pad.results ? (
-            pad.results.map((pa) => {
-              return (
-                <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-                  <img src={pa.map_image || nontrovata} alt={pa.name} />
-                  <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
-                    {pa.name}
-                  </h1>
-                  <p className="mt-2 text-lg mb-3">
-                    <b>Totale lanci effetuati:&nbsp;</b>
-                    {pa.total_launch_count}
-                  </p>
-                  <p className="mt-2 text-lg mb-3">
-                    <b>Latitudine:&nbsp;</b>
-                    {pa.latitude}
-                  </p>
-                  <p className="mt-2 text-lg mb-4">
-                    <b>Longitudine:&nbsp;</b>
-                    {pa.longitude}
-                  </p>
 
-                 
-                  <span
-                    onClick={() =>
-                      router
-                        .push(`/piattaforma-lancio-pad/${pa.id}`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
-                    className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                  >
-                    Leggi di più
-                  </span>
-                </article>
-              );
-            })
-          ) : (
-            <pre>{pad.detail}</pre>
-          )}
+          {pad.results
+            ? pad.results
+                .filter(
+                  ({ location: { country_code } }) =>
+                    country_code === currentCategory
+                )
+                .map((pa) => {
+                  return (
+                    <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                      <img src={pa.map_image || nontrovata} alt={pa.name} />
+                      <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
+                        {pa.name}
+                      </h1>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Totale lanci effetuati:&nbsp;</b>
+                        {pa.total_launch_count}
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                        <b>Latitudine:&nbsp;</b>
+                        {pa.latitude}
+                      </p>
+                      <p className="mt-2 text-lg mb-4">
+                        <b>Longitudine:&nbsp;</b>
+                        {pa.longitude}
+                      </p>
+
+                      <span
+                        onClick={() =>
+                          router
+                            .push(`/piattaforma-lancio-pad/${pa.id}`)
+                            .then(() => window.scrollTo(0, 0))
+                        }
+                        className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                      >
+                        Leggi di più
+                      </span>
+                    </article>
+                  );
+                })
+            : pad.results.map((pa) => {
+                return (
+                  <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                    <img src={pa.map_image || nontrovata} alt={pa.name} />
+                    <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
+                      {pa.name}
+                    </h1>
+                    <p className="mt-2 text-lg mb-3">
+                      <b>Totale lanci effetuati:&nbsp;</b>
+                      {pa.total_launch_count}
+                    </p>
+                    <p className="mt-2 text-lg mb-3">
+                      <b>Latitudine:&nbsp;</b>
+                      {pa.latitude}
+                    </p>
+                    <p className="mt-2 text-lg mb-4">
+                      <b>Longitudine:&nbsp;</b>
+                      {pa.longitude}
+                    </p>
+
+                    <span
+                      onClick={() =>
+                        router
+                          .push(`/piattaforma-lancio-pad/${pa.id}`)
+                          .then(() => window.scrollTo(0, 0))
+                      }
+                      className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    >
+                      Leggi di più
+                    </span>
+                  </article>
+                );
+              })}
         </section>
         <hr />
         <section className="flex">
