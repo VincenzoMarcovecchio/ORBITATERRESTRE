@@ -12,11 +12,11 @@ function Piattaforme({ pad }) {
 
 let categories = [];
 
-  for (let i = 0; i < pad.results.length; i++) {
+  for (let i = 0; i < pad.count; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
-  console.log(categories)
+  console.log(categories,pad )
 
   return (
     <LayoutComponent>

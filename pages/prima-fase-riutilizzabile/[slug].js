@@ -1,10 +1,9 @@
-import { React, useState, useEffect } from "react";
+import  React from "react";
 import { LayoutComponent, SEO } from "@components/common";
-import { useRouter } from "next/router";
 
-function PrimeFasi({ sta, pageNumber }) {
+
+function PrimeFasi({ sta }) {
  
-  const router = useRouter();
 
   return (
     <LayoutComponent>
