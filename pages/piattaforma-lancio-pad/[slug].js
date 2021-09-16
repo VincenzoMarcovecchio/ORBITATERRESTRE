@@ -1,26 +1,27 @@
 import React from "react";
-import { LayoutComponent } from "../../components/common/Layout/Layout";
-import { SEO } from "../../components/common/Seo/index";
+import { LayoutComponent, SEO } from "@components/common";
 
-function Piattaformalo({ pal }) {
-  console.log(pal);
+function Piattaformalo({ pad }) {
+  console.log(pad);
   return (
     <LayoutComponent>
       <SEO
-        description={`${pal.results.name}, ${pal.results.location.name}`}
-        title={`Piattaforma di lancio ${pal.results.name}`}
+        description={`${pad.results[0]?.name}, ${pad.results[0]?.location.name}`}
+        title={`Piattaforma di lancio ${pad.results[0]?.name}`}
       />
-      {pal.results ? (
+      {pad.results.length > 1 ? (
         <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
           <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
-            {pal.results.name},&nbsp;{pal.results.location.name}
+            {pad.results[0]?.name},&nbsp;{pad.results[0]?.location.name}
           </h1>
-          <h2>Totale lanci effetuati:&nbsp;{pal.results.total_launch_count}</h2>
-          <h2>Latitudine:&nbsp;{pal.results.latitude}</h2>
-          <h2>Longitudine:&nbsp;{pal.results.longitude}</h2>
-          <h2>Wikipedia:&nbsp;{pal.results.wiki_url}</h2>
+          <h2>
+            Totale lanci effetuati:&nbsp;{pad.results[0]?.total_launch_count}
+          </h2>
+          <h2>Latitudine:&nbsp;{pad.results[0]?.latitude}</h2>
+          <h2>Longitudine:&nbsp;{pad.results[0]?.longitude}</h2>
+          <h2>Wikipedia:&nbsp;{pad.results[0]?.wiki_url}</h2>
 
-          <img src={pal.results.map_image} alt={pal.results.name} />
+          <img src={pad.results[0]?.map_image} alt={pad.results[0]?.name} />
         </div>
       ) : (
         "errore nel caricamento (bisognerebbe supportare i ragazzi at the spacedevs)"
