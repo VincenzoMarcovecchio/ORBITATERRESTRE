@@ -1,5 +1,4 @@
 import React from "react";
-import nontrovata from "../../content/assets/immagine-non-trovata.png";
 
 function Piattaformalo({ pad }) {
  console.log(pad)
@@ -9,7 +8,7 @@ function Piattaformalo({ pad }) {
         description={`${pad.results[0]?.name}, ${pad.results[0]?.location.name}`}
         title={`Piattaforma di lancio ${pad.results[0]?.name}`}
       />
-      {pad.results.length > 1 ? (
+      {pad.results.length > 0 ? (
         <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
           <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
             {pad.results[0]?.name},&nbsp;{pad.results[0]?.location.name}
