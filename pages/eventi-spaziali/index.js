@@ -33,32 +33,26 @@ function Eventit({ eventi }) {
                       src={lol.feature_image}
                       alt={lol.titile}
                     />
-                  
+
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
                       <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
                         {lol.name}
                       </h1>
-                      <span
-                      
-                        className="px-3 cursor-pointer flex w-full py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                    
-                      >
-                         {moment(lol.date).format('DD-MM-YYYY')}
+                      <span className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+                        {moment(lol.date).format("DD-MM-YYYY")}
                       </span>
                       <p className="mt-2 text-lg mb-3">
-                      <b>Location:&nbsp;</b>
-                        <p>{lol.location}</p>
+                        <b>Location:&nbsp;</b>
+                        {lol.location}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                      <b>Parte del programma:&nbsp;</b>
-                        <p>{lol.program[0]?.name}</p>
+                        <b>Parte del programma:&nbsp;</b>
+                        {lol.program[0]?.name}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                      <b>Descrizione:&nbsp;</b>
-                        <p>{lol.description}</p>
+                        <b>Descrizione:&nbsp;</b>
+                        {lol.description}
                       </p>
-                    
-                    
                       <span
                         onClick={() =>
                           router
