@@ -12,7 +12,7 @@ function Piattaforme({ pad }) {
 
 let categories = [];
 
-  for (let i = 0; i < pad.count; i++) {
+  for (let i = 0; i < pad.results.length; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
