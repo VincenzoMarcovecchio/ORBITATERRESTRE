@@ -3,10 +3,10 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
+import {renderSwitch} from "../utils/getFlags"
 
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState(null);
-  const [countryCode, setCountry] = useState(null);
 
   const router = useRouter();
 
@@ -30,15 +30,15 @@ function Piattaforme({ pad }) {
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
             Ci sono {pad.count} risultati
           </h3>
-          <div className="display 	flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
+          <div className="display flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
             {uniquecat.map((cate, i) => {
               return (
                 <span
-                  className="cursor-pointer m-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className="cursor-pointer mr-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
                   onClick={() => setCurrentCategory(cate)}
                 >
-                  {cate}
+                  {renderSwitch(cate)}
                 </span>
               );
             })}
