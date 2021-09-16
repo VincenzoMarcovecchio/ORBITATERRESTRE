@@ -41,7 +41,7 @@ function Eventit({ eventi }) {
                       <span className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                         {moment(lol.date).format("DD-MM-YYYY")}
                       </span>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-4 text-lg mb-3">
                         <b>Location:&nbsp;</b>
                         {lol.location}
                       </p>

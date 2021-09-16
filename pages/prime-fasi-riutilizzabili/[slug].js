@@ -53,7 +53,7 @@ function PrimeFasi({ sta, pageNumber }) {
                   target="_blank"
                   rel="noopener noreferrer canonical"
                 >
-                  Leggi di piu
+              Leggi di più
                 </span>
               </div>
             </article>

@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import Link from "next/link";
 import non from "../../content/assets/immagine-non-trovata.png";
-import { LayoutComponent } from "@components/common";
+import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Page({ agenciesData, pageNumber }) {
@@ -70,7 +70,7 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-3 text-lg mb-2">
+                      <p className="mt-2 text-lg mb-2">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
                       <p className="mt-2 text-lg mb-2">
@@ -83,15 +83,16 @@ function Page({ agenciesData, pageNumber }) {
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
-                      <Link
+                      <span
                         className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        target="_blank"
-                        rel="noopener noreferrer canonical"
-                        href={`/agenzia-spaziale/${data.id}/`}
-                        replace
+                        onClick={() =>
+                          router
+                            .push(`/eventi-spaziali/${lol.slug}`)
+                            .then(() => window.scrollTo(0, 0))
+                        }
                       >
                         Scopri di più
-                      </Link>
+                      </span>
                     </figcaption>
                   </figure>
                 );
