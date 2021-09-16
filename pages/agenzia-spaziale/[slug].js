@@ -18,18 +18,18 @@ function Pagetwo({ agenciesDatatwo }) {
             </h1>
             <img src={agenciesDatatwo.logo_url} alt={agenciesDatatwo.name} />
             <figcaption>
-              <p className="mt-2 text-lg mb-3">
+              <p className="mt-2 text-lg mb-2">
                 <b>Fondata nel:</b>&nbsp;{agenciesDatatwo.founding_year}
               </p>
-              <p className="mt-2 text-lg mb-3">
+              <p className="mt-2 text-lg mb-2">
                 <b>Tipo:</b>&nbsp;{agenciesDatatwo.type}
               </p>
-              <p className="mt-2 text-lg mb-3">
+              <p className="mt-2 text-lg mb-2">
                 <b>Amministratore:</b>&nbsp;
                 {agenciesDatatwo.administrator ||
                   "nessun amministratore trovato"}
               </p>
-              <p className="mt-2 text-lg mb-3">
+              <p className="mt-2 text-lg mb-2">
                 <b>Nazionalità:</b>&nbsp;{agenciesDatatwo.country_code}
               </p>
               <p className="mt-2 text-lg mb-3">

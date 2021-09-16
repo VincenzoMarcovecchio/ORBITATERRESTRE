@@ -53,7 +53,7 @@ function News({ newsdata }) {
         </section>
         <section className="flex ">
           <aside>
-            <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            <h3 className="md:px-4 text-3xl font-bold text-yellow-600 font-display mt-8  mb-6">
               Prossimi Eventi
             </h3>
             <div className="px-4 flex flex-col">

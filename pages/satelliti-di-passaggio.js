@@ -142,7 +142,7 @@ function Testas() {
           <hr />
         <section className="flex">
           <aside>
-            <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               Prossimi Lanci
             </h2>
             <Lanci />

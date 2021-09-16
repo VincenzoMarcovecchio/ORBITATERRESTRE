@@ -1,9 +1,11 @@
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
+import moment from "moment";
 
 function Eventit({ eventi }) {
   const router = useRouter();
   console.log(eventi);
+
   return (
     <LayoutComponent>
       <SEO
@@ -31,25 +33,32 @@ function Eventit({ eventi }) {
                       src={lol.feature_image}
                       alt={lol.titile}
                     />
-                    <div>
-                      <pre>{lol.date}</pre>
-                    </div>
+                  
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
                       <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
                         {lol.name}
                       </h1>
-                      <div className="flex">
-                        <b>Location:&nbsp;</b>
+                      <span
+                      
+                        className="px-3 cursor-pointer flex w-full py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    
+                      >
+                         {moment(lol.date).format('DD-MM-YYYY')}
+                      </span>
+                      <p className="mt-2 text-lg mb-3">
+                      <b>Location:&nbsp;</b>
                         <p>{lol.location}</p>
-                      </div>
-                      <div className="flex">
-                        <b>Parte del programma:&nbsp;</b>
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                      <b>Parte del programma:&nbsp;</b>
                         <p>{lol.program[0]?.name}</p>
-                      </div>
-                      <div className="flex mb-6">
-                        <b>Descrizione:&nbsp;</b>
+                      </p>
+                      <p className="mt-2 text-lg mb-3">
+                      <b>Descrizione:&nbsp;</b>
                         <p>{lol.description}</p>
-                      </div>
+                      </p>
+                    
+                    
                       <span
                         onClick={() =>
                           router

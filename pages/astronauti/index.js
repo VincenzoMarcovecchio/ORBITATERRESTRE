@@ -1,21 +1,18 @@
-import { React, useState, useEffect } from "react";
+import  React,{ useState, useEffect } from "react";
 import { LayoutComponent, SEO } from "@components/common";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik } from "formik";
 
 function Paginax() {
-  const defaultEndpoint =
-    "https://ll.thespacedevs.com/2.1.0/astronaut/?limit=10&offset=10";
+
 
   const [defaultResults, setDefaultResults] = useState([]);
   const astronauti = ["All", "American", "Russian", "European", "Others"];
   const [name, setName] = useState("");
   const [nationality, setNationality] = useState("All");
 
-  
-
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?nationality=${nationality}&search=${name}&limit=50&offset=50`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -49,10 +46,11 @@ function Paginax() {
             return (
               <span
                 key={li}
-                className={`${String(nationality.toLowerCase()) === String(li.toLowerCase())
+                className={`${
+                  String(nationality.toLowerCase()) === String(li.toLowerCase())
                     ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
                     : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                  }`}
+                }`}
                 onClick={() => setNationality(li)}
               >
                 {li}
@@ -129,29 +127,39 @@ function Paginax() {
                       />
                     )}
                     <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
-                      <h3 className="text-3xl font-bold text-yellow-600 font-display">
+                      <h3 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
                         {name}
                       </h3>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg mb-2">
                         <strong className="font-extrabold">Nazionalità </strong>
                         :&nbsp;{nationality}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <strong className="font-extrabold" >Nato il</strong>:&nbsp;{result.date_of_birth}
+                      <p className="mt-2 text-lg mb-2">
+                        <strong className="font-extrabold">Nato il</strong>
+                        :&nbsp;{result.date_of_birth}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <strong className="font-extrabold" >Descrizione:</strong>&nbsp;{bio}
+                      <p className="mt-2 text-lg mb-2">
+                        <strong className="font-extrabold">Descrizione:</strong>
+                        &nbsp;{bio}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <strong className="font-extrabold" >Primo Volo:&nbsp;</strong>
+                      <p className="mt-2 text-lg mb-2">
+                        <strong className="font-extrabold">
+                          Primo Volo:&nbsp;
+                        </strong>
                         {result.first_flight}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <strong className="font-extrabold" >   Instagram:&nbsp;</strong>
+                      <p className="mt-2 text-lg mb-2">
+                        <strong className="font-extrabold">
+                        
+                          Instagram:&nbsp;
+                        </strong>
                         {result.instagram}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <strong className="font-extrabold"  >   Twitter:&nbsp;</strong>
+                      <p className="mt-2 text-lg mb-4">
+                        <strong className="font-extrabold">
+                         
+                          Twitter:&nbsp;
+                        </strong>
                         {result.twitter}
                       </p>
                     </figcaption>

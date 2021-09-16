@@ -51,7 +51,7 @@ function SpaceXTimeline() {
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full">
-          <div className="container bg-gray-200 mx-auto w-full h-full">
+          <div className="container mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden p-5 md:p-10 h-full">
               <div className="border-2-2 md:left-2/4 absolute border-opacity-20 border-gray-700 h-full border"></div>
               {data ? (
