@@ -30,8 +30,12 @@ export const NavBar = () => {
                   alt="astronauta nello spazio"
                 />
                 <span className="font-xl mt-2 ml-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
-                  <p className="font-black leading-none font-display
-                     font-xl uppercase font-bold">orbita</p>{" "}
+                  <p
+                    className="font-black leading-none font-display
+                     font-xl uppercase font-bold"
+                  >
+                    orbita
+                  </p>{" "}
                   terrestre
                 </span>
               </div>
@@ -503,7 +507,7 @@ export const NavBar = () => {
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
                           <Link
-                          replace
+                            replace
                             href="/piattaforme-lancio-pad/"
                             as="/piattaforme-lancio-pad/"
                           >
@@ -576,7 +580,6 @@ export const NavBar = () => {
                   />
                 </div>
                 <div>
-           
                   <Header />
                 </div>
                 <div className="-mr-2">
@@ -641,10 +644,7 @@ export const NavBar = () => {
                     as="/nuove-scoperte-su-marte/3000"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    <a
-                     
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                    >
+                    <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       <svg
                         className="flex-shrink-0 h-6 w-6 text-indigo-600"
                         xmlns="http://www.w3.org/2000/svg"
@@ -692,26 +692,24 @@ export const NavBar = () => {
                     </Link>
                   </a>
                   <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
-                     
-
-                      <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                  <Link replace href={"/blog/"} as={`/blog`}>
-                    <span className="ml-3 text-base font-medium ">Blog</span>
-                  </Link>
+                    <svg
+                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <Link replace href={"/blog/"} as={`/blog`}>
+                      <span className="ml-3 text-base font-medium ">Blog</span>
+                    </Link>
                   </a>
                   <a
                     href="/sistema-solare"

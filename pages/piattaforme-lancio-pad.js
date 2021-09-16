@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../../content/assets/immagine-non-trovata.png";
-import { Lanci } from "../../components/common/Lanci";
+import { Lanci } from "../components/common/Lanci";
 
 function Piattaforme({ pad }) {
   
@@ -78,8 +78,8 @@ let categories = [];
   );
 }
 
-export const getServerSideProps = async () => {
-  const apiResponse = await fetch(`https://ll.thespacedevs.com/2.2.0/pad?limit=10&offset=10`);
+export async function getStaticProps() {
+  const apiResponse = await fetch(`https://ll.thespacedevs.com/2.2.0/pad/`);
 
   const data = await apiResponse.json();
 

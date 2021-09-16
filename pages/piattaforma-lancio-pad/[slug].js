@@ -33,7 +33,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageNumber = pageContext.query.slug;
 
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad/?id=${pageNumber}`
+    `https://ll.thespacedevs.com/2.2.0/pad/?location=${pageNumber}`
   );
 
   const data = await apiResponse.json();
