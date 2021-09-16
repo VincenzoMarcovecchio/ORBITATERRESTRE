@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
-import nontrovata from "../../content/assets/immagine-non-trovata.png";
+import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 
 function Piattaforme({ pad }) {
