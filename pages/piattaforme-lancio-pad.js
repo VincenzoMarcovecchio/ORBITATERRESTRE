@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
-import { server } from '../config/server';
+import { piatte } from '../data/piatte';
 
 
 function Piattaforme({ pad }) {
@@ -141,12 +141,11 @@ function Piattaforme({ pad }) {
 
 export async function getStaticProps() {
 
-  const data = await fetch(`${server}/api/piatta.json`)
   
 
   return {
     props: {
-      pad: data,
+      pad: piatte,
     },
   };
 }
