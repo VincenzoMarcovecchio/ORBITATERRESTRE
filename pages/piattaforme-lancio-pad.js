@@ -20,7 +20,7 @@ function Piattaforme({ pad }) {
 
   let categories = [];
 
-  for (let i = 0; i < pad.count; i++) {
+  for (let i = 0; i < 193; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
@@ -42,7 +42,7 @@ function Piattaforme({ pad }) {
             Piattaforme di lancio
           </h2>
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
-            Ci sono {pad.count} risultati
+            Ci sono 193 risultati
           </h3>
           <div className="display flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
             {uniquecat.map((cate, i) => {
