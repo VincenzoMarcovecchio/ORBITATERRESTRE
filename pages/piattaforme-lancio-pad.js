@@ -6,7 +6,7 @@ import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
 
 function Piattaforme({ pad }) {
-  const [currentCategory, setCurrentCategory] = useState("America");
+  const [currentCategory, setCurrentCategory] = useState("");
 
   const router = useRouter();
 
@@ -54,7 +54,7 @@ function Piattaforme({ pad }) {
             ? pad.results
                 .filter(
                   ({ location: { country_code } }) =>
-                    country_code == currentCategory
+                  currentCategory ==  country_code 
                 )
                 .map((pa) => {
                   return (
@@ -139,7 +139,7 @@ function Piattaforme({ pad }) {
 
 export async function getStaticProps() {
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad/?limit=20&offset=20`
+    `https://ll.thespacedevs.com/2.2.0/pad/?limit=200&offset=200`
   );
 
   const data = await apiResponse.json();
