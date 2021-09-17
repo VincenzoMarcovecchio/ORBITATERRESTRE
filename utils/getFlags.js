@@ -34,8 +34,10 @@ export const renderSwitch = (param) => {
       return "India";
     case "NZL":
       return "Nuova Zelanda";
+    case "KOR":
+      return "Sud Korea";
 
     default:
-      return;
+      return null;
   }
 };

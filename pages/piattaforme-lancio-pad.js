@@ -48,7 +48,7 @@ function Piattaforme({ pad }) {
             {uniquecat.map((cate, i) => {
               return (
                 <span
-                  className="cursor-pointer mb-4 mr-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className="cursor-pointer mb-4 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
                   onClick={() => setCurrentCategory(cate)}
                 >
