@@ -14,7 +14,7 @@ export async function getStaticProps() {
   };
 }
 function Piattaforme({ pad }) {
-  const [currentCategory, setCurrentCategory] = useState("USA");
+  const [currentCategory, setCurrentCategory] = useState("ITA");
 
   const router = useRouter();
 
@@ -58,48 +58,15 @@ function Piattaforme({ pad }) {
             })}
           </div>
 
-          {pad.results
-            ? pad.results
-                .filter(
-                  ({ location: { country_code } }) =>
-                    currentCategory == country_code
-                )
-                .map((pa) => {
-                  return (
-                    <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-                      <img src={pa.map_image || nontrovata} alt={pa.name} />
-                      <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
-                        {pa.name}
-                      </h1>
-                      <p className="mt-2 text-lg mb-3">
-                        <b>Totale lanci effetuati:&nbsp;</b>
-                        {pa.total_launch_count}
-                      </p>
-                      <p className="mt-2 text-lg mb-3">
-                        <b>Latitudine:&nbsp;</b>
-                        {pa.latitude}
-                      </p>
-                      <p className="mt-2 text-lg mb-4">
-                        <b>Longitudine:&nbsp;</b>
-                        {pa.longitude}
-                      </p>
-
-                      <span
-                        onClick={() =>
-                          router
-                            .push(`/piattaforma-lancio-pad/${pa.id}`)
-                            .then(() => window.scrollTo(0, 0))
-                        }
-                        className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                      >
-                        Leggi di più
-                      </span>
-                    </article>
-                  );
-                })
-            : pad.results.map((pa) => {
+          {pad.results &&
+            pad.results
+              .filter(
+                ({ location: { country_code } }) =>
+                  currentCategory == country_code
+              )
+              .map((pa) => {
                 return (
-                  <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                  <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
                     <img src={pa.map_image || nontrovata} alt={pa.name} />
                     <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                       {pa.name}

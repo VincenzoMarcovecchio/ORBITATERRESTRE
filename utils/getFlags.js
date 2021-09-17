@@ -26,8 +26,16 @@ export const renderSwitch = (param) => {
       return "Nord Corea";
     case "IRN":
       return "Iran";
+    case "MHL":
+      return "Isole Marshall";
+    case "AUS":
+      return "Australia";
+    case "IND":
+      return "India";
+    case "NZL":
+      return "Nuova Zelanda";
 
     default:
-      return "";
+      return;
   }
 };
