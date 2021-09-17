@@ -34,7 +34,7 @@ function Piattaforme({ pad }) {
         slug="piattaforme-lancio-pad"
         description="Lista delle piattaforme di lancio"
         cano="si"
-        imageUrl={pad.results[0]?.map_image}
+        imageUrl={"piattaforme-lancio-pad.jpg"}
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
