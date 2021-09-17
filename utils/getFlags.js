@@ -12,6 +12,20 @@ export const renderSwitch = (param) => {
       return "kazakistan";
     case "UNK":
       return "Sconosciuto";
+    case "ITA":
+      return "Italia";
+    case "ISR":
+      return "Israele";
+    case "BRA":
+      return "Brasile";
+    case "GUF":
+      return "Francia";
+    case "JPN":
+      return "Giappone";
+    case "PRK":
+      return "Nord Corea";
+    case "IRN":
+      return "Iran";
 
     default:
       return "";
