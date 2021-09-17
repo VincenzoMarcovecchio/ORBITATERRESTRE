@@ -536,7 +536,7 @@ export const NavBar = () => {
                 </div>
               </div>
             </div>
-            <div className="relative flex">
+            <div className="relative items-center flex">
             <Link href={"/blog"} as={`/blog`}>
               Blog
             </Link>

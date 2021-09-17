@@ -49,7 +49,7 @@ function Testas() {
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
-          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-8">
             Hey cosa passa sopra la tua testa? 😮 🛰️
           </h2>
           <button
