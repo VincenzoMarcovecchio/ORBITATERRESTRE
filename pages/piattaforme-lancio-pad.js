@@ -141,8 +141,8 @@ function Piattaforme({ pad }) {
 
 export async function getStaticProps() {
 
-  const apiResponse = await fetch(`${server}/api/piatta`)
-  const data = await JSON.parse(JSON.stringify(apiResponse));
+  const data = await fetch(`${server}/api/piatta`)
+
 
   return {
     props: {
