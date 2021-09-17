@@ -142,11 +142,11 @@ function Piattaforme({ pad }) {
 export async function getStaticProps() {
 
   const data = await fetch(`${server}/api/piatta`)
-
+  const piatte = JSON.stringify(data)
 
   return {
     props: {
-      pad: data,
+      pad: piatte,
     },
   };
 }
