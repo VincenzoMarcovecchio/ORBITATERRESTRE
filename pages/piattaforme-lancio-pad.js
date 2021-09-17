@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
-import { server } from '../config';
+import { server } from '../config/server';
 
 
 function Piattaforme({ pad }) {
