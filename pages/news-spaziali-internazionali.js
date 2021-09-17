@@ -3,7 +3,8 @@ import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
-import non from "../content/assets/immagine-non-trovata.png";
+import { non } from "../content/assets/immagine-non-trovata.png";
+import { Lanci } from "../components/common/Lanci";
 
 function News({ newsdata }) {
   const url =
@@ -13,7 +14,10 @@ function News({ newsdata }) {
 
   return (
     <LayoutComponent>
-      <SEO title="News Astronautiche Internazionali " description="News Astronautiche Internazionali da diverse fonti del web"/>
+      <SEO
+        title="News Astronautiche Internazionali "
+        description="News Astronautiche Internazionali da diverse fonti del web"
+      />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           {newsdata ? (
@@ -51,62 +55,13 @@ function News({ newsdata }) {
             <p>caricamento supersonico in corso...</p>
           )}
         </section>
-        <section className="flex ">
+        <hr />
+        <section className="flex">
           <aside>
-            <h3 className="md:px-4 text-3xl font-bold text-yellow-600 font-display mt-8  mb-6">
-              Prossimi Eventi
-            </h3>
-            <div className="px-4 flex flex-col">
-              {data != undefined ? (
-                data.results.map((la) => {
-                  return (
-                    <figure
-                      key={la.date}
-                      className=" relative w-full shadow-lg  mb-8 md:max-w-md"
-                    >
-                      {la.featured_image ? (
-                        <img
-                          loading="lazy"
-                          className=" max-h-35 w-full"
-                          src={featured_image}
-                          alt={la.name}
-                        />
-                      ) : (
-                        <img
-                          className=" max-h-35 w-full"
-                          src={non}
-                          alt={la.name}
-                        />
-                      )}
-
-                      <figcaption className="z-20 p-2">
-                        <div className="flex ">
-                          <b>Nome:&nbsp;</b>
-                          <Link
-                            className="z-20"
-                            href={`/eventi-spaziali/${la.slug}`}
-                          >
-                            {la.name}
-                          </Link>
-                        </div>
-                        <div className="flex flex-col">
-                          <b>Descrizione:&nbsp;</b>
-
-                          <Link
-                            className="z-20"
-                            href={`/eventi-spaziali/${la.slug}`}
-                          >
-                            {la.description}
-                          </Link>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  );
-                })
-              ) : (
-                <b>{"caricamento supersonico in corso..."}</b>
-              )}
-            </div>
+            <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+              Prossimi Lanci
+            </h2>
+            <Lanci />
           </aside>
         </section>
       </div>
@@ -115,7 +70,7 @@ function News({ newsdata }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://spaceflightnewsapi.net/api/v2/articles");
+  const res = await fetch("https://api.spaceflightnewsapi.net/v3/articles");
 
   const news = await res.json();
 
@@ -129,6 +84,5 @@ export async function getStaticProps() {
     },
   };
 }
-
 
 export default News;
