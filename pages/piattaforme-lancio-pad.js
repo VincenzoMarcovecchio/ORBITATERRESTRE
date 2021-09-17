@@ -139,7 +139,7 @@ function Piattaforme({ pad }) {
 
 export async function getStaticProps() {
   const apiResponse = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/pad/?limit=200&offset=`
+    `https://ll.thespacedevs.com/2.2.0/pad/?limit=300&offset=`
   );
 
   const data = await apiResponse.json();
