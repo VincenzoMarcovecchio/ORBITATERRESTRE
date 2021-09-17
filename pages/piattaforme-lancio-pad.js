@@ -4,9 +4,15 @@ import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
-import { piatte } from '../data/piatte';
+import { piatta } from "../data/piatte";
 
-
+export async function getStaticProps() {
+  return {
+    props: {
+      pad: piatta,
+    },
+  };
+}
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState("USA");
 
@@ -56,7 +62,7 @@ function Piattaforme({ pad }) {
             ? pad.results
                 .filter(
                   ({ location: { country_code } }) =>
-                  currentCategory ==  country_code 
+                    currentCategory == country_code
                 )
                 .map((pa) => {
                   return (
@@ -137,17 +143,6 @@ function Piattaforme({ pad }) {
       </div>
     </LayoutComponent>
   );
-}
-
-export async function getStaticProps() {
-
-  
-
-  return {
-    props: {
-      pad: piatte,
-    },
-  };
 }
 
 export default Piattaforme;

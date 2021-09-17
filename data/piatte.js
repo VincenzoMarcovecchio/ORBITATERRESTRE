@@ -1,8 +1,6 @@
-export const piatte = [
-    {
-        "count": 193,
-        "next": "https://ll.thespacedevs.com/2.2.0/pad/?limit=100&offset=100",
-        "previous": null,
+export const piatta = 
+    
+      {
         "results": [
             {
                 "id": 93,
@@ -4249,5 +4247,4 @@ export const piatte = [
                 "map_image": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/pad_53_20200803143612.jpg",
                 "total_launch_count": 3
             }
-        ]}
-]
+        ] }
