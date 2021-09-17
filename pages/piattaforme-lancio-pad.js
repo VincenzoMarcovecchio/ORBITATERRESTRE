@@ -6,7 +6,7 @@ import { Lanci } from "../components/common/Lanci";
 import {renderSwitch} from "../utils/getFlags"
 
 function Piattaforme({ pad }) {
-  const [currentCategory, setCurrentCategory] = useState(null);
+  const [currentCategory, setCurrentCategory] = useState("America");
 
   const router = useRouter();
 
@@ -21,7 +21,9 @@ function Piattaforme({ pad }) {
   const uniquecat = [...new Set(categories)];
   return (
     <LayoutComponent>
-      <SEO title="Piattaforme di lancio" />
+      <SEO title="Piattaforme di lancio"   
+      description="Lista delle piattaforme di lancio"      cano="si"
+        imageUrl={pad.results[0]?.map_image}/>
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mx-auto mb-6">
@@ -34,7 +36,7 @@ function Piattaforme({ pad }) {
             {uniquecat.map((cate, i) => {
               return (
                 <span
-                  className="cursor-pointer mr-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className="cursor-pointer mb-4 mr-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
                   onClick={() => setCurrentCategory(cate)}
                 >
@@ -52,7 +54,7 @@ function Piattaforme({ pad }) {
                 )
                 .map((pa) => {
                   return (
-                    <article className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+                    <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
                       <img src={pa.map_image || nontrovata} alt={pa.name} />
                       <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                         {pa.name}

@@ -6,6 +6,8 @@ function Piattaformalo({ pad }) {
   return (
     <LayoutComponent>
       <SEO
+        cano="si"
+        imageUrl={pad.results[0]?.map_image}
         description={`${pad.results[0]?.name}, ${pad.results[0]?.location.name}`}
         title={`Piattaforma di lancio ${pad.results[0]?.name}`}
       />
@@ -19,9 +21,22 @@ function Piattaformalo({ pad }) {
           </h2>
           <h2>Latitudine:&nbsp;{pad.results[0]?.latitude}</h2>
           <h2>Longitudine:&nbsp;{pad.results[0]?.longitude}</h2>
-          <h2>Wikipedia:&nbsp;{pad.results[0]?.wiki_url}</h2>
+          <h2>
+            Wikipedia:&nbsp;
+            <a
+              href={pad.results[0]?.wiki_url}
+              rel="caninocal noopener noreferrer"
+              target="__blank"
+            >
+              link
+            </a>
+          </h2>
 
-          <img src={pad.results[0]?.map_image} alt={pad.results[0]?.name} />
+          <img
+            className="mt-4"
+            src={pad.results[0]?.map_image}
+            alt={pad.results[0]?.name}
+          />
         </div>
       ) : (
         "errore nel caricamento (bisognerebbe supportare i ragazzi at the spacedevs)"
