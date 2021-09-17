@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
+import { server } from '../config';
+
 
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState("USA");
@@ -138,10 +140,8 @@ function Piattaforme({ pad }) {
 }
 
 export async function getStaticProps() {
-  const apiResponse = await fetch(
-    '../data/piatta.json'
-  );
 
+  const apiResponse = await fetch(`${server}/api/piatta`)
   const data = await apiResponse.json();
 
   return {

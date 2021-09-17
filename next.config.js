@@ -1,7 +1,9 @@
 const withPlugins = require("next-compose-plugins");
 
 const optimizedImages = require("next-optimized-images");
+const dev = process.env.NODE_ENV !== 'production';
 
+export const server = dev ? 'http://localhost:3000' : 'https://orbitaterrestre.com';
 const nextConfig = {
   webpack: (config, { isServer }) => {
     if (isServer) {
