@@ -3,7 +3,7 @@ import { LayoutComponent, SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
-import {renderSwitch} from "../utils/getFlags"
+import { renderSwitch } from "../utils/getFlags";
 
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState("America");
@@ -21,9 +21,13 @@ function Piattaforme({ pad }) {
   const uniquecat = [...new Set(categories)];
   return (
     <LayoutComponent>
-      <SEO title="Piattaforme di lancio"   
-      description="Lista delle piattaforme di lancio"      cano="si"
-        imageUrl={pad.results[0]?.map_image}/>
+      <SEO
+        title="Piattaforme di lancio"
+        slug="piattaforme-lancio-pad"
+        description="Lista delle piattaforme di lancio"
+        cano="si"
+        imageUrl={pad.results[0]?.map_image}
+      />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mx-auto mb-6">
@@ -50,7 +54,7 @@ function Piattaforme({ pad }) {
             ? pad.results
                 .filter(
                   ({ location: { country_code } }) =>
-                    country_code === currentCategory
+                    country_code == currentCategory
                 )
                 .map((pa) => {
                   return (

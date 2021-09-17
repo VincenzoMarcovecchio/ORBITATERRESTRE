@@ -7,6 +7,7 @@ function Piattaformalo({ pad }) {
     <LayoutComponent>
       <SEO
         cano="si"
+        slug={`piattaforma-lancio-pad/${pad.results[0]?.id}`}
         imageUrl={pad.results[0]?.map_image}
         description={`${pad.results[0]?.name}, ${pad.results[0]?.location.name}`}
         title={`Piattaforma di lancio ${pad.results[0]?.name}`}
