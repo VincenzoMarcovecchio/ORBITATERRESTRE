@@ -40,7 +40,7 @@ export const renderSwitch = (param) => {
       return "Francia";
     case " ":
       return "Sconosciuto";
-    case "' '":
+    case "''":
       return "Sconosciuto";
 
     default:

@@ -44,11 +44,11 @@ function Piattaforme({ pad }) {
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
             Ci sono 193 risultati
           </h3>
-          <div className="display flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
+          <div className="display justify-start main-content w-full flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">
             {uniquecat.map((cate, i) => {
               return (
                 <span
-                  className="cursor-pointer mb-4 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className="cursor-pointer m-2 mr-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
                   onClick={() => setCurrentCategory(cate)}
                 >
