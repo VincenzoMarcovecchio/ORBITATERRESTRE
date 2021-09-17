@@ -24,7 +24,7 @@ function Piattaforme({ pad }) {
     categories.push(pad.results[i].location.country_code);
   }
 
-  console.log(categories, pad);
+  console.log(categories,currentCategory, pad);
 
   const uniquecat = [...new Set(categories)];
   return (

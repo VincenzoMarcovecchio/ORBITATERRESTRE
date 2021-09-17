@@ -1,7 +1,7 @@
 export const renderSwitch = (param) => {
   switch (param) {
     case "USA":
-      return "America";
+      return "Stati Uniti";
     case "GUF":
       return "Francia";
     case "RUS":
@@ -36,6 +36,8 @@ export const renderSwitch = (param) => {
       return "Nuova Zelanda";
     case "KOR":
       return "Sud Korea";
+    case "DZ":
+      return "Algeria";
 
     default:
       return null;
