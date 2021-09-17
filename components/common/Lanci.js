@@ -11,7 +11,7 @@ export function Lanci() {
   const { data, error } = useSWR(url, fetcher);
 
   return (
-    <div className="md:px-4 flex flex-col">
+    <div className="md:px-4 flex flex-col mio">
       {data ? (
         data.results?.map((la) => {
           return (
@@ -36,8 +36,8 @@ export function Lanci() {
                 </small>
               </div>
 
-              <figcaption className="bg-white bg-opacity-75  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
-                <div className="flex ">
+              <figcaption className="bg-white bg-opacity-85  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
+                <p >
                   <b>Agenzia:&nbsp;</b>
                   <Link
                     className=" z-20"
@@ -45,8 +45,8 @@ export function Lanci() {
                   >
                     <a>{la.launch_service_provider.name}</a>
                   </Link>
-                </div>
-                <div className="flex">
+                </p>
+                <p >
                   <b>Dove:&nbsp;</b>
                   <Link
                     className="truncate text-gray-500 text-sm"
@@ -54,8 +54,8 @@ export function Lanci() {
                   >
                     <a>{la.pad.name}</a>
                   </Link>
-                </div>
-                <div className="flex">
+                </p>
+                <p >
                   <b>Nome Missione:&nbsp;</b>
                   <Link
                     className="truncate text-gray-500 text-sm"
@@ -63,7 +63,7 @@ export function Lanci() {
                   >
                     <a>{la.mission?.name}</a>
                   </Link>
-                </div>
+                </p>
               </figcaption>
             </figure>
           );
@@ -73,7 +73,7 @@ export function Lanci() {
       )}
       <div>
         <Link as={`/lanci-missioni-spaziali`} href={`/lanci-missioni-spaziali`}>
-          <a>Scopri di piu` sui lanci</a>
+          <a>Scopri di piú sui lanci</a>
         </Link>
       </div>
     </div>

@@ -73,7 +73,7 @@ export const NavBar = () => {
             >
               News Internazionali
             </Link>
-            <div className="relative">
+            <div className="relative flex">
               <button
                 type="button"
                 className="
@@ -318,7 +318,7 @@ export const NavBar = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative flex">
               {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
               <button
                 type="button"
@@ -536,9 +536,11 @@ export const NavBar = () => {
                 </div>
               </div>
             </div>
+            <div className="relative flex">
             <Link href={"/blog"} as={`/blog`}>
               Blog
             </Link>
+            </div>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Header />
