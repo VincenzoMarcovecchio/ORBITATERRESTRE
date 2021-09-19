@@ -1,5 +1,5 @@
-import { React, useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  useState, useEffect } from "react";
+import {  SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 import { setCORS } from "google-translate-api-browser";
@@ -41,7 +41,7 @@ function SpaceXTimeline() {
   let vaimo = translated.length > 1 && translated.substring(1);
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         cano="si"
         imageUrl="la-storia-di-spaceX-in-timeline-component.png"
@@ -108,7 +108,7 @@ function SpaceXTimeline() {
           </div>
         </section>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

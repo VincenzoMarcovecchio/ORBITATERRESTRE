@@ -1,9 +1,9 @@
 import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 
 export default function Errores() {
   return (
-    <LayoutComponent>
+   <>
       <SEO
         title="Esplorazione Esopianeti"
         description="In media, si stima che esista almeno un pianeta per ogni stella della galassia. Ciò significa che c'è qualcosa nell'ordine di miliardi di pianeti solo nella nostra galassia, molti nella gamma di dimensioni della Terra. Questi pianeti al di fuori del nostro sistema solare sono noti come pianeti extrasolari."
@@ -21,6 +21,6 @@ export default function Errores() {
           alt="NASA esplorazione esopianeti"
         ></iframe>
       </div>
-    </LayoutComponent>
+    </>
   );
 }

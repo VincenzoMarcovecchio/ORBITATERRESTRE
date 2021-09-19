@@ -3,17 +3,13 @@ import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
-import { non } from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 
 function News({ newsdata }) {
-  const url =
-    "https://mimmofranco.herokuapp.com/https://ll.thespacedevs.com/2.1.0/event/upcoming";
 
-  const { data, error } = useSWR(url, fetcher);
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="News Astronautiche Internazionali "
         description="News Astronautiche Internazionali da diverse fonti del web"
@@ -65,7 +61,7 @@ function News({ newsdata }) {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+  </>
   );
 }
 

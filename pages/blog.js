@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import Link from "next/link";
-import { LayoutComponent,  SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
 import moment from "moment";
 
@@ -18,7 +18,7 @@ function Blog({ posts }) {
   const uniquecat = [...new Set(merged)];
 
   return (
-    <LayoutComponent>
+    <>
       <SEO title="Il blog " description="Notizie dallo spazio vicino e lontano" />
 
       <div className="w-full md:max-w-8xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
@@ -100,7 +100,7 @@ function Blog({ posts }) {
               )}
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

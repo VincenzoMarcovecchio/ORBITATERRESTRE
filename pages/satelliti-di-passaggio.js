@@ -1,5 +1,5 @@
 import {  useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import moment from "moment";
 import { Lanci } from "../components/common/Lanci";
 
@@ -40,7 +40,7 @@ function Testas() {
   };
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
      cano="si"
       slug="satelliti-di-passaggio"
@@ -149,7 +149,7 @@ function Testas() {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+      </>
   );
 }
 

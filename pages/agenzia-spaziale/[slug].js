@@ -1,13 +1,12 @@
-import { React, useState, useEffect } from "react";
-import Link from "next/link";
-import non from "../../content/assets/immagine-non-trovata.png";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
+import {  useState, useEffect } from "react";
+
+import {  Bio, SEO } from "@components/common";
+
 
 function Pagetwo({ agenciesDatatwo }) {
 
   return (
-    <LayoutComponent>
+    <>
       <SEO description={agenciesDatatwo.description} title={`Agenzie Spaziale ${agenciesDatatwo.results}`} />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -41,7 +40,7 @@ function Pagetwo({ agenciesDatatwo }) {
           "caricamento supersonico suprersonico in corso..."
         )}
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

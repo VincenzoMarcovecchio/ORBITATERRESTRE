@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import  {  useEffect } from "react";
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Asteroidi({ near }) {
-  const router = useRouter();
+
   var newObject;
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function Asteroidi({ near }) {
   }, []);
 
   return (
-    <LayoutComponent>
+    <>
       <SEO title="Asteroidi in rotta di collisione" />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -60,7 +60,7 @@ function Asteroidi({ near }) {
           });
         })}
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

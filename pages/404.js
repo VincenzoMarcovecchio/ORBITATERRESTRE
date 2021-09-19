@@ -1,9 +1,9 @@
 import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 
  function NoBueno() {
   return (
-    <LayoutComponent>
+    <>
       <SEO title="Oops qualcosa e' andato storto" />
 
       <div className="bg-gradient-to-r from-purple-300 to-blue-200">
@@ -28,7 +28,7 @@ import { LayoutComponent, SEO } from "@components/common";
           </div>
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

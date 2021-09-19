@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import  { useState, useEffect } from "react";
+import {  SEO } from "@components/common";
 import { Lanci } from "../components/common/Lanci";
 
 function Retrogrado() {
@@ -28,7 +28,7 @@ function Retrogrado() {
     setSubmit(true);
   };
   return (
-    <LayoutComponent>
+   <>
       <SEO
         cano="si"
         title="Il Retrogrado di Mercurio, le previsioni in tempo reale"
@@ -177,7 +177,7 @@ function Retrogrado() {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 export default Retrogrado;

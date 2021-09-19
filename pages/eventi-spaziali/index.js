@@ -1,13 +1,13 @@
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 import moment from "moment";
 
 function Eventit({ eventi }) {
   const router = useRouter();
-  console.log(eventi);
+ 
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         cano="si"
         slug="eventi-spaziali"
@@ -88,7 +88,7 @@ function Eventit({ eventi }) {
           </div>
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

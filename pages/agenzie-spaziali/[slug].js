@@ -1,7 +1,7 @@
-import { React, useState } from "react";
+import {  useState } from "react";
 import Link from "next/link";
 import non from "../../content/assets/immagine-non-trovata.png";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Page({ agenciesData, pageNumber }) {
@@ -19,7 +19,7 @@ function Page({ agenciesData, pageNumber }) {
   ];
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Agenzie Spaziali"
         description="Una lista di agenzie che si occupano di missioni nello spazio"
@@ -456,7 +456,7 @@ function Page({ agenciesData, pageNumber }) {
           </div>
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

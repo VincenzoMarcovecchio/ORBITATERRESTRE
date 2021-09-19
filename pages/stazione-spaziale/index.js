@@ -1,13 +1,13 @@
-import  React  from "react";
 
-import { LayoutComponent, SEO } from "@components/common";
+
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function StazioneSpazialeIndex({ sta }) {
  
   const router = useRouter();
   return (
-    <LayoutComponent>
+    <>
       <SEO
         description="Lista completa delle stazioni spaziali attive e non "
         title="Stazioni Spaziali"
@@ -66,7 +66,7 @@ function StazioneSpazialeIndex({ sta }) {
           <pre>{sta.detail}</pre>
         )}
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

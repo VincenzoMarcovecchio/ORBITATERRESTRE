@@ -1,12 +1,11 @@
-import { React, useState, useEffect } from "react";
+import {  useState, useEffect } from "react";
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import {  SEO } from "@components/common";
+import { Formik } from "formik";
 import non from "../../content/assets/immagine-non-trovata.png";
 
 const LanciIndex = () => {
-  const router = useRouter();
+  
   const [name, setName] = useState("");
   const [lancid, setLancid] = useState([]);
   const [crewed, setCrewed] = useState(false);
@@ -20,7 +19,7 @@ const LanciIndex = () => {
   }, [crewed, name]);
 
   return (
-    <LayoutComponent>
+    <>
       <SEO title="Lanci di missioni Spaziali" />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -155,7 +154,7 @@ const LanciIndex = () => {
           <p>{lancid.detail || "caricamento supersonico in corso..."}</p>
         )}
       </div>
-    </LayoutComponent>
+    </>
   );
 };
 

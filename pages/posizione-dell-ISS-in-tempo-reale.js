@@ -1,10 +1,10 @@
 import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { Lanci } from "../components/common/Lanci";
 
 function Thispage() {
   return (
-    <LayoutComponent>
+   <>
       <SEO
         cano="si"
         slug="posizione-dell-ISS-in-tempo-reale"
@@ -37,7 +37,7 @@ function Thispage() {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+   </>
   );
 }
 

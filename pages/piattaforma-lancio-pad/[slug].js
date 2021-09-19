@@ -1,10 +1,10 @@
-import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+
+import {  SEO } from "@components/common";
 
 function Piattaformalo({ pad }) {
-  console.log(pad);
+
   return (
-    <LayoutComponent>
+    <>
       <SEO
         cano="si"
         slug={`piattaforma-lancio-pad/${pad.results[0]?.id}`}
@@ -42,7 +42,7 @@ function Piattaformalo({ pad }) {
       ) : (
         "errore nel caricamento (bisognerebbe supportare i ragazzi at the spacedevs)"
       )}
-    </LayoutComponent>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
-import  React,{ useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import  { useState, useEffect } from "react";
+import {  SEO } from "@components/common";
 import { Formik } from "formik";
 
 function Paginax() {
@@ -27,7 +27,7 @@ function Paginax() {
   }, [nationality]);
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Anagrafe Astronauti"
         description="Incontra le persone eccezionali che si sono avventurate nello spazio 👨‍🚀"
@@ -172,7 +172,7 @@ function Paginax() {
           )}
         </ul>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

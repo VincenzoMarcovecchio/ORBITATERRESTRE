@@ -1,9 +1,9 @@
-import  React  from "react";
-import { LayoutComponent, SEO } from "@components/common";
+
+import {  SEO } from "@components/common";
 
 function StazioneSpaziale({ sta }) {
   return (
-    <LayoutComponent>
+    <>
       <SEO title={`${sta.name}`} description={`${sta.description}`} />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -72,7 +72,7 @@ function StazioneSpaziale({ sta }) {
           })}
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

@@ -1,10 +1,10 @@
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import cheerio from "cheerio";
 import axios from "axios";
 
 function Telescopi({ title, lastScraped }) {
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Nasa Live "
         description="La TV della NASA trasmette una varietà di programmi educativi e di pubbliche relazioni regolarmente programmati e preregistrati 24 ore al giorno sui suoi vari canali. La rete fornisce anche una serie di programmi in diretta, come la copertura di missioni, eventi (passeggiate nello spazio, interviste ai media, trasmissioni educative), conferenze stampa e lanci di razzi."
@@ -15,7 +15,7 @@ function Telescopi({ title, lastScraped }) {
           <p>{lastScraped}</p>
         </section>
       </div>
-    </LayoutComponent>
+      </>
   );
 }
 

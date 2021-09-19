@@ -1,12 +1,12 @@
-import  React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+
+import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function PrimeFasi({ sta, pageNumber }) {
   const router = useRouter();
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         description="Monitoriamo le prime fasi del razzo quando un veicolo di lancio può essere utilizzato più di una volta come i core Falcon 9 utilizzati da SpaceX"
         title="Lanciatori e prime fasi riutilizzabili"
@@ -99,7 +99,7 @@ function PrimeFasi({ sta, pageNumber }) {
           </div>
         </div>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

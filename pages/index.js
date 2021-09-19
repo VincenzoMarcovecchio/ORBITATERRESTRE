@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { QuickLinks } from "../components/common/quickLinks";
 import { Lanci } from "../components/common/Lanci";
@@ -33,7 +33,7 @@ function Home({ datas }) {
 
   return (
     <React.Fragment>
-      <LayoutComponent>
+   
         <SEO title="Home" description="Una guida allo spazio semplificata per noi comuni umani" />
         <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
           <section className="w-full md:max-w-screen-lg">
@@ -85,7 +85,7 @@ function Home({ datas }) {
             </aside>
           </section>
         </div>
-      </LayoutComponent>
+    
     </React.Fragment>
   );
 }

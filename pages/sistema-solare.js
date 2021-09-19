@@ -1,9 +1,9 @@
 
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 
  function Come() {
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Il tuo vicinato galattico"
         description="Questa vista simulata del nostro sistema solare funziona su dati reali. Le posizioni dei pianeti, delle lune e dei veicoli spaziali vengono mostrate dove si trovano in questo momento. Questo orrery digitale è una versione leggera e ottimizzata per i dispositivi mobili del software Eyes della NASA."
@@ -21,7 +21,7 @@ import { LayoutComponent, SEO } from "@components/common";
           alt="Il sistema solare"
         ></iframe>
       </div>
-    </LayoutComponent>
+      </>
   );
 }
 export default Come

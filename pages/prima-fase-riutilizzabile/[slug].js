@@ -1,12 +1,12 @@
-import  React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+
+import {  SEO } from "@components/common";
 
 
 function Primala({ sta }) {
  
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         description="Monitoriamo le prime fasi del razzo quando un veicolo di lancio può essere utilizzato più di una volta come i core Falcon 9 utilizzati da SpaceX"
         title="Lanciatori e prime fasi riutilizzabili"
@@ -60,7 +60,7 @@ function Primala({ sta }) {
           </div>
         </article>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

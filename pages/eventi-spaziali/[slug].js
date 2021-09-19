@@ -1,13 +1,13 @@
-import { React, useState } from "react";
-import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
-import { useRouter } from "next/router";
+import {  useState } from "react";
+
+import {  SEO } from "@components/common";
+
 
 function Slugt({ curiosity }) {
  
-  const router = useRouter();
+ 
   return (
-    <LayoutComponent>
+    <>
       <SEO title={`${curiosity.results[0]?.name}`} />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -34,7 +34,7 @@ function Slugt({ curiosity }) {
           "il video non si e`caricato oppure non c'e`"
         )}
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

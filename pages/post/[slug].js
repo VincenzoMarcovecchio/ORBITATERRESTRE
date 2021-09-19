@@ -2,7 +2,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
-import { LayoutComponent, Image, SEO } from "@components/common";
+import {  Image, SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
@@ -10,7 +10,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
 
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         slug={slug}
         title={frontmatter.title}
@@ -55,7 +55,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
           <div />
         )}
       </nav>
-    </LayoutComponent>
+    </>
   );
 }
 

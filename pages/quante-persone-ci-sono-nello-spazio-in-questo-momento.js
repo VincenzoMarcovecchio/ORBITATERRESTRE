@@ -1,10 +1,10 @@
 import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { Lanci } from "../components/common/Lanci";
 
 function Newsz({ newsdatal }) {
   return (
-    <LayoutComponent>
+    <>
       <SEO
         cano="si"
         slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
@@ -62,7 +62,7 @@ function Newsz({ newsdatal }) {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+  </>
   );
 }
 

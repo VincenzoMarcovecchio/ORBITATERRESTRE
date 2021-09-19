@@ -1,13 +1,13 @@
-import  React  from "react";
+
 import Link from "next/link";
-import { LayoutComponent, Bio, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Marte({ curiosity }) {
 
   const router = useRouter();
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Gli occhi di Marte "
         description="Telecamere installate su marte"
@@ -110,7 +110,7 @@ function Marte({ curiosity }) {
           alt="punto di atterraggio di curiosity"
         ></iframe>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 

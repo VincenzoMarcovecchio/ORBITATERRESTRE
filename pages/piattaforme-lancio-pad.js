@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import  { useState } from "react";
+import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
@@ -28,7 +28,7 @@ function Piattaforme({ pad }) {
 
   const uniquecat = [...new Set(categories)];
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title="Piattaforme di lancio"
         slug="piattaforme-lancio-pad"
@@ -108,7 +108,7 @@ function Piattaforme({ pad }) {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+   </>
   );
 }
 

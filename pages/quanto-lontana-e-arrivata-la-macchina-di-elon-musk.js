@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { Lanci } from "../components/common/Lanci";
 
 const unixToLocal = (target, dateString, dateOnly = 0) => {
@@ -42,7 +42,7 @@ const unixToLocal = (target, dateString, dateOnly = 0) => {
 
 const Roadster = ({ roadster }) => {
   return (
-    <LayoutComponent>
+    <>
       <SEO
         cano="si"
         slug="quanto-lontana-e-arrivata-la-macchina-di-elon-musk"
@@ -150,7 +150,7 @@ const Roadster = ({ roadster }) => {
           </aside>
         </section>
       </div>
-    </LayoutComponent>
+   </>
   );
 };
 

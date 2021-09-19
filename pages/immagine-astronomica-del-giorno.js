@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { LayoutComponent, SEO } from "@components/common";
+import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import {Lanci} from "../components/common/Lanci";
 
@@ -34,7 +34,7 @@ function Giorno({datas}) {
 
 
   return (
-    <LayoutComponent>
+    <>
       <SEO
         title={`NASA Immagine astronomica del giorno`}
         description={datas.explanation}
@@ -87,7 +87,7 @@ function Giorno({datas}) {
             </aside>
           </section>
       </div>
-    </LayoutComponent>
+    </>
   );
 }
 
