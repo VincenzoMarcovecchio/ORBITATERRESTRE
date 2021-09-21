@@ -3,17 +3,27 @@ import { SEO } from "@components/common";
 import { Formik } from "formik";
 
 function Paginax() {
+
   const [defaultResults, setDefaultResults] = useState([]);
   const [name, setName] = useState("");
   const [nationality, setNationality] = useState("All");
   console.log(defaultResults, name, nationality);
+  
   useEffect(() => {
     fetch(
       `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name.toLowerCase()}&nationality=${nationality.toLowerCase()}&limit=50&offset=50`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
-  }, [nationality, name]);
+  }, [nationality]);
+
+  useEffect(() => {
+    fetch(
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name.toLowerCase()}&nationality=${nationality.toLowerCase()}&limit=50&offset=50`
+    )
+      .then((res) => res.json())
+      .then((data) => setDefaultResults(data.results));
+  }, [ name]);
 
   return (
     <>
@@ -184,7 +194,7 @@ function Paginax() {
               );
             })
           ) : (
-            <pre>{result.detail}</pre>
+            <pre>{defaultResults.detail}</pre>
           )}
         </ul>
       </div>
