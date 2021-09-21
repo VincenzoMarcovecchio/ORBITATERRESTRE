@@ -184,7 +184,7 @@ function Paginax() {
               );
             })
           ) : (
-            <li>ci sono stati dei problemi...</li>
+            <pre>{result.detail}</pre>
           )}
         </ul>
       </div>
