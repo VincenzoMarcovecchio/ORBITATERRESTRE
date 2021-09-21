@@ -42,15 +42,15 @@ function Eventit({ eventi }) {
                         {moment(lol.date).format("DD-MM-YYYY")}
                       </span> 
                       <p className="mt-4 text-lg mb-3">
-                      <strong className="font-extrabold">Location:&nbsp;</strong>
+                      <strong >Location:&nbsp;</strong>
                         {lol.location}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                      <strong className="font-extrabold">Parte del programma:&nbsp;</strong>
+                      <strong >Parte del programma:&nbsp;</strong>
                         {lol.program[0]?.name}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                      <strong className="font-extrabold">Descrizione:&nbsp;</strong>
+                      <strong >Descrizione:&nbsp;</strong>
                         {lol.description}
                       </p>
                       <span

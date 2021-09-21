@@ -1,5 +1,3 @@
-
-
 import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
@@ -70,7 +68,7 @@ function StazioneSpazialeIndex({ sta }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const apiResponse = await fetch(
     `https://ll.thespacedevs.com/2.0.0/spacestation/?format=json&name=&orbit=&ordering=id&owners__abbrev=&owners__name=&status=&type=`
   );

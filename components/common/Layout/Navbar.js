@@ -24,7 +24,8 @@ export const NavBar = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href={"/"} as={`/`}>
               <div className="flex ">
-                <img style={{marginLeft:"-0.5rem"}}
+                <img
+                  style={{ marginLeft: "-0.5rem" }}
                   className="cursor-pointer  h-16"
                   src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
@@ -537,9 +538,9 @@ export const NavBar = () => {
               </div>
             </div>
             <div className="relative items-center flex">
-            <Link href={"/blog"} as={`/blog`}>
-              Blog
-            </Link>
+              <Link href={"/blog"} as={`/blog`}>
+                Blog
+              </Link>
             </div>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -567,7 +568,7 @@ export const NavBar = () => {
           }
         >
           <div
-            style={{ background: "whitesmoke" }}
+            style={{ background: "lightgrey" }}
             className={
               "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
@@ -576,6 +577,7 @@ export const NavBar = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <img
+                    style={{ marginLeft: " -0.7rem", height: "3.7rem" }}
                     className="cursor-pointer h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
