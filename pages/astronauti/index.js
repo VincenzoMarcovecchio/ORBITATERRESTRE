@@ -4,12 +4,12 @@ import { Formik } from "formik";
 
 function Paginax() {
   const [defaultResults, setDefaultResults] = useState([]);
-  const [name, setName] = useState("John");
+  const [name, setName] = useState("");
   const [nationality, setNationality] = useState("All");
-
+  console.log(defaultResults, name, nationality);
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name.toLowerCase()}&nationality=${nationality.toLowerCase()}&limit=50&offset=50`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -81,7 +81,6 @@ function Paginax() {
           >
             Altri
           </span>
-
         </div>
         <Formik
           enableReinitialize
