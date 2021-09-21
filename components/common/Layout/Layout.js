@@ -1,4 +1,4 @@
-import { NavBar } from "./navbar";
+import { NavBar } from "./Navbar";
 import { Bio } from "../Bio";
 import Link from "next/link";
 
