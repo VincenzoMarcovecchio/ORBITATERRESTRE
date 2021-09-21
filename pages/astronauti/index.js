@@ -1,20 +1,19 @@
-import  { useState, useEffect } from "react";
-import {  SEO } from "@components/common";
+import { useState, useEffect } from "react";
+import { SEO } from "@components/common";
 import { Formik } from "formik";
 
 function Paginax() {
-
   const [defaultResults, setDefaultResults] = useState([]);
   const [name, setName] = useState("John");
   const [nationality, setNationality] = useState("All");
 
-
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`    )
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
+    )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
-  }, [nationality,name]);
+  }, [nationality, name]);
 
   return (
     <>
@@ -32,64 +31,57 @@ function Paginax() {
         </h2>
 
         <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
-        
-              <span
-                key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
-                    ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                    : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
-                onClick={() => setNationality("All")}
-              >
-                Tutti
-              </span>
-              <span
-                key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
-                    ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                    : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
-                onClick={() => setNationality("American")}
-              >
-                Americani
-              </span>
-              <span
-                key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
-                    ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                    : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
-                onClick={() => setNationality("Russian")}
-              >
-                Russi
-              </span>
-              <span
-                key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
-                    ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                    : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
-                onClick={() => setNationality("European")}
-              >
-                Europei
-              </span>
-              <span
-                key={li}
-                className={`${
-                  String(nationality.toLowerCase()) === String(li.toLowerCase())
-                    ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                    : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                }`}
-                onClick={() => setNationality("Others")}
-              >
-   Altri
-              </span>
-            );
-          
+          <span
+            className={`${
+              String(nationality.toLowerCase()) === String("all")
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setNationality("All")}
+          >
+            Tutti
+          </span>
+          <span
+            className={`${
+              String(nationality.toLowerCase()) === String("american")
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setNationality("American")}
+          >
+            Americani
+          </span>
+          <span
+            className={`${
+              String(nationality.toLowerCase()) === String("russian")
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setNationality("Russian")}
+          >
+            Russi
+          </span>
+          <span
+            className={`${
+              String(nationality.toLowerCase()) === String("european")
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setNationality("European")}
+          >
+            Europei
+          </span>
+          <span
+            className={`${
+              String(nationality.toLowerCase()) === String("others")
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+            }`}
+            onClick={() => setNationality("Others")}
+          >
+            Altri
+          </span>
+          );
         </div>
         <Formik
           enableReinitialize
@@ -164,35 +156,27 @@ function Paginax() {
                         {name}
                       </h3>
                       <p className="mt-2 text-lg mb-2">
-                        <strong >Nazionalità </strong>
+                        <strong>Nazionalità </strong>
                         :&nbsp;{nationality}
                       </p>
                       <p className="mt-2 text-lg mb-2">
-                        <strong >Nato il</strong>
+                        <strong>Nato il</strong>
                         :&nbsp;{result.date_of_birth}
                       </p>
                       <p className="mt-2 text-lg mb-2">
-                        <strong >Descrizione:</strong>
+                        <strong>Descrizione:</strong>
                         &nbsp;{bio}
                       </p>
                       <p className="mt-2 text-lg mb-2">
-                        <strong >
-                          Primo Volo:&nbsp;
-                        </strong>
+                        <strong>Primo Volo:&nbsp;</strong>
                         {result.first_flight}
                       </p>
                       <p className="mt-2 text-lg mb-2">
-                        <strong >
-                        
-                          Instagram:&nbsp;
-                        </strong>
+                        <strong>Instagram:&nbsp;</strong>
                         {result.instagram}
                       </p>
                       <p className="mt-2 text-lg mb-4">
-                        <strong>
-                         
-                          Twitter:&nbsp;
-                        </strong>
+                        <strong>Twitter:&nbsp;</strong>
                         {result.twitter}
                       </p>
                     </figcaption>
