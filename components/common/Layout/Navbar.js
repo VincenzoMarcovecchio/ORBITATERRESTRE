@@ -24,15 +24,15 @@ export const NavBar = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href={"/"} as={`/`}>
               <div className="flex ">
-                <img
-                  className="cursor-pointer h-12 w-auto md:h-14"
-                  src={`/cosmos.png`}
+                <img style={{marginLeft:"-0.5rem"}}
+                  className="cursor-pointer  h-16"
+                  src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
                 />
-                <span className="font-xl mt-2 ml-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
+                <span className="font-md mt-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
                   <p
                     className="font-black leading-none font-display
-                     font-xl uppercase font-bold"
+                     font-md uppercase font-bold"
                   >
                     orbita
                   </p>{" "}
@@ -576,8 +576,9 @@ export const NavBar = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    className="cursor-pointer h-10 w-auto md:h-14"
-                    src={`/cosmos.png`}
+                    className="cursor-pointer h-12 w-auto md:h-14"
+                    src={`/transfinale.webp
+                    `}
                     alt="astronauta nello spazio"
                   />
                 </div>

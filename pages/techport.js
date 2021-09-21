@@ -3,7 +3,7 @@ import {  SEO } from "@components/common";
 import { RenderNews } from "@components/common/renderNews";
 import { Countdown } from "../utils/countdown";
 import non from "../content/assets/immagine-non-trovata.png";
-import { Lanci } from "../components/common/Lanci";
+import { Lanci } from "../components/common/lanci";
 
 function Techport({ newsdata }) {
   return (

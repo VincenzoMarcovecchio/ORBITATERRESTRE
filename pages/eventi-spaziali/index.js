@@ -40,17 +40,17 @@ function Eventit({ eventi }) {
                       </h1>
                       <span className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                         {moment(lol.date).format("DD-MM-YYYY")}
-                      </span>
+                      </span> 
                       <p className="mt-4 text-lg mb-3">
-                        <b>Location:&nbsp;</b>
+                      <strong className="font-extrabold">Location:&nbsp;</strong>
                         {lol.location}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <b>Parte del programma:&nbsp;</b>
+                      <strong className="font-extrabold">Parte del programma:&nbsp;</strong>
                         {lol.program[0]?.name}
                       </p>
                       <p className="mt-2 text-lg mb-3">
-                        <b>Descrizione:&nbsp;</b>
+                      <strong className="font-extrabold">Descrizione:&nbsp;</strong>
                         {lol.description}
                       </p>
                       <span
@@ -93,8 +93,8 @@ function Eventit({ eventi }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(pageContext) {
-  const pageNumber = pageContext.query.slug;
+export async function getStaticProps() {
+ 
 
   const res = await fetch(`https://ll.thespacedevs.com/2.1.0/event/upcoming`);
 

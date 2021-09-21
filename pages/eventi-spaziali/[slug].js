@@ -1,10 +1,7 @@
-import {  useState } from "react";
-
 import {  SEO } from "@components/common";
 
 
 function Slugt({ curiosity }) {
- 
  
   return (
     <>

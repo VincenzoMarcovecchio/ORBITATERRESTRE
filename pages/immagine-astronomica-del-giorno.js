@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
-import {Lanci} from "../components/common/Lanci";
+import {Lanci} from "../components/common/lanci";
 
 
 function Giorno({datas}) {

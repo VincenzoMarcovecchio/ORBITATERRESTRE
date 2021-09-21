@@ -1,6 +1,6 @@
 import  { useState, useEffect } from "react";
 import {  SEO } from "@components/common";
-import { Lanci } from "../components/common/Lanci";
+import { Lanci } from "../components/common/lanci";
 
 function Retrogrado() {
   const [data, setData] = useState("");

@@ -3,8 +3,6 @@ import {  SEO } from "@components/common";
 import { Formik } from "formik";
 
 function Paginax() {
-
-
   const [defaultResults, setDefaultResults] = useState([]);
   const astronauti = ["All", "American", "Russian", "European", "Others"];
   const [name, setName] = useState("");
@@ -60,10 +58,10 @@ function Paginax() {
         </div>
         <Formik
           enableReinitialize
-          initialValues={{ nationality: "" }}
+          initialValues={{ name: "" }}
           validate={(values) => {
             const errors = {};
-            if (!values.nationality) {
+            if (!values.name) {
               errors.name = "Oops ??";
             }
             return errors;
@@ -71,7 +69,7 @@ function Paginax() {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               setSubmitting(true);
-              setName(values.nationality);
+              setName(values.name);
             }, 400);
           }}
         >
@@ -93,13 +91,13 @@ function Paginax() {
               <input
                 className="input mt-2 p-2 text-black text-lg mb-3"
                 type="text"
-                name="nationality"
+                name="name"
                 placeholder="es John"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.nationality}
+                value={values.name}
               />
-              {errors.nationality && touched.nationality && errors.nationality}
+              {errors.name && touched.name && errors.name}
               <button
                 type="submit"
                 className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"

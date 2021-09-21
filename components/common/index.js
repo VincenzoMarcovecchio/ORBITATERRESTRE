@@ -1,4 +1,4 @@
-export * from "./Bio";
+export * from "./bio";
 export * from "./Image";
-export * from "./Layout";
-export * from "./Seo";
+export * from "./layout";
+export * from "./seo";

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { QuickLinks } from "../components/common/quickLinks";
-import { Lanci } from "../components/common/Lanci";
+import { Lanci } from "../components/common/lanci";
 
 function Home({ datas }) {
   const translateto = JSON.stringify(datas.explanation);
@@ -58,11 +58,11 @@ function Home({ datas }) {
                 />
               )}
               <figcaption>
-                <p className="">
+                <p className="mb-2">
                   <strong className="font-extrabold">Titolo:&nbsp;</strong>
                   {titlet || datas.title}
                 </p>
-                <p className="mb-2 pr-4">
+                <p className="mb-2">
                   <strong className="font-extrabold">Descrizione:&nbsp;</strong>
                   {translated || datas.explanation}
                 </p>

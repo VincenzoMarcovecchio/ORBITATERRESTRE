@@ -7,7 +7,7 @@ import { LayoutComponent } from "@components/common";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider defaultTheme="light" enableSystem={true} attribute="class">
+    <ThemeProvider defaultTheme="dark" enableSystem={true} attribute="class">
       <LayoutComponent>
       <Component {...pageProps} />
       </LayoutComponent>

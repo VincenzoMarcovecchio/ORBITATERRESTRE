@@ -113,3 +113,6 @@ input[type='range']:focus::-ms-fill-upper {
 .mio {
 padding-right: 0 !important;
 }
+hr {
+  margin: 1rem auto;
+}

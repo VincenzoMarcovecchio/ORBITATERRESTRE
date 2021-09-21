@@ -1,6 +1,6 @@
 import React from "react";
 import {  SEO } from "@components/common";
-import { Lanci } from "../components/common/Lanci";
+import { Lanci } from "../components/common/lanci";
 
 const unixToLocal = (target, dateString, dateOnly = 0) => {
   let dateObject;
