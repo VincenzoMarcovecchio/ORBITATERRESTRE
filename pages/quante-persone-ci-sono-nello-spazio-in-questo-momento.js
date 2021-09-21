@@ -1,6 +1,6 @@
 import React from "react";
 import {  SEO } from "@components/common";
-import { Lanci } from "../components/common/lanci";
+import { Lanci } from "../components/common/Lanci";
 
 function Newsz({ newsdatal }) {
   return (

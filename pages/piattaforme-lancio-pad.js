@@ -2,7 +2,7 @@ import  { useState } from "react";
 import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 import nontrovata from "../content/assets/immagine-non-trovata.png";
-import { Lanci } from "../components/common/lanci";
+import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
 import { piatta } from "../data/piatte";
 

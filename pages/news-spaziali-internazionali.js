@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LayoutComponent, SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
-import { Lanci } from "../components/common/lanci";
+import { Lanci } from "../components/common/Lanci";
 
 function News({ newsdata }) {
 

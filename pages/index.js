@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { QuickLinks } from "../components/common/quickLinks";
-import { Lanci } from "../components/common/lanci";
+import { Lanci } from "../components/common/Lanci";
 
 function Home({ datas }) {
   const translateto = JSON.stringify(datas.explanation);
