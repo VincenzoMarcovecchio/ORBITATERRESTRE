@@ -11,7 +11,7 @@ function Paginax() {
   
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -19,7 +19,7 @@ function Paginax() {
 
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -167,7 +167,7 @@ function Paginax() {
               );
             })
           ) : (
-            <pre>{defaultResults.detail}</pre>
+            <pre>{defaultResults && defaultResults.detail}</pre>
           )}
         </ul>
       </div>

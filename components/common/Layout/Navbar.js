@@ -112,8 +112,8 @@ export const NavBar = () => {
                 ref={ref}
                 className={
                   flyer
-                    ? " z-20 opacity-100 dark:bg-gray-700 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                    : "  translate-y-1 dark:bg-gray-700 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    ? " z-20 opacity-100  translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "  translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                 }
               >
                 <div
@@ -126,7 +126,7 @@ export const NavBar = () => {
                   <div
                     className={
                       flyer
-                        ? " z-20 relative grid gap-6 bg-white flyer-container px-5 py-6 sm:gap-8 sm:p-8"
+                        ? " z-20 relative grid gap-6 bg-white dark:bg-gray-700 flyer-container px-5 py-6 sm:gap-8 sm:p-8"
                         : "hidden "
                     }
                   >
@@ -262,7 +262,7 @@ export const NavBar = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                  <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                     <div className="flow-root">
                       <Link as="nasa-live" href="/nasa-live">
                         <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100">
@@ -367,7 +367,7 @@ export const NavBar = () => {
                       : "hidden opacity-0 "
                   }
                 >
-                  <div className="relative dark:bg-gray-700 grid gap-6 flyer-container  dark:bg-yellow px-5 py-6 sm:gap-8 sm:p-8">
+                  <div className="relative bg-white dark:bg-gray-700 grid gap-6 flyer-container  dark:bg-yellow px-5 py-6 sm:gap-8 sm:p-8">
                     <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
@@ -497,7 +497,7 @@ export const NavBar = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                  <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 sm:px-8 sm:py-8">
                     <div>
                       <Link
                         href="/stazione-spaziale"
