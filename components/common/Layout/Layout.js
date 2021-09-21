@@ -1,5 +1,5 @@
 import { NavBar } from "./navbar";
-import { Bio } from "../bio";
+import { Bio } from "../Bio";
 import Link from "next/link";
 
 export function LayoutComponent({ children }) {
