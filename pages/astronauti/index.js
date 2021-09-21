@@ -11,7 +11,7 @@ function Paginax() {
   
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name.toLowerCase()}&nationality=${nationality}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -19,7 +19,7 @@ function Paginax() {
 
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name.toLowerCase()}&nationality=${nationality}&limit=50&offset=50`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}&limit=50&offset=50`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results));
@@ -92,58 +92,31 @@ function Paginax() {
             Altri
           </span>
         </div>
-        <Formik
-          enableReinitialize
-          initialValues={{ name: "" }}
-          validate={(values) => {
-            const errors = {};
-            if (!values.name) {
-              errors.name = "Oops ??";
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              setSubmitting(true);
-              setName(values.name);
-            }, 400);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
+      
             <form
               className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
-              onSubmit={handleSubmit}
+              onSubmit={(e)=> e.preventDefault()}
             >
-              <label htmlFor="nationality">Cerca nel dataset</label>
+              <label htmlFor="name">Cerca nel dataset</label>
               <input
                 className="input mt-2 p-2 text-black text-lg mb-3"
                 type="text"
                 name="name"
                 placeholder="es John"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
+                onChange={(e)=> setName(e.target.value)}
+               
+                value={name}
               />
-              {errors.name && touched.name && errors.name}
+             
               <button
                 type="submit"
                 className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                disabled={isSubmitting}
+              
               >
                 Cerca
               </button>
             </form>
-          )}
-        </Formik>
+        
 
         <ul className="w-full">
           {defaultResults ? (

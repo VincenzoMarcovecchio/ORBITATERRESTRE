@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import useOnclickOutside from "react-cool-onclickoutside";
 
 export const NavBar = () => {
+  
   const [open, setOpen] = useState(false);
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
@@ -355,8 +356,8 @@ export const NavBar = () => {
                 ref={ref}
                 className={
                   flyerTwo
-                    ? " z-20 opacity-100 dark:bg-gray-700 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                    : "  translate-y-1 dark:bg-gray-700 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    ? " z-20 opacity-100  translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "  translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                 }
               >
                 <div
@@ -366,8 +367,8 @@ export const NavBar = () => {
                       : "hidden opacity-0 "
                   }
                 >
-                  <div className="relative grid gap-6 flyer-container bg-white dark:bg-yellow px-5 py-6 sm:gap-8 sm:p-8">
-                    <div className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                  <div className="relative dark:bg-gray-700 grid gap-6 flyer-container  dark:bg-yellow px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
                         style={{ textDecoration: "none" }}
@@ -563,14 +564,14 @@ export const NavBar = () => {
           ref={ref}
           className={
             open
-              ? "block z-20 dark:bg-gray-700 opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-              : "opacity-0 dark:bg-gray-700 scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              ? "block z-20  opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              : "opacity-0  scale-0 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           }
         >
           <div
            
             className={
-              "bg-white  dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              "  dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
