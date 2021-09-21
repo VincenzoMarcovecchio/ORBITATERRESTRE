@@ -107,7 +107,7 @@ export async function getStaticProps() {
   return {
     props: {
       eventi,
-      pageNumber: Number.parseInt(pageNumber),
+     
     },
   };
 }
