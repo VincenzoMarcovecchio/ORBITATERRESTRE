@@ -81,7 +81,7 @@ function Paginax() {
           >
             Altri
           </span>
-          );
+
         </div>
         <Formik
           enableReinitialize

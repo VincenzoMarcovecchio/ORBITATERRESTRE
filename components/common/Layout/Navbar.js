@@ -568,16 +568,16 @@ export const NavBar = () => {
           }
         >
           <div
-            style={{ background: "lightgrey" }}
+           
             className={
-              "rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              " dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    style={{ marginLeft: " -0.7rem", height: "3.7rem" }}
+                    style={{ marginLeft: " -0.7rem", height: "4.1rem" }}
                     className="cursor-pointer h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
