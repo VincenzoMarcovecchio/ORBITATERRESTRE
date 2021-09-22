@@ -8,13 +8,13 @@ export default class MyDocument extends Document {
 
     return (
       <Html lang={siteMetadata.language}>
-        <Head>
-          
-        </Head>
+        <Head></Head>
         <body className="bg-gray-50">
           <Main />
           <NextScript />
         </body>
+
+   
       </Html>
     );
   }

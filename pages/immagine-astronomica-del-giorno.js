@@ -5,6 +5,7 @@ import {Lanci} from "../components/common/Lanci";
 
 
 function Giorno({datas}) {
+
     const translateto = JSON.stringify(datas.explanation);
     const translatetwo = JSON.stringify(datas.title);
     const translate = setCORS("https://mimmofranco.herokuapp.com/");
@@ -38,6 +39,9 @@ function Giorno({datas}) {
       <SEO
         title={`NASA Immagine astronomica del giorno`}
         description={datas.explanation}
+        slug="immagine-astronomica-del-giorno"
+        cano="si"
+        imageUrl={datas.url}
     
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
@@ -93,7 +97,7 @@ function Giorno({datas}) {
 
 export default Giorno;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const resat = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`,
       {
@@ -109,7 +113,6 @@ export async function getStaticProps() {
     return {
       props: {
         datas,
-      },
-      revalidate: 46400,
+      }
     };
   }
