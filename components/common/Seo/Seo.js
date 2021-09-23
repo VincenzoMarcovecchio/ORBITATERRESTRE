@@ -31,6 +31,7 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
+            : imageUrl.includes("https") ? `${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}
       />
@@ -55,6 +56,7 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
+            : imageUrl.includes("https") ? `${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}
       />
