@@ -31,7 +31,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
-            : imageUrl.includes("apod.nasa.gov") ? `${imageUrl}`
+            : imageUrl && imageUrl.includes("apod.nasa.gov")
+            ? `${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}
       />
@@ -41,10 +42,10 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         property="og:url"
         content={`${
           imageUrl && cano
-          ? `https://orbitaterrestre.com/${sluga}`
-          : imageUrl && !cano
-          ? `https://orbitaterrestre.com/post/${sluga}`
-          : `https://orbitaterrestre.com/`
+            ? `https://orbitaterrestre.com/${sluga}`
+            : imageUrl && !cano
+            ? `https://orbitaterrestre.com/post/${sluga}`
+            : `https://orbitaterrestre.com/`
         }`}
       />
       <meta name="twitter:card" content="summary" />
@@ -56,7 +57,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         content={`${
           imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
-            : imageUrl.includes("apod.nasa.gov") ? `${imageUrl}`
+            : imageUrl && imageUrl.includes("apod.nasa.gov")
+            ? `${imageUrl}`
             : `https://orbitaterrestre.com/`
         }`}
       />
