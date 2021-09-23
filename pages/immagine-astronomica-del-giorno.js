@@ -38,7 +38,7 @@ function Giorno({datas}) {
     <>
       <SEO
         title={`NASA Immagine astronomica del giorno`}
-        description={datas.explanation}
+        description={"La NASA pubblica ogni giorno l'immagine astronomica ritenuta piú importante, affascinante in base a scoperte, avvenimenti, periodi dell'anno"}
         slug="immagine-astronomica-del-giorno"
         cano="si"
         imageUrl={datas.url}
@@ -98,21 +98,25 @@ function Giorno({datas}) {
 export default Giorno;
 
 export async function getServerSideProps() {
-    const resat = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`,
-      {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "User-Agent": "*",
-        },
-      }
-    );
 
-    const datas = await resat.json();
+  const resat = await fetch(
+    `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`,
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent": "*",
+      },
+    }
+  );
+
+  const datas = await resat.json();
+
+
 
     return {
       props: {
         datas,
+       
       }
     };
   }
