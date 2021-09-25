@@ -757,7 +757,7 @@ export const NavBar = () => {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div  onClick={() => setOpen(!open)} className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
                   onClick={() => setOpen(!open)}
                   replace
