@@ -6,7 +6,6 @@ import { useTheme } from "next-themes";
 import useOnclickOutside from "react-cool-onclickoutside";
 
 export const NavBar = () => {
-  
   const [open, setOpen] = useState(false);
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
@@ -131,7 +130,7 @@ export const NavBar = () => {
                     }
                   >
                     <a
-                     onClick={() => setOpen(!open)}
+                      onClick={() => setOpen(!open)}
                       style={{ textDecoration: "none" }}
                       href="/nuove-scoperte-su-marte/3000"
                       as="/nuove-scoperte-su-marte/3000"
@@ -570,7 +569,6 @@ export const NavBar = () => {
           }
         >
           <div
-           
             className={
               "  dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
@@ -616,9 +614,9 @@ export const NavBar = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-8">
+                <nav onClick={() => setOpen(!open)} className="grid gap-y-8">
                   <Link
-                   onClick={() => setOpen(!open)}
+                    onClick={() => setOpen(!open)}
                     href="/eventi-spaziali"
                     as="/eventi-spaziali"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
@@ -647,7 +645,7 @@ export const NavBar = () => {
                     </a>
                   </Link>
                   <Link
-                   onClick={() => setOpen(!open)}
+                    onClick={() => setOpen(!open)}
                     replace
                     href="/nuove-scoperte-su-marte/3000/"
                     as="/nuove-scoperte-su-marte/3000"
@@ -694,7 +692,12 @@ export const NavBar = () => {
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <Link  onClick={() => setOpen(!open)} replace href="/astronauti/" as="/astronauti/">
+                    <Link
+                      onClick={() => setOpen(!open)}
+                      replace
+                      href="/astronauti/"
+                      as="/astronauti/"
+                    >
                       <span className="ml-3 text-base font-medium ">
                         Astronauti
                       </span>
@@ -716,11 +719,17 @@ export const NavBar = () => {
                         d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-                    <Link  onClick={() => setOpen(!open)} replace href={"/blog/"} as={`/blog`}>
+                    <Link
+                      onClick={() => setOpen(!open)}
+                      replace
+                      href={"/blog/"}
+                      as={`/blog`}
+                    >
                       <span className="ml-3 text-base font-medium ">Blog</span>
                     </Link>
                   </a>
-                  <a  onClick={() => setOpen(!open)}
+                  <a
+                    onClick={() => setOpen(!open)}
                     href="/sistema-solare"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
@@ -750,7 +759,7 @@ export const NavBar = () => {
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/piattaforme-lancio-pad/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -758,7 +767,7 @@ export const NavBar = () => {
                   Piattaforme
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   className="text-base font-medium  hover:text-gray-700"
                   href={"/news-spaziali-internazionali/"}
@@ -767,7 +776,7 @@ export const NavBar = () => {
                   News Internazionali
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/prime-fasi-riutilizzabili/10/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -775,7 +784,7 @@ export const NavBar = () => {
                   Prime Fasi Riutilizzabili
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/satelliti-di-passaggio/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -783,7 +792,7 @@ export const NavBar = () => {
                   Satelliti sulla mia testa
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/quante-persone-ci-sono-nello-spazio-in-questo-momento/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -791,7 +800,7 @@ export const NavBar = () => {
                   Persone nello spazio
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/posizione-dell-ISS-in-tempo-reale/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -799,7 +808,7 @@ export const NavBar = () => {
                   ISS Live
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/nasa-live/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -807,7 +816,7 @@ export const NavBar = () => {
                   NASA Live
                 </Link>
                 <Link
-                 onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(!open)}
                   replace
                   href="/progetti-di-ricerca-esopianeti/"
                   className="text-base font-medium  hover:text-gray-700"
