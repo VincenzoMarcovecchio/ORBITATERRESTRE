@@ -25,7 +25,7 @@ export const NavBar = () => {
             <Link href={"/"} as={`/`}>
               <div className="flex ">
                 <img
-                  style={{ marginLeft: "-0.5rem" }}
+                  style={{ marginLeft: "-0.6rem" }}
                   className="cursor-pointer  h-16"
                   src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
@@ -570,14 +570,14 @@ export const NavBar = () => {
         >
           <div
             className={
-              "  dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
+              "bg-white  dark:bg-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 flyer-container dark:bg-yellow divide-y-2 divide-gray-50"
             }
           >
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    style={{ marginLeft: " -0.7rem", height: "4.1rem" }}
+                    style={{ marginLeft: " -0.8rem", height: "4.1rem" }}
                     className="cursor-pointer h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
@@ -730,27 +730,27 @@ export const NavBar = () => {
                   </a>
                   <a
                     onClick={() => setOpen(!open)}
-                    href="/sistema-solare"
+                    href="/lanci-missioni-spaziali"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/refresh */}
                     <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                      />
-                    </svg>
+                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          />
+                        </svg>
                     <span className="ml-3 text-base font-medium ">
-                      Sistema Solare
+                      Lanci prossimi
                     </span>
                   </a>
                 </nav>
@@ -831,12 +831,7 @@ export const NavBar = () => {
                 >
                   Sign up
                 </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
+            
               </div>
             </div>
           </div>
