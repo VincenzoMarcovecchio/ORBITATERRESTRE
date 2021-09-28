@@ -3,13 +3,14 @@ import Link from "next/link";
 import useSWR from "swr";
 import { Countdown } from "../../utils/countdown";
 import { fetcher } from "../../utils/fetcher";
-import { useRouter } from "next/router";
+
 
 export function Lanci() {
-  const url = "https://lldev.thespacedevs.com/2.2.0/launch/upcoming/";
+  const url =
+    "https://lldev.thespacedevs.com/2.2.0/launch/upcoming/";
 
   const { data, error } = useSWR(url, fetcher);
-  const router = useRouter();
+ 
   return (
     <div className="md:px-4 flex flex-col mio">
       {data ? (
@@ -37,49 +38,35 @@ export function Lanci() {
               </div>
 
               <figcaption className="bg-white bg-opacity-85  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
-                <p>
+                <p >
                   <b>Agenzia:&nbsp;</b>
-
-                  <span
-                    className="z-20"
-                    onClick={() =>
-                      router
-                        .push(
-                          `/agenzia-spaziale/${la.launch_service_provider.id}/`
-                        )
-                        .then(() => window.scrollTo(0, 0))
-                    }
+                  <Link
+                    className=" z-20"
+                    replace
+                    href={`/agenzia-spaziale/${la.launch_service_provider.id}/`}
                   >
                     <a>{la.launch_service_provider.name}</a>
-                  </span>
+                  </Link>
                 </p>
-                <p>
+                <p >
                   <b>Dove:&nbsp;</b>
-
-                  <span
-                    className="z-20"
-                    onClick={() =>
-                      router
-                        .push(`/piattaforma-lancio-pad/${la.pad.id}/`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
+                  <Link
+                  replace
+                    className="truncate text-gray-500 text-sm"
+                    href={`/piattaforma-lancio-pad/${la.pad.id}/`}
                   >
                     <a>{la.pad.name}</a>
-                  </span>
+                  </Link>
                 </p>
-                <p>
+                <p >
                   <b>Nome Missione:&nbsp;</b>
-
-                  <span
-                    className="z-20"
-                    onClick={() =>
-                      router
-                        .push(`/lancio-missione-spaziale/${la.slug}/`)
-                        .then(() => window.scrollTo(0, 0))
-                    }
+                  <Link
+                  replace
+                    className="truncate text-gray-500 text-sm"
+                    href={`/lancio-missione-spaziale/${la.slug}/`}
                   >
                     <a>{la.mission?.name}</a>
-                  </span>
+                  </Link>
                 </p>
               </figcaption>
             </figure>
@@ -89,11 +76,7 @@ export function Lanci() {
         <b>{"caricamento supersonico in corso..."}</b>
       )}
       <div>
-        <Link
-          as={`/lanci-missioni-spaziali`}
-          href={`/lanci-missioni-spaziali/`}
-          replace
-        >
+        <Link as={`/lanci-missioni-spaziali`} href={`/lanci-missioni-spaziali/` }replace>
           <a>Scopri di piú sui lanci</a>
         </Link>
       </div>
