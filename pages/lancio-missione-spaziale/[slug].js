@@ -7,11 +7,11 @@ function polpo({ newsar }) {
   return (
     <>
       <SEO
-        title={`${newsar.results[0]?.name}`}
+        title={`${newsar.name}`}
         cano="si"
-        slug={`lancio-missione-spaziale/${newsar.results[0]?.slug}`}
-        imageUrl={newsar.results[0]?.image}
-        description={`${newsar.results[0]?.mission.description}`}
+        slug={`lancio-missione-spaziale/${newsar.id}`}
+        imageUrl={newsar.image}
+        description={`${newsar.status.description}`}
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
@@ -21,30 +21,30 @@ function polpo({ newsar }) {
               <img
                 className="sm:w-full md:w-1/3 object-cover"
                
-                src={newsar.results[0]?.image || non}
-                alt={newsar.results[0]?.name}
+                src={newsar.image || non}
+                alt={newsar.name}
               />
           
 
             <div className="sm:w-full md:w-2/3 px-4  py-6 ">
               <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-                Lancio {newsar.results[0]?.name}
+                Lancio {newsar.name}
               </h1>
               <div className="flex">
                 <b>Status:</b>&nbsp;
-                <p className="">{newsar.results[0]?.status.abbrev}</p>
+                <p className="">{newsar.status.abbrev}</p>
               </div>
               <div className="flex">
                 <b>Descrizione:</b>&nbsp;
-                <p className="">{newsar.results[0]?.status.description}</p>
+                <p className="">{newsar.status.description}</p>
               </div>
               <div className="flex">
                 <b>Piattaforma di lancio:</b>&nbsp;
-                <p className=""> {newsar.results[0]?.pad.name}</p>
+                <p className=""> {newsar.pad.name}</p>
               </div>
               <div className="flex">
                 <b>Location:</b>&nbsp;
-                <p>{newsar.results[0]?.location.name}</p>
+                <p>{newsar.location.name}</p>
               </div>
             </div>
           </article>
