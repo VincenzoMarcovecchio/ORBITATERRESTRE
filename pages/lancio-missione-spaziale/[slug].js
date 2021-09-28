@@ -17,20 +17,14 @@ function SingoloLancio({ newsar }) {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {newsar.results ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
-            {newsar.results[0]?.image ? (
+           
               <img
                 className="sm:w-full md:w-1/3 object-cover"
-                S
-                src={newsar.results[0]?.image}
+               
+                src={newsar.results[0]?.image || non}
                 alt={newsar.results[0]?.name}
               />
-            ) : (
-              <img
-                className="sm:w-full md:w-1/3 object-cover"
-                src={non}
-                alt={"immagine non trovata"}
-              />
-            )}
+          
 
             <div className="sm:w-full md:w-2/3 px-4  py-6 ">
               <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
@@ -66,7 +60,7 @@ function SingoloLancio({ newsar }) {
 export async function getServerSideProps(pageContext) {
   const pageNumber = pageContext.query.slug;
   const res = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launch/?name=&slug=${pageNumber}&rocket__configuration__name=&rocket__configuration__id=&status=&rocket__spacecraftflight__spacecraft__name=&rocket__spacecraftflight__spacecraft__name__icontains=&rocket__spacecraftflight__spacecraft__id=&rocket__configuration__manufacturer__name=&rocket__configuration__manufacturer__name__icontains=&rocket__configuration__full_name=&rocket__configuration__full_name__icontains=&mission__orbit__name=&mission__orbit__name__icontains=&r_spacex_api_id=&net__gt=&net__lt=&net__gte=&net__lte=&window_start__gt=&window_start__lt=&window_start__gte=&window_start__lte=&window_end__gt=&window_end__lt=&window_end__gte=&window_end__lte=&last_updated__gte=&last_updated__lte=`
+    `https://ll.thespacedevs.com/2.2.0/launch/?slug=${pageNumber}`
   );
 
   const newsar = await res.json();
