@@ -59,7 +59,7 @@ export function Lanci() {
                   <b>Nome Missione:&nbsp;</b>
                   <Link
                     className="truncate text-gray-500 text-sm"
-                    href={`/lancio-missione-spaziale/${la.id}`}
+                    href={`/lancio-missione-spaziale/${la.slug}`}
                   >
                     <a>{la.mission?.name}</a>
                   </Link>
