@@ -6,44 +6,44 @@ function SingoloLancio({ newsar }) {
 
   return (
     <>
-      <SEO title={`${newsar.name}`} description={`${newsar.mission}`} />
+      <SEO title={`${newsar.results[0].name}`} cano="si" slug={newsar.results[0].slug} imageUrl={newsar.results[0].image} description={`${newsar.results[0].mission.description}`} />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {newsar.id ? (
+        {newsar.results ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
-            {newsar.image ? (
+            {newsar.results[0].image ? (
               <img
                 className="sm:w-full md:w-1/3 object-cover"
-                src={newsar.image}
-                alt={newsar.name}
+                src={newsar.results[0].image}
+                alt={newsar.results[0].name}
               />
             ) : (
               <img
                 className="sm:w-full md:w-1/3 object-cover"
                 src={non}
-                alt={newsar.name}
+                alt={newsar.results[0].name}
               />
             )}
 
             <div className="sm:w-full md:w-2/3 px-4  py-6 ">
               <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-                Lancio {newsar.name}
+                Lancio {newsar.results[0].name}
               </h1>
               <div className="flex">
                 <b>Status:</b>&nbsp;
-                <p className="">{newsar.status.abbrev}</p>
+                <p className="">{newsar.results[0].status.abbrev}</p>
               </div>
               <div className="flex">
                 <b>Descrizione:</b>&nbsp;
-                <p className="">{newsar.status.description}</p>
+                <p className="">{newsar.results[0].status.description}</p>
               </div>
               <div className="flex">
                 <b>Piattaforma di lancio:</b>&nbsp;
-                <p className=""> {newsar.pad.name}</p>
+                <p className=""> {newsar.results[0].pad.name}</p>
               </div>
               <div className="flex">
                 <b>Location:</b>&nbsp;
-                <p>{newsar.location.name}</p>
+                <p>{newsar.results[0].location.name}</p>
               </div>
             </div>
           </article>
