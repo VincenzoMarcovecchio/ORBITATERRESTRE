@@ -60,7 +60,7 @@ function polpo({ newsar }) {
 export async function getServerSideProps(pageContext) {
   const pageNumbera = pageContext.query.slug;
   const res = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launch/?slug=${pageNumbera}`
+    `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}`
   );
 
   const newsar = await res.json();
