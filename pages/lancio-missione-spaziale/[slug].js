@@ -1,15 +1,15 @@
 import { SEO } from "@components/common";
 import non from "../../content/assets/immagine-non-trovata.png";
 
-function polpo({ newsar }) {
+function Polpo({ newsar }) {
   console.log(newsar);
 
   return (
     <>
       <SEO
-        title={`${newsar?.name}`}
+        title={`${newsar?.name || ""}`}
         cano="si"
-        slug={`lancio-missione-spaziale/${newsar?.id}`}
+        slug={`lancio-missione-spaziale/${newsar?.id} `}
         imageUrl={newsar?.image}
         description={`${newsar?.status.description}`}
       />
@@ -17,14 +17,11 @@ function polpo({ newsar }) {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {newsar ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
-           
-              <img
-                className="sm:w-full md:w-1/3 object-cover"
-               
-                src={newsar.image || non}
-                alt={newsar.name}
-              />
-          
+            <img
+              className="sm:w-full md:w-1/3 object-cover"
+              src={newsar.image || non}
+              alt={newsar.name}
+            />
 
             <div className="sm:w-full md:w-2/3 px-4  py-6 ">
               <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
@@ -73,4 +70,4 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
-export default polpo;
+export default Polpo;
