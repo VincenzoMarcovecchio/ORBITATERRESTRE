@@ -1,7 +1,7 @@
 import { SEO } from "@components/common";
 import non from "../../content/assets/immagine-non-trovata.png";
 
-function SingoloLancio({ newsar }) {
+function polpo({ newsar }) {
   console.log(newsar);
 
   return (
@@ -15,7 +15,7 @@ function SingoloLancio({ newsar }) {
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {newsar.results ? (
+        {newsar.count == 1 ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
            
               <img
@@ -58,9 +58,9 @@ function SingoloLancio({ newsar }) {
 
 // This gets called on every request
 export async function getServerSideProps(pageContext) {
-  const pageNumber = pageContext.query.slug;
+  const pageNumbera = pageContext.query.slug;
   const res = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launch/?slug=${pageNumber}`
+    `https://ll.thespacedevs.com/2.2.0/launch/?slug=${pageNumbera}`
   );
 
   const newsar = await res.json();
@@ -73,4 +73,4 @@ export async function getServerSideProps(pageContext) {
     },
   };
 }
-export default SingoloLancio;
+export default polpo;
