@@ -6,14 +6,21 @@ function SingoloLancio({ newsar }) {
 
   return (
     <>
-      <SEO title={`${newsar.results[0].name}`} cano="si" slug={newsar.results[0].slug} imageUrl={newsar.results[0].image} description={`${newsar.results[0].mission.description}`} />
+      <SEO
+        title={`${newsar.results[0]?.name}`}
+        cano="si"
+        slug={`lancio-missione-spazial/${newsar.results[0]?.slug}`}
+        imageUrl={newsar.results[0]?.image}
+        description={`${newsar.results[0]?.mission.description}`}
+      />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {newsar.results ? (
+        {newsar.results.length ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
             {newsar.results[0].image ? (
               <img
                 className="sm:w-full md:w-1/3 object-cover"
+                S
                 src={newsar.results[0].image}
                 alt={newsar.results[0].name}
               />
