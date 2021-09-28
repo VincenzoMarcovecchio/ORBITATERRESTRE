@@ -15,7 +15,7 @@ function polpo({ newsar }) {
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {newsar.count == 1 ? (
+        {newsar ? (
           <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
            
               <img
