@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { getSiteMetaData } from "@utils/helpers";
 
-function Bio({ className }) {
+export function Bio({ className }) {
   const { author, social } = getSiteMetaData();
   return (
     <div className={clsx(`flex items-center `, className)}>
@@ -27,4 +27,3 @@ function Bio({ className }) {
     </div>
   );
 }
-export default Bio;
