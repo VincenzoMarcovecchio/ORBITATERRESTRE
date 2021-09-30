@@ -1,9 +1,8 @@
-import dynamic from "next/dynamic";
-const NavBar = dynamic(() => import("./Navbar"));
-const Bio = dynamic(() => import("../Bio"));
+import { NavBar } from "./Navbar";
+import { Bio } from "../Bio";
 import Link from "next/link";
 
-export function LayoutComponent({ children }) {
+ function LayoutComponent({ children }) {
   return (
     <>
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white font-body">
@@ -27,3 +26,4 @@ export function LayoutComponent({ children }) {
     </>
   );
 }
+export default LayoutComponent
