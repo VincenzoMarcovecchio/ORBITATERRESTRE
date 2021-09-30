@@ -1,12 +1,11 @@
-import React from "react";
 import dynamic from 'next/dynamic'
-const SEOS = dynamic(() => import('../components/common/Seo'))
-const Lanci = dynamic(() => import('../components/common/Lanci'))
+const SEO = dynamic(() => import('../components/common/Seo').then((mod) => mod.SEO))
+const Lanci = dynamic(() => import('../components/common/Lanci').then((mod) => mod.Lanci))
 
 function Thispage() {
   return (
    <>
-      <SEOS
+      <SEO
         cano="si"
         slug="posizione-dell-ISS-in-tempo-reale"
         title="La posizione della stazione spaziale internazionale in tempo reale "
