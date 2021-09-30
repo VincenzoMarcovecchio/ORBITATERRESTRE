@@ -1,8 +1,11 @@
-import { NavBar } from "./Navbar";
-import { Bio } from "../Bio";
-import Link from "next/link";
+  import dynamic from "next/dynamic";
+  import Link from "next/link";
 
- function LayoutComponent({ children }) {
+  const NavBar = dynamic(() => import("./Navbar"));
+  const Bio = dynamic(() => import("../Bio"));
+
+
+export function LayoutComponent({ children }) {
   return (
     <>
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white font-body">
@@ -26,4 +29,3 @@ import Link from "next/link";
     </>
   );
 }
-export default LayoutComponent

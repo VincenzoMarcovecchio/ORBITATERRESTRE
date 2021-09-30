@@ -5,7 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
 import useOnclickOutside from "react-cool-onclickoutside";
 
-export const NavBar = () => {
+ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
@@ -870,3 +870,4 @@ const Header = () => {
     </>
   );
 };
+export default NavBar
