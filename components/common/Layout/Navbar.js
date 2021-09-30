@@ -164,7 +164,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
                     </a>
                     <a
                       style={{ textDecoration: "none" }}
-                      href="#"
+                      href="/visualizzazione-orbita-terrestre-bassa-in-tempo-reale/"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       {/* Heroicon name: outline/shield-check */}
