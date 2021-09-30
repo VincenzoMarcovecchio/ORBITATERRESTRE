@@ -1,5 +1,6 @@
-import { NavBar } from "./Navbar";
-import { Bio } from "../Bio";
+import dynamic from "next/dynamic";
+const NavBar = dynamic(() => import("./Navbar"));
+const Bio = dynamic(() => import("../Bio"));
 import Link from "next/link";
 
 export function LayoutComponent({ children }) {

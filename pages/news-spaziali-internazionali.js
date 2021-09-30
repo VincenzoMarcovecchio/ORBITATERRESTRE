@@ -1,13 +1,8 @@
-import { React } from "react";
-import Link from "next/link";
-import { LayoutComponent, SEO } from "@components/common";
-import useSWR from "swr";
-import { fetcher } from "../utils/fetcher";
-import { Lanci } from "../components/common/Lanci";
+import dynamic from 'next/dynamic'
+const SEO = dynamic(() => import('../components/common/Seo'))
+const Lanci = dynamic(() => import('../components/common/Lanci'))
 
 function News({ newsdata }) {
-
-
   return (
     <>
       <SEO

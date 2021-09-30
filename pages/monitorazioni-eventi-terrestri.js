@@ -1,5 +1,5 @@
-
-import {  SEO } from "@components/common";
+import dynamic from 'next/dynamic'
+const SEO = dynamic(() => import('../components/common/Seo'))
 
 function Eventiqq() {
   return (
