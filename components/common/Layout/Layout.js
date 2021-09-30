@@ -1,7 +1,11 @@
 import dynamic from "next/dynamic";
 
-const Bio = dynamic(() => import("../Bio"));
-const NavBar = dynamic(() => import("./Navbar"));
+const Bio = dynamic(() => import("../Bio"),
+{ ssr: false }
+);
+const NavBar = dynamic(() => import("./Navbar"),
+{ ssr: false }
+);
 
 import Link from "next/link";
 
