@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 
 const Bio = dynamic(() => import("../Bio"),
-{ ssr: false }
+{ ssr: true }
 );
 const NavBar = dynamic(() => import("./Navbar"),
-{ ssr: false }
+{ ssr: true }
 );
 
 import Link from "next/link";
