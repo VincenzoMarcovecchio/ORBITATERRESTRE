@@ -1,8 +1,5 @@
-
 import {  SEO } from "@components/common";
 import { RenderNews } from "@components/common/renderNews";
-import { Countdown } from "../utils/countdown";
-import non from "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 
 function Techport({ newsdata }) {
@@ -33,7 +30,7 @@ function Techport({ newsdata }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     `https://api.nasa.gov/techport/api/projects?updatedSince=2021-01-01&api_key=${process.env.NEXT_PUBLIC_KEY_NASA}`
   );
@@ -48,7 +45,7 @@ export async function getStaticProps() {
     props: {
       newsdata,
     },
-    revalidate: 4000,
+   
   };
 }
 
