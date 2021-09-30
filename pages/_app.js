@@ -2,9 +2,8 @@ import { ThemeProvider } from "next-themes";
 import "@assets/main.css";
 import "typeface-open-sans";
 import "typeface-merriweather";
-import dynamic from "next/dynamic";
-const LayoutComponent = dynamic(() => import("../components/common/Layout/index")
-);
+import { LayoutComponent } from "@components/common";
+
 
 export default function MyApp({ Component, pageProps }) {
   return (
