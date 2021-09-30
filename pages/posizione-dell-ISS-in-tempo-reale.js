@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic'
-const SEO = dynamic(() => import('../components/common/Seo').then((mod) => mod.SEO))
-const Lanci = dynamic(() => import('../components/common/Lanci').then((mod) => mod.Lanci))
+import React from "react";
+import {  SEO } from "@components/common";
+import { Lanci } from "../components/common/Lanci";
 
 function Thispage() {
   return (

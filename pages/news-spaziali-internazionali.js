@@ -60,7 +60,7 @@ function News({ newsdata }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://api.spaceflightnewsapi.net/v3/articles");
 
   const news = await res.json();

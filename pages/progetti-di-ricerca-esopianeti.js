@@ -1,7 +1,7 @@
 import React from "react";
 import {  SEO } from "@components/common";
 
-export default function Errores() {
+export default function Esoplanets() {
   return (
    <>
       <SEO

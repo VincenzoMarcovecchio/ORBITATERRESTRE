@@ -1,4 +1,3 @@
-
 import {  SEO } from "@components/common";
 
  function Come() {
