@@ -1,7 +1,10 @@
-import  { useState, useEffect } from "react";
-import {  SEO } from "@components/common";
-import { Lanci } from "../components/common/Lanci";
-
+import { useState, useEffect } from "react";
+import { SEO } from "@components/common";
+import dynamic from "next/dynamic";
+const Lanci = dynamic(
+  () => import("../components/common/Lanci").then((mod) => mod.Lanci),
+  { loading: () => <p>loading</p> }
+);
 function Retrogrado() {
   const [data, setData] = useState("");
   const [defaultResults, setDefaultResults] = useState(null);
@@ -28,7 +31,7 @@ function Retrogrado() {
     setSubmit(true);
   };
   return (
-   <>
+    <>
       <SEO
         cano="si"
         title="Il Retrogrado di Mercurio, le previsioni in tempo reale"
@@ -124,7 +127,7 @@ function Retrogrado() {
               </a>
             </p>
           </form>
-          {defaultResults  && (
+          {defaultResults && (
             <h3 className="text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               {defaultResults.is_retrograde === false ? "FALSO" : "VERO"}
             </h3>

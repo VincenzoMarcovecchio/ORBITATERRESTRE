@@ -1,8 +1,7 @@
-import {  useState, useEffect } from "react";
-import {  SEO } from "@components/common";
+import { useState, useEffect } from "react";
+import { SEO } from "@components/common";
 import moment from "moment";
 import { Lanci } from "../components/common/Lanci";
-
 
 function Testas() {
   const [lat, setLat] = useState("");
@@ -21,7 +20,6 @@ function Testas() {
       setSubmit(false);
     };
   }, [submit == true]);
-
 
   const getLocation = () => {
     if (!navigator.geolocation) {
@@ -42,16 +40,16 @@ function Testas() {
   return (
     <>
       <SEO
-     cano="si"
-      slug="satelliti-di-passaggio"
+        cano="si"
+        slug="satelliti-di-passaggio"
         title={`Satelliti sopra la mia testa in questo momento`}
         description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
-          <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-8">
+          <h3 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-8">
             Hey cosa passa sopra la tua testa? 😮 🛰️
-          </h2>
+          </h3>
           <button
             className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             onClick={getLocation}
@@ -97,49 +95,84 @@ function Testas() {
               Cerca
             </button>
           </form>
-          {defaultResults.length > 0 && <p>Ci sono:&nbsp;{defaultResults.length}&nbsp;risultati&nbsp;(o meglio limitati a 5) per adesso</p> }
+          {defaultResults.length > 0 && (
+            <p>
+              Ci sono:&nbsp;{defaultResults.length}&nbsp;risultati&nbsp;(o
+              meglio limitati a 5) per adesso
+            </p>
+          )}
           {defaultResults.length > 0 &&
             defaultResults.map(function (eachObj) {
               return (
                 <div className="flex flex-row p-2 mt-4">
-                 <div className="text-4xl font-bold font-display"> 🛰️ </div>
-                 <div>
-                 <details>
-                 <summary>Innalzamento</summary>
-                 <p>Illuminato dal sole:&nbsp; {eachObj.rise.is_sunlit.toString()}</p>
-                 <p>Data:&nbsp; {moment(eachObj.rise.utc_datetime).format('MMMM Do YYYY, h:mm:ss a')}</p>
-                 <p>Visibile:&nbsp; {eachObj.rise.visible.toString()}</p>
-                 <p>Alt:&nbsp; {eachObj.rise.alt}</p>
-                 <p>Az:&nbsp; {eachObj.rise.az}</p>
-                 <p>Az_octant:&nbsp; {eachObj.rise.az_octant}</p>
-                 </details>
-                 
-                 <details>
-                 <summary>Culmine</summary>
-                 <p>Illuminato dal sole:&nbsp; {eachObj.culmination.is_sunlit.toString()}</p>
-                 <p>Data:&nbsp;{moment(eachObj.culmination.utc_datetime).format('MMMM Do YYYY, h:mm:ss a')}</p>
-                 <p>Visibile:&nbsp; {eachObj.culmination.visible.toString()}</p>
-                 <p>Alt:&nbsp; {eachObj.culmination.alt}</p>
-                 <p>Az:&nbsp; {eachObj.culmination.az}</p>
-                 <p>Az_octant:&nbsp; {eachObj.culmination.az_octant}</p>
-                 </details>
-               
-                 <details>
-                 <summary>Tramonto</summary>
-                 <p>Illuminato dal sole:&nbsp; {eachObj.set.is_sunlit.toString()}</p>
-                 <p>Data:&nbsp;{moment(eachObj.set.utc_datetime).format('MMMM Do YYYY, h:mm:ss a')} </p>
-                 <p>Visibile:&nbsp; {eachObj.set.visible.toString()}</p>
-                 <p>Alt:&nbsp; {eachObj.set.alt}</p>
-                 <p>Az:&nbsp; {eachObj.set.az}</p>
-                 <p>Az_octant:&nbsp; {eachObj.set.az_octant}</p>
-                 </details>
-                 </div>
+                  <div className="text-4xl font-bold font-display"> 🛰️ </div>
+                  <div>
+                    <details>
+                      <summary>Innalzamento</summary>
+                      <p>
+                        Illuminato dal sole:&nbsp;{" "}
+                        {eachObj.rise.is_sunlit.toString()}
+                      </p>
+                      <p>
+                        Data:&nbsp;{" "}
+                        {moment(eachObj.rise.utc_datetime).format(
+                          "MMMM Do YYYY, h:mm:ss a"
+                        )}
+                      </p>
+                      <p>Visibile:&nbsp; {eachObj.rise.visible.toString()}</p>
+                      <p>Alt:&nbsp; {eachObj.rise.alt}</p>
+                      <p>Az:&nbsp; {eachObj.rise.az}</p>
+                      <p>Az_octant:&nbsp; {eachObj.rise.az_octant}</p>
+                    </details>
+
+                    <details>
+                      <summary>Culmine</summary>
+                      <p>
+                        Illuminato dal sole:&nbsp;{" "}
+                        {eachObj.culmination.is_sunlit.toString()}
+                      </p>
+                      <p>
+                        Data:&nbsp;
+                        {moment(eachObj.culmination.utc_datetime).format(
+                          "MMMM Do YYYY, h:mm:ss a"
+                        )}
+                      </p>
+                      <p>
+                        Visibile:&nbsp; {eachObj.culmination.visible.toString()}
+                      </p>
+                      <p>Alt:&nbsp; {eachObj.culmination.alt}</p>
+                      <p>Az:&nbsp; {eachObj.culmination.az}</p>
+                      <p>Az_octant:&nbsp; {eachObj.culmination.az_octant}</p>
+                    </details>
+
+                    <details>
+                      <summary>Tramonto</summary>
+                      <p>
+                        Illuminato dal sole:&nbsp;{" "}
+                        {eachObj.set.is_sunlit.toString()}
+                      </p>
+                      <p>
+                        Data:&nbsp;
+                        {moment(eachObj.set.utc_datetime).format(
+                          "MMMM Do YYYY, h:mm:ss a"
+                        )}{" "}
+                      </p>
+                      <p>Visibile:&nbsp; {eachObj.set.visible.toString()}</p>
+                      <p>Alt:&nbsp; {eachObj.set.alt}</p>
+                      <p>Az:&nbsp; {eachObj.set.az}</p>
+                      <p>Az_octant:&nbsp; {eachObj.set.az_octant}</p>
+                    </details>
+                  </div>
                 </div>
               );
             })}
-            <div><small>Per ulteriori informazioni: https://satellites.fly.dev/</small></div>
+          <div>
+            <small>
+              Per ulteriori informazioni: https://satellites.fly.dev/
+            </small>
+          </div>
         </section>
-          <hr />
+        <hr />
         <section className="flex">
           <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
@@ -149,7 +182,7 @@ function Testas() {
           </aside>
         </section>
       </div>
-      </>
+    </>
   );
 }
 

@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic'
-const SEO = dynamic(() => import('../components/common/Seo'))
-const Lanci = dynamic(() => import('../components/common/Lanci'))
-
+import { Lanci } from "../components/common/Lanci";
+import { SEO } from '../components/common/Seo'
 function News({ newsdata }) {
+
+
   return (
     <>
       <SEO
@@ -60,7 +60,7 @@ function News({ newsdata }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://api.spaceflightnewsapi.net/v3/articles");
 
   const news = await res.json();
