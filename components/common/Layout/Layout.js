@@ -1,12 +1,5 @@
-import dynamic from "next/dynamic";
-
-const Bio = dynamic(() => import("../Bio"),
-{ ssr: true }
-);
-const NavBar = dynamic(() => import("./Navbar"),
-{ ssr: true }
-);
-
+import  NavBar  from "./Navbar";
+import  Bio  from "../Bio";
 import Link from "next/link";
 
 export function LayoutComponent({ children }) {
