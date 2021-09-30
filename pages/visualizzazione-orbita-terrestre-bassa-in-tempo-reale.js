@@ -13,9 +13,8 @@ function OrbitaBassas() {
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className=" max-w-7xl mx-auto  px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
           <iframe
-              style={{ width: "100%" }}
-              width="760"
-              height="515"
+            style={{ width: "100%" }}
+            height="515"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
