@@ -7,11 +7,11 @@ function Polpo({ newsar }) {
   return (
     <>
       <SEO
-        title={`${newsar?.name || ""}`}
+        title={`${newsar.name}`}
         cano="si"
-        slug={`lancio-missione-spaziale/${newsar?.id} `}
-        imageUrl={newsar?.image}
-        description={`${newsar?.status.description}`}
+        slug={`lancio-missione-spaziale/${newsar.id} `}
+        imageUrl={newsar.image}
+        description={`${newsar.status.description}`}
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
