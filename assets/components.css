@@ -114,5 +114,5 @@ input[type='range']:focus::-ms-fill-upper {
 padding-right: 0 !important;
 }
 hr {
-  margin: 1rem auto;
+  margin: 1rem auto !important;
 }

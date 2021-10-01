@@ -11,22 +11,27 @@ function OrbitaBassas() {
         description="Questa visualizzazione dell'orbita terrestre bassa (LEOV) è di proprietà di LeoLabs, Inc. Il LEOV può essere utilizzato (inclusa la riproduzione di video e immagini LEOV) per scopi educativi, accademici o di ricerca non commerciali o per pubblicazioni di notizie e scopi giornalistici simili. In tali usi, è necessario attribuire credito a LeoLabs, incluso un collegamento al sito Web di LeoLabs all'indirizzo https://leolabs.space e il nome di LeoLabs e altri indizi di proprietà non possono essere rimossi o oscurati. LeoLabs si riserva il diritto di revocare tale autorizzazione qualora LeoLabs determini che l'uso non è conforme a quanto sopra o potrebbe esporre LeoLabs o altri a rischio di danni. Il LEOV è reso disponibile così com'è e senza garanzia, esplicita o implicita, inclusa l'accuratezza, e l'uso è a rischio esclusivo dell'utente. LeoLabs si riserva tutti i diritti sul LEOV."
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
-        <section className=" max-w-7xl mx-auto  px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-          <iframe
-            style={{ width: "100%" }}
-            height="515"
-            width="815"
-            frameBorder="0"
-            className="mt-8 w-full w-auto flex"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            src="https://platform.leolabs.space/visualizations/leo"
-          />
+        <section className="w-full md:max-w-screen-lg">
+          <figure className="">
+            <iframe
+              className="w-full flex mb-4 mt-8"
+              width="420"
+              height="515"
+              src="https://platform.leolabs.space/visualizations/leo"
+            ></iframe>
+
+            <figcaption>
+              <p className="mb-2">
+                <strong className="font-extrabold">&nbsp;</strong>
+              </p>
+            </figcaption>
+          </figure>
         </section>
+
         <hr />
         <section className="flex">
           <aside>
-            <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mb-6">
+            <h3 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               Prossimi Lanci
             </h3>
             <Lanci />

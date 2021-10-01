@@ -30,7 +30,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
                   src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
                 />
-                <span className="font-md mt-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
+                <span style={{ marginLeft: "-0.5rem" }} className="font-md mt-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
                   <p
                     className="font-black leading-none font-display
                      font-md uppercase font-bold"
@@ -577,8 +577,8 @@ import useOnclickOutside from "react-cool-onclickoutside";
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    style={{ marginLeft: " -0.8rem", height: "4.1rem" }}
-                    className="cursor-pointer h-12 w-auto md:h-14"
+                    style={{ height: "4.1rem" }}
+                    className="cursor-pointer absolute top-14 left-8  h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
                     alt="astronauta nello spazio"
