@@ -5,7 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
 import useOnclickOutside from "react-cool-onclickoutside";
 
- const NavBar = () => {
+const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
@@ -30,7 +30,14 @@ import useOnclickOutside from "react-cool-onclickoutside";
                   src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
                 />
-                <span style={{ marginLeft: "-0.5rem" }} className="font-md mt-4 flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display">
+                <span
+                  style={{
+                    marginLeft: "-0.5rem",
+                    fontSize: "0.9rem",
+                    marginTop: "1.2rem",
+                  }}
+                  className=" flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display"
+                >
                   <p
                     className="font-black leading-none font-display
                      font-md uppercase font-bold"
@@ -577,7 +584,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    style={{ height: "4.1rem",left:"8px",top:"17px" }}
+                    style={{ height: "4.1rem", left: "8px", top: "17px" }}
                     className="cursor-pointer absolute top-14 left-8  h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
@@ -735,20 +742,20 @@ import useOnclickOutside from "react-cool-onclickoutside";
                   >
                     {/* Heroicon name: outline/refresh */}
                     <svg
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                          />
-                        </svg>
+                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
                     <span className="ml-3 text-base font-medium ">
                       Lanci prossimi
                     </span>
@@ -757,7 +764,10 @@ import useOnclickOutside from "react-cool-onclickoutside";
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div  onClick={() => setOpen(!open)} className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div
+                onClick={() => setOpen(!open)}
+                className="grid grid-cols-2 gap-y-4 gap-x-8"
+              >
                 <Link
                   onClick={() => setOpen(!open)}
                   replace
@@ -831,7 +841,6 @@ import useOnclickOutside from "react-cool-onclickoutside";
                 >
                   Sign up
                 </a>
-            
               </div>
             </div>
           </div>
@@ -870,4 +879,4 @@ const Header = () => {
     </>
   );
 };
-export default NavBar
+export default NavBar;
