@@ -1,7 +1,8 @@
 import { SEO } from "@components/common";
 import non from "../../content/assets/immagine-non-trovata.png";
 
-function Polpo({ newsar }) {
+function Polpo({ gigi }) {
+  const [newsar, setNews] = useState(gigi);
   console.log(newsar);
 
   return (
@@ -57,13 +58,13 @@ export async function getServerSideProps(pageContext) {
     `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}/`
   );
 
-  const newsar = await res.json();
+  const gigi = await res.json();
 
   // Pass data to the page via props
 
   return {
     props: {
-      newsar,
+      gigi,
     },
   };
 }
