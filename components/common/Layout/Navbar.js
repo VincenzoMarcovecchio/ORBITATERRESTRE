@@ -20,7 +20,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
       {/* This example requires Tailwind CSS v2.0+ */}
 
       <div className=" mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href={"/"} as={`/`}>
               <div className="flex ">
@@ -577,7 +577,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    style={{ height: "4.1rem" }}
+                    style={{ height: "4.1rem",left:"8px",top:"17px" }}
                     className="cursor-pointer absolute top-14 left-8  h-12 w-auto md:h-14"
                     src={`/transfinale.webp
                     `}
