@@ -15,8 +15,9 @@ function OrbitaBassas() {
           <iframe
             style={{ width: "100%" }}
             height="515"
+            width="815"
             frameBorder="0"
-            className="mt-4 w-full max-w-screen-2xl flex"
+            className="mt-8 w-full w-auto flex"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             src="https://platform.leolabs.space/visualizations/leo"
@@ -25,7 +26,7 @@ function OrbitaBassas() {
         <hr />
         <section className="flex">
           <aside>
-            <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            <h3 className="text-center text-3xl font-bold text-yellow-600 font-display mt-8 mb-6">
               Prossimi Lanci
             </h3>
             <Lanci />
