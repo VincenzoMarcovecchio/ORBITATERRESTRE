@@ -33,7 +33,7 @@ const NavBar = () => {
                 <span
                   style={{
                     marginLeft: "-0.5rem",
-                    fontSize: "0.9rem",
+                    fontSize: "1rem",
                     marginTop: "1.2rem",
                   }}
                   className=" flex flex-col cursor-pointer uppercase font-bold font-black leading-none font-display"
