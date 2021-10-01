@@ -10,7 +10,7 @@ function Polpo({ gigi }) {
   return (
     <>
       <SEO
-        title={newsar.name}
+        title={newsar.mission.name}
         cano="si"
         slug={`lancio-missione-spaziale/${newsar.id} `}
         imageUrl={newsar.image}
