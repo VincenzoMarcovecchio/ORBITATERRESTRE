@@ -1,10 +1,12 @@
 import { SEO } from "@components/common";
 import non from "../../content/assets/immagine-non-trovata.png";
+import {useState} from "react";
 
 function Polpo({ gigi }) {
+  
   const [newsar, setNews] = useState(gigi);
   console.log(newsar);
-
+//resr
   return (
     <>
       <SEO
