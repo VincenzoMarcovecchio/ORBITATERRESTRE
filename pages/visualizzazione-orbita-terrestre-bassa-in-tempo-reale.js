@@ -31,7 +31,7 @@ function OrbitaBassas() {
         <hr />
         <section className="flex">
           <aside>
-            <h3 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+            <h3 className="text-4xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
               Prossimi Lanci
             </h3>
             <Lanci />
