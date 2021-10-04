@@ -14,7 +14,9 @@ const NavBar = () => {
     setFlyer(false);
     setFlyerTwo(false);
   });
-
+  const handleClose = () => {
+    setOpen(!open);
+  };
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -25,7 +27,7 @@ const NavBar = () => {
             <Link href={"/"} as={`/`}>
               <div className="flex ">
                 <img
-                  style={{ marginLeft: "-0.6rem" }}
+                  style={{ marginLeft: "-0.8rem" }}
                   className="cursor-pointer  h-16"
                   src={`/transfinale.webp`}
                   alt="astronauta nello spazio"
@@ -598,7 +600,7 @@ const NavBar = () => {
                   <button
                     type="button"
                     className="bg-white flyer-container rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    onClick={() => setOpen(!open)}
+                    onClick={handleClose}
                   >
                     <span className="sr-only">Close menu</span>
                     {/* Heroicon name: outline/x */}
@@ -621,7 +623,7 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav onClick={() => setOpen(!open)} className="grid gap-y-8">
+                <nav className="grid gap-y-8">
                   <Link
                     onClick={() => setOpen(!open)}
                     href="/eventi-spaziali"
@@ -764,10 +766,7 @@ const NavBar = () => {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div
-                onClick={() => setOpen(!open)}
-                className="grid grid-cols-2 gap-y-4 gap-x-8"
-              >
+              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
                   onClick={() => setOpen(!open)}
                   replace

@@ -1,15 +1,13 @@
 import { Lanci } from "../components/common/Lanci";
-import { SEO } from '../components/common/Seo'
+import { SEO } from "../components/common/Seo";
 function News({ newsdata }) {
-
-
   return (
     <>
       <SEO
         title="News Astronautiche Internazionali "
         description="News Astronautiche Internazionali da diverse fonti del web"
       />
-      <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
+      <div className="px-4 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           {newsdata ? (
             newsdata.map((lol) => {
@@ -56,7 +54,7 @@ function News({ newsdata }) {
           </aside>
         </section>
       </div>
-  </>
+    </>
   );
 }
 
