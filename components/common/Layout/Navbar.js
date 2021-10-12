@@ -623,7 +623,7 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-8">
+                <nav onClick={() => setOpen(!open)} className="grid gap-y-8">
                   <Link
                     onClick={() => setOpen(!open)}
                     href="/eventi-spaziali"
@@ -765,7 +765,7 @@ const NavBar = () => {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5 space-y-6">
+            <div onClick={() => setOpen(!open)} className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
                   onClick={() => setOpen(!open)}
