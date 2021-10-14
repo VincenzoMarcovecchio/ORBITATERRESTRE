@@ -2,19 +2,17 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
-import {  Image, SEO } from "@components/common";
+import { Image, SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
+import moment from "moment";
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
-  
-
-
   return (
     <>
       <SEO
         slug={slug}
         title={frontmatter.title}
-        imageUrl={`${slug}.jpg` || `${slug}.png` }
+        imageUrl={`${slug}.jpg` || `${slug}.png`}
         description={frontmatter.description}
       />
 
@@ -22,9 +20,10 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
         <header className="mb-8 mt-8">
           <h1 className="mb-2 text-4xl font-black leading-none font-display">
             {frontmatter.title}
-          </h1>
-          <time datetime={frontmatter.date.toLocaleString("it-IT")}
-           className="text-sm">{frontmatter.date.toLocaleString("it-IT")}</time>
+          </h1>{" "}
+          <time datetime={frontmatter.date} className="text-sm">
+            &nbsp;&nbsp;{moment(frontmatter.date).format("DD-MM-YYYY")}
+          </time>
         </header>
 
         <ReactMarkdown
@@ -58,8 +57,6 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
     </>
   );
 }
-
-
 
 export async function getStaticPaths() {
   const paths = getPostsSlugs();

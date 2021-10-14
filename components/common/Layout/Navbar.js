@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
@@ -14,9 +14,9 @@ const NavBar = () => {
     setFlyer(false);
     setFlyerTwo(false);
   });
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(!open);
-  };
+  });
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -55,7 +55,7 @@ const NavBar = () => {
             <button
               type="button"
               className=" dark:bg-gray-700 antialiased dark:text-white rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              onClick={() => setOpen(!open)}
+              onClick={handleClose}
             >
               <span className="sr-only">Open menu</span>
               {/* Heroicon name: outline/menu */}
@@ -139,7 +139,7 @@ const NavBar = () => {
                     }
                   >
                     <a
-                      onClick={() => setOpen(!open)}
+                      onClick={handleClose}
                       style={{ textDecoration: "none" }}
                       href="/nuove-scoperte-su-marte/3000"
                       as="/nuove-scoperte-su-marte/3000"
@@ -623,9 +623,9 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav onClick={() => setOpen(!open)} className="grid gap-y-8">
+                <nav onClick={handleClose} className="grid gap-y-8">
                   <Link
-                    onClick={() => setOpen(!open)}
+                    onClick={handleClose}
                     href="/eventi-spaziali"
                     as="/eventi-spaziali"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
@@ -654,7 +654,7 @@ const NavBar = () => {
                     </a>
                   </Link>
                   <Link
-                    onClick={() => setOpen(!open)}
+                    onClick={handleClose}
                     replace
                     href="/nuove-scoperte-su-marte/3000/"
                     as="/nuove-scoperte-su-marte/3000"
@@ -702,7 +702,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <Link
-                      onClick={() => setOpen(!open)}
+                      onClick={handleClose}
                       replace
                       href="/astronauti/"
                       as="/astronauti/"
@@ -729,7 +729,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <Link
-                      onClick={() => setOpen(!open)}
+                      onClick={handleClose}
                       replace
                       href={"/blog/"}
                       as={`/blog`}
@@ -738,7 +738,7 @@ const NavBar = () => {
                     </Link>
                   </a>
                   <a
-                    onClick={() => setOpen(!open)}
+                    onClick={handleClose}
                     href="/lanci-missioni-spaziali"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
@@ -765,10 +765,10 @@ const NavBar = () => {
                 </nav>
               </div>
             </div>
-            <div onClick={() => setOpen(!open)} className="py-6 px-5 space-y-6">
+            <div onClick={handleClose} className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/piattaforme-lancio-pad/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -776,7 +776,7 @@ const NavBar = () => {
                   Piattaforme
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   className="text-base font-medium  hover:text-gray-700"
                   href={"/news-spaziali-internazionali/"}
@@ -785,7 +785,7 @@ const NavBar = () => {
                   News Internazionali
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/prime-fasi-riutilizzabili/10/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -793,7 +793,7 @@ const NavBar = () => {
                   Prime Fasi Riutilizzabili
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/satelliti-di-passaggio/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -801,7 +801,7 @@ const NavBar = () => {
                   Satelliti sulla mia testa
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/quante-persone-ci-sono-nello-spazio-in-questo-momento/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -809,7 +809,7 @@ const NavBar = () => {
                   Persone nello spazio
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/posizione-dell-ISS-in-tempo-reale/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -817,7 +817,7 @@ const NavBar = () => {
                   ISS Live
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/nasa-live/"
                   className="text-base font-medium  hover:text-gray-700"
@@ -825,7 +825,7 @@ const NavBar = () => {
                   NASA Live
                 </Link>
                 <Link
-                  onClick={() => setOpen(!open)}
+                  onClick={handleClose}
                   replace
                   href="/progetti-di-ricerca-esopianeti/"
                   className="text-base font-medium  hover:text-gray-700"

@@ -5,7 +5,7 @@ export function Bio({ className }) {
   const { author, social } = getSiteMetaData();
   return (
     <div className={clsx(`flex items-center `, className)}>
-      <p className="text-base leading-7">
+      <p className="text-base leading-7 mb-6">
         Sito web ancora in costruzione ed in cerca di ispirazioni by{" "}
         <b className="font-semibold">{author.name}</b>
         <a
