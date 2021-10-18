@@ -1,6 +1,5 @@
 import {  useState } from "react";
 import Link from "next/link";
-const non = "../content/assets/immagine-non-trovata.png";
 import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
@@ -331,7 +330,7 @@ function Page({ agenciesData, pageNumber }) {
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
-                        src={non}
+                        src={`/immagine-non-trovata.png`}
                         alt={data.name}
                       />
                     )}

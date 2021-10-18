@@ -3,7 +3,7 @@ import Link from "next/link";
 import {  SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
-const non = "../content/assets/immagine-non-trovata.png";
+
 
 function NasaLive() {
   const url =
@@ -56,7 +56,7 @@ function NasaLive() {
                       ) : (
                         <img
                           className=" max-h-35 w-full"
-                          src={non}
+                          src={`/immagine-non-trovata.png`}
                           alt={la.name}
                         />
                       )}

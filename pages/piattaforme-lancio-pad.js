@@ -1,7 +1,6 @@
 import  { useState } from "react";
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
-const nontrovata = "../content/assets/immagine-non-trovata.png";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
 import { piatta } from "../data/piatte";
@@ -67,7 +66,7 @@ function Piattaforme({ pad }) {
               .map((pa) => {
                 return (
                   <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-                    <img src={pa.map_image || nontrovata} alt={pa.name} />
+                    <img  src={`/immagine-non-trovata.png`} />
                     <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                       {pa.name}
                     </h1>

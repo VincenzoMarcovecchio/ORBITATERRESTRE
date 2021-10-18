@@ -1,5 +1,4 @@
 import { SEO } from "@components/common";
-const non = "../content/assets/immagine-non-trovata.png";
 
 
 function Polpo({ gigi }) {
@@ -19,7 +18,7 @@ function Polpo({ gigi }) {
         <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
             className="sm:w-full md:w-1/3 object-cover"
-            src={gigi.results[0]?.image || non}
+            src={gigi.results[0]?.image ||  `/immagine-non-trovata.png`}
             alt={gigi.results[0]?.name}
           />
 

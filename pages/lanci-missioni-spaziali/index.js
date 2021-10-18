@@ -2,7 +2,6 @@ import {  useState, useEffect } from "react";
 import Link from "next/link";
 import {  SEO } from "@components/common";
 import { Formik } from "formik";
-const non = "../content/assets/immagine-non-trovata.png";
 
 const LanciIndex = () => {
   
@@ -118,7 +117,7 @@ const LanciIndex = () => {
                 ) : (
                   <img
                     className="sm:w-full md:w-1/3 object-cover"
-                    src={non}
+                    src={`/immagine-non-trovata.png`}
                     alt={lol.name}
                   />
                 )}
