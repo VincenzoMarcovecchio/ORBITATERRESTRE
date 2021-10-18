@@ -1,5 +1,5 @@
 import { SEO } from "@components/common";
-import non from "../../content/assets/immagine-non-trovata.png";
+const non = "../content/assets/immagine-non-trovata.png";
 
 
 function Polpo({ gigi }) {

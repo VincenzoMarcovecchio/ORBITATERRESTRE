@@ -2,7 +2,7 @@ import {  useState, useEffect } from "react";
 import Link from "next/link";
 import {  SEO } from "@components/common";
 import { Formik } from "formik";
-import non from "../../content/assets/immagine-non-trovata.png";
+const non = "../content/assets/immagine-non-trovata.png";
 
 const LanciIndex = () => {
   

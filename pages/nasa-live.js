@@ -3,7 +3,7 @@ import Link from "next/link";
 import {  SEO } from "@components/common";
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
-import non from "../content/assets/immagine-non-trovata.png";
+const non = "../content/assets/immagine-non-trovata.png";
 
 function NasaLive() {
   const url =

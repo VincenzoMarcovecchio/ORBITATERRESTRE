@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import Link from "next/link";
-import non from "../../content/assets/immagine-non-trovata.png";
+const non = "../content/assets/immagine-non-trovata.png";
 import {  SEO } from "@components/common";
 import { useRouter } from "next/router";
 
