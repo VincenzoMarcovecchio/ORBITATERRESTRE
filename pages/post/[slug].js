@@ -22,7 +22,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
             {frontmatter.title}
           </h1>{" "}
           <time datetime={frontmatter.date} className="text-sm">
-            &nbsp;&nbsp;{moment(frontmatter.date).format("DD-MM-YYYY")}
+            {frontmatter.date && moment(frontmatter.date).format("DD-MM-YYYY")}
           </time>
         </header>
 
