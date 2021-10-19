@@ -5,7 +5,6 @@ import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import { Image, SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
-
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   return (
     <>
@@ -30,7 +29,7 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
           className="mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
-          renderers={{ code: CodeBlock, image: MarkdownImage }}
+          renderers={{ code: CodeBlock }}
         />
 
         <hr className="mt-4" />
