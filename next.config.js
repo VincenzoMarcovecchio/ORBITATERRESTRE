@@ -3,6 +3,7 @@ const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
 const nextConfig = {
+  target: "serverless",
   webpack: (config, { isServer }) => {
     if (isServer) {
       require("./scripts/sitemap-common");
