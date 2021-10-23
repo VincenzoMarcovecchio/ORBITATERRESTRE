@@ -1,6 +1,6 @@
-import {  useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function Page({ agenciesData, pageNumber }) {
@@ -114,7 +114,7 @@ function Page({ agenciesData, pageNumber }) {
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
-                        src={non}
+                        src={`/immagine-non-trovata.png`}
                         alt={data.name}
                       />
                     )}
@@ -167,7 +167,7 @@ function Page({ agenciesData, pageNumber }) {
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
-                        src={non}
+                        src={`/immagine-non-trovata.png`}
                         alt={data.name}
                       />
                     )}
@@ -220,7 +220,7 @@ function Page({ agenciesData, pageNumber }) {
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
-                        src={non}
+                        src={`/immagine-non-trovata.png`}
                         alt={data.name}
                       />
                     )}
@@ -275,7 +275,7 @@ function Page({ agenciesData, pageNumber }) {
                         ) : (
                           <img
                             className="sm:w-full md:w-1/3 object-cover"
-                            src={non}
+                            src={`/immagine-non-trovata.png`}
                             alt={data.name}
                           />
                         )}
@@ -380,7 +380,7 @@ function Page({ agenciesData, pageNumber }) {
                   ) : (
                     <img
                       className="sm:w-full md:w-1/3 object-cover"
-                      src={non}
+                      src={`/immagine-non-trovata.png`}
                       alt={data.name}
                     />
                   )}
