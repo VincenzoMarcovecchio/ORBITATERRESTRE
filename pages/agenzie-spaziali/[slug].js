@@ -60,7 +60,7 @@ function Page({ agenciesData, pageNumber }) {
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
-                        src={non}
+                        src={`/immagine-non-trovata.png`}
                         alt={data.name}
                       />
                     )}
