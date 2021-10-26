@@ -126,22 +126,22 @@ const LanciIndex = () => {
                   <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <div className="flex">
+                  <p className="flex">
                     <b>Status:</b>&nbsp;
                     <p className="">{lol.status.abbrev}</p>
-                  </div>
-                  <div className="flex">
+                  </p>
+                  <p className="flex">
                     <b>Descrizione:</b>&nbsp;
                     <p className="">{lol.status.description}</p>
-                  </div>
-                  <div className="flex">
+                  </p>
+                  <p className="flex">
                     <b>Piattaforma di lancio:</b>&nbsp;
                     <p className=""> {lol.pad}</p>
-                  </div>
-                  <div className="flex">
+                  </p>
+                  <p className="flex">
                     <b>Location:</b>&nbsp;
                     <p>{lol.location}</p>
-                  </div>
+                  </p>
                   <Link href={`/lancio-missione-spaziale/${lol.id}/`}>
                     Scopri di piu
                   </Link>

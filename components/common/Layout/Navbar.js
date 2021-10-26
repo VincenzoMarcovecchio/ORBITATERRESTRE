@@ -593,7 +593,7 @@ const NavBar = () => {
                     alt="astronauta nello spazio"
                   />
                 </div>
-                <div>
+                <div className="sm:ml-4 md:ml-0">
                   <Header />
                 </div>
                 <div className="-mr-2">
@@ -759,7 +759,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium ">
-                      Lanci prossimi
+                      Lanci Prossimi
                     </span>
                   </a>
                 </nav>

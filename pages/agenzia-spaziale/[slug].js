@@ -15,7 +15,7 @@ function Pagetwo({ agenciesDatatwo }) {
             </h1>
             <img src={agenciesDatatwo.logo_url} alt={agenciesDatatwo.name} />
             <figcaption>
-              <p className="mt-2 text-lg mb-2">
+              <p className="mt-4 text-lg mb-2">
                 <b>Fondata nel:</b>&nbsp;{agenciesDatatwo.founding_year}
               </p>
               <p className="mt-2 text-lg mb-2">

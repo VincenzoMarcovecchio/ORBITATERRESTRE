@@ -28,35 +28,35 @@ function Primala({ sta }) {
               <b>Voli:&nbsp;</b>
               <p>{sta.flights}</p>
             </div>
-            <div className="flex">
+            <p className="flex">
               <b>Status:&nbsp;</b>
               <p>{sta.status}</p>
-            </div>
-            <div className="flex">
+            </p>
+            <p className="flex">
               <b>Atterraggi riusciti:&nbsp;</b>
               <p>{sta.succesfull_landings || "nessun risultato"}</p>
-            </div>
-            <div>
+            </p>
+            <p>
               <b>Configurazioni Lanciatore:</b>
-            </div>
-            <div className="flex">
-              <p>Nome:&nbsp;</p>
-              <p>{sta.launcher_config.full_name}</p>
-            </div>
-            <div className="flex">
-              <p>Descrizione:&nbsp;</p>
+            </p>
+            <p className="flex">
+              <b>Nome:&nbsp;</b>
+              <b>{sta.launcher_config.full_name}</b>
+            </p>
+            <p className="flex">
+              <b>Descrizione:&nbsp;</b>
               <p>{sta.launcher_config.description}</p>
-            </div>
-            <div className="flex">
-              <p>Lanci Totali:&nbsp;</p>
+            </p>
+            <p className="flex">
+              <b>Lanci Totali:&nbsp;</b>
               <p>{sta.launcher_config.total_launch_count}</p>
-            </div>
-            <div className="flex">
-              <p>Lanci Avvenuti Con Successo:&nbsp;</p>
+            </p>
+            <p className="flex">
+              <b>Lanci Avvenuti Con Successo:&nbsp;</b>
               <p>
                 {sta.launcher_config.succesfull_launches || "niente al momento"}
               </p>
-            </div>
+            </p>
           </div>
         </article>
       </div>
