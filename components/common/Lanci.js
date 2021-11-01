@@ -13,8 +13,8 @@ export function Lanci() {
  
   return (
     <div className="md:px-4 flex flex-col mio">
-      {data ? (
-        data.results?.map((la) => {
+      {data !== null ? (
+        data.results.map((la) => {
           return (
             <figure
               className="flex mb-8 flex-col justify-between max-w-72 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
