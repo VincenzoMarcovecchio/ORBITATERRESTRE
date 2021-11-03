@@ -37,7 +37,7 @@
     "react-optimized-image": "^0.4.1",
     "react-syntax-highlighter": "^15.4.4",
     "react-toggle-dark-mode": "^1.0.4",
-    "swr": "^1.1.0-beta.6",
+    "swr": "^1.0.1",
     "typeface-merriweather": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
     "webp-loader": "^0.6.0"
