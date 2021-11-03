@@ -4,16 +4,15 @@ import useSWR from "swr";
 import { Countdown } from "../../utils/countdown";
 import { fetcher } from "../../utils/fetcher";
 
-
-export function Lanci() {
+export  function Lanci() {
   const url =
     "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?limit=10&offset=10";
 
-  const { data, error } = useSWR(url, fetcher);
- 
+  const { data, error } =  useSWR(url,  fetcher);
+   console.log(data);
   return (
     <div className="md:px-4 flex flex-col mio">
-      {data !== null ? (
+      {data && data.results !== undefined ? (
         data.results.map((la) => {
           return (
             <figure
@@ -38,7 +37,7 @@ export function Lanci() {
               </div>
 
               <figcaption className="bg-gray-50  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
-                <p >
+                <p>
                   <b>Agenzia:&nbsp;</b>
                   <Link
                     className=" z-20"
@@ -48,24 +47,24 @@ export function Lanci() {
                     <a>{la.launch_service_provider.name}</a>
                   </Link>
                 </p>
-                <p >
+                <p>
                   <b>Dove:&nbsp;</b>
                   <Link
-                  replace
+                    replace
                     className="truncate text-gray-500 text-sm"
                     href={`/piattaforma-lancio-pad/${la.pad.id}/`}
                   >
-                    <a>{la.pad.name}</a>
+                    <a>{la.pad?.name}</a>
                   </Link>
                 </p>
-                <p >
+                <p>
                   <b>Nome Missione:&nbsp;</b>
                   <Link
-                  replace
+                    replace
                     className="truncate text-gray-500 text-sm"
                     href={`/lancio-missione-spaziale/${la.slug}/`}
                   >
-                    <a>{la.mission.name}</a>
+                    <a>{la.mission?.name}</a>
                   </Link>
                 </p>
               </figcaption>
@@ -76,7 +75,11 @@ export function Lanci() {
         <b>{"caricamento supersonico in corso..."}</b>
       )}
       <div>
-        <Link as={`/lanci-missioni-spaziali`} href={`/lanci-missioni-spaziali/` }replace>
+        <Link
+          as={`/lanci-missioni-spaziali`}
+          href={`/lanci-missioni-spaziali/`}
+          replace
+        >
           <a>Scopri di piú sui lanci</a>
         </Link>
       </div>
