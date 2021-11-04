@@ -33,11 +33,11 @@ function Paginax() {
       />
       <div className=" max-w-7xl mx-auto px-4  sm:px-6 display flex flex-col items-start">
         <h1 className="text-4xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto ">
-          Astronauti ‎‍🚀
+          Astronauti 👨‍🚀
         </h1>
         <h2 className="text-2xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-          👨‍🚀 Incontra le persone eccezionali che si sono avventurate nello
-          spazio.👨‍🚀
+           Incontra le persone eccezionali che si sono avventurate nello
+          spazio.
         </h2>
 
         <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">

@@ -9,7 +9,7 @@ export  function Lanci() {
     "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?limit=10&offset=10";
 
   const { data, error } =  useSWR(url,  fetcher);
-   console.log(data);
+  
   return (
     <div className="md:px-4 flex flex-col mio">
       {data && data.results !== undefined ? (
@@ -62,7 +62,7 @@ export  function Lanci() {
                   <Link
                     replace
                     className="truncate text-gray-500 text-sm"
-                    href={`/lancio-missione-spaziale/${la.slug}/`}
+                    href={`#`}
                   >
                     <a>{la.mission?.name}</a>
                   </Link>
@@ -86,3 +86,5 @@ export  function Lanci() {
     </div>
   );
 }
+
+///lancio-missione-spaziale/${la.slug}/

@@ -172,7 +172,7 @@ function Testas() {
             </small>
           </div>
         </section>
-        <hr />
+        <hr className="mt-4" />
         <section className="flex">
           <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">

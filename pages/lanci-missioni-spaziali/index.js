@@ -1,10 +1,9 @@
-import {  useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { Formik } from "formik";
 
 const LanciIndex = () => {
-  
   const [name, setName] = useState("");
   const [lancid, setLancid] = useState([]);
   const [crewed, setCrewed] = useState(false);
@@ -126,25 +125,34 @@ const LanciIndex = () => {
                   <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <p className="flex">
+                  <p className="">
                     <b>Status:</b>&nbsp;
                     <p className="">{lol.status.abbrev}</p>
                   </p>
-                  <p className="flex">
+                  <p className="">
                     <b>Descrizione:</b>&nbsp;
                     <p className="">{lol.status.description}</p>
                   </p>
-                  <p className="flex">
+                  <p className="">
                     <b>Piattaforma di lancio:</b>&nbsp;
                     <p className=""> {lol.pad}</p>
                   </p>
-                  <p className="flex">
+                  <p className="">
                     <b>Location:</b>&nbsp;
                     <p>{lol.location}</p>
                   </p>
-                  <Link href={`/lancio-missione-spaziale/${lol.id}/`}>
+                  <span
+                    onClick={() =>
+                      router
+                        .push(`/lancio-missione-spaziale/${lol.id}/`)
+                        .then(() => window.scrollTo(0, 0))
+                    }
+                    className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    target="_blank"
+                    rel="noopener noreferrer canonical"
+                  >
                     Scopri di piu
-                  </Link>
+                  </span>
                 </div>
               </article>
             );

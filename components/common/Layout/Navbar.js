@@ -593,7 +593,7 @@ const NavBar = () => {
                     alt="astronauta nello spazio"
                   />
                 </div>
-                <div className="sm:ml-4 md:ml-0">
+                <div className="sm:ml-6 md:ml-0">
                   <Header />
                 </div>
                 <div className="-mr-2">
