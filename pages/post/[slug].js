@@ -1,8 +1,6 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
-
 
 function Post({ post, slug, frontmatter, nextPost, previousPost }) {
   return (
@@ -24,11 +22,9 @@ function Post({ post, slug, frontmatter, nextPost, previousPost }) {
           </time>
         </header>
 
-        <ReactMarkdown
+        <div
           className="mb-4 prose lg:prose-lg dark:prose-dark"
-          escapeHtml={false}
-          source={post.content}
-         
+          dangerouslySetInnerHTML={{ __html: `${post.content}` }}
         />
 
         <hr className="mt-4" />
@@ -78,9 +74,5 @@ export async function getStaticProps({ params: { slug } }) {
 
   return { props: postData };
 }
-
-
-
-
 
 export default Post;
