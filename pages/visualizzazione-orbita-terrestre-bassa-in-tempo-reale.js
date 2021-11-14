@@ -17,7 +17,7 @@ function OrbitaBassas() {
               className="w-full flex mb-4 mt-8"
               width="420"
               height="515"
-              src="https://platform.leolabs.space/visualizations/leo"
+              src="http://stuffin.space/"
             ></iframe>
 
             <figcaption>

@@ -53,7 +53,7 @@ export function QuickLinks() {
               </div>
             </div>
             <div className="pt-4">
-              <h3 className="text-white text-lg">Fasi riutilizzabili </h3>
+              <h3 className="text-white text-lg">Fasi Riutilizzabili </h3>
               <p className="text-gray-400">
                 I lanciatori in grado di riatterrare
               </p>

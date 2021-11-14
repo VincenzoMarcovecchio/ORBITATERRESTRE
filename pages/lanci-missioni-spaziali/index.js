@@ -125,19 +125,19 @@ const LanciIndex = () => {
                   <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <p className="">
+                  <p className="flex">
                     <b>Status:</b>&nbsp;
                     <p className="">{lol.status.abbrev}</p>
                   </p>
-                  <p className="">
+                  <p className="flex">
                     <b>Descrizione:</b>&nbsp;
                     <p className="">{lol.status.description}</p>
                   </p>
-                  <p className="">
+                  <p className="flex">
                     <b>Piattaforma di lancio:</b>&nbsp;
                     <p className=""> {lol.pad}</p>
                   </p>
-                  <p className="">
+                  <p className="flex">
                     <b>Location:</b>&nbsp;
                     <p>{lol.location}</p>
                   </p>
@@ -147,7 +147,7 @@ const LanciIndex = () => {
                         .push(`/lancio-missione-spaziale/${lol.id}/`)
                         .then(() => window.scrollTo(0, 0))
                     }
-                    className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    className="px-3 cursor-pointer mt-6  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
