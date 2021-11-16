@@ -72,7 +72,7 @@ function Home({ datas }) {
                 </p>
               </figcaption>
             </figure>
-            <QuickLinks />
+        
           </section>
 
           <hr className="mt=4" />

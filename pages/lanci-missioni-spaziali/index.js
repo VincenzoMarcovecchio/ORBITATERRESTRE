@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { SEO } from "@components/common";
 import { Formik } from "formik";
 
@@ -125,21 +124,21 @@ const LanciIndex = () => {
                   <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                     {lol.name}
                   </h1>
-                  <p className="flex">
+                  <p>
                     <b>Status:</b>&nbsp;
-                    <p className="">{lol.status.abbrev}</p>
+                    {lol.status.abbrev}
                   </p>
-                  <p className="flex">
+                  <p>
                     <b>Descrizione:</b>&nbsp;
-                    <p className="">{lol.status.description}</p>
+                    {lol.status.description}
                   </p>
-                  <p className="flex">
+                  <p>
                     <b>Piattaforma di lancio:</b>&nbsp;
-                    <p className=""> {lol.pad}</p>
+                    {lol.pad}
                   </p>
-                  <p className="flex">
+                  <p>
                     <b>Location:</b>&nbsp;
-                    <p>{lol.location}</p>
+                    {lol.location}
                   </p>
                   <span
                     onClick={() =>

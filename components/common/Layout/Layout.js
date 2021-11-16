@@ -16,7 +16,7 @@ export function LayoutComponent({ children }) {
           </span>
         </center>
         <NavBar />
-        <main className="container mx-auto">{children}</main>
+        <main className="container mx-auto min-h-screen">{children}</main>
         <footer className=" max-w-7xl mx-auto mt-12 px-4 sm:px-6 text-smaller">
           <Bio />© {new Date().getFullYear()}&nbsp;powered by&nbsp;
           <a href="https://nextjs.org/">Next.js</a>
