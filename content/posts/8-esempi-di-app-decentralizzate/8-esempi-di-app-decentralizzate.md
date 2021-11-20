@@ -1,29 +1,81 @@
 ---
 title: 8 Esempi di App Decentralizzate
-description: Le applicazioni decentralizzate – DApps – sono la chiave per il successo della maggior parte dei progetti che hanno a che fare con le criptovalute. Da quando Ethereum è stato lanciato nel 2015, la criptovaluta e la blockchain si sono evolute dall'essere puramente uno strumento finanziario ad una piattaforma che consente la distribuzione di un'ampia varietà di DApp.
-date: 2021-04-16T11:00:00.000Z
+description: Queste sono alcune applicazioni blockchain che potrebbero aiutare la tua piccola impresa (e aiutarti a generare idee di business o un' eventuale app)
+date: 2021-11-16T11:00:00.000Z
 category: dapp
 
 ---
 
-Le DApp offrono diversi vantaggi rispetto alle tradizionali applicazioni centralizzate, come quelle disponibili su Apple e Google Play Store. In teoria, le DApp sono molto più economiche da far funzionare rispetto alle tradizionali applicazioni centralizzate, poiché il trasferimento dei dati è distribuito tra gli utenti anziché essere eseguito tramite un server centralizzato. Verificando tutte le transazioni dell'applicazione su un registro pubblico distribuito abilitato alla blockchain, gli utenti potenzialmente mantengono il controllo sui contenuti e sulle risorse che producono e distribuiscono.
+Il Bitcoin e la tecnologia blockchain non hanno davvero sconvolto il mondo come si pensava inizialmente quando Satoshi Nakamoto ha pubblicato la sua invenzione nel 2009.
 
-Ci sono molti progetti in competizione per diventare la prima piattaforma DApp ad ottenere un'adozione diffusa. Alcuni dei principali rivali di Ethereum per la creazione di un variegato ecosistema DApp includono EOS, NEO, VeChain, IOTA, Stellar e TRON. Sebbene queste piattaforme DApp siano in genere in competizione per dimostrare di essere le più scalabili, sicure ed economiche, ci sono dozzine di altri progetti che mirano a sfruttare il potenziale delle DApp all'interno di decine di nicchie mirate altamente specifiche.
+Più di recente, tuttavia, la valuta digitale, l'IoT e la blockchain sono diventate alcune delle parole d'ordine più discusse. Questo è vero non solo nel settore dei pagamenti, ma in diversi altri settori. In effetti, alcuni credono che la tecnologia blockchain potrebbe alla fine essere più importante di Internet.
 
-Sebbene le DApp siano ancora lontane dal raggiungere un'adozione mainstream diffusa, sono emerse alcune categorie principali che saranno la chiave per il futuro successo del concetto di DApp.
+Per il momento, tuttavia, queste sono alcune, 8 applicazioni blockchain che potrebbero aiutare la tua piccola impresa (e aiutarti a generare idee di business o un' eventuale app):
 
-1. Giochi
-La prima DApp a generare molta attenzione è stata CryptoKitties, che ha bloccato la rete Ethereum quando l'utilizzo è aumentato alla fine del 2017.
-CryptoKitties è un gioco decentralizzato abbastanza primitivo, in cui gli utenti raccolgono, allevano e scambiano felini unici. Tuttavia, illustra abbastanza bene il potenziale caso d'uso per le DApp di gioco. Al culmine della sua popolarità, i rari CryptoKitties venivano venduti per un massimo di $ 170.000.
+1. Pagamenti e trasferimenti di denaro
+Forse l'applicazione blockchain più conosciuta è quella di poter inviare e ricevere pagamenti. Ha senso poiché la tecnologia blockchain ha i suoi inizi nella criptovaluta. Ma quanto è esattamente vantaggioso per i proprietari di piccole imprese.
 
-La monetizzazione degli oggetti di gioco è già un enorme business. Il gioco più popolare al mondo in questo momento è Fortnite, che ha generato oltre 1 miliardo di dollari tramite l'acquisto di skin e altri oggetti di gioco, nonostante il gioco principale sia distribuito gratuitamente.
+Utilizzando la tecnologia blockchain, sei in grado di trasferire fondi direttamente a chiunque desideri quasi istantaneamente e a tariffe estremamente basse. Questo perché non ci sono intermediari che rallentano il trasferimento di fondi tra diverse banche e addebitano commissioni di transazione oltraggiose.
 
-Molti sviluppatori si stanno spostando nello spazio e stanno cercando di creare il primo vero gioco basato su blockchain di successo. Alcuni degli esempi attuali più degni di nota includono EOS Knights su EOS, Gods Unchained ed Ethermon su Ethereum e Magic Academy di BitGuild su TRON.
+Questa pratica è particolarmente utile se hai dipendenti remoti o sei coinvolto nel mercato globale.
 
-I creatori di CryptoKitties, Dapper Labs, hanno recentemente raccolto 15 milioni di dollari in finanziamenti da aziende come Google e Samsung. Anche i creatori di PlayStation Sony potrebbero guardare a una mossa nello spazio, con il recente annuncio di piani per creare il proprio portafoglio hardware crittografico.
+Aziende come Abra, Bitwage e Coinpip stanno  utilizzano la blockchain per trasferire fondi o gestire le buste paga.
 
-Altri progetti da tenere d'occhio includono Bit.Game, che ha lanciato il primo scambio al mondo dedicato esclusivamente alle risorse di gioco blockchain, e TrustNote, che ha creato la piattaforma iToken di facile utilizzo per la creazione e la gestione di risorse digitali uniche. La piattaforma iToken può essere particolarmente interessante per gli sviluppatori di giochi più piccoli, poiché rende molto più semplice ed economico creare risorse digitali utilizzabili rispetto a reti come Ethereum.
+2. Contratti intelligenti
+Che ci crediate o no, il termine "contratto intelligente" è in uso dal 1993, ma ora è associato alla blockchain grazie all'emergere del progetto Ethereum del 2013.
 
-Il gioco è una delle aree più attive dello sviluppo di DApp e molti prevedono che sarà la prima area a trovare un uso diffuso nel mondo reale.
+Questo progetto "è una piattaforma decentralizzata che esegue contratti intelligenti: applicazioni che funzionano esattamente come programmato senza alcuna possibilità di tempi di inattività, censura, frode o interferenza di terze parti".
 
-2. Scambi decentralizzati
+Gli "smart contract" sono "programmi per computer automatici in grado di eseguire i termini di qualsiasi contratto", scrive Chris DeRose in American Banker. In poche parole "è una sicurezza finanziaria tenuta in garanzia da una rete che viene instradata ai destinatari in base a eventi futuri e al codice del computer".
+
+Con i "contratti intelligenti" le aziende saranno in grado di aggirare le normative. “Abbassare i costi per un sottoinsieme delle nostre transazioni finanziarie più comuni”. Inoltre, questi contratti saranno infrangibili.
+
+Aziende come Slock, una piattaforma Internet delle cose abilitata per Ethereum, stanno già utilizzando questa applicazione in modo che i clienti possano noleggiare qualsiasi cosa, dalle biciclette agli appartamenti, sbloccando una serratura intelligente dopo che entrambe le parti hanno concordato i termini del contratto.
+
+Inoltre, le banche globali utilizzano "contratti intelligenti" per migliorare il mercato dei prestiti sindacati. Una di queste società che utilizza blockchain per emettere microprestiti è Synaps.
+
+3. Notaio
+La tecnologia blockchain può essere utilizzata anche come servizio notarile conveniente ed economico. Ad esempio, app come Uproov, una piattaforma multimediale per smartphone, possono essere autenticate immediatamente dopo che un utente ha creato un'immagine, un video o una registrazione audio.
+
+Nel frattempo, stampd.io può essere effettivamente utilizzato per autenticare la prova della proprietà della creazione digitale.
+
+4. Archiviazione cloud distribuita
+Il cloud storage distribuito sarà un'altra applicazione blockchain di cui le aziende potranno trarre vantaggio. Storj, azienda che utilizza la blockchain per fornire agli utenti un cloud storage conveniente, veloce e sicuro.
+
+Parlando con il fondatore di VentureBeat Storj, Shawn Wilkinson, ha affermato che "Semplicemente utilizzando lo spazio in eccesso sul disco rigido, gli utenti possono archiviare il cloud tradizionale 300 volte", proprio come è possibile affittare una stanza su Airbnb. Wilkinson ha aggiunto: "Considerando che il mondo spende oltre 22 miliardi di dollari solo sul cloud storage, questo potrebbe aprire un flusso di entrate per gli utenti medi, riducendo significativamente i costi di archiviazione dei dati per le aziende e gli utenti personali".
+
+Questo rende il cloud storage distribuito una delle applicazioni blockchain più interessanti. È uno di quelli da tenere d'occhio per le piccole imprese.
+
+5. Identità digitale
+Sapevi che si stima che le frodi costino all'industria circa 18,5 miliardi di dollari all'anno? In altre parole, ciò significa che per ogni $ 3 spesi, $ 1 andrà a frode pubblicitaria. Per questo motivo, la sicurezza è una delle principali preoccupazioni per le aziende di tutte le dimensioni che desiderano utilizzare un portafoglio blockchain.
+
+"Le tecnologie blockchain rendono il tracciamento e la gestione delle identità digitali sicure ed efficiente, con conseguente accesso senza interruzioni e riduzione delle frodi", scrive Ameer Rosic, fondatore di Blocgeeks, in un precedente articolo di Due.
+
+"La tecnologia blockchain offre una soluzione a molti problemi di identità digitale, in cui l'identità può essere autenticata in modo univoco in modo irrefutabile, immutabile e sicuro", afferma Rosic. “I metodi attuali utilizzano sistemi problematici basati su password di segreti condivisi scambiati e archiviati su sistemi non sicuri. I sistemi di autenticazione basati su blockchain si basano sulla verifica dell'identità inconfutabile mediante firme digitali basate sulla crittografia a chiave pubblica.
+
+Con l'autenticazione dell'identità blockchain, "l'unico controllo eseguito è se la transazione è stata firmata o meno dalla chiave privata corretta. Se ne deduce che chi ha accesso alla chiave privata è il proprietario e l'esatta identità del proprietario è ritenuta irrilevante.
+
+chiave privata corretta. Se ne deduce che chi ha accesso alla chiave privata è il proprietario e l'esatta identità del proprietario è ritenuta irrilevante.
+
+La tecnologia blockchain può essere applicata alle applicazioni di identità in aree come ID, accesso all'account online, residenza elettronica, passaporti e certificati di nascita.
+
+Aziende come ShoCard utilizzano la blockchain per convalidare l'identità di un individuo sul proprio dispositivo mobile.
+
+6. Comunicazioni della catena di approvvigionamento e prove di provenienza
+“La maggior parte delle cose che acquistiamo non sono realizzate da un'unica entità, ma da una catena di fornitori che vendono i loro componenti (ad esempio grafite per matite) a un'azienda che assembla e commercializza il prodotto finale.
+
+Il problema con questo sistema è che se uno di questi componenti si guasta "il marchio subisce l'urto del contraccolpo", afferma Phil Gomes di Edelman Digital.
+
+Utilizzando la tecnologia blockchain "un'azienda potrebbe fornire in modo proattivo record digitali permanenti e verificabili che mostrano alle parti interessate lo stato del prodotto in ogni fase a valore aggiunto".
+
+Provenance e SkuChain sono solo due esempi di aziende che tentano di risolvere questo problema.
+
+7. Carte regalo e programmi fedeltà
+La blockchain potrebbe anche aiutare i rivenditori che offrono carte regalo, programmi fedeltà e altre risorse digitali rendendo il processo più economico e sicuro eliminando gli intermediari e utilizzando le capacità di verifica uniche della blockchain.
+
+Gyft Block, che è una partnership tra Gyft e lo sviluppatore di API bitcoin Chain, emette una carta regalo digitale che può essere scambiata in modo sicuro sul registro pubblico della blockchain.
+
+8. Reti e IoT
+IBM e Samsung hanno collaborato per un concetto noto come ADEPT, o Telemetria peer-to-peer decentralizzata autonoma (un tipo di rete peer-to-peer), che utilizza blockchain "per fornire la spina dorsale del sistema, utilizzando un mix di proof-of-work and proof-of-stake per garantire le transazioni”.
+
+Con ADEPT una blockchain fungerebbe da registro pubblico per una grande quantità di dispositivi. Ciò eliminerebbe la necessità di un hub centrale e "servirebbe da ponte tra molti dispositivi a basso costo". Senza la necessità di un sistema di controllo centrale, tutti questi dispositivi potrebbero comunicare tra loro autonomamente per gestire aggiornamenti software, bug o gestire l'energia. Questa applicazione blockchain è particolarmente rilevante per le aziende che creano software compatibile con i sistemi e dispositivi IoT simili.
