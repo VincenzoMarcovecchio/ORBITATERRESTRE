@@ -146,7 +146,7 @@ const LanciIndex = () => {
                         .push(`/lancio-missione-spaziale/${lol.id}/`)
                         .then(() => window.scrollTo(0, 0))
                     }
-                    className="px-3 cursor-pointer mt-6  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                    className="px-3 cursor-pointer mt-6 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
