@@ -7,40 +7,40 @@ console.log(gigi)
   return (
     <>
       <SEO
-        title={gigi.results[0]?.name}
+        title={gigi.name}
         cano="si"
-        slug={`lancio-missione-spaziale/${gigi.results[0]?.slug} `}
-        imageUrl={gigi.results[0]?.image}
-        description={`${gigi.results[0]?.status.description}`}
+        slug={`lancio-missione-spaziale/${gigi.id} `}
+        imageUrl={gigi.image}
+        description={`${gigi.mission.description}`}
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
             className="sm:w-full md:w-1/3 object-cover"
-            src={gigi.results[0]?.image ||  `/immagine-non-trovata.png`}
-            alt={gigi.results[0]?.name}
+            src={gigi.image ||  `/immagine-non-trovata.png`}
+            alt={gigi.name}
           />
 
           <div className="sm:w-full md:w-2/3 px-4  py-6 ">
             <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-              Lancio {gigi.results[0]?.name}
+              Lancio {gigi.name}
             </h1>
             <div className="flex">
               <b>Status:</b>&nbsp;
-              <p className="">{gigi.results[0]?.status.abbrev}</p>
+              <p className="">{gigi.status.description</p>
             </div>
             <div className="flex">
               <b>Descrizione:</b>&nbsp;
-              <p className="">{gigi.results[0]?.status.description}</p>
+              <p className="">{gigi.mission.description}</p>
             </div>
             <div className="flex">
               <b>Piattaforma di lancio:</b>&nbsp;
-              <p> {gigi.results[0]?.pad.name}</p>
+              <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`  }> {gigi.results[0]?.pad.name}</a>
             </div>
             <div className="flex">
-              <b>Location:</b>&nbsp;
-              <p>{gigi.results[0]?.location.name}</p>
+              <b>Parte del programma:</b>&nbsp;
+              <pre>{gigi.progrm}</pre>
             </div>
           </div>
         </article>
