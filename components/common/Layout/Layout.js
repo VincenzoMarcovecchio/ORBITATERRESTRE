@@ -19,7 +19,7 @@ export function LayoutComponent({ children }) {
         <main className="container mx-auto min-h-screen">{children}</main>
         <footer className=" max-w-7xl mx-auto mt-12 px-4 sm:px-6 text-smaller">
           <Bio />© {new Date().getFullYear()}&nbsp;powered by&nbsp;
-          <a href="https://nextjs.org/">Next.js</a>
+          <a href="https://nextjs.org/">Next.js </a>
           &#128293;
         </footer>
       </div>

@@ -3,7 +3,7 @@ import { SEO } from "@components/common";
 
 function Polpo({ gigi }) {
   
-//resr
+console.log(gigi)
   return (
     <>
       <SEO
@@ -54,7 +54,7 @@ function Polpo({ gigi }) {
 export async function getServerSideProps(pageContext) {
   const pageNumbera = pageContext.query.slug;
   const res = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}`)
+    `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}/`)
 
   const gigi = await res.json();
 
