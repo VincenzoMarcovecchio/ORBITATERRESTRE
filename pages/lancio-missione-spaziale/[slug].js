@@ -24,28 +24,28 @@ function Polpo({ gigi }) {
             <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
               Lancio {gigi.name}
             </h1>
-            <div className="flex">
+            <div className="">
               <b>Status:</b>&nbsp;
               <p className="">{gigi.status.description}</p>
             </div>
-            <div className="flex">
+            <div className="">
               <b>Descrizione:</b>&nbsp;
               <p className="">{gigi.mission.description}</p>
             </div>
-            <div className="flex">
+            <div className="">
               <b>Piattaforma di lancio:</b>&nbsp;
               <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`}>
                 {" "}
                 {gigi.pad.name}
               </a>
             </div>
-            <div className="flex">
+            <div className="">
               <b>Parte del programma:</b>&nbsp;
               <pre>{gigi.program}</pre>
             </div>
           </div>
         </article>
-        ) : ( <p>"request throttled"</p> )
+        )
       </div>
     </>
   );
