@@ -28,7 +28,7 @@ console.log(gigi)
             </h1>
             <div className="flex">
               <b>Status:</b>&nbsp;
-              <p className="">{gigi.status.description</p>
+              <p className="">{gigi.status.description}</p>
             </div>
             <div className="flex">
               <b>Descrizione:</b>&nbsp;
