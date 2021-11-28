@@ -1,9 +1,7 @@
 import { SEO } from "@components/common";
 
-
 function Polpo({ gigi }) {
-  
-console.log(gigi)
+  console.log(gigi);
   return (
     <>
       <SEO
@@ -18,7 +16,7 @@ console.log(gigi)
         <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
             className="sm:w-full md:w-1/3 object-cover"
-            src={gigi.image ||  `/immagine-non-trovata.png`}
+            src={gigi.image || `/immagine-non-trovata.png`}
             alt={gigi.name}
           />
 
@@ -36,11 +34,14 @@ console.log(gigi)
             </div>
             <div className="flex">
               <b>Piattaforma di lancio:</b>&nbsp;
-              <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`  }> {gigi.results[0]?.pad.name}</a>
+              <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`}>
+                {" "}
+                {gigi.pad.name}
+              </a>
             </div>
             <div className="flex">
               <b>Parte del programma:</b>&nbsp;
-              <pre>{gigi.progrm}</pre>
+              <pre>{gigi.program}</pre>
             </div>
           </div>
         </article>
@@ -54,7 +55,8 @@ console.log(gigi)
 export async function getServerSideProps(pageContext) {
   const pageNumbera = pageContext.query.slug;
   const res = await fetch(
-    `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}/`)
+    `https://ll.thespacedevs.com/2.2.0/launch/${pageNumbera}/`
+  );
 
   const gigi = await res.json();
 
