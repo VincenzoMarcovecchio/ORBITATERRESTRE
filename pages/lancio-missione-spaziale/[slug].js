@@ -16,10 +16,10 @@ function Polpo({ gigi }) {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <figure
-            className="flex mb-8 flex-col justify-between max-w-72 md:h-96 sm:h-full md:mr-4 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
+            className="flex mb-8 flex-col justify-between max-w-72 h-96 md:mr-4 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
             style={{
               backgroundImage: `url(${gigi.image})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -37,7 +37,7 @@ function Polpo({ gigi }) {
             <figcaption></figcaption>
           </figure>
 
-          <div className="sm:w-full px-2 py-6 ">
+          <div className="sm:w-full px-2">
             <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
               Lancio {gigi.name}
             </h1>
@@ -64,15 +64,15 @@ function Polpo({ gigi }) {
               {gigi.program}
             </p>
             <hr />
-            <h3 className="mt-2 font-extrabold">Configuarazione del missile:</h3>
+            <h3 className="mt-2 mb-2 font-extrabold">
+              Configurazione del missile
+            </h3>
             <p>
               <b className="font-extrabold">Nome completo:&nbsp;</b>
               {gigi.rocket.configuration.full_name}
             </p>
             <p>
-              <b className="">
-                Lanci effettuati con successo:&nbsp;
-              </b>
+              <b className="">Lanci effettuati con successo:&nbsp;</b>
               {gigi.rocket.configuration.consecutive_successful_launches}
             </p>
             <p>
@@ -99,7 +99,7 @@ function Polpo({ gigi }) {
               <b className="font-extrabold">Costo di un lancio:&nbsp;</b>
               {gigi.rocket.configuration.Launch_cost}
             </p>
-            <p>
+            <p className="mb-6">
               <b className="font-extrabold">Manufatturiere:&nbsp;</b>
               <a
                 href={`/agenzia-spaziale/${gigi.rocket.configuration.manufacturer.id}`}

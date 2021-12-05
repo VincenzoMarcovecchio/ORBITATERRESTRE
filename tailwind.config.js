@@ -45,6 +45,7 @@ module.exports = {
       spacing: {
         14: "3.375rem",
       },
+
       typography: (theme) => ({
         DEFAULT: {
           css: {
