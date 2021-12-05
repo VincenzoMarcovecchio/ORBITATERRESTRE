@@ -24,28 +24,75 @@ function Polpo({ gigi }) {
             <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
               Lancio {gigi.name}
             </h1>
-            <div className="">
+            <p>
+              <b>Lancio di tipo:</b>&nbsp;
+              {gigi.mission.type}
+            </p>
+            <p>
               <b>Status:</b>&nbsp;
-              <p className="">{gigi.status.description}</p>
-            </div>
-            <div className="">
+              {gigi.status.description}
+            </p>
+            <p>
               <b>Descrizione:</b>&nbsp;
-              <p className="">{gigi.mission.description}</p>
-            </div>
-            <div className="">
+              {gigi.mission.description}
+            </p>
+            <p>
               <b>Piattaforma di lancio:</b>&nbsp;
               <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`}>
-                {" "}
                 {gigi.pad.name}
               </a>
-            </div>
-            <div className="">
+            </p>
+            <p>
               <b>Parte del programma:</b>&nbsp;
-              <pre>{gigi.program}</pre>
-            </div>
+              {gigi.program}
+            </p>
+            <details>
+              <summary>Configuarazione del missile:</summary>
+              <p>
+                <b>Nome completo:&nbsp;</b>
+                {gigi.rocket.configuration.full_name}
+              </p>
+              <p>
+                <b>Lanci effettuati con successo:&nbsp;</b>
+                {gigi.rocket.configuration.consecutive_successful_launches}
+              </p>
+              <p>
+                <b>Lanci falliti:&nbsp;</b>
+                {gigi.rocket.configuration.failed_launches}
+              </p>
+              <p>
+                <b>Descrizione:&nbsp;</b>
+                {gigi.rocket.configuration.description}
+              </p>
+              <p>
+                <b>Diametro:&nbsp;</b>
+                {gigi.rocket.configuration.diamater}
+              </p>
+              <p>
+                <b>Lunghezza:&nbsp;</b>
+                {gigi.rocket.configuration.length}
+              </p>
+              <p>
+                <b>Massa del lancio:&nbsp;</b>
+                {gigi.rocket.configuration.launch_mass}
+              </p>
+              <p>
+                <b>Costo di un lancio:&nbsp;</b>
+                {gigi.rocket.configuration.Launch_cost}
+              </p>
+              <p>
+                <b>Manufatturiere:&nbsp;</b>
+                <a
+                  href={`/agenzia-spaziale/${gigi.rocket.configuration.manufacturer.id}`}
+                >
+                  {gigi.rocket.configuration.manufacturer.name}
+                </a>
+              </p>
+        
+            </details>
           </div>
         </article>
-        )
+       
       </div>
     </>
   );

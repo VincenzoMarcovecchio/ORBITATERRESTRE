@@ -69,7 +69,7 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-2 text-lg mb-2">
+                      <p className="mt-4 text-lg mb-2">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
                       <p className="mt-2 text-lg mb-2">
