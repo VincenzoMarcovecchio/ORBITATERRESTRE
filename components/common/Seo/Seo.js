@@ -29,11 +29,12 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <meta
         property="og:image"
         content={`${
-          imageUrl && imageUrl.includes("apod") || imageUrl.includes("spacelaunchnow")
-          ? `${imageUrl}`
-          : imageUrl
-          ? `https://orbitaterrestre.com/${imageUrl}`
-          : `https://orbitaterrestre.com/`
+          (imageUrl && imageUrl.includes("apod")) ||
+          (imageUrl && imageUrl.includes("spacelaunchnow"))
+            ? `${imageUrl}`
+            : imageUrl
+            ? `https://orbitaterrestre.com/${imageUrl}`
+            : `https://orbitaterrestre.com/`
         }`}
       />
 
@@ -55,7 +56,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
       <meta
         name="twitter:image"
         content={`${
-          imageUrl && imageUrl.includes("apod")  || imageUrl.includes("spacelaunchnow")
+          (imageUrl && imageUrl.includes("apod")) ||
+          (imageUrl && imageUrl.includes("spacelaunchnow"))
             ? `${imageUrl}`
             : imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`
