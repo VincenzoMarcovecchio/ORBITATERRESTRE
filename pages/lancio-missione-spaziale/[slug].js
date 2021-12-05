@@ -14,7 +14,7 @@ function Polpo({ gigi }) {
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
+        <article className="flex flex-col max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <figure
             className="flex mb-8 flex-col justify-between max-w-72 h-96 md:mr-4 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
             style={{
@@ -64,7 +64,7 @@ function Polpo({ gigi }) {
               {gigi.program}
             </p>
             <hr />
-            <h3 className="mt-2 mb-2 font-extrabold">
+            <h3 className="mt-2 mb-2 font-extrabold text-yellow-600">
               Configurazione del missile
             </h3>
             <p>
