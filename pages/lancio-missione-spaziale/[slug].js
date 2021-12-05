@@ -2,7 +2,7 @@ import { SEO } from "@components/common";
 import { Countdown } from "../../utils/countdown";
 
 function Polpo({ gigi }) {
-  console.log(gigi);
+
   return (
     <>
       <SEO
@@ -85,7 +85,7 @@ function Polpo({ gigi }) {
             </p>
             <p>
               <b className="font-extrabold">Diametro:&nbsp;</b>
-              {gigi.rocket.configuration.diamater}
+              {gigi.rocket.configuration.diameter}
             </p>
             <p>
               <b className="font-extrabold">Lunghezza:&nbsp;</b>
@@ -97,7 +97,7 @@ function Polpo({ gigi }) {
             </p>
             <p>
               <b className="font-extrabold">Costo di un lancio:&nbsp;</b>
-              {gigi.rocket.configuration.Launch_cost}
+              {gigi.rocket.configuration.launch_cost}
             </p>
             <p className="mb-6">
               <b className="font-extrabold">Manufatturiere:&nbsp;</b>
