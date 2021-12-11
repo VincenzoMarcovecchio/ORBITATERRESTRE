@@ -125,19 +125,20 @@ const LanciIndex = () => {
                     {lol.name}
                   </h1>
                   <p>
-                    <b>Status:</b>&nbsp;
+                    <b className="font-extrabold">Status:</b>&nbsp;
                     {lol.status.abbrev}
                   </p>
                   <p>
-                    <b>Descrizione:</b>&nbsp;
+                    <b className="font-extrabold">Descrizione:</b>&nbsp;
                     {lol.status.description}
                   </p>
                   <p>
-                    <b>Piattaforma di lancio:</b>&nbsp;
+                    <b className="font-extrabold">Piattaforma di lancio:</b>
+                    &nbsp;
                     {lol.pad}
                   </p>
-                  <p>
-                    <b>Location:</b>&nbsp;
+                  <p className="mb-4">
+                    <b className="font-extrabold">Location:</b>&nbsp;
                     {lol.location}
                   </p>
                   <span
