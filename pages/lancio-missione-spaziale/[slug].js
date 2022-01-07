@@ -26,7 +26,7 @@ function Polpo({ gigi }) {
             <div className="flex justify-between items-center ml-4 pr-8">
               <div className="bg-indigo-500 bg-opacity-95 text-grey-darker bg-opacity-95 shadow px-2 py-1 flex items-center font-bold text-xs rounded">
                 <Countdown
-                  timeTillDate={gigi.window_end}
+                  timeTillDate={gigi.window_start}
                   timeFormat={"YYYY MM DD, h:mm a"}
                 />
               </div>

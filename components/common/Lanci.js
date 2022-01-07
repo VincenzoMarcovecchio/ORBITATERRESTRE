@@ -16,7 +16,7 @@ export function Lanci() {
         data.results
           .sort(function (a, b) {
             return (
-              Number(new Date(a.window_end)) - Number(new Date(b.window_end))
+              Number(new Date(a.window_start)) - Number(new Date(b.window_start))
             );
           })
           .map((la) => {
@@ -33,7 +33,7 @@ export function Lanci() {
                 <div className="flex justify-between items-center ml-4 pr-8">
                   <div className="bg-indigo-500 bg-opacity-95 text-grey-darker bg-opacity-95 shadow px-2 py-1 flex items-center font-bold text-xs rounded">
                     <Countdown
-                      timeTillDate={la.window_end}
+                      timeTillDate={la.window_start}
                       timeFormat={"YYYY MM DD, h:mm a"}
                     />
                   </div>
