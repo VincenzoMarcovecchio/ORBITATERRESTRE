@@ -17,7 +17,13 @@ const LanciIndex = () => {
 
   return (
     <>
-      <SEO title="Lanci di missioni Spaziali" />
+      <SEO
+        title="Lanci di missioni Spaziali"
+        description="Cerca tra tutti i lanci effetuati o che stanno per partire, rimani sempre aggiornato!"
+        cano="si"
+        slug={`lanci-missione-spaziale`}
+        imageUrl={gigi.image}
+      />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
@@ -151,7 +157,7 @@ const LanciIndex = () => {
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
-                    Scopri di piu
+                    Scopri di più
                   </span>
                 </div>
               </article>

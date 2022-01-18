@@ -64,15 +64,14 @@ function Polpo({ gigi }) {
               {gigi.program}
             </p>
             <hr />
-            <h3 className="mt-2 mb-2 font-extrabold text-yellow-600">
-              Configurazione del missile
-            </h3>
+            <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">              Configurazione del missile
+            </h2>
             <p>
               <b className="font-extrabold">Nome completo:&nbsp;</b>
               {gigi.rocket.configuration.full_name}
             </p>
             <p>
-              <b className="">Lanci effettuati con successo:&nbsp;</b>
+              <b className="font-extrabold">Lanci effettuati con successo:&nbsp;</b>
               {gigi.rocket.configuration.consecutive_successful_launches}
             </p>
             <p>

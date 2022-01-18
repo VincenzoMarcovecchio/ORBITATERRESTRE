@@ -16,7 +16,7 @@ https://github.com/kevin200617/Project-L.O.C.U.S.T/
 Progetto L.L.O.C.U.S.T. [Locuste Locazione, Obliterazione e Coordinamento utilizzando i satelliti e l'equitazione] rileva e prevede la posizione delle locuste e prevede i loro movimenti nelle aree di interesse caraterrizate come vulnerabili. Utilizzando un modello di apprendimento automatico addestrato sui dati satellitari della NASA di vento, umidità, temperature superficiali e indice di vegetazione, tutti fattori che promuovono la popolazione di locuste, si sintonizza L.L.O.C.U.S.T per creare una mappa termica delle aree più a rischio di infestazione di locuste.
 
 Attraverso l'uso di un sito Web interattivo, basato sull'intelligenza artificiale e di facile utilizzo, agricoltori, funzionari comunali e aziende possono visualizzare i rilevamenti e le previsioni del modello sotto forma di una mappa interattiva.
-
+<br/>
 <h2>Come hanno affrontato questa sfida</h2>
 Il team ha sviluppato un modello di apprendimento automatico che è stato addestrato sui dati satellitari di vento, umidità, temperature superficiali e indice di vegetazione dai satelliti SMAP e Terra (strumento MODIS, strumento ASTER).
 
@@ -70,7 +70,7 @@ Hanno utilizzato Python per creare una pipeline di dati, che li ha consentiti di
 Poiché il download e l'elaborazione delle immagini satellitari in formato TIFF richiedevano molto tempo e risorse di calcolo, hanno deciso di raccogliere una discreta quantità di dati per i luoghi in cui è avvenuta l'invasione delle locuste e anche per i luoghi in cui non è avvenuta. Dopo l'addestramento, il modello Random Forest e il modello SVC hanno avuto un'accuratezza del 100% durante i test (si sospetta che ciò sia dovuto alla quantità limitata di dati che avevamo circa 200 campioni per i test). Quindi questo modello è stato utilizzato dall'app frontend per visualizzare la probabilità di un'infestazione di locuste in una determinata posizione.
 
 La parte visiva del frontend del sito Web è stata creata utilizzando la libreria di mappatura Leaflet.JS. La simulazione del vento è stata creata utilizzando una versione pesantemente modificata della libreria di rendering del vento per proiettare i futuri modelli di movimento degli sciami di locuste. Le mappe di calore sono state visualizzate sulla mappa utilizzando Leaflet.Heat per mostrare la densità di popolazione e le loro previsioni su dove si sarebbero potuti verificarsi focolai di locuste.
-
+<br/>
 <h2>Quali problemi e risultati ha avuto la squadra?</h2>
 
 Una delle maggiori sfide incontrate dal  team è stata ottenere e formattare i dati in modo utilizzabile, identificando i punti dati più utili per mantenere gestibili le dimensioni del set di dati. In totale, hanno trascorso più di 12 ore a eseguire il debug e a capire come estrarre in modo efficiente le immagini satellitari dal database della visione del mondo della NASA. Oltre a ciò, nessuno era preparato a quanto sia difficile lavorare con le immagini satellitari. Sebbene alcuni membri del team abbiano lavorato alla creazione di modelli basati su immagini, immagini satellitari e molti formati oscuri e stranieri in cui si trovano, non solo è stato atrocemente difficile lavorare con il team, ma è costato molto tempo al team.
@@ -80,7 +80,7 @@ Un'altra sfida è stata non scoprire un bug con il sito Web EOSDIS Worldview fin
 Hanno anche avuto difficoltà a modificare il modello del vento per gli scopi predittivi, ma alla fine sono riusciti a creare un potente strumento di visualizzazione che può essere utilizzato sia da cittadini che da ricercatori.
 
 Volevano aggiungere una funzionalità per prevedere il costo economico che un certo sciame di locuste potrebbe causare in base al suo percorso previsto. Tuttavia, sono stati in grado di creare dati di simulazione sulla mappa solo per mostrare quella caratteristica perché avevanoo limiti di tempo.
-
+<br/>
 <h2>Come hanno utilizzato i dati dell'agenzia spaziale in questo progetto</h2>
 
 Hanno richiesto immagini dai satelliti Terra e SMAP della NASA in base a coordinate specifiche dal set di dati Locust Swarm (fornito dalla FAO) e quindi utilizzando Raster.io, hanno salvato i dati binari ricevuti in un file TIFF. Hanno quindi estratto i valori di pixel alle coordinate specifiche degli sciami di locuste e della posizione non sciame come valore esadecimale. Hanno quindi convertito questi valori in RGB per un ulteriore utilizzo durante l'addestramento e i test.

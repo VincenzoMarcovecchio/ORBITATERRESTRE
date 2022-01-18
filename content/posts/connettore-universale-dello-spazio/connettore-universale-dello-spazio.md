@@ -15,6 +15,7 @@ Per veicoli spaziali più grandi in grado di eseguire missioni più grandi, part
 Vi presentiamo un nuovo tipo di connettore universale per il trasporto di liquidi, gas ed elettricità.
 
 
+
 <h2>Come hanno affrontato questa sfida</h2>
 Il satellite medio per comunicazioni costa circa 300 milioni di dollari per la sola costruzione, circa 100 milioni per il lancio e funziona per circa 15 anni. Quando il carburante viene utilizzato completamente, il satellite non è in grado di mantenere l'orbita e inizia a spostarsi, perdendo la comunicazione e diventando inutile
 
@@ -33,6 +34,7 @@ Può anche essere utilizzato per l'interconnessione di moduli di stazioni spazia
 Inoltre, il connettore universale sarà utilizzato in futuro, per le stazioni di rifornimento interplanetarie e faciliterà i processi di colonizzazione del nostro sistema solare.
 
 
+<br/>
 <h2>Come hanno sviluppato questo progetto</h2>
 
 Il team è stato composto da ingegneri hardware, astrofisici e sviluppatori. Sono partiti dalla ricerca di progetti e missioni di rifornimento già esistenti. La maggior parte di loro utilizza procedure e strumenti complessi per questo compito, quindi hanno deciso di sviluppare un connettore universale piccolo, leggero, economico, che può essere facilmente aggiunto a quasi tutti i satelliti con un sovraccarico minimo.
@@ -42,18 +44,21 @@ Utensili:
 Per la modellazione 3d si utilizza SolidWorks. Il prototipo è stampato su stampante 3D con plastica PLA
 
 
+
+<br/>
 <h2>Come hanno utilizzato i dati dell'agenzia spaziale in questo progetto</h2>
 Abbiamo cercato missioni di rifornimento esistenti, raccontano i partecipanti - ora sono troppo complesse e costose. Abbiamo scoperto che alcuni satelliti di ricerca e comunicazione possono costare più di 500 milioni di dollari e la maggior parte di essi deve essere ritirata a causa dell'esaurimento del carburante. Al contrario, il lancio di razzi sta diventando più economico e può trasportare carburante extra per le missioni esistenti.
 
 
+
 <blockquote>
-Demo del progetto
-youtu.be/l7BzFrY0YKI
+Demo del progetto:
+youtu.be/l7BzFrY0YKI <br/>
 Codice del progetto
-https://github.com/giver0/space_socket
+https://github.com/giver0/space_socket <br/>
 Dati e risorse
 Esempio di missioni di rifornimento spaziale esistenti: https://www.nasa.gov/feature/robotic-tool-operations-bring-in-space-refueling-closer-to-reality
-nexis.gsfc.nasa.gov/rrm_refueling_task.html
+nexis.gsfc.nasa.gov/rrm_refueling_task.html <br/>
 Tipi di carburante nei satelliti:
 www.nasa.gov/mission_pages/kepler/overview/index.html
 Materiali di tenuta, istallati nello spazio: www.spacematdb.com/spacemat/datasearch.php?name=Viton%20B910
