@@ -22,7 +22,7 @@ const LanciIndex = () => {
         description="Cerca tra tutti i lanci effetuati o che stanno per partire, rimani sempre aggiornato!"
         cano="si"
         slug={`lanci-missione-spaziale`}
-        imageUrl={gigi.image}
+        imageUrl={`https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/antares2520230252b_image_20191102024633.jpeg`}
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
