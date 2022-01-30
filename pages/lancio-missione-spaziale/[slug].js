@@ -59,6 +59,12 @@ function Polpo({ gigi }) {
                 {gigi.pad.name}
               </a>
             </p>
+            <p>
+              <b className="font-extrabold">Agenzia:</b>&nbsp;
+              <a href={`/piattaforma-lancio-pad/${gigi.launch_service_provider.id}`}>
+                {gigi.launch_service_provider.name}
+              </a>
+            </p>
             <p className="mb-2">
               <b className="font-extrabold">Parte del programma:</b>&nbsp;
               {gigi.program}

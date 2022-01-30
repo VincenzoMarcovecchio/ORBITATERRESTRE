@@ -69,16 +69,16 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-4 text-lg mb-2">
+                      <p className="mt-4 text-lg">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg mb-2">
+                      <p className="mt-2 text-lg ">
                         <b>Fondata nel:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg mb-2">
+                      <p className="mt-2 text-lg">
                         <b> Descrizione:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg mb-2">
+                      <p className="mt-2 text-lg">
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
@@ -123,27 +123,27 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-4 text-lg">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b>Fondata nel:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Descrizione:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
                       <Link
-                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                         href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Scopri di piu`
+                        Scopri di più
                       </Link>
                     </figcaption>
                   </figure>
@@ -176,27 +176,27 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b>Fondata nel:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Descrizione:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
                       <Link
-                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                         href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Scopri di piu`
+                        Scopri di più
                       </Link>
                     </figcaption>
                   </figure>
@@ -229,27 +229,27 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-4 text-lg">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b>Fondata nel:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Descrizione:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
                       <Link
-                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                         href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Scopri di piu`
+                        Scopri di più
                       </Link>
                     </figcaption>
                   </figure>
@@ -284,27 +284,27 @@ function Page({ agenciesData, pageNumber }) {
                           <h1 className="text-3xl font-bold text-yellow-600 font-display">
                             {data.name}
                           </h1>
-                          <p className="mt-2 text-lg mb-3">
+                          <p className="mt-4 text-lg ">
                             <b> Amministatore:</b>&nbsp;{data.amministrator}
                           </p>
-                          <p className="mt-2 text-lg mb-3">
+                          <p className="mt-2 text-lg ">
                             <b>Fondata nel:</b>&nbsp;{data.founding_year}
                           </p>
-                          <p className="mt-2 text-lg mb-3">
+                          <p className="mt-2 text-lg ">
                             <b> Descrizione:</b>&nbsp;{data.description}
                           </p>
-                          <p className="mt-2 text-lg mb-3">
+                          <p className="mt-2 text-lg ">
                             <b> Tipo:</b>&nbsp;{data.type}
                           </p>
 
                           <Link
-                            className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                            className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                             href={`/agenzia-spaziale/${data.id}/`}
                             replace
                             target="_blank"
                             rel="noopener noreferrer canonical"
                           >
-                            Scopri di piu`
+                            Scopri di più
                           </Link>
                         </figcaption>
                       </figure>
@@ -339,27 +339,27 @@ function Page({ agenciesData, pageNumber }) {
                       <h1 className="text-3xl font-bold text-yellow-600 font-display">
                         {data.name}
                       </h1>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-4 text-lg">
                         <b> Amministatore:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b>Fondata nel:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Descrizione:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
+                      <p className="mt-2 text-lg">
                         <b> Tipo:</b>&nbsp;{data.type}
                       </p>
 
                       <Link
-                        className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                         href={`/agenzia-spaziale/${data.id}/`}
                         replace
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Scopri di piu`
+                        Scopri di più
                       </Link>
                     </figcaption>
                   </figure>
@@ -389,21 +389,21 @@ function Page({ agenciesData, pageNumber }) {
                     <h1 className="text-3xl font-bold text-yellow-600 font-display">
                       {data.name}
                     </h1>
-                    <p className="mt-2 text-lg mb-3">
+                    <p className="mt-4 text-lg ">
                       <b> Amministatore:</b>&nbsp;{data.amministrator}
                     </p>
-                    <p className="mt-2 text-lg mb-3">
+                    <p className="mt-2 text-lg ">
                       <b>Fondata nel:</b>&nbsp;{data.founding_year}
                     </p>
-                    <p className="mt-2 text-lg mb-3">
+                    <p className="mt-2 text-lg ">
                       <b> Descrizione:</b>&nbsp;{data.description}
                     </p>
-                    <p className="mt-2 text-lg mb-3">
+                    <p className="mt-2 text-lg ">
                       <b> Tipo:</b>&nbsp;{data.type}
                     </p>
 
                     <Link
-                      className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                      className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                       href={`/agenzia-spaziale/${data.id}/`}
                       replace
                       target="_blank"
