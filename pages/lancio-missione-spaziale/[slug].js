@@ -61,7 +61,7 @@ function Polpo({ gigi }) {
             </p>
             <p>
               <b className="font-extrabold">Agenzia:</b>&nbsp;
-              <a href={`/piattaforma-lancio-pad/${gigi.launch_service_provider.id}`}>
+              <a href={`/agenzia-spaziale/${gigi.launch_service_provider.id}`}>
                 {gigi.launch_service_provider.name}
               </a>
             </p>
