@@ -8,7 +8,7 @@ import { fetcher } from "../../utils/fetcher";
 
 export function Lanci() {
   const url =
-    "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/?limit=20";
+    "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming?limit=20";
 
   const { data, error } = useSWR(url, fetcher);
 
@@ -46,7 +46,7 @@ export function Lanci() {
 
                 <figcaption className="bg-gray-50  shadow-md rounded-r-xl p-4 flex flex-col mr-4 mb-8">
                   <p>
-                    <b>Agenzia:&nbsp;</b>
+                    <b>Agency:&nbsp;</b>
                     <Link
                       className=" z-20"
                       replace
@@ -56,7 +56,7 @@ export function Lanci() {
                     </Link>
                   </p>
                   <p>
-                    <b>Dove:&nbsp;</b>
+                    <b>Pad:&nbsp;</b>
                     <Link
                       replace
                       className="truncate text-gray-500 text-sm"
@@ -66,7 +66,7 @@ export function Lanci() {
                     </Link>
                   </p>
                   <p>
-                    <b>Nome Missione:&nbsp;</b>
+                    <b>Mission Name:&nbsp;</b>
                     <Link
                       replace
                       className="truncate text-gray-500 text-sm"
@@ -80,7 +80,7 @@ export function Lanci() {
             );
           })
       ) : (
-        <b>{"caricamento supersonico in corso..."}</b>
+        <b>{"supersonic loading..."}</b>
       )}
       <div>
         <Link
@@ -88,7 +88,7 @@ export function Lanci() {
           href={`/lanci-missioni-spaziali/`}
           replace
         >
-          <a>Scopri di piú sui lanci</a>
+          <a>Find out more</a>
         </Link>
       </div>
     </div>

@@ -41,20 +41,20 @@ function Testas() {
     <>
       <SEO
         cano="si"
-        slug="satelliti-di-passaggio"
+        slug="satellites-right-above-your-head"
         title={`Satelliti sopra la mia testa in questo momento`}
         description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h3 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-8">
-            Hey cosa passa sopra la tua testa? 😮 🛰️
+            Hey what's going on over your head 😮 🛰️
           </h3>
           <button
             className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             onClick={getLocation}
           >
-            Non conosci la tua posizione?
+            Don't know your position?
           </button>
 
           <form
@@ -66,7 +66,7 @@ function Testas() {
               }, 400);
             }}
           >
-            <label htmlFor="latitudine">Latitudine:</label>
+            <label htmlFor="latitudine">Latitude:</label>
             <input
               className="input mt-2 p-2 text-black text-lg mb-3"
               type="number"
@@ -77,7 +77,7 @@ function Testas() {
               value={lat}
             />
 
-            <label htmlFor="longitudine">Longitudine:</label>
+            <label htmlFor="longitudine">Longitude:</label>
             <input
               className="input mt-2 p-2 text-black text-lg mb-3"
               type="number"
@@ -97,8 +97,8 @@ function Testas() {
           </form>
           {defaultResults.length > 0 && (
             <p>
-              Ci sono:&nbsp;{defaultResults.length}&nbsp;risultati&nbsp;(o
-              meglio limitati a 5) per adesso
+              There are:&nbsp;{defaultResults.length}&nbsp;results&nbsp;(or rather
+              limited to 5) for now
             </p>
           )}
           {defaultResults.length > 0 &&
@@ -108,37 +108,37 @@ function Testas() {
                   <div className="text-4xl font-bold font-display"> 🛰️ </div>
                   <div>
                     <details>
-                      <summary>Innalzamento</summary>
+                      <summary>Rising</summary>
                       <p>
-                        Illuminato dal sole:&nbsp;{" "}
+                        Illuminated by the sun:&nbsp;{" "}
                         {eachObj.rise.is_sunlit.toString()}
                       </p>
                       <p>
-                        Data:&nbsp;{" "}
+                        Date:&nbsp;{" "}
                         {moment(eachObj.rise.utc_datetime).format(
                           "MMMM Do YYYY, h:mm:ss a"
                         )}
                       </p>
-                      <p>Visibile:&nbsp; {eachObj.rise.visible.toString()}</p>
+                      <p>Visible:&nbsp; {eachObj.rise.visible.toString()}</p>
                       <p>Alt:&nbsp; {eachObj.rise.alt}</p>
                       <p>Az:&nbsp; {eachObj.rise.az}</p>
                       <p>Az_octant:&nbsp; {eachObj.rise.az_octant}</p>
                     </details>
 
                     <details>
-                      <summary>Culmine</summary>
+                      <summary>Climax</summary>
                       <p>
-                        Illuminato dal sole:&nbsp;{" "}
+                        Illuminated by the sun:&nbsp;{" "}
                         {eachObj.culmination.is_sunlit.toString()}
                       </p>
                       <p>
-                        Data:&nbsp;
+                        Date:&nbsp;
                         {moment(eachObj.culmination.utc_datetime).format(
                           "MMMM Do YYYY, h:mm:ss a"
                         )}
                       </p>
                       <p>
-                        Visibile:&nbsp; {eachObj.culmination.visible.toString()}
+                        Visible:&nbsp; {eachObj.culmination.visible.toString()}
                       </p>
                       <p>Alt:&nbsp; {eachObj.culmination.alt}</p>
                       <p>Az:&nbsp; {eachObj.culmination.az}</p>
@@ -146,18 +146,18 @@ function Testas() {
                     </details>
 
                     <details>
-                      <summary>Tramonto</summary>
+                      <summary>Sunset</summary>
                       <p>
-                        Illuminato dal sole:&nbsp;{" "}
+                        Illuminated by the sun:&nbsp;{" "}
                         {eachObj.set.is_sunlit.toString()}
                       </p>
                       <p>
-                        Data:&nbsp;
+                        Date:&nbsp;
                         {moment(eachObj.set.utc_datetime).format(
                           "MMMM Do YYYY, h:mm:ss a"
                         )}{" "}
                       </p>
-                      <p>Visibile:&nbsp; {eachObj.set.visible.toString()}</p>
+                      <p>Visible:&nbsp; {eachObj.set.visible.toString()}</p>
                       <p>Alt:&nbsp; {eachObj.set.alt}</p>
                       <p>Az:&nbsp; {eachObj.set.az}</p>
                       <p>Az_octant:&nbsp; {eachObj.set.az_octant}</p>
@@ -168,7 +168,7 @@ function Testas() {
             })}
           <div>
             <small>
-              Per ulteriori informazioni: https://satellites.fly.dev/
+              For more information: https://satellites.fly.dev/
             </small>
           </div>
         </section>
@@ -176,7 +176,7 @@ function Testas() {
         <section className="flex">
           <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Prossimi Lanci
+              Next launches
             </h2>
             <Lanci />
           </aside>

@@ -38,19 +38,19 @@ export class Countdown extends React.Component {
         <div className="countdown-wrapper">
           <div className="countdown-item">
             {days}&nbsp;
-            <span>giorni</span>
+            <span>days</span>
           </div>
           <div className="countdown-item">
             {hours}&nbsp;
-            <span>ore</span>
+            <span>hour</span>
           </div>
           <div className="countdown-item">
             {minutes}&nbsp;
-            <span>minuti</span>
+            <span>minutes</span>
           </div>
           <div className="countdown-item">
             {seconds}&nbsp;
-            <span>secondi</span>
+            <span>seconds</span>
           </div>
         </div>
       </div>
