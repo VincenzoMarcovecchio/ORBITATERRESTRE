@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { SEO } from "@components/common";
 import { Formik } from "formik";
+import Image from 'next/image'
 
 const LanciIndex = () => {
   const [name, setName] = useState("");
@@ -113,11 +114,15 @@ const LanciIndex = () => {
                 key={lol.id}
               >
                 {lol.image ? (
-                  <img
-                    className="sm:w-full md:w-1/3 object-cover"
-                    src={lol.image}
+               
+                  <Image
+                  
+                  src={lol.image}
                     alt={lol.name}
-                  />
+                  width="850"
+                  height="650"
+                  layout="responsive"
+                />
                 ) : (
                   <img
                     className="sm:w-full md:w-1/3 object-cover"

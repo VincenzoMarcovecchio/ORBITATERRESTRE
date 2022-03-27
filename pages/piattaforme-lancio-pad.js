@@ -3,19 +3,14 @@ import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
-
+import { piatta } from "../data/piata"
 import Image from 'next/image'
-
 
 export async function getStaticProps() {
   
-  const data = await fetch("https://orbitaterrestre.com/api/piatta")
-  const response = await data.json()
-  console.log(response)
-
   return {
     props: {
-      pad: response,
+      pad: piatta,
     },
   };
 }
@@ -27,11 +22,10 @@ function Piattaforme({ pad }) {
 
   let categories = [];
 
-  for (let i = 0; i < 195; i++) {
+  for (let i = 0; i < pad.results.length; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
-  console.log(categories, currentCategory, pad);
 
   const uniquecat = [...new Set(categories)];
   return (
@@ -71,14 +65,10 @@ function Piattaforme({ pad }) {
                 ({ location: { country_code } }) =>
                   currentCategory == country_code
               )
-              .map((pa) => {
+              .map((pa,i) => {
                 return (
-                  <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-
-
-
-                    <Image
-                      className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
+                  <article key={i} className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
+                    <Image                     
                       src={pa.map_image}
                       alt={pa.name}
                       width="850"

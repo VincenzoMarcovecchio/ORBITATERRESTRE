@@ -2,7 +2,6 @@ import { SEO } from "@components/common";
 import { Countdown } from "../../utils/countdown";
 
 function Polpo({ gigi }) {
-  console.log(gigi);
   return (
     <>
       <SEO

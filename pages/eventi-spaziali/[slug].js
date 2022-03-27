@@ -2,7 +2,6 @@ import { SEO } from "@components/common";
 import Image from 'next/image'
 
 function Slugt({ curiosity, pageNumber }) {
-  console.log(curiosity)
   return (
     <>
       <SEO cano="si"

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 function PrimeFasi({ sta, pageNumber }) {
   const router = useRouter();
-
+console.log(sta)
   return (
     <>
       <SEO
@@ -18,9 +18,9 @@ function PrimeFasi({ sta, pageNumber }) {
         <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
           Lanciatori e prime fasi riutilizzabili
         </h1>
-        <h3 className="text-2xl mb-6">Ci sono {sta.count} risultati </h3>
+       {sta.count && <h3 className="text-2xl mb-6">Ci sono {sta.count} risultati </h3>} 
 
-        {sta.results?.map((lol) => {
+        {sta.results ? sta.results?.map((lol) => {
           return (
             <article
               className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
@@ -50,13 +50,13 @@ function PrimeFasi({ sta, pageNumber }) {
                   <p>{lol.status}</p>
                 </div>
                 <span
-                  className="mt-4"
+                 
                   onClick={() =>
                     router
                       .push(`/prima-fase-riutilizzabile/${lol.id}`)
                       .then(() => window.scrollTo(0, 0))
                   }
-                  className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                  className=" mt-4 px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   target="_blank"
                   rel="noopener noreferrer canonical"
                 >
@@ -65,7 +65,7 @@ function PrimeFasi({ sta, pageNumber }) {
               </div>
             </article>
           );
-        })}
+        }) : <pre>{sta.detail}</pre>}
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex  items-center">
           <div
             className="cursor-pointer"
