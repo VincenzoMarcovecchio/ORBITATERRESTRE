@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export async function getStaticProps() {
   
-  const data = await fetch("http://localhost:3000/api/piatta")
+  const data = await fetch("https://orbitaterrestre.com/api/piatta")
   const response = await data.json()
   console.log(response)
 
