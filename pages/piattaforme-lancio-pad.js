@@ -1,17 +1,25 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
-import { piatta } from "../data/piatte";
 
-export async function getServerSideProps () {
+import Image from 'next/image'
+
+
+export async function getStaticProps() {
+  
+  const data = await fetch("http://localhost:3000/api/piatta")
+  const response = await data.json()
+  console.log(response)
+
   return {
     props: {
-      pad: piatta,
+      pad: response,
     },
   };
 }
+
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState("ITA");
 
@@ -19,11 +27,11 @@ function Piattaforme({ pad }) {
 
   let categories = [];
 
-  for (let i = 0; i < 193; i++) {
+  for (let i = 0; i < 195; i++) {
     categories.push(pad.results[i].location.country_code);
   }
 
-  console.log(categories,currentCategory, pad);
+  console.log(categories, currentCategory, pad);
 
   const uniquecat = [...new Set(categories)];
   return (
@@ -41,7 +49,7 @@ function Piattaforme({ pad }) {
             Piattaforme di lancio
           </h2>
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
-            Ci sono 193 risultati
+            Ci sono 195 risultati
           </h3>
           <div className="display justify-start main-content w-full flex-wrap flex mb-8 mt-4 ">
             {uniquecat.map((cate, i) => {
@@ -66,7 +74,17 @@ function Piattaforme({ pad }) {
               .map((pa) => {
                 return (
                   <article className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-                    <img  src={pa.map_image} />
+
+
+
+                    <Image
+                      className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
+                      src={pa.map_image}
+                      alt={pa.name}
+                      width="850"
+                      height="650"
+                      layout="responsive"
+                    />
                     <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                       {pa.name}
                     </h1>
@@ -107,7 +125,7 @@ function Piattaforme({ pad }) {
           </aside>
         </section>
       </div>
-   </>
+    </>
   );
 }
 

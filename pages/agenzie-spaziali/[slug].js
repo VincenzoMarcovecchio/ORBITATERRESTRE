@@ -15,8 +15,14 @@ function Page({ agenciesData, pageNumber }) {
     "Educazionali",
     "Private",
     "Sconosciute",
-  ];
+  ]
 
+
+  if ( !agenciesData ) {
+    return <p> errore nel caricamento </p>
+  }
+
+  
   return (
     <>
       <SEO
@@ -41,7 +47,7 @@ function Page({ agenciesData, pageNumber }) {
         ))}
       </div>
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {!agenciesData && "errore nel caricamento"}
+
         {agenciesData && type === 0
           ? agenciesData.results
               .filter((agency) => agency.type === "Government")

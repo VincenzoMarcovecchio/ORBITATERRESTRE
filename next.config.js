@@ -3,6 +3,9 @@ const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
 const nextConfig = {
+  images: {
+    domains: ["mars.nasa.gov", "apod.nasa.gov", "spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com", "nasaspaceflight.com"],
+  },
   target: "serverless",
   webpack: (config, { isServer }) => {
     if (isServer) {
@@ -28,9 +31,7 @@ const nextConfig = {
 module.exports = withPlugins(
   [
     optimizedImages,
-    {
-      domains: ["mars.nasa.gov", "www.nasaspaceflight.com"],
-    },
+
   ],
 
   nextConfig

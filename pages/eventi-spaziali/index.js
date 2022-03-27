@@ -1,10 +1,11 @@
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import moment from "moment";
+import Image from 'next/image'
 
 function Eventit({ eventi }) {
   const router = useRouter();
- 
+
 
   return (
     <>
@@ -28,29 +29,32 @@ function Eventit({ eventi }) {
                     className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                     key={lol.id}
                   >
-                    <img
+                    <Image
                       className="sm:w-full md:w-1/3 object-cover"
                       src={lol.feature_image}
                       alt={lol.titile}
+                      width={350}
+                      height={350}
+                      layout="intrinsic"
                     />
 
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                      <h1 className="text-3xl font-bold text-yellow-600 mb-4 font-display">
+                      <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                         {lol.name}
                       </h1>
                       <span className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                         {moment(lol.date).format("DD-MM-YYYY")}
-                      </span> 
-                      <p className="mt-4 text-lg mb-3">
-                      <strong >Location:&nbsp;</strong>
+                      </span>
+                      <p className="mt-4" >
+                        <b className="font-extrabold">Location:&nbsp;</b>
                         {lol.location}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                      <strong >Parte del programma:&nbsp;</strong>
+                      <p >
+                        <b className="font-extrabold">Parte del programma:&nbsp;</b>
                         {lol.program[0]?.name}
                       </p>
-                      <p className="mt-2 text-lg mb-3">
-                      <strong >Descrizione:&nbsp;</strong>
+                      <p className="mb-4" >
+                        <b className="font-extrabold">Descrizione:&nbsp;</b>
                         {lol.description}
                       </p>
                       <span
@@ -94,7 +98,7 @@ function Eventit({ eventi }) {
 
 // This gets called on every request
 export async function getStaticProps() {
- 
+
 
   const res = await fetch(`https://ll.thespacedevs.com/2.1.0/event/upcoming`);
 
@@ -107,7 +111,7 @@ export async function getStaticProps() {
   return {
     props: {
       eventi,
-     
+
     },
   };
 }

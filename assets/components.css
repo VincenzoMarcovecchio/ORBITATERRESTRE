@@ -110,6 +110,9 @@ input[type='range']:focus::-ms-fill-upper {
   max-height: 80vh;
   width:100% !important;
 }
+ img {
+  object-fit: contain  !important;
+}
 .mio {
 padding-right: 0 !important;
 }

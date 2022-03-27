@@ -3,7 +3,7 @@ import {  SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { QuickLinks } from "../components/common/quickLinks";
 import { Lanci } from "../components/common/Lanci";
-
+import Image from 'next/image'
 function Home({ datas }) {
   const translateto = JSON.stringify(datas.explanation);
   const translatetwo = JSON.stringify(datas.title);
@@ -51,14 +51,17 @@ function Home({ datas }) {
               )}
               {datas.media_type !== "video" && (
                 
-                <img
+                <Image
                   className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                   src={datas.url}
                   alt={datas.title}
+                  width="850"
+                  height="650"
+                  layout="responsive"
                 />
               )}
               <figcaption>
-                <p className="mb-2">
+                <p className="mb-2 mt-4">
                   <strong className="font-extrabold">Titolo:&nbsp;</strong>
                   {titlet || datas.title}
                 </p>
