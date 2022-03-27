@@ -12,38 +12,26 @@ function Paginax() {
   console.log(defaultResults, name, nationality);
 
   useEffect(() => {
-    let mounted = true
+
     fetch(
       `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}`
-    ).then((res) => {
-      if (mounted) {
-        SetLoading(false)
-      }
-      return res.json()
-    })
+    ).then((res) => res.json())
       .then((data) => setDefaultResults(data.results))
 
 
-    return mounted = false
 
   }, [nationality]);
 
   useEffect(() => {
-    let mounted = true
+
 
     fetch(
       `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}`
     )
-      .then((res) => {
-        if (mounted) {
-          SetLoading(false)
-        }
-        return res.json()
-      })
+      .then((res) => res.json())
       .then((data) => setDefaultResults(data.results))
 
 
-    return mounted = false
 
   }, [name]);
 

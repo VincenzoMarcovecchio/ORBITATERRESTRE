@@ -7,7 +7,7 @@ import { piatta } from "../data/piata"
 import Image from 'next/image'
 
 export async function getStaticProps() {
-  
+
   return {
     props: {
       pad: piatta,
@@ -26,6 +26,7 @@ function Piattaforme({ pad }) {
     categories.push(pad.results[i].location.country_code);
   }
 
+  console.log(categories, currentCategory, pad);
 
   const uniquecat = [...new Set(categories)];
   return (
@@ -65,10 +66,11 @@ function Piattaforme({ pad }) {
                 ({ location: { country_code } }) =>
                   currentCategory == country_code
               )
-              .map((pa,i) => {
+              .map((pa, i) => {
                 return (
                   <article key={i} className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-                    <Image                     
+                    <Image
+                      className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                       src={pa.map_image}
                       alt={pa.name}
                       width="850"
