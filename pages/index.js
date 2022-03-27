@@ -38,7 +38,7 @@ function Home({ datas }) {
         <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
           <section className="w-full md:max-w-screen-lg">
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Immagine astronomica del giorno
+            Astronomic picture of the day
             </h2>
             <figure className="sm:pr-0 ">
               {datas.media_type === "video" && (
@@ -62,12 +62,12 @@ function Home({ datas }) {
               )}
               <figcaption>
                 <p className="mb-2 mt-4">
-                  <strong className="font-extrabold">Titolo:&nbsp;</strong>
-                  {titlet || datas.title}
+                  <strong className="font-extrabold">Title:&nbsp;</strong>
+                  {datas.title}
                 </p>
                 <p className="mb-2">
-                  <strong className="font-extrabold">Descrizione:&nbsp;</strong>
-                  {translated || datas.explanation}
+                  <strong className="font-extrabold">Description:&nbsp;</strong>
+                  {datas.explanation}
                 </p>
                 <p className="mb-2">
                   <b>©&nbsp;</b>
@@ -82,7 +82,7 @@ function Home({ datas }) {
           <section className="flex">
             <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-                Prossimi Lanci
+               Next Launches
               </h2>
               <Lanci />
             </aside>

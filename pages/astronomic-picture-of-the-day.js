@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { SEO } from "@components/common";
 import { setCORS } from "google-translate-api-browser";
 import { Lanci } from "../components/common/Lanci";
-
+import Image from 'next/image'
 function Giorno({ datas }) {
   const translateto = JSON.stringify(datas.explanation);
   const translatetwo = JSON.stringify(datas.title);
@@ -33,18 +33,18 @@ function Giorno({ datas }) {
   return (
     <>
       <SEO
-        title={`NASA Immagine astronomica del giorno`}
+        title={`NASA Astronomic picture of the day`}
         description={
-          "La NASA pubblica ogni giorno l'immagine astronomica ritenuta piú importante, affascinante in base a scoperte, avvenimenti, periodi dell'anno"
+          "APOD"
         }
-        slug="immagine-astronomica-del-giorno"
+        slug="astronomic-picture-of-the-day"
         cano="si"
         imageUrl={datas.url}
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-6 mx-auto mb-6">
-            Immagine astronomica del giorno
+            NASA Astronomic picture of the day
           </h2>
           <figure className="sm:pr-0 ">
             {datas.media_type === "video" && (
@@ -55,21 +55,26 @@ function Giorno({ datas }) {
                 src={datas.url}
               ></iframe>
             )}
+            
             {datas.media_type !== "video" && (
-              <img
-                className="mb-4 h-full object-cover flex "
+              <Image
+                className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                 src={datas.url}
                 alt={datas.title}
+                width="850"
+                height="650"
+                layout="responsive"
               />
             )}
+
             <figcaption>
               <p className="">
-                <strong className="font-extrabold">Titolo:&nbsp;</strong>
-                {titlet || datas.title}
+                <strong className="font-extrabold">Title:&nbsp;</strong>
+                {datas.title}
               </p>
               <p className="mb-2 pr-4">
-                <strong className="font-extrabold">Descrizione:&nbsp;</strong>
-                {translated || datas.explanation}
+                <strong className="font-extrabold">Description:&nbsp;</strong>
+                {datas.explanation}
               </p>
               <p className="mb-2">
                 <b>©&nbsp;</b>
@@ -82,7 +87,7 @@ function Giorno({ datas }) {
         <section className="flex">
           <aside>
             <h3 className=" text-3xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Prossimi Lanci
+              Next Launches
             </h3>
             <Lanci />
           </aside>

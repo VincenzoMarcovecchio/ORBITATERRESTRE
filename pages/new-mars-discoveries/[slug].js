@@ -1,7 +1,8 @@
 
 import Link from "next/link";
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { useRouter } from "next/router";
+import Image from 'next/image'
 
 function Marte({ curiosity }) {
 
@@ -9,20 +10,20 @@ function Marte({ curiosity }) {
   return (
     <>
       <SEO
-        title="Gli occhi di Marte "
-        description="Telecamere installate su marte"
+        title="The eyes of mars"
+        description="Cameras installed on mars"
       />
 
       <section className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col w-full items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-          Gli occhi di Curiosity
+          The eyes of curiosity
         </h1>
         <label htmlFor="sol">
-          Questo input range va da 0 a 4500{" "}
+          This input range goes from 0 to 4500{" "}
           <Link replace href="/post/come-si-misurano-i-giorni-su-marte/">
             SOL
           </Link>{" "}
-          (controlla URL)
+          (check URL)
         </label>
         <input
           draggabletrack
@@ -30,7 +31,7 @@ function Marte({ curiosity }) {
           list="tickmarks"
           onChange={(e) =>
             router
-              .push(`/nuove-scoperte-su-marte/${e.target.value}`)
+              .push(`/new-mars-discoveries/${e.target.value}`)
               .then(() => window.scrollTo(0, 0))
           }
           id="sol"
@@ -55,47 +56,49 @@ function Marte({ curiosity }) {
 
         {curiosity.photos.length > 1
           ? curiosity.photos.map((lol) => {
-              return (
-                <article
-                  className="sm:grid mx-auto md:flex sm:flex-col md:flex-row w-full max-w-4xl mb-12 shadow-lg rounded-lg overflow-hidden"
-                  key={lol.id}
-                >
-                  <img
-                    className="sm:w-full md:w-2/3 object-cover"
-                    src={lol.img_src}
-                    alt={lol.camera.fullname}
-                  />
-
-                  <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                    <h2 className="text-3xl font-bold text-yellow-600 font-display">
-                      {lol.camera.full_name}
-                    </h2>
-                    <p className="mt-2 text-lg mb-3">
-                      <b>Data Terrestre:&nbsp;{lol.earth_date}</b>
+            return (
+              <article
+                className="sm:grid mx-auto md:flex sm:flex-col md:flex-row w-full max-w-4xl mb-12 shadow-lg rounded-lg overflow-hidden"
+                key={lol.id}
+              >
+                <Image
+                  className="sm:w-full md:w-2/3 object-cover"
+                  src={lol.img_src}
+                  alt={lol.camera.fullname}
+                  width="350"
+                  height="350"
+                  layout="responsive"
+                />
+                <div className="sm:w-full md:w-2/3 px-4  py-6 ">
+                  <h2 className="text-3xl font-bold text-yellow-600 font-display">
+                    {lol.camera.full_name}
+                  </h2>
+                  <p className="mt-2 text-lg mb-3">
+                    <b>Terrestrial date:&nbsp;{lol.earth_date}</b>
+                  </p>
+                  <details>
+                    <summary>{lol.rover.name}</summary>
+                    <p>
+                      Landing day:&nbsp;{lol.rover.landing_date}
                     </p>
-                    <details>
-                      <summary>{lol.rover.name}</summary>
-                      <p>
-                        Giorno di atterraggio:&nbsp;{lol.rover.landing_date}
-                      </p>
-                      <p>
-                        Giorno in cui venne effettuato il lancio:&nbsp;
-                        {lol.rover.launch_date}
-                      </p>
-                      <p>
-                        Rover id:&nbsp;
-                        {lol.rover.id}
-                      </p>
-                      <p>
-                        Camera:&nbsp;
-                        {lol.camera.full_name}
-                      </p>
-                      <p>Status:&nbsp;{lol.rover.status}</p>
-                    </details>
-                  </div>
-                </article>
-              );
-            })
+                    <p>
+                      Launch day:&nbsp;
+                      {lol.rover.launch_date}
+                    </p>
+                    <p>
+                      Rover id:&nbsp;
+                      {lol.rover.id}
+                    </p>
+                    <p>
+                      Camera:&nbsp;
+                      {lol.camera.full_name}
+                    </p>
+                    <p>Status:&nbsp;{lol.rover.status}</p>
+                  </details>
+                </div>
+              </article>
+            );
+          })
           : "niente qui"}
       </section>
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
@@ -44,9 +44,8 @@ const NavBar = () => {
                     className="font-black leading-none font-display
                      font-md uppercase font-bold"
                   >
-                    orbita
-                  </p>{" "}
-                  terrestre
+                    orbit
+                  </p>
                 </span>
               </div>
             </Link>
@@ -78,10 +77,10 @@ const NavBar = () => {
           </div>
           <nav className="hidden md:flex space-x-10">
             <Link
-              href={"/news-spaziali-internazionali"}
-              as={`/news-spaziali-internazionali`}
+              href={"/space-news"}
+              as={`/space-news`}
             >
-              News Internazionali
+              Space News
             </Link>
             <div className="relative flex">
               <button
@@ -91,7 +90,7 @@ const NavBar = () => {
                   "
                 onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                <span className="px-1">Dallo Spazio </span>
+                <span className="px-1">From Space </span>
                 {/*
               Heroicon name: solid/chevron-down
 
@@ -141,8 +140,8 @@ const NavBar = () => {
                     <a
                       onClick={handleClose}
                       style={{ textDecoration: "none" }}
-                      href="/nuove-scoperte-su-marte/3000"
-                      as="/nuove-scoperte-su-marte/3000"
+                      href="/new-mars-discoveries/3000"
+                      as="/new-mars-discoveries/3000"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       {/* Heroicon name: outline/cursor-click */}
@@ -164,9 +163,9 @@ const NavBar = () => {
 
                       <div className="ml-4">
                         <span>
-                          Marte
+                          Mars
                           <p className="innerlink">
-                            Immagini del rover Curiosity
+                            Immages from Curiosity's rover
                           </p>
                         </span>
                       </div>
@@ -193,10 +192,9 @@ const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Cyber Spazio</p>
+                        <p className="text-base font-medium ">Cyber space</p>
                         <p className="mt-1 text-sm innerlink ">
-                          Dominii e scambi di informazioni attraverso le reti
-                          informatiche e le loro infrastrutture fisiche.
+                          work in progress
                         </p>
                       </div>
                     </a>
@@ -527,10 +525,10 @@ const NavBar = () => {
                         </li>
                         <li className="text-base truncate">
                           <Link
-                            href="/la-storia-di-spaceX-in-timeline-component"
-                            as="/la-storia-di-spaceX-in-timeline-component"
+                            href="/the-history-of-spaceX-in-timeline"
+                            as="/the-history-of-spaceX-in-timeline"
                           >
-                            SpaceX in timeline
+                            SpaceX timeline
                           </Link>
                         </li>
                         <li className="text-base truncate">
