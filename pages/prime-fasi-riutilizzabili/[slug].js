@@ -1,6 +1,8 @@
 
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
+import Image from 'next/image'
+
 
 function PrimeFasi({ sta, pageNumber }) {
   const router = useRouter();
@@ -24,11 +26,16 @@ function PrimeFasi({ sta, pageNumber }) {
               className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
               key={lol.id}
             >
-              <img
-                className="sm:w-full md:w-1/3 object-cover"
+
+              <Image
+                className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                 src={lol.image_url}
                 alt={lol.name}
+                width="850"
+                height="650"
+                layout="responsive"
               />
+
 
               <div className="sm:w-full md:w-2/3 px-4  py-6">
                 <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
@@ -53,7 +60,7 @@ function PrimeFasi({ sta, pageNumber }) {
                   target="_blank"
                   rel="noopener noreferrer canonical"
                 >
-              Leggi di più
+                  Leggi di più
                 </span>
               </div>
             </article>

@@ -5,7 +5,7 @@ export default async (req, res) => {
 
 
             res.statusCode = 200;
-            return res.json(
+            return res.json([
 
                 {
                     "count": 193,
@@ -2213,7 +2213,7 @@ export default async (req, res) => {
                             "total_launch_count": 104
                         }
                     ]
-                });
+                }]);
         } catch (e) {
             // 5
             res.statusCode = 404;
