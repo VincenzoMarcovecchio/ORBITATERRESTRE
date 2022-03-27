@@ -12,7 +12,7 @@ export class Countdown extends React.Component {
   componentDidMount() {
     this.interval = setInterval(() => {
       const { timeTillDate, timeFormat } = this.props;
-      const then = moment(timeTillDate, timeFormat);
+      const then = moment(timeTillDate);
       const now = moment();
       const countdown = moment(then - now);
       const days = countdown.format("D");

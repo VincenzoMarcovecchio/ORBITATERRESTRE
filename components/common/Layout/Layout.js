@@ -8,9 +8,9 @@ export function LayoutComponent({ children }) {
       <div className="w-full dark:bg-gray-700 antialiased dark:text-white font-body">
         <center style={{ background: "cornflowerblue" }}>
           <span className="max-w-7xl mx-auto font-light text-center">
-          🛰️ hey cosa passa sopra la tua{" "}
-            <Link href={"/satelliti-di-passaggio/"} replace>
-              testa&nbsp;
+          🛰️ hey what's going on over your{" "}
+            <Link href={"/satellites-right-above-your-head/"} replace>
+              head&nbsp;
             </Link>
             🛰️
           </span>
