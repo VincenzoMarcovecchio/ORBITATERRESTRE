@@ -126,7 +126,7 @@ function Paginax() {
 
 
         <ul className="w-full">
-          {loading && <p>caricamento....</p>}
+    
           {defaultResults ? (
             defaultResults.map((result) => {
               const { name, id, profile_image, nationality, bio } = result;
@@ -136,12 +136,12 @@ function Paginax() {
                   <figure className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden key={name}">
                     {profile_image && (
                       <Image
-                        className="w-full md:w-1/3 object-cover"
+                        className="w-full md:w-1/3 object-cover flex emma"
                         src={profile_image}
                         alt={`${name}-thumb`}
-                        width={350}
-                        height={350}
-                        layout="responsive"
+                        width="350"
+                        height="350"
+                   
                       />
 
                     )}
