@@ -224,7 +224,7 @@ const NavBar = () => {
                         </Link>
                         <Link href="/techport" as="/techport">
                           <p className="mt-1 text-sm innerlink ">
-                            Programmi ufficiali NASA attivi nel 2021
+                        work in progress
                           </p>
                         </Link>
                       </div>
@@ -262,8 +262,7 @@ const NavBar = () => {
                           href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
                         >
                           <p className="mt-1 text-sm innerlink ">
-                            Telescopi usati per l'esplorazioni di esopianeti ed
-                            altro
+                         Esoplanets exploration
                           </p>
                         </Link>
                       </div>
@@ -334,7 +333,7 @@ const NavBar = () => {
                 className="group  rounded-md  inline-flex items-center text-base font-medium  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 onClick={() => (setFlyerTwo(!flyerTwo), setFlyer(false))}
               >
-                <span className="px-1">Missioni</span>
+                <span className="px-1">Missions</span>
                 {/*
               Heroicon name: solid/chevron-down
 
@@ -403,10 +402,9 @@ const NavBar = () => {
                             as="/agenzie-spaziali/10"
                           >
                             <span>
-                              <p className="text-base font-medium "> Agenzie</p>
+                              <p className="text-base font-medium "> Agencies</p>
                               <p className="mt-1 text-sm innerlink">
-                                Una lista delle agenzie che si occupano di
-                                missioni nello spazio
+                               A list of agencies involved with space missions
                               </p>
                             </span>
                           </Link>
@@ -435,10 +433,9 @@ const NavBar = () => {
                           />
                         </svg>
                         <div className="ml-4">
-                          Astronauti
+                          Astronauts
                           <p className="mt-1 text-sm innerlink">
-                            Tutti coloro che hanno fatto parte ad una spedizione
-                            nello spazio
+                          All those who took part in a space mission
                           </p>
                         </div>
                       </a>
@@ -466,9 +463,9 @@ const NavBar = () => {
                           />
                         </svg>
                         <div className="ml-4">
-                          Eventi
+                          Events
                           <p className="mt-1 text-sm innerlink">
-                            Eventi futuri che riguardano l'esplorazione spaziale
+                            FUture events concerning space exploration
                           </p>
                         </div>
                       </a>
@@ -495,10 +492,9 @@ const NavBar = () => {
                           />
                         </svg>
                         <div className="ml-4">
-                          Programmi
+                          Programs
                           <p className="mt-1 text-sm innerlink">
-                            Una lista dei programmi che le agenzie hanno portato
-                            a termine o che porteranno a termine
+                          A list of programs that agencies are taking part of
                           </p>
                         </div>
                       </a>
@@ -507,18 +503,18 @@ const NavBar = () => {
                   <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 sm:px-8 sm:py-8">
                     <div>
                       <Link
-                        href="/stazione-spaziale"
-                        as="/stazione-spaziale"
+                        href="/space-station"
+                        as="/space-station"
                         className="text-sm tracking-wide font-medium  uppercase"
                       >
-                        Stazioni spaziali
+                        Space Stations
                       </Link>
                       <ul className="mt-4 space-y-4">
                         <li className="text-base truncate">
                           <Link
                             replace
-                            href="/piattaforme-lancio-pad/"
-                            as="/piattaforme-lancio-pad/"
+                            href="/launch-pad-platforms/"
+                            as="/launch-pad-platforms/"
                           >
                             Pad
                           </Link>
@@ -536,7 +532,7 @@ const NavBar = () => {
                             href="/monitorazioni-eventi-terrestri"
                             as="/monitorazioni-eventi-terrestri"
                           >
-                            Eventi Terrestri
+                           Terrestrial events
                           </Link>
                         </li>
                       </ul>
@@ -702,11 +698,11 @@ const NavBar = () => {
                     <Link
                       onClick={handleClose}
                       replace
-                      href="/astronauti/"
-                      as="/astronauti/"
+                      href="/astronauts/"
+                      as="/astronauts/"
                     >
                       <span className="ml-3 text-base font-medium ">
-                        Astronauti
+                        Astronauts
                       </span>
                     </Link>
                   </a>
@@ -768,10 +764,10 @@ const NavBar = () => {
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/piattaforme-lancio-pad/"
+                  href="/launch-pad-platforms/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Piattaforme
+                  Platforms
                 </Link>
                 <Link
                   onClick={handleClose}
@@ -780,15 +776,15 @@ const NavBar = () => {
                   href={"/news-spaziali-internazionali/"}
                   as={`/news-spaziali-internazionali/`}
                 >
-                  News Internazionali
+                 Space News
                 </Link>
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/prime-fasi-riutilizzabili/10/"
+                  href="/reusable-cores/10/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Prime Fasi Riutilizzabili
+                  Reusable cores
                 </Link>
                 <Link
                   onClick={handleClose}
@@ -804,7 +800,7 @@ const NavBar = () => {
                   href="/quante-persone-ci-sono-nello-spazio-in-questo-momento/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Persone nello spazio
+                  Satellites over my head
                 </Link>
                 <Link
                   onClick={handleClose}
@@ -828,7 +824,7 @@ const NavBar = () => {
                   href="/progetti-di-ricerca-esopianeti/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Esopianeti
+                  Esoplanets
                 </Link>
               </div>
               <div>

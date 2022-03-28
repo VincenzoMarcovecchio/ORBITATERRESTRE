@@ -67,7 +67,7 @@ function Marte({ curiosity }) {
                   alt={lol.camera.fullname}
                   width="350"
                   height="350"
-                  layout="responsive"
+          
                 />
                 <div className="sm:w-full md:w-2/3 px-4  py-6 ">
                   <h2 className="text-3xl font-bold text-yellow-600 font-display">

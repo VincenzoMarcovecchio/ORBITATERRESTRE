@@ -7,10 +7,10 @@ function Newsz({ newsdatal }) {
     <>
       <SEO
         cano="si"
-        slug="quante-persone-ci-sono-nello-spazio-in-questo-momento"
-        title="Quanti astronauti ci sono nello Spazio in questo momento? "
-        imageUrl="quante-persone-ci-sono-nello-spazio-in-questo-momento.jpg"
-        description="Aggiornamenti in tempo reale"
+        slug="how-many-people-are-in-space-right-now"
+        title="How many people are in space right now? "
+        imageUrl="how-many-people-are-in-space-right-now.jpg"
+        description="Live updates"
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
