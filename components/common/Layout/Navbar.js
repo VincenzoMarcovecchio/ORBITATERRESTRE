@@ -444,7 +444,7 @@ const NavBar = () => {
                       {/* Heroicon name: outline/calendar */}
                       <a
                         style={{ textDecoration: "none" }}
-                        href="/eventi-spaziali"
+                        href="/space-events"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         <svg
@@ -473,7 +473,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <a
                         style={{ textDecoration: "none" }}
-                        href="/lanci-missioni-spaziali"
+                        href="/space-launch"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         <svg
@@ -620,8 +620,8 @@ const NavBar = () => {
                 <nav onClick={handleClose} className="grid gap-y-8">
                   <Link
                     onClick={handleClose}
-                    href="/eventi-spaziali"
-                    as="/eventi-spaziali"
+                    href="/space-events"
+                    as="/space-events"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 ">
@@ -650,8 +650,8 @@ const NavBar = () => {
                   <Link
                     onClick={handleClose}
                     replace
-                    href="/nuove-scoperte-su-marte/3000/"
-                    as="/nuove-scoperte-su-marte/3000"
+                    href="/new-mars-discoveries/3000/"
+                    as="/new-mars-discoveries/3000"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
@@ -733,7 +733,7 @@ const NavBar = () => {
                   </a>
                   <a
                     onClick={handleClose}
-                    href="/lanci-missioni-spaziali"
+                    href="/space-launch"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/refresh */}

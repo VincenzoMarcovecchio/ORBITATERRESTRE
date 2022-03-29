@@ -19,16 +19,16 @@ const LanciIndex = () => {
   return (
     <>
       <SEO
-        title="Lanci di missioni Spaziali"
-        description="Cerca tra tutti i lanci effetuati o che stanno per partire, rimani sempre aggiornato!"
+        title="Dataset of space launches"
+        description="Search among all the launches made or about to leave, stay up to date!"
         cano="si"
-        slug={`lanci-missione-spaziale`}
+        slug={`space-launch`}
         imageUrl={`https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/antares2520230252b_image_20191102024633.jpeg`}
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-          Lanci Di Missioni Spaziali
+          Dataset of space launches
         </h1>
         <span
           className={`${
@@ -38,7 +38,7 @@ const LanciIndex = () => {
           }`}
           onClick={() => setCrewed(true)}
         >
-          Con equipaggio
+With crew
         </span>
         <span
           className={`${
@@ -48,7 +48,7 @@ const LanciIndex = () => {
           }`}
           onClick={() => setCrewed(false)}
         >
-          Senza equipaggio
+          Unmanned
         </span>
         <div className=" y flex flex-col items-start">
           <Formik
@@ -82,7 +82,7 @@ const LanciIndex = () => {
                 className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
                 onSubmit={handleSubmit}
               >
-                <label htmlFor="nationality">Cerca nel dataset</label>
+                <label htmlFor="nationality">Search the dataset</label>
                 <input
                   className="input mt-2 p-2 text-black text-lg mb-3"
                   type="text"
@@ -100,7 +100,7 @@ const LanciIndex = () => {
                   className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   disabled={isSubmitting}
                 >
-                  Cerca
+                  Search
                 </button>
               </form>
             )}

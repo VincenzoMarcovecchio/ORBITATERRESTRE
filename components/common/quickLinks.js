@@ -11,13 +11,13 @@ export function QuickLinks() {
             <div className="group relative">
               <img
                 className="w-full object-cover h-full md:h-40  md:w-72 block rounded"
-                src={"./lanci-con-equipaggio.jpg"}
+                src={"/lanci-con-equipaggio.jpg"}
                 alt="lanci previsti di equipaggio"
               />
               <div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
                 <Link
-                  href="/lanci-missioni-spaziali"
-                  as="/lanci-missioni-spaziali"
+                  href="/space-launch"
+                  as="/space-launch"
                   className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition"
                 >
                   <button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
