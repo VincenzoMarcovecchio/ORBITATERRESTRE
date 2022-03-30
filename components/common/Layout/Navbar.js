@@ -378,7 +378,7 @@ const NavBar = () => {
                       {/* Heroicon name: outline/support */}
                       <a
                         style={{ textDecoration: "none" }}
-                        href="/agenzie-spaziali/10"
+                        href="/space-agencies/10"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         <svg
@@ -398,8 +398,8 @@ const NavBar = () => {
                         </svg>
                         <div className="ml-4">
                           <Link
-                            href="/agenzie-spaziali/10"
-                            as="/agenzie-spaziali/10"
+                            href="/space-agencies/10"
+                            as="/space-agencies/10"
                           >
                             <span>
                               <p className="text-base font-medium "> Agencies</p>
@@ -414,7 +414,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <a
                         style={{ textDecoration: "none" }}
-                        href="/astronauti"
+                        href="/astronauts"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         <svg
@@ -529,10 +529,10 @@ const NavBar = () => {
                         </li>
                         <li className="text-base truncate">
                           <Link
-                            href="/monitorazioni-eventi-terrestri"
-                            as="/monitorazioni-eventi-terrestri"
+                            href="/launch-pad-platforms"
+                            as="/launch-pad-platforms"
                           >
-                           Terrestrial events
+                           test
                           </Link>
                         </li>
                       </ul>

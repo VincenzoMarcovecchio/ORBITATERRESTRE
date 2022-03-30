@@ -7,14 +7,14 @@ function Thispage() {
    <>
       <SEO
         cano="si"
-        slug="posizione-dell-ISS-in-tempo-reale"
-        title="La posizione della stazione spaziale internazionale in tempo reale "
-        description="Il tracker mostra dove si trova la Stazione Spaziale in questo momento e il suo percorso 90 minuti fa (-1,5 ore) e tra 90 minuti (+1,5 ore). La sovrapposizione scura indica dove è notte nel mondo."
+        slug="ISS-live-position"
+        title="The position of the international space station in real time"
+        description="The tracker shows where the Space Station is now and its path 90 minutes ago (-1.5 hours) and in 90 minutes (+1.5 hours). The dark overlay indicates where it is night in the world."
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-            Mappa di monitoraggio
+          Tracking map
           </h2>
           <iframe
             className="w-full"
@@ -31,7 +31,7 @@ function Thispage() {
         <section className="flex">
           <aside>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Prossimi Lanci
+            Next Launches
             </h2>
             <Lanci />
           </aside>

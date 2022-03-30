@@ -7,7 +7,7 @@ function Polpo({ gigi }) {
       <SEO
         title={gigi.name}
         cano="si"
-        slug={`lancio-missione-spaziale/${gigi.id} `}
+        slug={`space-launch-single/${gigi.id} `}
         imageUrl={gigi.image}
         description={`${gigi.mission.description}`}
       />
@@ -38,10 +38,10 @@ function Polpo({ gigi }) {
 
           <div className="sm:w-full px-2">
             <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-              Lancio {gigi.name}
+              Launch {gigi.name}
             </h1>
             <p>
-              <b className="font-extrabold">Lancio di tipo:</b>&nbsp;
+              <b className="font-extrabold">Type of launch:</b>&nbsp;
               {gigi.mission.type}
             </p>
             <p>
@@ -49,64 +49,64 @@ function Polpo({ gigi }) {
               {gigi.status.description}
             </p>
             <p>
-              <b className="font-extrabold">Descrizione:</b>&nbsp;
+              <b className="font-extrabold">Description:</b>&nbsp;
               {gigi.mission.description}
             </p>
             <p>
-              <b className="font-extrabold">Piattaforma di lancio:</b>&nbsp;
-              <a href={`/piattaforma-lancio-pad/${gigi.pad.id}`}>
+              <b className="font-extrabold">Platform:</b>&nbsp;
+              <a href={`/launch-pad-platforms/${gigi.pad.id}`}>
                 {gigi.pad.name}
               </a>
             </p>
             <p>
-              <b className="font-extrabold">Agenzia:</b>&nbsp;
-              <a href={`/agenzia-spaziale/${gigi.launch_service_provider.id}`}>
+              <b className="font-extrabold">Agency:</b>&nbsp;
+              <a href={`/space-agency/${gigi.launch_service_provider.id}`}>
                 {gigi.launch_service_provider.name}
               </a>
             </p>
             <p className="mb-2">
-              <b className="font-extrabold">Parte del programma:</b>&nbsp;
+              <b className="font-extrabold">Part of the program:</b>&nbsp;
               {gigi.program}
             </p>
             <hr />
             <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">              Configurazione del missile
             </h2>
             <p>
-              <b className="font-extrabold">Nome completo:&nbsp;</b>
+              <b className="font-extrabold">Complete name:&nbsp;</b>
               {gigi.rocket.configuration.full_name}
             </p>
             <p>
-              <b className="font-extrabold">Lanci effettuati con successo:&nbsp;</b>
+              <b className="font-extrabold">Successful launches:&nbsp;</b>
               {gigi.rocket.configuration.consecutive_successful_launches}
             </p>
             <p>
-              <b className="font-extrabold">Lanci falliti:&nbsp;</b>
+              <b className="font-extrabold">Failed launches:&nbsp;</b>
               {gigi.rocket.configuration.failed_launches}
             </p>
             <p>
-              <b className="font-extrabold">Descrizione:&nbsp;</b>
+              <b className="font-extrabold">Description:&nbsp;</b>
               {gigi.rocket.configuration.description}
             </p>
             <p>
-              <b className="font-extrabold">Diametro:&nbsp;</b>
+              <b className="font-extrabold">Diameter:&nbsp;</b>
               {gigi.rocket.configuration.diameter}
             </p>
             <p>
-              <b className="font-extrabold">Lunghezza:&nbsp;</b>
+              <b className="font-extrabold">Length:&nbsp;</b>
               {gigi.rocket.configuration.length}
             </p>
             <p>
-              <b className="font-extrabold">Massa del lancio:&nbsp;</b>
+              <b className="font-extrabold">Mass of the launch:&nbsp;</b>
               {gigi.rocket.configuration.launch_mass}
             </p>
             <p>
-              <b className="font-extrabold">Costo di un lancio:&nbsp;</b>
+              <b className="font-extrabold">Cost of a launch:&nbsp;</b>
               {gigi.rocket.configuration.launch_cost}
             </p>
             <p className="mb-6">
-              <b className="font-extrabold">Manufatturiere:&nbsp;</b>
+              <b className="font-extrabold">Builder:&nbsp;</b>
               <a
-                href={`/agenzia-spaziale/${gigi.rocket.configuration.manufacturer.id}`}
+                href={`/space-agency/${gigi.rocket.configuration.manufacturer.id}`}
               >
                 {gigi.rocket.configuration.manufacturer.name}
               </a>

@@ -11,34 +11,34 @@ function Page({ agenciesData, pageNumber }) {
 
   const set = [
     "Governative",
-    "Multinazionali",
-    "Commerciali",
-    "Educazionali",
-    "Private",
-    "Sconosciute",
+    "Multinationals",
+    "Commercials",
+    "Educationals",
+    "Privates",
+    "Unknown",
   ]
 
 
   if (!agenciesData) {
-    return <p> errore nel caricamento </p>
+    return <p> error </p>
   }
 
 
   return (
     <>
       <SEO
-        title="Agenzie Spaziali"
-        description="Una lista di agenzie che si occupano di missioni nello spazio"
+        title="Space Agencies"
+        description="A list of agencies involved with space missions"
       />
       <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
-        Dataset delle agenzie spaziali
+        Space agencies dataset
       </h1>
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex flex-wrap sm:flex-col md:flex-row w-full items-start">
         {set.map((se, index) => (
           <span
             className={`${type === index
-                ? " underline flex-wrap border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-                : "m-1.5 flex-wrap cursor-pointer px-4  py-4 shadow-lg"
+              ? " underline flex-wrap border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+              : "m-1.5 flex-wrap cursor-pointer px-4  py-4 shadow-lg"
               }`}
             onClick={() => setType(index)}
           >
@@ -65,7 +65,7 @@ function Page({ agenciesData, pageNumber }) {
                       alt={data.name}
                       width="350"
                       height="350"
-                      layout="responsive"
+
                     />
 
 
@@ -82,27 +82,27 @@ function Page({ agenciesData, pageNumber }) {
                       {data.name}
                     </h1>
                     <p className="mt-4 text-lg">
-                      <b> Amministatore:</b>&nbsp;{data.amministrator}
+                      <b>Administrator:</b>&nbsp;{data.amministrator}
                     </p>
                     <p className="mt-2 text-lg ">
-                      <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                      <b>Founded:</b>&nbsp;{data.founding_year}
                     </p>
                     <p className="mt-2 text-lg">
-                      <b> Descrizione:</b>&nbsp;{data.description}
+                      <b>Description:</b>&nbsp;{data.description}
                     </p>
                     <p className="mt-2 text-lg">
-                      <b> Tipo:</b>&nbsp;{data.type}
+                      <b>Type:</b>&nbsp;{data.type}
                     </p>
 
                     <span
                       className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                       onClick={() =>
                         router
-                          .push(`/eventi-spaziali/${lol.slug}`)
+                          .push(`/space-events/${lol.slug}`)
                           .then(() => window.scrollTo(0, 0))
                       }
                     >
-                      Scopri di più
+                      Find out more
                     </span>
                   </figcaption>
                 </figure>
@@ -125,8 +125,10 @@ function Page({ agenciesData, pageNumber }) {
                         alt={data.name}
                         width="350"
                         height="350"
-                        layout="responsive"
+
                       />
+
+
                     ) : (
                       <img
                         className="sm:w-full md:w-1/3 object-cover"
@@ -140,34 +142,35 @@ function Page({ agenciesData, pageNumber }) {
                         {data.name}
                       </h1>
                       <p className="mt-4 text-lg">
-                        <b> Amministatore:</b>&nbsp;{data.amministrator}
+                        <b>Administrator:</b>&nbsp;{data.amministrator}
+                      </p>
+                      <p className="mt-2 text-lg ">
+                        <b>Founded:</b>&nbsp;{data.founding_year}
                       </p>
                       <p className="mt-2 text-lg">
-                        <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                        <b>Description:</b>&nbsp;{data.description}
                       </p>
                       <p className="mt-2 text-lg">
-                        <b> Descrizione:</b>&nbsp;{data.description}
-                      </p>
-                      <p className="mt-2 text-lg">
-                        <b> Tipo:</b>&nbsp;{data.type}
+                        <b>Type:</b>&nbsp;{data.type}
                       </p>
 
-                      <Link
+                      <span
                         className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        href={`/agenzia-spaziale/${data.id}/`}
-                        replace
-                        target="_blank"
-                        rel="noopener noreferrer canonical"
+                        onClick={() =>
+                          router
+                            .push(`/space-events/${lol.slug}`)
+                            .then(() => window.scrollTo(0, 0))
+                        }
                       >
-                        Scopri di più
-                      </Link>
+                        Find out more
+                      </span>
                     </figcaption>
                   </figure>
                 );
               })
-            : type === 2
+            : type === 3
               ? agenciesData.results
-                .filter((agency) => agency.type === "Commercial")
+                .filter((agency) => agency.type === "Educational")
                 .map((data) => {
                   return (
                     <figure
@@ -182,8 +185,10 @@ function Page({ agenciesData, pageNumber }) {
                           alt={data.name}
                           width="350"
                           height="350"
-                          layout="responsive"
+
                         />
+
+
                       ) : (
                         <img
                           className="sm:w-full md:w-1/3 object-cover"
@@ -196,155 +201,40 @@ function Page({ agenciesData, pageNumber }) {
                         <h1 className="text-3xl font-bold text-yellow-600 font-display">
                           {data.name}
                         </h1>
-                        <p className="mt-2 text-lg">
-                          <b> Amministatore:</b>&nbsp;{data.amministrator}
+                        <p className="mt-4 ">
+                          <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                         </p>
-                        <p className="mt-2 text-lg">
-                          <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                        <p className="">
+                          <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                         </p>
-                        <p className="mt-2 text-lg">
-                          <b> Descrizione:</b>&nbsp;{data.description}
+                        <p>
+                          <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                         </p>
-                        <p className="mt-2 text-lg">
-                          <b> Tipo:</b>&nbsp;{data.type}
+                        <p className="mb-4">
+                          <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                         </p>
 
-                        <Link
+                        <span
                           className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                          href={`/agenzia-spaziale/${data.id}/`}
-                          replace
-                          target="_blank"
-                          rel="noopener noreferrer canonical"
+                          onClick={() =>
+                            router
+                              .push(`/space-events/${lol.slug}`)
+                              .then(() => window.scrollTo(0, 0))
+                          }
                         >
-                          Scopri di più
-                        </Link>
+                          Find out more
+                        </span>
                       </figcaption>
                     </figure>
                   );
                 })
-              : type === 3
+              : type === 4
                 ? agenciesData.results
-                  .filter((agency) => agency.type === "Educational")
+                  .filter((agency) => agency.type === "private")
                   .map((data) => {
                     return (
-                      <figure
-                        className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                        key={data.id}
-                      >
-                        {data.image_url ? (
-                          <Image
-                            className="sm:w-full md:w-1/3 object-cover"
-
-                            src={data.image_url}
-                            alt={data.name}
-                            width="350"
-                            height="350"
-                            layout="responsive"
-                          />
-                        ) : (
-                          <img
-                            className="sm:w-full md:w-1/3 object-cover"
-                            src={`/immagine-non-trovata.png`}
-                            alt={data.name}
-                          />
-                        )}
-
-                        <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
-                          <h1 className="text-3xl font-bold text-yellow-600 font-display">
-                            {data.name}
-                          </h1>
-                          <p className="mt-4 text-lg">
-                            <b> Amministatore:</b>&nbsp;{data.amministrator}
-                          </p>
-                          <p className="mt-2 text-lg">
-                            <b>Fondata nel:</b>&nbsp;{data.founding_year}
-                          </p>
-                          <p className="mt-2 text-lg">
-                            <b> Descrizione:</b>&nbsp;{data.description}
-                          </p>
-                          <p className="mt-2 text-lg">
-                            <b> Tipo:</b>&nbsp;{data.type}
-                          </p>
-
-                          <Link
-                            className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                            href={`/agenzia-spaziale/${data.id}/`}
-                            replace
-                            target="_blank"
-                            rel="noopener noreferrer canonical"
-                          >
-                            Scopri di più
-                          </Link>
-                        </figcaption>
-                      </figure>
-                    );
-                  })
-                : type === 4
-                  ? agenciesData.results
-                    .filter((agency) => agency.type === "private")
-                    .map((data) => {
-                      return (
-                        <>
-                          {data.id && (
-                            <figure
-                              className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                              key={data.id}
-                            >
-                              {data.image_url ? (
-                                <Image
-                                  className="sm:w-full md:w-1/3 object-cover"
-
-                                  src={data.image_url}
-                                  alt={data.name}
-                                  width="350"
-                                  height="350"
-                                  layout="responsive"
-                                />
-                              ) : (
-                                <img
-                                  className="sm:w-full md:w-1/3 object-cover"
-                                  src={`/immagine-non-trovata.png`}
-                                  alt={data.name}
-                                />
-                              )}
-
-                              <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
-                                <h1 className="text-3xl font-bold text-yellow-600 font-display">
-                                  {data.name}
-                                </h1>
-                                <p className="mt-4 text-lg ">
-                                  <b> Amministatore:</b>&nbsp;{data.amministrator}
-                                </p>
-                                <p className="mt-2 text-lg ">
-                                  <b>Fondata nel:</b>&nbsp;{data.founding_year}
-                                </p>
-                                <p className="mt-2 text-lg ">
-                                  <b> Descrizione:</b>&nbsp;{data.description}
-                                </p>
-                                <p className="mt-2 text-lg ">
-                                  <b> Tipo:</b>&nbsp;{data.type}
-                                </p>
-
-                                <Link
-                                  className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                                  href={`/agenzia-spaziale/${data.id}/`}
-                                  replace
-                                  target="_blank"
-                                  rel="noopener noreferrer canonical"
-                                >
-                                  Scopri di più
-                                </Link>
-                              </figcaption>
-                            </figure>
-                          )}
-                        </>
-                      );
-                    })
-                  : type === 5
-                    ? agenciesData.results
-                      .filter((agency) => agency.type === "Unknown")
-                      .map((data) => {
-                        return (
+                      <>
+                        {data.id && (
                           <figure
                             className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
                             key={data.id}
@@ -357,8 +247,10 @@ function Page({ agenciesData, pageNumber }) {
                                 alt={data.name}
                                 width="350"
                                 height="350"
-                                layout="responsive"
+
                               />
+
+
                             ) : (
                               <img
                                 className="sm:w-full md:w-1/3 object-cover"
@@ -371,33 +263,39 @@ function Page({ agenciesData, pageNumber }) {
                               <h1 className="text-3xl font-bold text-yellow-600 font-display">
                                 {data.name}
                               </h1>
-                              <p className="mt-4 text-lg">
-                                <b> Amministatore:</b>&nbsp;{data.amministrator}
+                              <p className="mt-4 ">
+                                <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                               </p>
-                              <p className="mt-2 text-lg">
-                                <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                              <p className="">
+                                <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                               </p>
-                              <p className="mt-2 text-lg">
-                                <b> Descrizione:</b>&nbsp;{data.description}
+                              <p>
+                                <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                               </p>
-                              <p className="mt-2 text-lg">
-                                <b> Tipo:</b>&nbsp;{data.type}
+                              <p className="mb-4">
+                                <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                               </p>
 
-                              <Link
+                              <span
                                 className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                                href={`/agenzia-spaziale/${data.id}/`}
-                                replace
-                                target="_blank"
-                                rel="noopener noreferrer canonical"
+                                onClick={() =>
+                                  router
+                                    .push(`/space-events/${lol.slug}`)
+                                    .then(() => window.scrollTo(0, 0))
+                                }
                               >
-                                Scopri di più
-                              </Link>
+                                Find out more
+                              </span>
                             </figcaption>
                           </figure>
-                        );
-                      })
-                    : agenciesData.results.map((data) => {
+                        )}
+                      </>
+                    );
+                  })
+                : type === 5
+                  ? agenciesData.results
+                    .filter((agency) => agency.type === "Unknown")
+                    .map((data) => {
                       return (
                         <figure
                           className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
@@ -411,8 +309,10 @@ function Page({ agenciesData, pageNumber }) {
                               alt={data.name}
                               width="350"
                               height="350"
-                              layout="responsive"
+
                             />
+
+
                           ) : (
                             <img
                               className="sm:w-full md:w-1/3 object-cover"
@@ -425,32 +325,89 @@ function Page({ agenciesData, pageNumber }) {
                             <h1 className="text-3xl font-bold text-yellow-600 font-display">
                               {data.name}
                             </h1>
-                            <p className="mt-4 text-lg ">
-                              <b> Amministatore:</b>&nbsp;{data.amministrator}
+                            <p className="mt-4 ">
+                              <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                             </p>
-                            <p className="mt-2 text-lg ">
-                              <b>Fondata nel:</b>&nbsp;{data.founding_year}
+                            <p className="">
+                              <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                             </p>
-                            <p className="mt-2 text-lg ">
-                              <b> Descrizione:</b>&nbsp;{data.description}
+                            <p>
+                              <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                             </p>
-                            <p className="mt-2 text-lg ">
-                              <b> Tipo:</b>&nbsp;{data.type}
+                            <p className="mb-4">
+                              <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                             </p>
 
-                            <Link
+                            <span
                               className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                              href={`/agenzia-spaziale/${data.id}/`}
-                              replace
-                              target="_blank"
-                              rel="noopener noreferrer canonical"
+                              onClick={() =>
+                                router
+                                  .push(`/space-events/${lol.slug}`)
+                                  .then(() => window.scrollTo(0, 0))
+                              }
                             >
-                              Scopri di più
-                            </Link>
+                              Find out more
+                            </span>
                           </figcaption>
                         </figure>
                       );
-                    })}
+                    })
+                  : agenciesData.results.map((data) => {
+                    return (
+                      <figure
+                        className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                        key={data.id}
+                      >
+                        {data.image_url ? (
+                          <Image
+                            className="sm:w-full md:w-1/3 object-cover"
+
+                            src={data.image_url}
+                            alt={data.name}
+                            width="350"
+                            height="350"
+                         
+                          />
+
+
+                        ) : (
+                          <img
+                            className="sm:w-full md:w-1/3 object-cover"
+                            src={`/immagine-non-trovata.png`}
+                            alt={data.name}
+                          />
+                        )}
+                        <figcaption className="sm:w-full md:w-2/3 px-4  py-6 ">
+                          <h1 className="text-3xl font-bold text-yellow-600 font-display">
+                            {data.name}
+                          </h1>
+                          <p className="mt-4 ">
+                            <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
+                          </p>
+                          <p className="">
+                            <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
+                          </p>
+                          <p>
+                            <b className="font-extrabold">Description:</b>&nbsp;{data.description}
+                          </p>
+                          <p className="mb-4">
+                            <b className="font-extrabold">Type:</b>&nbsp;{data.type}
+                          </p>
+
+                          <span
+                            className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                            onClick={() =>
+                              router
+                                .push(`/space-events/${lol.slug}`)
+                                .then(() => window.scrollTo(0, 0))
+                            }
+                          >
+                            Find out more
+                          </span>
+                        </figcaption>
+                      </figure>
+                    );
+                  })}
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex  items-center">
           <div
             className="cursor-pointer"
@@ -462,12 +419,12 @@ function Page({ agenciesData, pageNumber }) {
                 // Show this in tutorial vid:
                 // https://github.com/vercel/next.js/issues/3249
                 router
-                  .push(`/agenzie-spaziali/${pageNumber - 10}`)
+                  .push(`/space-agencies/${pageNumber - 10}`)
                   .then(() => window.scrollTo(0, 0));
               }
             }}
           >
-            Pagina Precedente&nbsp;&nbsp;&nbsp;&nbsp;
+            Previous page&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
 
           <div>#{pageNumber}</div>
@@ -482,12 +439,12 @@ function Page({ agenciesData, pageNumber }) {
                 // Show this in tutorial vid:
                 // https://github.com/vercel/next.js/issues/3249
                 router
-                  .push(`/agenzie-spaziali/${pageNumber + 10}`)
+                  .push(`/space-agencies/${pageNumber + 10}`)
                   .then(() => window.scrollTo(0, 0));
               }
             }}
           >
-            &nbsp;&nbsp;&nbsp;&nbsp;Pagina Successiva
+            &nbsp;&nbsp;&nbsp;&nbsp;Next page
           </div>
         </div>
       </div>

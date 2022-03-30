@@ -140,36 +140,33 @@ With crew
                     {lol.status.abbrev}
                   </p>
                   <p>
-                    <b className="font-extrabold">Descrizione:</b>&nbsp;
+                    <b className="font-extrabold">Description:</b>&nbsp;
                     {lol.status.description}
                   </p>
                   <p>
-                    <b className="font-extrabold">Piattaforma di lancio:</b>
+                    <b className="font-extrabold">Launch platform:</b>
                     &nbsp;
                     {lol.pad}
                   </p>
-                  <p className="mb-4">
-                    <b className="font-extrabold">Location:</b>&nbsp;
-                    {lol.location}
-                  </p>
+  
                   <span
                     onClick={() =>
                       router
-                        .push(`/lancio-missione-spaziale/${lol.id}/`)
+                        .push(`/space-launch-single/${lol.id}/`)
                         .then(() => window.scrollTo(0, 0))
                     }
                     className="px-3 cursor-pointer mt-6 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
-                    Scopri di più
+                   Find out more
                   </span>
                 </div>
               </article>
             );
           })
         ) : (
-          <p>{lancid.detail || "caricamento supersonico in corso..."}</p>
+          <p>{lancid.detail || "supersonic loading..."}</p>
         )}
       </div>
     </>
