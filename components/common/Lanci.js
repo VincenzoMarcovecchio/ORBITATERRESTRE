@@ -50,7 +50,7 @@ export function Lanci() {
                     <Link
                       className=" z-20"
                       replace
-                      href={`/agenzia-spaziale/${la.launch_service_provider.id}/`}
+                      href={`/space-agency/${la.launch_service_provider.id}/`}
                     >
                       <a>{la.launch_service_provider.name}</a>
                     </Link>
@@ -60,7 +60,7 @@ export function Lanci() {
                     <Link
                       replace
                       className="truncate text-gray-500 text-sm"
-                      href={`/piattaforma-lancio-pad/${la.pad.id}/`}
+                      href={`/launch-pad-platforms/${la.pad.id}/`}
                     >
                       <a>{la.pad?.name}</a>
                     </Link>
@@ -70,7 +70,7 @@ export function Lanci() {
                     <Link
                       replace
                       className="truncate text-gray-500 text-sm"
-                      href={`/lancio-missione-spaziale/${la.id}`}
+                      href={`/space-launch-single/${la.id}`}
                     >
                       <a>{la.mission?.name}</a>
                     </Link>
@@ -84,8 +84,8 @@ export function Lanci() {
       )}
       <div>
         <Link
-          as={`/lanci-missioni-spaziali`}
-          href={`/lanci-missioni-spaziali/`}
+          as={`/space-launch`}
+          href={`/space-launch/`}
           replace
         >
           <a>Find out more</a>

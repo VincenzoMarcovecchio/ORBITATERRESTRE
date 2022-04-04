@@ -4,7 +4,7 @@ import {  SEO } from "@components/common";
   return (
     <>
       <SEO
-        title="Il tuo vicinato galattico"
+        title="Your galactic neighbourhood"
         description="Questa vista simulata del nostro sistema solare funziona su dati reali. Le posizioni dei pianeti, delle lune e dei veicoli spaziali vengono mostrate dove si trovano in questo momento. Questo orrery digitale è una versione leggera e ottimizzata per i dispositivi mobili del software Eyes della NASA."
       />
 

@@ -42,8 +42,8 @@ function Testas() {
       <SEO
         cano="si"
         slug="satellites-right-above-your-head"
-        title={`Satelliti sopra la mia testa in questo momento`}
-        description="Grazie ad alcune API open source è possibile capire quali satelliti stiano attraversando il cielo che abbiamo in comune"
+        title={`Satellites right above my head in this moment`}
+        description="Thanks to some open source API's it ispossible to understand which satellites are sharing the sky that we have in common"
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">

@@ -96,7 +96,7 @@ function Piattaforme({ pad }) {
                     <span
                       onClick={() =>
                         router
-                          .push(`/piattaforma-lancio-pad/${pa.id}`)
+                          .push(`/space-launch-single/${pa.id}`)
                           .then(() => window.scrollTo(0, 0))
                       }
                       className="px-3 cursor-pointer mt-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
@@ -111,7 +111,7 @@ function Piattaforme({ pad }) {
         <section className="flex">
           <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Prossimi Lanci
+            Next Launches
             </h2>
             <Lanci />
           </aside>
