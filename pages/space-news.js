@@ -25,9 +25,8 @@ function News({ newsdata }) {
                     className="sm:w-full md:w-1/3 object-cover"
                     src={lol.imageUrl}
                     alt={lol.titile}
-                    width="450"
-                    height="450"
-                    quality={80}
+                    width={550}
+                    height={550} 
                     layout="responsive"
                   />
 

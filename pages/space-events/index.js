@@ -11,14 +11,14 @@ function Eventit({ eventi }) {
     <>
       <SEO
         cano="si"
-        slug="eventi-spaziali"
-        title="Eventi Spaziali"
-        description="Una lista di eventi spaziali futuri"
+        slug="space-events"
+        title="Space Events"
+        description="A list of future space events"
       />
 
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-          Prossimi eventi
+         Next Events
         </h1>
         <div>
           <div className=" max-w-7xl mx-auto  md:px-4 display flex flex-col items-start">
@@ -33,9 +33,9 @@ function Eventit({ eventi }) {
                       className="sm:w-full md:w-1/3 object-cover"
                       src={lol.feature_image}
                       alt={lol.titile}
-                      width={350}
-                      height={350}
-                      layout="intrinsic"
+                      width={450}
+                      height={450}
+                      layout="responsive"
                     />
 
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
@@ -50,11 +50,11 @@ function Eventit({ eventi }) {
                         {lol.location}
                       </p>
                       <p >
-                        <b className="font-extrabold">Parte del programma:&nbsp;</b>
+                        <b className="font-extrabold">Part of the program:&nbsp;</b>
                         {lol.program[0]?.name}
                       </p>
                       <p className="mb-4" >
-                        <b className="font-extrabold">Descrizione:&nbsp;</b>
+                        <b className="font-extrabold">Description:&nbsp;</b>
                         {lol.description}
                       </p>
                       <span
@@ -67,7 +67,7 @@ function Eventit({ eventi }) {
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Leggi di più
+                       Find out more
                       </span>
                       &nbsp;
                       <span

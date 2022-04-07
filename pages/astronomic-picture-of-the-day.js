@@ -33,10 +33,8 @@ function Giorno({ datas }) {
   return (
     <>
       <SEO
-        title={`NASA Astronomic picture of the day`}
-        description={
-          "APOD"
-        }
+        title={datas.title}
+        description={datas.description}
         slug="astronomic-picture-of-the-day"
         cano="si"
         imageUrl={datas.url}

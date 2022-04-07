@@ -20,25 +20,25 @@ function Slugt({ curiosity, pageNumber }) {
           alt={curiosity.results[0]?.name}
           width={350}
           height={350}
-          layout="intrinsic"
+          layout="responsive"
         />
 
         <p className="mt-4">
-          <b className="font-extrabold">Descrizione:</b>&nbsp;{curiosity.results[0]?.description}
+          <b className="font-extrabold">Descriptions:</b>&nbsp;{curiosity.results[0]?.description}
         </p>
         <p >
-          <b className="font-extrabold">Un evento di tipo:</b>&nbsp;{curiosity.results[0]?.type.name}
+          <b className="font-extrabold">An event of type:</b>&nbsp;{curiosity.results[0]?.type.name}
         </p>
         <p >
           <b className="font-extrabold">Location:</b>&nbsp;{curiosity.results[0]?.location}
         </p>
         <p >
-          <b className="font-extrabold">Stazioni spaziali:</b>&nbsp;{curiosity.results[0]?.spacestations[0]?.name}
+          <b className="font-extrabold">Space stations:</b>&nbsp;{curiosity.results[0]?.spacestations[0]?.name}
         </p>
         {curiosity.results[0]?.video_url ? (
          <div class="w-full flex"> <iframe className="mt-4" width="560" height="315" src={curiosity.results[0]?.video_url.replace("watch","embed")} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div> ) : (
-          "il video non si e`caricato oppure non c'e"
+          "Video not found"
         )}
       </div>
     </>

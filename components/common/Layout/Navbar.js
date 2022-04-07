@@ -643,7 +643,7 @@ const NavBar = () => {
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium ">
-                        Eventi
+                        Events
                       </span>
                     </a>
                   </Link>
@@ -671,7 +671,7 @@ const NavBar = () => {
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium ">
-                        Scoperte Su Marte
+                        Mars discoveries
                       </span>
                     </a>
                   </Link>
@@ -753,7 +753,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium ">
-                      Lanci Prossimi
+                      Next Launches
                     </span>
                   </a>
                 </nav>
@@ -789,18 +789,18 @@ const NavBar = () => {
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/satelliti-di-passaggio/"
+                  href="/satellites-right-above-your-head/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Satelliti sulla mia testa
+                  Satellites over your head
                 </Link>
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/quante-persone-ci-sono-nello-spazio-in-questo-momento/"
+                  href="/how-many-people-are-in-space-right-now/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
-                  Satellites over my head
+                  People in space right now
                 </Link>
                 <Link
                   onClick={handleClose}

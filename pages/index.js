@@ -55,8 +55,8 @@ function Home({ datas }) {
                   className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                   src={datas.url}
                   alt={datas.title}
-                  width="850"
-                  height="650"
+                  width={850}
+                  height={850}
                   layout="responsive"
                 />
               )}
