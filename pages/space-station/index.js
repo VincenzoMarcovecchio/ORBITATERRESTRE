@@ -1,19 +1,21 @@
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 
 function StazioneSpazialeIndex({ sta }) {
- 
+
   const router = useRouter();
   return (
     <>
       <SEO
-        description="Lista completa delle stazioni spaziali attive e non "
-        title="Stazioni Spaziali"
+        cano="si"
+        slug="space-station"
+        description="A complete list of active space stations and non"
+        title="Space Stations"
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-      <h1 className="text-4xl font-bold text-yellow-600 font-display mt-6 mx-auto mb-8">
-          Stazioni Spaziali
+        <h1 className="text-4xl font-bold text-yellow-600 font-display mt-6 mx-auto mb-8">
+          Space Stations
         </h1>
         {sta.results ? (
           sta.results.map((lol) => {
@@ -33,28 +35,28 @@ function StazioneSpazialeIndex({ sta }) {
                     {lol.name}
                   </h1>
                   <div className="flex mb-2">
-                    <b>Orbita:&nbsp;</b>
+                    <b>Orbit:&nbsp;</b>
                     <p>{lol.orbit}</p>
                   </div>
                   <div className="flex mb-2">
-                    <b>Tipo:&nbsp;</b>
+                    <b>Type:&nbsp;</b>
                     <p>{lol.type.name}</p>
                   </div>
                   <div className="flex mb-6 flex-col">
-                    <b>Descrizione:&nbsp;</b>
+                    <b>Description:&nbsp;</b>
                     <p>{lol.description}</p>
                   </div>
                   <a
                     onClick={() =>
                       router
-                        .push(`/stazione-spaziale/${lol.id}`)
+                        .push(`/space-station/${lol.id}`)
                         .then(() => window.scrollTo(0, 0))
                     }
                     className="px-3 mt-8 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
-                    Leggi di piu
+                    Find out more
                   </a>
                 </div>
               </article>

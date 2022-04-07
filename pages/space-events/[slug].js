@@ -14,12 +14,12 @@ function Slugt({ curiosity, pageNumber }) {
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           {curiosity.results[0]?.name}
         </h1>
-        <Image
+        <img
           className="mb-8"
           src={curiosity.results[0]?.feature_image}
           alt={curiosity.results[0]?.name}
-          width={350}
-          height={350}
+          width={650}
+          height={650}
           layout="responsive"
         />
 

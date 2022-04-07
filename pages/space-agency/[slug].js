@@ -2,22 +2,23 @@ import { SEO } from "@components/common";
 import Image from 'next/image'
 
 function Pagetwo({ agenciesDatatwo }) {
-
+console.log(agenciesDatatwo)
   return (
     <>
-      <SEO description={agenciesDatatwo.description} title={`Agenzie Spaziale ${agenciesDatatwo.name}`} />
+      <SEO description={agenciesDatatwo.description} title={`${agenciesDatatwo.name}`} />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        {agenciesDatatwo.length ? (
+        {agenciesDatatwo ? (
           <figure className="flex flex-col" key={agenciesDatatwo.id}>
             <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
               {agenciesDatatwo.name}
             </h1>
             <Image
+              className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
               src={agenciesDatatwo.logo_url}
               alt={agenciesDatatwo.name}
-              width="850"
-              height="650"
+              width="150"
+              height="150"
               layout="responsive"
             />
 

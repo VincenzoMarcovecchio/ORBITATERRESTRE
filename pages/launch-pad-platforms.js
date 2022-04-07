@@ -69,12 +69,12 @@ function Piattaforme({ pad }) {
               .map((pa, i) => {
                 return (
                   <article key={i} className=" max-w-7xl mt-12 mx-auto   display flex flex-col items-start">
-                    <Image
+                    <img
                       className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                       src={pa.map_image}
                       alt={pa.name}
-                      width="850"
-                      height="650"
+                      width="350"
+                      height="350"
                       layout="responsive"
                     />
                     <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">

@@ -51,12 +51,12 @@ function Home({ datas }) {
               )}
               {datas.media_type !== "video" && (
                 
-                <Image
+                <img
                   className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                   src={datas.url}
                   alt={datas.title}
-                  width={850}
-                  height={850}
+                  width={450}
+                  height={550}
                   layout="responsive"
                 />
               )}

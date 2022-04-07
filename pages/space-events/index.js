@@ -29,12 +29,12 @@ function Eventit({ eventi }) {
                     className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                     key={lol.id}
                   >
-                    <Image
+                    <img
                       className="sm:w-full md:w-1/3 object-cover"
                       src={lol.feature_image}
                       alt={lol.titile}
-                      width={450}
-                      height={450}
+                      width={250}
+                      height={250}
                       layout="responsive"
                     />
 
@@ -60,7 +60,7 @@ function Eventit({ eventi }) {
                       <span
                         onClick={() =>
                           router
-                            .push(`/eventi-spaziali/${lol.slug}`)
+                            .push(`/space-events/${lol.slug}`)
                             .then(() => window.scrollTo(0, 0))
                         }
                         className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
@@ -73,7 +73,7 @@ function Eventit({ eventi }) {
                       <span
                         onClick={() =>
                           router
-                            .push(`/eventi-spaziali/${lol.slug}`)
+                            .push(`/space-events/${lol.slug}`)
                             .then(() => window.scrollTo(0, 0))
                         }
                         className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded"

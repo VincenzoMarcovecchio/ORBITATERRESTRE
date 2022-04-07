@@ -21,12 +21,12 @@ function News({ newsdata }) {
                   className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                   key={lol.id}
                 >
-                  <Image
+                  <img
                     className="sm:w-full md:w-1/3 object-cover"
                     src={lol.imageUrl}
                     alt={lol.titile}
-                    width={550}
-                    height={550} 
+                    width={350}
+                    height={350} 
                     layout="responsive"
                   />
 
