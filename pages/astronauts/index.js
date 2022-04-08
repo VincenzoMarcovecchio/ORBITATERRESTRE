@@ -39,17 +39,16 @@ function Paginax() {
     <>
       <SEO
         cano="si"
-        slug="astronauti"
-        title="Anagrafe Astronauti"
-        description="Incontra le persone eccezionali che si sono avventurate nello spazio 👨‍🚀"
+        slug="astronauts"
+        title="Astronauts"
+        description="Meet the incredible people that took part in aspace mission👨‍🚀"
       />
       <div className=" max-w-7xl mx-auto px-4  sm:px-6 display flex flex-col items-start">
         <h1 className="text-4xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto ">
-          Astronauti 👨‍🚀
+          Astronauts 👨‍🚀
         </h1>
         <h2 className="text-2xl text-center font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-          Incontra le persone eccezionali che si sono avventurate nello
-          spazio.
+       Meet all the incredible people who took part in a space mission
         </h2>
 
         <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
@@ -60,7 +59,7 @@ function Paginax() {
               }`}
             onClick={() => setNationality("All")}
           >
-            Tutti
+            All
           </span>
           <span
             className={`${String(nationality.toLowerCase()) === String("american")
@@ -69,7 +68,7 @@ function Paginax() {
               }`}
             onClick={() => setNationality("American")}
           >
-            Americani
+            Americans
           </span>
           <span
             className={`${String(nationality.toLowerCase()) === String("russian")
@@ -78,7 +77,7 @@ function Paginax() {
               }`}
             onClick={() => setNationality("Russian")}
           >
-            Russi
+            Russians
           </span>
           <span
             className={`${String(nationality.toLowerCase()) === String("european")
@@ -87,7 +86,7 @@ function Paginax() {
               }`}
             onClick={() => setNationality("European")}
           >
-            Europei
+            Europeans
           </span>
           <span
             className={`${String(nationality.toLowerCase()) === String("others")
@@ -96,7 +95,7 @@ function Paginax() {
               }`}
             onClick={() => setNationality("Others")}
           >
-            Altri
+            Others
           </span>
         </div>
 
@@ -104,7 +103,7 @@ function Paginax() {
           className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
           onSubmit={(e) => e.preventDefault()}
         >
-          <label htmlFor="name">Cerca nel dataset</label>
+          <label htmlFor="name">Search the dataset</label>
           <input
             className="input mt-2 p-2 text-black text-lg mb-3"
             type="text"
@@ -120,7 +119,7 @@ function Paginax() {
             className="px-3 py-4 bg-gray-800 text-white text-xs font-bold uppercase rounded"
 
           >
-            Cerca
+            Search
           </button>
         </form>
 
@@ -150,19 +149,19 @@ function Paginax() {
                         {name}
                       </h3>
                       <p className="">
-                        <b className="font-extrabold">Nazionalità </b>
+                        <b className="font-extrabold">Nationality </b>
                         :&nbsp;{nationality}
                       </p>
                       <p className="">
-                        <b className="font-extrabold">Nato il</b>
+                        <b className="font-extrabold">Born</b>
                         :&nbsp;{result.date_of_birth}
                       </p>
                       <p className="">
-                        <b className="font-extrabold">Descrizione:</b>
+                        <b className="font-extrabold">Desription:</b>
                         &nbsp;{bio}
                       </p>
                       <p className="">
-                        <b className="font-extrabold">Primo Volo:&nbsp;</b>
+                        <b className="font-extrabold">First flight:&nbsp;</b>
                         {result.first_flight}
                       </p>
                       <p className="">

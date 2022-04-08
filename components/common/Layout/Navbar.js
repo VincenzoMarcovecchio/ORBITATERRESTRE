@@ -529,10 +529,10 @@ const NavBar = () => {
                         </li>
                         <li className="text-base truncate">
                           <Link
-                            href="/launch-pad-platforms"
-                            as="/launch-pad-platforms"
+                            href="/reusable-cores/10"
+                            as="/reusable-cores/10"
                           >
-                           test
+                           Reusable cores
                           </Link>
                         </li>
                       </ul>

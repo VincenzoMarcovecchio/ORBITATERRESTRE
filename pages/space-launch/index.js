@@ -114,14 +114,13 @@ With crew
                 key={lol.id}
               >
                 {lol.image ? (
-               
-                  <Image
-                  
+                 <Image        
+                 className="sm:w-full md:w-1/3 object-cover"          
                   src={lol.image}
-                    alt={lol.name}
-                  width="850"
-                  height="650"
-                  layout="responsive"
+                  alt={lol.name}
+                  width="350"
+                  height="350"
+                  layout="intrinsic"
                 />
                 ) : (
                   <img
@@ -143,7 +142,7 @@ With crew
                     <b className="font-extrabold">Description:</b>&nbsp;
                     {lol.status.description}
                   </p>
-                  <p>
+                  <p className="mb-6">
                     <b className="font-extrabold">Launch platform:</b>
                     &nbsp;
                     {lol.pad}

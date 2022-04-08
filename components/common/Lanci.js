@@ -40,7 +40,7 @@ export function Lanci() {
                     />
                   </div>
                   <small className="bg-white bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-red-400 ">
-                    {la.mission?.type || "non specificato"}
+                    {la.mission?.type || "non specified"}
                   </small>
                 </div>
 

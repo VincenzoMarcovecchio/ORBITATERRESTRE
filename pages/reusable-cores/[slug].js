@@ -10,15 +10,15 @@ console.log(sta)
   return (
     <>
       <SEO
-        description="Monitoriamo le prime fasi del razzo quando un veicolo di lancio può essere utilizzato più di una volta come i core Falcon 9 utilizzati da SpaceX"
-        title="Lanciatori e prime fasi riutilizzabili"
+        description="Launchers and reusable cores"
+        title="Launchers and reusable cores"
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
-          Lanciatori e prime fasi riutilizzabili
+        Launchers and reusable cores
         </h1>
-       {sta.count && <h3 className="text-2xl mb-6">Ci sono {sta.count} risultati </h3>} 
+       {sta.count && <h3 className="text-2xl mb-6">There are {sta.count} results </h3>} 
 
         {sta.results ? sta.results?.map((lol) => {
           return (
@@ -31,9 +31,8 @@ console.log(sta)
                 className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                 src={lol.image_url}
                 alt={lol.name}
-                width="850"
-                height="650"
-                layout="responsive"
+       
+                layout="raw"
               />
 
 
@@ -42,7 +41,7 @@ console.log(sta)
                   {lol.details}
                 </h1>
                 <div className="flex">
-                  <b>Voli: &nbsp;</b>
+                  <b>Flights: &nbsp;</b>
                   <p>{lol.flights}</p>
                 </div>
                 <div className="flex mb-4">
@@ -53,14 +52,14 @@ console.log(sta)
                  
                   onClick={() =>
                     router
-                      .push(`/prima-fase-riutilizzabile/${lol.id}`)
+                      .push(`/single-reusable-core/${lol.id}`)
                       .then(() => window.scrollTo(0, 0))
                   }
                   className=" mt-4 px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   target="_blank"
                   rel="noopener noreferrer canonical"
                 >
-                  Leggi di più
+                 Find out more
                 </span>
               </div>
             </article>
@@ -77,12 +76,12 @@ console.log(sta)
                 // Show this in tutorial vid:
                 // https://github.com/vercel/next.js/issues/3249
                 router
-                  .push(`/prime-fasi-riutilizzabili/${pageNumber - 10}`)
+                  .push(`/reusable-cores/${pageNumber - 10}`)
                   .then(() => window.scrollTo(0, 0));
               }
             }}
           >
-            Pagina Precedente&nbsp;&nbsp;&nbsp;&nbsp;
+            Previous Page&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
 
           <div>#{pageNumber}</div>
@@ -97,12 +96,12 @@ console.log(sta)
                 // Show this in tutorial vid:
                 // https://github.com/vercel/next.js/issues/3249
                 router
-                  .push(`/prime-fasi-riutilizzabili/${pageNumber + 10}`)
+                  .push(`/reusable-cores/${pageNumber + 10}`)
                   .then(() => window.scrollTo(0, 0));
               }
             }}
           >
-            &nbsp;&nbsp;&nbsp;&nbsp;Pagina Successiva
+            &nbsp;&nbsp;&nbsp;&nbsp;Next Page
           </div>
         </div>
       </div>

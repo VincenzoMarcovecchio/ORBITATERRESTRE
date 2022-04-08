@@ -1,53 +1,15 @@
-import {  useState, useEffect } from "react";
 import {  SEO } from "@components/common";
-import useSWR from "swr";
-import { fetcher } from "../utils/fetcher";
-import { setCORS } from "google-translate-api-browser";
 import moment from "moment";
 
-function SpaceXTimeline() {
-  const url = "https://api.spacexdata.com/v4/history";
-  const { data, error } = useSWR(url, fetcher);
-  const translate = setCORS("https://mimmofranco.herokuapp.com/");
-  const [translated, setTranslated] = useState([]);
-  const [toBeTranslated, setToBeTranslated] = useState([]);
-  const translateplease = JSON.stringify(toBeTranslated);
-
-  useEffect(() => {
-    const getData = () => {
-      fetch(`https://api.spacexdata.com/v4/history`)
-        .then((res) => res.json())
-        .then((results) => {
-          setToBeTranslated(
-            results.map((item) => {
-              return [item.title, item.details, item.links.article];
-            })
-          );
-        })
-        .catch((e) => e);
-    };
-    getData();
-  }, []);
-
-  useEffect(() => {
-    translate(translateplease, { to: "it" })
-      .then((res) => {
-        setTranslated(JSON.stringify(res));
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-  let vaimo = translated.length > 1 && translated.substring(1);
-
-  return (
+function SpaceXTimeline({data}) {
+   return (
     <>
       <SEO
         cano="si"
         imageUrl="la-storia-di-spaceX-in-timeline-component.png"
-        slug="la-storia-di-spaceX-in-timeline-component"
-        title="La storia di SpaceX in un timeline "
-        description="Vi siete mai chiesti come l'agenzia spaziale spaceX..."
+        slug="the-history-of-space-x-in-a-timeline-component"
+        title="Space X history in a timeline "
+        description="Have you ever wondered how spaceX..."
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full">
@@ -95,14 +57,14 @@ function SpaceXTimeline() {
                           rel="canonical noopener noreferrer"
                           className="text-sm rounded-full py-1 px-2  mt-8 bg-gray-50 leading-snug tracking-wide font-white leading-none font-display  text-sm color-white"
                         >
-                          Scopri di più
+                          Find out more
                         </a>
                       </div>
                     </div>
                   );
                 })
               ) : (
-                <p>caricamento supersonico in corso...</p>
+                <p>supersonic loading...</p>
               )}
             </div>
           </div>
@@ -113,3 +75,20 @@ function SpaceXTimeline() {
 }
 
 export default SpaceXTimeline;
+
+export async function getStaticProps() {
+  const res = await fetch("https://api.spacexdata.com/v4/history");
+
+  const news = await res.json();
+
+  const data = news;
+
+  // Pass data to the page via props
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+

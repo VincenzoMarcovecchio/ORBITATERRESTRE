@@ -384,18 +384,18 @@ function Page({ agenciesData, pageNumber }) {
                           <p className="mt-4 ">
                             <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                           </p>
-                          <p className="">
+                          <p>
                             <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                           </p>
                           <p>
                             <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                           </p>
-                          <p className="mb-4">
+                          <p className="mb-6">
                             <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                           </p>
 
                           <span
-                            className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                            className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                             onClick={() =>
                               router
                                 .push(`/space-events/${lol.slug}`)
