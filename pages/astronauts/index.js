@@ -7,9 +7,9 @@ function Paginax() {
 
   const [defaultResults, setDefaultResults] = useState([]);
   const [name, setName] = useState("");
-  const [nationality, setNationality] = useState("All");
+  const [nationality, setNationality] = useState("American");
   const [loading, SetLoading] = useState(true);
-  console.log(defaultResults, name, nationality);
+ 
 
   useEffect(() => {
 

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Link from "next/link";
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import Image from 'next/image'
+import Link from "next/link";
 
 function Page({ agenciesData, pageNumber }) {
   const router = useRouter();
@@ -27,6 +27,7 @@ function Page({ agenciesData, pageNumber }) {
   return (
     <>
       <SEO
+     
         title="Space Agencies"
         description="A list of agencies involved with space missions"
       />
@@ -81,16 +82,16 @@ function Page({ agenciesData, pageNumber }) {
                     <h1 className="text-3xl font-bold text-yellow-600 font-display">
                       {data.name}
                     </h1>
-                    <p className="mt-4 text-lg">
+                    <p className=" text-lg">
                       <b>Administrator:</b>&nbsp;{data.amministrator}
                     </p>
-                    <p className="mt-2 text-lg ">
+                    <p className=" text-lg ">
                       <b>Founded:</b>&nbsp;{data.founding_year}
                     </p>
-                    <p className="mt-2 text-lg">
+                    <p className=" text-lg">
                       <b>Description:</b>&nbsp;{data.description}
                     </p>
-                    <p className="mt-2 text-lg">
+                    <p className=" text-lg">
                       <b>Type:</b>&nbsp;{data.type}
                     </p>
 
@@ -144,13 +145,13 @@ function Page({ agenciesData, pageNumber }) {
                       <p className="mt-4 text-lg">
                         <b>Administrator:</b>&nbsp;{data.amministrator}
                       </p>
-                      <p className="mt-2 text-lg ">
+                      <p className=" text-lg ">
                         <b>Founded:</b>&nbsp;{data.founding_year}
                       </p>
-                      <p className="mt-2 text-lg">
+                      <p className="text-lg">
                         <b>Description:</b>&nbsp;{data.description}
                       </p>
-                      <p className="mt-2 text-lg">
+                      <p className=" text-lg">
                         <b>Type:</b>&nbsp;{data.type}
                       </p>
 
@@ -381,7 +382,7 @@ function Page({ agenciesData, pageNumber }) {
                           <h1 className="text-3xl font-bold text-yellow-600 font-display">
                             {data.name}
                           </h1>
-                          <p className="mt-4 ">
+                          <p className=" ">
                             <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                           </p>
                           <p>
@@ -390,20 +391,16 @@ function Page({ agenciesData, pageNumber }) {
                           <p>
                             <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                           </p>
-                          <p className="mb-6">
+                          <p className="">
                             <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                           </p>
 
-                          <span
-                            className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                            onClick={() =>
-                              router
-                                .push(`/space-events/${lol.slug}`)
-                                .then(() => window.scrollTo(0, 0))
-                            }
+                          <Link
+                            className="px-3 mt-4 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+                            href={`/space-events/${lol.slug}`}
                           >
                             Find out more
-                          </span>
+                          </Link>
                         </figcaption>
                       </figure>
                     );

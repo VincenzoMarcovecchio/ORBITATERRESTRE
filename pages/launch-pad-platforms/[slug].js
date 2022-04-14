@@ -18,15 +18,15 @@ function Piattaformalo({ pad }) {
             {pad.results[0]?.name},&nbsp;{pad.results[0]?.location.name}
           </h1>
           <h2>
-            Totale lanci effetuati:&nbsp;{pad.results[0]?.total_launch_count}
+            Total launches:&nbsp;{pad.results[0]?.total_launch_count}
           </h2>
-          <h2>Latitudine:&nbsp;{pad.results[0]?.latitude}</h2>
-          <h2>Longitudine:&nbsp;{pad.results[0]?.longitude}</h2>
+          <h2>Latitude:&nbsp;{pad.results[0]?.latitude}</h2>
+          <h2>Longitude:&nbsp;{pad.results[0]?.longitude}</h2>
           <h2>
             Wikipedia:&nbsp;
             <a
               href={pad.results[0]?.wiki_url}
-              rel="caninocal noopener noreferrer"
+              rel="canonical noopener noreferrer"
               target="__blank"
             >
               link
@@ -40,7 +40,7 @@ function Piattaformalo({ pad }) {
           />
         </div>
       ) : (
-        "errore nel caricamento (bisognerebbe supportare i ragazzi at the spacedevs)"
+        "error"
       )}
     </>
   );

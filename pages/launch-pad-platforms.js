@@ -17,6 +17,7 @@ export async function getStaticProps() {
 
 function Piattaforme({ pad }) {
   const [currentCategory, setCurrentCategory] = useState("ITA");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -52,7 +53,7 @@ function Piattaforme({ pad }) {
                 <span
                   className="cursor-pointer  mr-2 mb-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
-                  onClick={() => setCurrentCategory(cate)}
+                  onClick={() => setCurrentCategory(cate) && setLoading(true)}
                 >
                   {renderSwitch(cate)}
                 </span>
@@ -60,7 +61,7 @@ function Piattaforme({ pad }) {
             })}
           </div>
 
-          {pad.results &&
+          {pad.results && setLoading(false) &&
             pad.results
               .filter(
                 ({ location: { country_code } }) =>

@@ -1,7 +1,7 @@
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import moment from "moment";
-import Image from 'next/image'
+import Link from "next/link";
 
 function Eventit({ eventi }) {
   const router = useRouter();
@@ -70,18 +70,14 @@ function Eventit({ eventi }) {
                        Find out more
                       </span>
                       &nbsp;
-                      <span
-                        onClick={() =>
-                          router
-                            .push(`/space-events/${lol.slug}`)
-                            .then(() => window.scrollTo(0, 0))
-                        }
+                      <Link
+                       href={`/space-events/${lol.slug}`}
                         className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded"
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
                         Video
-                      </span>
+                      </Link>
                     </div>
                   </article>
                 );

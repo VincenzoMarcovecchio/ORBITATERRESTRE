@@ -32,7 +32,7 @@ console.log(sta)
                 src={lol.image_url}
                 alt={lol.name}
        
-                layout="raw"
+                layout="responsive"
               />
 
 

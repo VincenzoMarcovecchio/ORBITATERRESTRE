@@ -15,7 +15,7 @@ function Newsz({ newsdatal }) {
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full ">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-            Quante persone ci sono nello Spazio adesso?
+            How many people are in space right now?
           </h2>
           <center>
             <h2 className="text-4xl mb-6 mt-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
@@ -39,10 +39,10 @@ function Newsz({ newsdatal }) {
               );
             })
           ) : (
-            <p>caricamento supersonico in corso...</p>
+            <p>supersonic loading...</p>
           )}
           <p>
-            Per ulteriori informazioni visitare il sito:{" "}
+            Further information:{" "}
             <a
               href="http://open-notify.org/Open-Notify-API/People-In-Space/"
               rel="canonical noopener noreferrer"
@@ -56,7 +56,7 @@ function Newsz({ newsdatal }) {
         <section className="flex">
           <aside>
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Prossimi Lanci
+             Next Launches
             </h2>
             <Lanci />
           </aside>

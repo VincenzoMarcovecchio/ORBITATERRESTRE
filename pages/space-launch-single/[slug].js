@@ -69,7 +69,7 @@ function Polpo({ gigi }) {
               {gigi.program}
             </p>
             <hr />
-            <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">              Configurazione del missile
+            <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">      Missile configuration
             </h2>
             <p>
               <b className="font-extrabold">Complete name:&nbsp;</b>

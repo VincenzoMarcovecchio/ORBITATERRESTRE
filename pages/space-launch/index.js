@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { SEO } from "@components/common";
 import { Formik } from "formik";
 import Image from 'next/image'
+import { useRouter } from "next/router";
 
 const LanciIndex = () => {
   const [name, setName] = useState("");
   const [lancid, setLancid] = useState([]);
   const [crewed, setCrewed] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     fetch(
       `https://ll.thespacedevs.com/2.2.0/launch/?mode=list&search=${name}&is_crewed=${crewed}&limit=50&offset=50&include_suborbital=true&related=false`
@@ -30,26 +31,29 @@ const LanciIndex = () => {
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           Dataset of space launches
         </h1>
-        <span
-          className={`${
-            crewed
-              ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-              : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-          }`}
-          onClick={() => setCrewed(true)}
-        >
-With crew
-        </span>
-        <span
-          className={`${
-            !crewed
-              ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-              : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
-          }`}
-          onClick={() => setCrewed(false)}
-        >
-          Unmanned
-        </span>
+
+        <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex flex-wrap sm:flex-col md:flex-row w-full items-start">
+          <span
+            className={`${crewed
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+              }`}
+            onClick={() => setCrewed(true)}
+          >
+            With crew
+          </span>
+          <span
+            className={`${!crewed
+                ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+                : "m-1.5 cursor-pointer px-4  py-4 shadow-lg"
+              }`}
+            onClick={() => setCrewed(false)}
+          >
+            Unmanned
+          </span>
+        </div>
+
+        
         <div className=" y flex flex-col items-start">
           <Formik
             enableReinitialize
@@ -114,14 +118,14 @@ With crew
                 key={lol.id}
               >
                 {lol.image ? (
-                 <Image        
-                 className="sm:w-full md:w-1/3 object-cover"          
-                  src={lol.image}
-                  alt={lol.name}
-                  width="350"
-                  height="350"
-                  layout="intrinsic"
-                />
+                  <Image
+                    className="sm:w-full md:w-1/3 object-cover"
+                    src={lol.image}
+                    alt={lol.name}
+                    width="350"
+                    height="350"
+                    layout="intrinsic"
+                  />
                 ) : (
                   <img
                     className="sm:w-full md:w-1/3 object-cover"
@@ -147,7 +151,7 @@ With crew
                     &nbsp;
                     {lol.pad}
                   </p>
-  
+
                   <span
                     onClick={() =>
                       router
@@ -158,7 +162,7 @@ With crew
                     target="_blank"
                     rel="noopener noreferrer canonical"
                   >
-                   Find out more
+                    Find out more
                   </span>
                 </div>
               </article>
