@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 function PrimeFasi({ sta, pageNumber }) {
   const router = useRouter();
-console.log(sta)
+
   return (
     <>
       <SEO

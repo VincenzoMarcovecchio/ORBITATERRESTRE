@@ -26,16 +26,15 @@ function Page({ agenciesData, pageNumber }) {
 
   return (
     <>
-      <SEO
-     
+      <SEO    
         title="Space Agencies"
         description="A list of agencies involved with space missions"
       />
       <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
         Space agencies dataset
       </h1>
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex flex-wrap sm:flex-col md:flex-row w-full items-start">
-        {set.map((se, index) => (
+      <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
+                {set.map((se, index) => (
           <span
             className={`${type === index
               ? " underline flex-wrap border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
@@ -91,20 +90,15 @@ function Page({ agenciesData, pageNumber }) {
                     <p className=" text-lg">
                       <b>Description:</b>&nbsp;{data.description}
                     </p>
-                    <p className=" text-lg">
+                    <p className="mb-4 text-lg">
                       <b>Type:</b>&nbsp;{data.type}
                     </p>
-
-                    <span
-                      className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                      onClick={() =>
-                        router
-                          .push(`/space-events/${lol.slug}`)
-                          .then(() => window.scrollTo(0, 0))
-                      }
+                    <Link
+                      href={`/space-agency/${data.id}`}                  
                     >
-                      Find out more
-                    </span>
+                                          <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
+
+                    </Link>
                   </figcaption>
                 </figure>
               );
@@ -151,20 +145,15 @@ function Page({ agenciesData, pageNumber }) {
                       <p className="text-lg">
                         <b>Description:</b>&nbsp;{data.description}
                       </p>
-                      <p className=" text-lg">
+                      <p className="mb-4 text-lg">
                         <b>Type:</b>&nbsp;{data.type}
                       </p>
 
-                      <span
-                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        onClick={() =>
-                          router
-                            .push(`/space-events/${lol.slug}`)
-                            .then(() => window.scrollTo(0, 0))
-                        }
-                      >
-                        Find out more
-                      </span>
+                      <Link
+                      href={`/space-agency/${data.id}`}                  
+                    >
+                      <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
+                    </Link>
                     </figcaption>
                   </figure>
                 );
@@ -215,16 +204,13 @@ function Page({ agenciesData, pageNumber }) {
                           <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                         </p>
 
-                        <span
-                          className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                          onClick={() =>
-                            router
-                              .push(`/space-events/${lol.slug}`)
-                              .then(() => window.scrollTo(0, 0))
-                          }
-                        >
-                          Find out more
-                        </span>
+                        <Link
+                    href={`/space-agency/${data.id}`}
+                  
+                    >
+                                       <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
+
+                    </Link>
                       </figcaption>
                     </figure>
                   );
@@ -277,16 +263,12 @@ function Page({ agenciesData, pageNumber }) {
                                 <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                               </p>
 
-                              <span
-                                className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                                onClick={() =>
-                                  router
-                                    .push(`/space-events/${lol.slug}`)
-                                    .then(() => window.scrollTo(0, 0))
-                                }
-                              >
-                                Find out more
-                              </span>
+                              <Link
+                    href={`/space-agency/${data.id}`}
+                  
+                    >
+                      <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
+                    </Link>
                             </figcaption>
                           </figure>
                         )}
@@ -339,16 +321,12 @@ function Page({ agenciesData, pageNumber }) {
                               <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                             </p>
 
-                            <span
-                              className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                              onClick={() =>
-                                router
-                                  .push(`/space-events/${lol.slug}`)
-                                  .then(() => window.scrollTo(0, 0))
-                              }
-                            >
-                              Find out more
-                            </span>
+                            <Link
+                    href={`/space-agency/${data.id}`}
+                  
+                    >
+                      <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
+                    </Link>
                           </figcaption>
                         </figure>
                       );
@@ -391,15 +369,14 @@ function Page({ agenciesData, pageNumber }) {
                           <p>
                             <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                           </p>
-                          <p className="">
+                          <p className="mb-4">
                             <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                           </p>
 
                           <Link
-                            className="px-3 mt-4 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                            href={`/space-events/${lol.slug}`}
+                      href={`/space-agency/${data.id}`}
                           >
-                            Find out more
+                      <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
                           </Link>
                         </figcaption>
                       </figure>

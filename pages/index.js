@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from "react";
-import {  SEO } from "@components/common";
-import { setCORS } from "google-translate-api-browser";
-import { QuickLinks } from "../components/common/quickLinks";
+import React from "react";
 import { Lanci } from "../components/common/Lanci";
-import Image from 'next/image'
+import NextImage from '../utils/NextImage'
+import {  SEO } from "@components/common";
+
+
 function Home({ datas }) {
-  const translateto = JSON.stringify(datas.explanation);
-  const translatetwo = JSON.stringify(datas.title);
-  const translate = setCORS("https://mimmofranco.herokuapp.com/");
-  const [translated, setTranslated] = useState(null);
-  const [titlet, setTitlet] = useState(null);
 
-  useEffect(() => {
-    translate(translatetwo, { to: "it" })
-      .then((res) => {
-        setTitlet(JSON.parse(res.text));
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-
-  useEffect(() => {
-    translate(translateto, { to: "it" })
-      .then((res) => {
-        setTranslated(JSON.parse(res.text));
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
 
   return (
     <React.Fragment>
@@ -57,7 +33,7 @@ function Home({ datas }) {
                   alt={datas.title}
                   width={450}
                   height={550}
-                  layout="responsive"
+                  layout="intrinsic"
                 />
               )}
               <figcaption>

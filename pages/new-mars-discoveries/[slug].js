@@ -99,7 +99,7 @@ function Marte({ curiosity }) {
               </article>
             );
           })
-          : "niente qui"}
+          : "nothing here"}
       </section>
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <iframe
@@ -110,7 +110,7 @@ function Marte({ curiosity }) {
           width="420"
           height="515"
           src="https://www.arcgis.com/apps/Viewer/index.html?appid=ee4fd19d7d514bb192359534f27169b8"
-          alt="punto di atterraggio di curiosity"
+          alt="curiosity"
         ></iframe>
       </div>
     </>

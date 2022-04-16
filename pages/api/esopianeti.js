@@ -12,8 +12,7 @@ export default async (req, res) => {
       );
       const htmlString = await response.text();
       const $ = cheerio.load(htmlString);
-      console.log(htmlString);
-
+   
       res.statusCode = 200;
       return res.json({});
     } catch (e) {

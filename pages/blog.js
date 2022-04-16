@@ -19,7 +19,7 @@ function Blog({ posts }) {
 
   return (
     <>
-      <SEO title="Il blog " description="Notizie dallo spazio vicino e lontano" />
+      <SEO title="The blog " description="News from near and far away universe" />
 
       <div className="w-full md:max-w-8xl mx-auto px-4 sm:px-6 max-w-screen-lg mx-auto ">
         <div className="display flex-wrap flex mb-8 mt-4 space-x-2 md:space-x-8">

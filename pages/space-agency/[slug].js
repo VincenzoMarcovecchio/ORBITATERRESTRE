@@ -19,31 +19,31 @@ console.log(agenciesDatatwo)
               alt={agenciesDatatwo.name}
               width="150"
               height="150"
-              layout="responsive"
+              layout="intrinsic"
             />
 
             <figcaption>
-              <p className="mt-4">
-                <b className="extra=bold">Fondata nel:</b>&nbsp;{agenciesDatatwo.founding_year}
+              <p className="mt-14">
+                <b className="font-extrabold">Founded:</b>&nbsp;{agenciesDatatwo.founding_year}
               </p>
               <p >
-                <b className="extra=bold">Tipo:</b>&nbsp;{agenciesDatatwo.type}
+                <b className="font-extrabold">Type:</b>&nbsp;{agenciesDatatwo.type}
               </p>
               <p>
-                < b className="extra=bold">Amministratore:</b>&nbsp;
+                < b className="font-extrabold">Administrator:</b>&nbsp;
                 {agenciesDatatwo.administrator ||
-                  "nessun amministratore trovato"}
+                  "none"}
               </p>
               <p >
-                <b className="extra=bold">Nazionalità:</b>&nbsp;{agenciesDatatwo.country_code}
+                <b className="font-extrabold">Nationality:</b>&nbsp;{agenciesDatatwo.country_code}
               </p>
               <p >
-                <b className="extra=bold">Descrizione:</b>&nbsp;{agenciesDatatwo.description}
+                <b className="font-extrabold">Description:</b>&nbsp;{agenciesDatatwo.description}
               </p>
             </figcaption>
           </figure>
         ) : (
-          "caricamento supersonico suprersonico in corso..."
+          "failed to load"
         )}
       </div>
     </>

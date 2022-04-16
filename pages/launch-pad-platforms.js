@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import { Lanci } from "../components/common/Lanci";
 import { renderSwitch } from "../utils/getFlags";
 import { piatta } from "../data/piata"
-import Image from 'next/image'
+import NextImage from "@utils/NextImage";
+
 
 export async function getStaticProps() {
 
@@ -26,10 +27,14 @@ function Piattaforme({ pad }) {
   for (let i = 0; i < pad.results.length; i++) {
     categories.push(pad.results[i].location.country_code);
   }
-
-  console.log(categories, currentCategory, pad);
+  useEffect(() => {
+   setLoading(true)
+    setTimeout(() => { setLoading(false) }, 3000)
+  }, [currentCategory])
 
   const uniquecat = [...new Set(categories)];
+
+
   return (
     <>
       <SEO
@@ -42,10 +47,10 @@ function Piattaforme({ pad }) {
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mx-auto mb-6">
-          Launch platforms
+            Launch platforms
           </h2>
           <h3 className="text-2xl font-bold text-yellow-600 font-display mx-auto mb-6">
-          There are 195 results
+            There are 195 results
           </h3>
           <div className="display justify-start main-content w-full flex-wrap flex mb-8 mt-4 ">
             {uniquecat.map((cate, i) => {
@@ -53,15 +58,14 @@ function Piattaforme({ pad }) {
                 <span
                   className="cursor-pointer  mr-2 mb-2 px-2  py-1 bg-gray-800 text-white text-xs font-bold uppercase rounded"
                   key={i}
-                  onClick={() => setCurrentCategory(cate) && setLoading(true)}
-                >
+                  onClick={() => setCurrentCategory(cate)}>
                   {renderSwitch(cate)}
                 </span>
-              );
+              )
             })}
           </div>
 
-          {pad.results && setLoading(false) &&
+          {!loading ?
             pad.results
               .filter(
                 ({ location: { country_code } }) =>
@@ -74,9 +78,8 @@ function Piattaforme({ pad }) {
                       className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                       src={pa.map_image}
                       alt={pa.name}
-                      width="350"
-                      height="350"
-                      layout="responsive"
+                      width="450"
+                      height="450"
                     />
                     <h1 className="text-3xl font-bold text-yellow-600 font-display mb-2 mt-6">
                       {pa.name}
@@ -106,13 +109,13 @@ function Piattaforme({ pad }) {
                     </span>
                   </article>
                 );
-              })}
+              } ): <p>Loading...</p>}
         </section>
         <hr />
         <section className="flex">
           <aside>
             <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-            Next Launches
+              Next Launches
             </h2>
             <Lanci />
           </aside>
