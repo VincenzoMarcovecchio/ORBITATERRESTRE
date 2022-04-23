@@ -38,8 +38,7 @@ function MarsNEws({ results }) {
 
 
                                     <Link
-                                        href=  {`/mars-news${results.link[index].substring(21).trim()}`}
-                                      
+                                        href=  {`/mars-news${results.link[index].substring(26).trim()}`}
                                         rel="noopener noreferrer canonical"
                                     >
                                     Find out more

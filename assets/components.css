@@ -105,7 +105,9 @@ input[type='range']:focus::-ms-fill-upper {
 .linko   {
   text-decoration: none !important;
 }
-
+iframe {
+  max-width: 100%;
+}
 .emma   {
   max-height: 80vh;
   width:100% !important;
