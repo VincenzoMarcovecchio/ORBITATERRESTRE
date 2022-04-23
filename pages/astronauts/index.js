@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { SEO } from "@components/common";
-import { Formik } from "formik";
 import Image from 'next/image'
 
 function Paginax() {
@@ -178,7 +177,7 @@ function Paginax() {
               );
             })
           ) : (
-            <pre>{defaultResults && defaultResults.detail}</pre>
+            <pre>{defaultResults.detail}</pre>
           )}
         </ul>
       </div>

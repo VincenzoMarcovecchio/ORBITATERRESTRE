@@ -732,7 +732,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium ">
-                      Next Launches
+                     Launch History
                     </span>
                   </a>
                 </nav>
@@ -752,8 +752,8 @@ const NavBar = () => {
                   onClick={handleClose}
                   replace
                   className="text-base font-medium  hover:text-gray-700"
-                  href={"/news-spaziali-internazionali/"}
-                  as={`/news-spaziali-internazionali/`}
+                  href={"/space-news/"}
+                  as={`/space-news/`}
                 >
                  Space News
                 </Link>

@@ -1,9 +1,9 @@
 export const renderSwitch = (param) => {
   switch (param) {
     case "USA":
-      return "Stati Uniti";
+      return "USA";
     case "GUF":
-      return "Francia";
+      return "France";
     case "RUS":
       return "Russia";
     case "CHN":
@@ -11,37 +11,35 @@ export const renderSwitch = (param) => {
     case "KAZ":
       return "kazakistan";
     case "UNK":
-      return "Sconosciuto";
+      return "Unknown";
     case "ITA":
-      return "Italia";
+      return "Italy";
     case "ISR":
-      return "Israele";
+      return "Israel";
     case "BRA":
-      return "Brasile";
-    case "GUF":
-      return "Francia";
+      return "Brasil";
     case "JPN":
-      return "Giappone";
+      return "Japan";
     case "PRK":
-      return "Nord Corea";
+      return "North Korea";
     case "IRN":
       return "Iran";
     case "MHL":
-      return "Isole Marshall";
+      return "Islands Marshall";
     case "AUS":
       return "Australia";
     case "IND":
       return "India";
     case "NZL":
-      return "Nuova Zelanda";
+      return "New Zeland";
     case "KOR":
-      return "Sud Korea";
+      return "South Korea";
     case "FRA":
-      return "Francia";
+      return "France";
     case " ":
-      return "Sconosciuto";
+      return "Unknown";
     case "''":
-      return "Sconosciuto";
+      return "Unknown";
 
     default:
       return null;

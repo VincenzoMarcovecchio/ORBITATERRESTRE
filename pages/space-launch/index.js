@@ -27,12 +27,12 @@ const LanciIndex = () => {
         imageUrl={`https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/antares2520230252b_image_20191102024633.jpeg`}
       />
 
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
+    <div className=" max-w-7xl mx-auto px-4  sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
           Dataset of space launches
         </h1>
 
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 display flex flex-wrap sm:flex-col md:flex-row w-full items-start">
+        <div className=" flex-wrap max-w-7xl mx-auto px-4 sm:px-6 display flex items-start">
           <span
             className={`${crewed
                 ? " underline  border-yellow-200 m-1.5 cursor-pointer px-4  py-4 shadow-lg"
@@ -54,7 +54,8 @@ const LanciIndex = () => {
         </div>
 
         
-        <div className=" y flex flex-col items-start">
+        <div className="form flex flex-col max-w-md mx-auto mt-12 mb-12"
+>
           <Formik
             enableReinitialize
             initialValues={{ nationality: "" }}
@@ -93,7 +94,6 @@ const LanciIndex = () => {
                   name="nationality"
                   placeholder="es SpaceX"
                   onChange={handleChange}
-                  onBlur={handleBlur}
                   value={values.nationality}
                 />
                 {errors.nationality &&

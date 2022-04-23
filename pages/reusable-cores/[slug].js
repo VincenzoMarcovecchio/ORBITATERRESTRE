@@ -31,7 +31,8 @@ function PrimeFasi({ sta, pageNumber }) {
                 className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
                 src={lol.image_url}
                 alt={lol.name}
-       
+                width="350"
+                height="350"
                 layout="responsive"
               />
 

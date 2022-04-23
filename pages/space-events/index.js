@@ -57,27 +57,14 @@ function Eventit({ eventi }) {
                         <b className="font-extrabold">Description:&nbsp;</b>
                         {lol.description}
                       </p>
-                      <span
-                        onClick={() =>
-                          router
-                            .push(`/space-events/${lol.slug}`)
-                            .then(() => window.scrollTo(0, 0))
-                        }
-                        className="px-3 cursor-pointer  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
-                        target="_blank"
-                        rel="noopener noreferrer canonical"
-                      >
-                       Find out more
-                      </span>
                       &nbsp;
                       <Link
                        href={`/space-events/${lol.slug}`}
-                        className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded"
                         target="_blank"
                         rel="noopener noreferrer canonical"
                       >
-                        Video
-                      </Link>
+                      <a className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded">Find out more</a>
+                    </Link>                                    
                     </div>
                   </article>
                 );

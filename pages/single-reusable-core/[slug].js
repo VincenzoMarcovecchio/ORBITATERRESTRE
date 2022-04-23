@@ -1,64 +1,69 @@
 
-import {  SEO } from "@components/common";
+import { SEO } from "@components/common";
 
 
 function Primala({ sta }) {
- 
+
 
   return (
     <>
       <SEO
-        description="Monitoriamo le prime fasi del razzo quando un veicolo di lancio può essere utilizzato più di una volta come i core Falcon 9 utilizzati da SpaceX"
-        title="Lanciatori e prime fasi riutilizzabili"
+        description="We monitor the early stages of the rocket when a launch vehicle can be used more than once such as the Falcon 9 cores used by SpaceX"
+        title="Reusable launchers"
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
-        <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
-          <img
+        <h1 className="text-4xl text-center mb-8 font-bold text-yellow-600 font-display mt-8 mx-auto ">
+          {sta.launcher_config.full_name}
+        </h1>
+        <figure className="flex flex-col">
+          <Image
             className="sm:w-full md:w-1/3 object-cover"
             src={sta.image_url}
             alt={sta.status}
+            width="350"
+            height="350"
+            layout="intrinsic"
           />
 
-          <div className="sm:w-full md:w-2/3 px-4  py-6">
-            {/* <h1 className="text-3xl font-bold text-yellow-600 font-display">
-              {lol.details}
-            </h1> */}
-            <div className="flex">
-              <b>Voli:&nbsp;</b>
-              <p>{sta.flights}</p>
-            </div>
-            <p className="flex">
-              <b>Status:&nbsp;</b>
-              <p>{sta.status}</p>
+          <figcaption>
+
+            <p className="mt-14">
+              <b className="font-extrabold">Fi;ghts:&nbsp;</b>
+              {sta.flights}
             </p>
-            <p className="flex">
-              <b>Atterraggi riusciti:&nbsp;</b>
-              <p>{sta.succesfull_landings || "nessun risultato"}</p>
+            <p className="">
+              <b className="font-extrabold">Status:&nbsp;</b>
+              {sta.status}
+            </p>
+            <p className="">
+              <b className="font-extrabold">Succesfull Landings:&nbsp;</b>
+              {sta.succesfull_landings || "nessun risultato"}
             </p>
             <p>
-              <b>Configurazioni Lanciatore:</b>
+              <b >Launcher configs:</b>
             </p>
-            <p className="flex">
-              <b>Nome:&nbsp;</b>
-              <b>{sta.launcher_config.full_name}</b>
+            <p >
+              <b className="font-extrabold">Name:&nbsp;</b>
+              {sta.launcher_config.full_name}
             </p>
-            <p className="flex">
-              <b>Descrizione:&nbsp;</b>
-              <p>{sta.launcher_config.description}</p>
+            <p>
+              <b className="font-extrabold">Description:&nbsp;</b>
+              {sta.launcher_config.description}
             </p>
-            <p className="flex">
-              <b>Lanci Totali:&nbsp;</b>
-              <p>{sta.launcher_config.total_launch_count}</p>
+            <p>
+              <b className="font-extrabold">Total launches:&nbsp;</b>
+              {sta.launcher_config.total_launch_count}
             </p>
-            <p className="flex">
-              <b>Lanci Avvenuti Con Successo:&nbsp;</b>
-              <p>
-                {sta.launcher_config.succesfull_launches || "niente al momento"}
-              </p>
+            <p>
+              <b className="font-extrabold">Succesfull launches:&nbsp;</b>
+
+              {sta.launcher_config.succesfull_launches || "nothing"}
+
             </p>
-          </div>
-        </article>
+          </figcaption>
+
+        </figure>
       </div>
     </>
   );

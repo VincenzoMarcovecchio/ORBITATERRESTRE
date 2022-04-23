@@ -4,12 +4,14 @@ import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import Image from 'next/image'
 
-function Marte({ curiosity }) {
+function Marte({ curiosity, pageNumber }) {
 
   const router = useRouter();
   return (
     <>
       <SEO
+      cano="si"
+      slug="new-mars-discoveries/3000"
         title="The eyes of mars"
         description="Cameras installed on mars"
       />
@@ -23,7 +25,7 @@ function Marte({ curiosity }) {
           <Link replace href="/post/come-si-misurano-i-giorni-su-marte/">
             SOL
           </Link>{" "}
-          (check URL)
+          (current {pageNumber})
         </label>
         <input
           draggabletrack
@@ -132,7 +134,7 @@ export async function getServerSideProps(pageContext) {
 
   return {
     props: {
-      curiosity,
+      curiosity,pageNumber
     },
   };
 }

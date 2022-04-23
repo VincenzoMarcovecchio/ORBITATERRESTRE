@@ -1,6 +1,5 @@
 import { Lanci } from "../components/common/Lanci";
 import { SEO } from "../components/common/Seo";
-import Image from 'next/image'
 
 
 function News({ newsdata }) {
