@@ -4,18 +4,17 @@ import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
 function MarsNEws({ results }) {
-   
-   
+
+
     return (
         <>
             <SEO
-                title="All about Mars"
-                description="All news from NASA latest discoveries"
+                title="National Aeronautics and Space Administration"
+                description="NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research."
             />
-      <div className="px-4 max-w-screen-2xl md:flex ">
-        <section className="w-full ">
+            <div className="px-4 max-w-screen-2xl md:flex ">
+                <section className="w-full ">
                     {results.title.map((item, index) => {
-                        console.log(results.link[index].substring(21))
                         return (
                             <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                                 key={index}>
@@ -38,10 +37,10 @@ function MarsNEws({ results }) {
 
 
                                     <Link
-                                        href=  {`/news-on-mars${results.link[index].substring(26).trim()}`}
+                                        href={`/nasa-news/${results.link[index].substring(26).trim()}`}
                                         rel="noopener noreferrer canonical"
                                     >
-                                    Find out more
+                                        Find out more
                                     </Link>
                                 </div>
                             </article>
@@ -49,14 +48,14 @@ function MarsNEws({ results }) {
                     })}
                 </section>
                 <hr />
-        <section className="flex">
-          <aside>
-            <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-              Next Launches
-            </h2>
-            <Lanci />
-          </aside>
-        </section>
+                <section className="flex">
+                    <aside>
+                        <h2 className="text-4xl md:px-4 font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
+                            Next Launches
+                        </h2>
+                        <Lanci />
+                    </aside>
+                </section>
             </div>
         </>
     );
@@ -66,7 +65,7 @@ export default MarsNEws;
 
 export async function getStaticProps() {
     const { data } = await axios.get(
-        "https://nassa.herokuapp.com/2");
+        "https://nassa.herokuapp.com/svs");
 
     return {
         props: { results: data.results },

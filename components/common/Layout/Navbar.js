@@ -219,12 +219,12 @@ const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <Link href="/techport" as="/techport">
-                          <p className="text-base font-medium ">Techport</p>
+                        <Link href="/news-on-mars" as="/news-on-mars">
+                          <p className="text-base font-medium ">News from Mars</p>
                         </Link>
-                        <Link href="/techport" as="/techport">
+                        <Link href="/news-on-mars" as="/news-on-mars">
                           <p className="mt-1 text-sm innerlink ">
-                        work in progress
+                            Gathering of information from NASA's websites
                           </p>
                         </Link>
                       </div>
@@ -262,7 +262,7 @@ const NavBar = () => {
                           href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
                         >
                           <p className="mt-1 text-sm innerlink ">
-                         Esoplanets exploration
+                            Esoplanets exploration
                           </p>
                         </Link>
                       </div>
@@ -298,7 +298,7 @@ const NavBar = () => {
                       </Link>
                     </div>
                     <div className="flow-root">
-                  
+
                     </div>
                   </div>
                 </div>
@@ -383,7 +383,7 @@ const NavBar = () => {
                             <span>
                               <p className="text-base font-medium "> Agencies</p>
                               <p className="mt-1 text-sm innerlink">
-                               A list of agencies involved with space missions
+                                A list of agencies involved with space missions
                               </p>
                             </span>
                           </Link>
@@ -414,7 +414,7 @@ const NavBar = () => {
                         <div className="ml-4">
                           Astronauts
                           <p className="mt-1 text-sm innerlink">
-                          All those who took part in a space mission
+                            All those who took part in a space mission
                           </p>
                         </div>
                       </a>
@@ -473,7 +473,7 @@ const NavBar = () => {
                         <div className="ml-4">
                           Programs
                           <p className="mt-1 text-sm innerlink">
-                          A list of programs that agencies are taking part of
+                            A list of programs that agencies are taking part of
                           </p>
                         </div>
                       </a>
@@ -511,7 +511,7 @@ const NavBar = () => {
                             href="/reusable-cores/10"
                             as="/reusable-cores/10"
                           >
-                           Reusable cores
+                            Reusable cores
                           </Link>
                         </li>
                       </ul>
@@ -732,7 +732,7 @@ const NavBar = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium ">
-                     Launch History
+                      Launch History
                     </span>
                   </a>
                 </nav>
@@ -755,7 +755,7 @@ const NavBar = () => {
                   href={"/space-news/"}
                   as={`/space-news/`}
                 >
-                 Space News
+                  Space News
                 </Link>
                 <Link
                   onClick={handleClose}
