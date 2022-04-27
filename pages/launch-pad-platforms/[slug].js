@@ -17,7 +17,7 @@ function Piattaformalo({ pad }) {
           <h1 className="text-3xl font-bold text-yellow-600 font-display mb-6">
             {pad.results[0]?.name},&nbsp;{pad.results[0]?.location.name}
           </h1>
-          <h2> 
+          <h2  className="font-extrabold"> 
             Total launches:&nbsp;{pad.results[0]?.total_launch_count}
           </h2>
           <h2  className="font-extrabold">Latitude:&nbsp;{pad.results[0]?.latitude}</h2>
@@ -25,7 +25,7 @@ function Piattaformalo({ pad }) {
           <h2  className="font-extrabold">
             Wikipedia:&nbsp;
             <a
-              href={pad.results[0]?.wiki_url}
+              href={pad.results[0]?.wiki_url ? pad.results[0]?.wiki_url : "" }
               rel="canonical noopener noreferrer"
               target="__blank"
             >

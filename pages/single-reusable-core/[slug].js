@@ -1,5 +1,6 @@
 
 import { SEO } from "@components/common";
+import Image from 'next/image'
 
 
 function Primala({ sta }) {
@@ -29,7 +30,7 @@ function Primala({ sta }) {
           <figcaption>
 
             <p className="mt-14">
-              <b className="font-extrabold">Fi;ghts:&nbsp;</b>
+              <b className="font-extrabold">Flights:&nbsp;</b>
               {sta.flights}
             </p>
             <p className="">

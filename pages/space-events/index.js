@@ -62,9 +62,7 @@ function Eventit({ eventi }) {
                        href={`/space-events/${lol.slug}`}
                         target="_blank"
                         rel="noopener noreferrer canonical"
-                      >
-                      <a className="px-3  cursor-pointer  py-2 bg-red-500 text-white text-xs font-bold uppercase rounded">Find out more</a>
-                    </Link>                                    
+                      ><a className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a></Link>                                    
                     </div>
                   </article>
                 );

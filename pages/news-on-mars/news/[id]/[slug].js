@@ -3,7 +3,9 @@ import cheerio from "cheerio";
 import axios from "axios";
 
 export async function getServerSideProps(context) {
+
 console.log(context.resolvedUrl.substring(13))
+
   const { data } = await axios.get(`https://mars.nasa.gov${context.resolvedUrl.substring(13)}`);
   const $ = cheerio.load(data);
   const title = $(".article_title").first().text();
@@ -17,7 +19,18 @@ console.log(context.resolvedUrl.substring(13))
 }
 
 function MarsSingle({ title,description,content, date, lastScraped,path }) {
+
 console.log(content)
+
+React.useEffect(() => {
+  let ciao = document.querySelectorAll("img")
+  ciao.forEach((io, i) => {
+    if (io.src.includes(".jpg")) {
+      io.src="https://mars.nasa.gov".concat(io.src)
+    }
+  })
+}, [])
+
   return (
     <>
       <SEO

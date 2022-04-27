@@ -38,11 +38,11 @@ function MarsNEws({ results }) {
 
 
                                     <Link
-                                        href=  {`/news-on-mars${results.link[index].substring(26).trim()}`}
+                                                          className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
+
+                                        href=  {`/news-on-mars/news${results.link[index].substring(26).trim()}`}
                                         rel="noopener noreferrer canonical"
-                                    >
-                                    Find out more
-                                    </Link>
+                                        ><a className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a></Link>                                    
                                 </div>
                             </article>
                         )

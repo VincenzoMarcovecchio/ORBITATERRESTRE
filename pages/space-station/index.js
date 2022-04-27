@@ -35,15 +35,15 @@ function StazioneSpazialeIndex({ sta }) {
                     {lol.name}
                   </h1>
                   <div className="flex mb-2">
-                    <b>Orbit:&nbsp;</b>
+                    <b className="font-extrabold">Orbit:&nbsp;</b>
                     <p>{lol.orbit}</p>
                   </div>
                   <div className="flex mb-2">
-                    <b>Type:&nbsp;</b>
+                    <b className="font-extrabold">Type:&nbsp;</b>
                     <p>{lol.type.name}</p>
                   </div>
                   <div className="flex mb-6 flex-col">
-                    <b>Description:&nbsp;</b>
+                    <b className="font-extrabold">Description:&nbsp;</b>
                     <p>{lol.description}</p>
                   </div>
                   <a

@@ -33,7 +33,7 @@ function PrimeFasi({ sta, pageNumber }) {
                 alt={lol.name}
                 width="350"
                 height="350"
-                layout="responsive"
+                layout="intrinsic"
               />
 
 
@@ -42,11 +42,11 @@ function PrimeFasi({ sta, pageNumber }) {
                   {lol.details}
                 </h1>
                 <div className="flex">
-                  <b>Flights: &nbsp;</b>
+                  <b className="font-extrabold">Flights: &nbsp;</b>
                   <p>{lol.flights}</p>
                 </div>
                 <div className="flex mb-4">
-                  <b>Status: &nbsp; </b>
+                  <b className="font-extrabold">Status: &nbsp; </b>
                   <p>{lol.status}</p>
                 </div>
                 <span

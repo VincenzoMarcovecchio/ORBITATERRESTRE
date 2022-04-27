@@ -82,16 +82,16 @@ function Page({ agenciesData, pageNumber }) {
                       {data.name}
                     </h1>
                     <p className=" text-lg">
-                      <b>Administrator:</b>&nbsp;{data.amministrator}
+                      <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                     </p>
                     <p className=" text-lg ">
-                      <b>Founded:</b>&nbsp;{data.founding_year}
+                      <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                     </p>
                     <p className=" text-lg">
-                      <b>Description:</b>&nbsp;{data.description}
+                      <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                     </p>
                     <p className="mb-4 text-lg">
-                      <b>Type:</b>&nbsp;{data.type}
+                      <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                     </p>
                     <Link
                       href={`/space-agency/${data.id}`}                  
@@ -137,16 +137,16 @@ function Page({ agenciesData, pageNumber }) {
                         {data.name}
                       </h1>
                       <p className="mt-4 text-lg">
-                        <b>Administrator:</b>&nbsp;{data.amministrator}
+                        <b className="font-extrabold">Administrator:</b>&nbsp;{data.amministrator}
                       </p>
                       <p className=" text-lg ">
-                        <b>Founded:</b>&nbsp;{data.founding_year}
+                        <b className="font-extrabold">Founded:</b>&nbsp;{data.founding_year}
                       </p>
                       <p className="text-lg">
-                        <b>Description:</b>&nbsp;{data.description}
+                        <b className="font-extrabold">Description:</b>&nbsp;{data.description}
                       </p>
                       <p className="mb-4 text-lg">
-                        <b>Type:</b>&nbsp;{data.type}
+                        <b className="font-extrabold">Type:</b>&nbsp;{data.type}
                       </p>
 
                       <Link
