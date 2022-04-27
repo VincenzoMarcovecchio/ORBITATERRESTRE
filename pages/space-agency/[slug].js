@@ -14,14 +14,18 @@ function Pagetwo({ agenciesDatatwo }) {
               <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                 {agenciesDatatwo.name}
               </h1>
-              <Image
-                className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
-                src={agenciesDatatwo.logo_url}
-                alt={agenciesDatatwo.name}
-                width="150"
-                height="150"
-                layout="intrinsic"
-              />
+              {agenciesDatatwo.logo_url ? 
+               <Image
+               className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
+               src={agenciesDatatwo.logo_url}
+               alt={agenciesDatatwo.name}
+               width="150"
+               height="150"
+               layout="intrinsic"
+             />
+            : ""
+            }
+           
 
               <figcaption>
                 <p className="mt-14">
@@ -52,7 +56,7 @@ function Pagetwo({ agenciesDatatwo }) {
             <h2 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
               Launcher List
             </h2>
-            {launcher_list.map((item) => {
+            {agenciesDatatwo.launcher_list.map((item) => {
 
               <div className="accordion" id="accordionExample">
                 <div className="accordion-item bg-white border border-gray-200">
@@ -94,7 +98,7 @@ bg-gray-800 text-white text-xs font-bold uppercase rounded
 
           </>
         ) : (
-          "failed to load"
+         agenciesDatatwo.detail
         )}
       </div>
     </>

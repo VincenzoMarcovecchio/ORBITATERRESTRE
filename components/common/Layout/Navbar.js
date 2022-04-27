@@ -701,11 +701,12 @@ const NavBar = () => {
                         d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
+             
                     <Link
                       onClick={handleClose}
                       replace
-                      href={"/blog/"}
-                      as={`/blog`}
+                      href={"/news-on-mars"}
+                      as={`/news-on-mars`}
                     >
                       <span className="ml-3 text-base font-medium ">Blog</span>
                     </Link>
