@@ -1,5 +1,5 @@
-
 import {  SEO } from "@components/common";
+import React from "react"
 
 function Piattaformalo({ pad }) {
 

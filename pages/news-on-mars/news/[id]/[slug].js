@@ -1,6 +1,8 @@
 import {  SEO } from "@components/common";
 import cheerio from "cheerio";
 import axios from "axios";
+import React from "react";
+
 
 export async function getServerSideProps(context) {
 
