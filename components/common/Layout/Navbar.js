@@ -219,10 +219,10 @@ const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <Link href="/news-on-mars" as="/news-on-mars">
+                        <Link onClick={handleClose} href="/news-on-mars" as="/news-on-mars">
                           <p className="text-base font-medium ">News from Mars</p>
                         </Link>
-                        <Link href="/news-on-mars" as="/news-on-mars">
+                        <Link onClick={handleClose} href="/news-on-mars" as="/news-on-mars">
                           <p className="mt-1 text-sm innerlink ">
                             Gathering of information from NASA's websites
                           </p>
@@ -270,7 +270,7 @@ const NavBar = () => {
                   </div>
                   <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                     <div className="flow-root">
-                      <Link as="nasa-live" href="/nasa-live">
+                      <Link as="nasa-live" href="/nasa-live-tv">
                         <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100">
                           <svg
                             className="flex-shrink-0 h-6 w-6 "
@@ -356,6 +356,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
+                      onClick={handleClose}
                         style={{ textDecoration: "none" }}
                         href="/space-agencies/10"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -479,7 +480,7 @@ const NavBar = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 sm:px-8 sm:py-8">
+                  <div onClick={handleClose} className="px-5 py-5 bg-gray-50 dark:bg-gray-700 sm:px-8 sm:py-8">
                     <div>
                       <Link
                         href="/space-station"
@@ -793,7 +794,7 @@ const NavBar = () => {
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/nasa-live/"
+                  href="/nasa-live-tv/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   NASA Live

@@ -1,11 +1,17 @@
 import { SEO } from "@components/common";
 import Image from 'next/image'
 
-function Pagetwo({ agenciesDatatwo }) {
+function Pagetwo({ agenciesDatatwo,sluga }) {
   console.log(agenciesDatatwo)
   return (
     <>
-      <SEO description={agenciesDatatwo.description} title={`${agenciesDatatwo.name}`} />
+      <SEO      
+      cano="si"
+      slug={`space-agency/${sluga}`}
+      description={agenciesDatatwo.description} 
+      title={`${agenciesDatatwo.name}`} 
+      imageUrl={agenciesDatatwo.logo_url ? agenciesDatatwo.logo_url : "" }
+      />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {agenciesDatatwo ? (
@@ -117,6 +123,7 @@ export const getServerSideProps = async (pageContext) => {
   return {
     props: {
       agenciesDatatwo: datap,
+      sluga:pageNumber
     },
   };
 };

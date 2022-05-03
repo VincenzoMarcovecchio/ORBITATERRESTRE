@@ -4,7 +4,7 @@ import { Countdown } from "../../utils/countdown";
 
 function Polpo({ gigi }) {
   return (
-    <>
+    <React.Fragment>
       <SEO
         title={gigi.name}
         cano="si"
@@ -115,7 +115,7 @@ function Polpo({ gigi }) {
           </div>
         </article>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

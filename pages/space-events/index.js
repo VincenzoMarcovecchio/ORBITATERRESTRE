@@ -13,6 +13,7 @@ function Eventit({ eventi }) {
         cano="si"
         slug="space-events"
         title="Space Events"
+        imageUrl={eventi.results[0].feature_image}
         description="A list of future space events"
       />
 

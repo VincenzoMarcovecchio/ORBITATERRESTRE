@@ -9,7 +9,7 @@ function Home({ datas }) {
   return (
     <React.Fragment>
    
-        <SEO title="Home" description="Una guida allo spazio semplificata per noi comuni umani" />
+        <SEO title="Home" description="A simplified space guide for us ordinary humans" />
         <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
           <section className="w-full md:max-w-screen-lg">
             <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">

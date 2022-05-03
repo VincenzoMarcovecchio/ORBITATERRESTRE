@@ -3,14 +3,17 @@ import { SEO } from "@components/common";
 import Image from 'next/image'
 
 
-function Primala({ sta }) {
+function Primala({ sta, pageNumber }) {
 
 
   return (
     <>
       <SEO
+      cano="si"
+      slug={`single-reusable-core/${pageNumber}`}
         description="We monitor the early stages of the rocket when a launch vehicle can be used more than once such as the Falcon 9 cores used by SpaceX"
         title="Reusable launchers"
+        imageUrl={sta.image_url ? sta.image_url : ""}
       />
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">

@@ -6,14 +6,14 @@ export function Bio({ className }) {
   return (
     <div className={clsx(`flex items-center `, className)}>
       <small className="text-base leading-7 mb-6">
-        Web site looking for ideas by{" "}
+        Website looking for ideas by{" "}
         <b className="font-semibold">{author.name}</b>
         <a
           target="_blank"
           rel="noopener noreefrrer canonical"
           href={`https://twitter.com/${social.twitter}`}
         >
-          &nbsp;Follow me on twitter
+          &nbsp;Follow me on Twitter
         </a>{" "}
         or on
         <a

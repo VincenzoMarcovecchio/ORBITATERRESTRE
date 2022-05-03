@@ -8,7 +8,7 @@ function NasaLive() {
     <>
       <SEO
         cano="si"
-        slug="nasa-live"
+        slug="nasa-live-tv"
         title="Nasa Live TV"
         description="NASA TV broadcasts a variety of regularly scheduled and pre-recorded educational and public relations programs 24 hours a day on its various channels. The network also provides a variety of live programs, such as coverage of missions, events (space walks, media interviews, educational broadcasts), press conferences and rocket launches."
       />

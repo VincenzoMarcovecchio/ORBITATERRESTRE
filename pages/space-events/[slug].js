@@ -7,6 +7,7 @@ function Slugt({ curiosity, pageNumber }) {
       <SEO cano="si"
         slug={pageNumber}
         title={`${curiosity.results[0]?.name}`}
+        imageUrl={curiosity.results[0]?.feature_image}
         description={curiosity.results[0]?.description}
       />
 
