@@ -1,3 +1,4 @@
+import React from "react"
 import { SEO } from "@components/common";
 import { Countdown } from "../../utils/countdown";
 
@@ -7,7 +8,7 @@ function Polpo({ gigi }) {
       <SEO
         title={gigi.name}
         cano="si"
-        slug={`space-launch-single/${gigi.id} `}
+        slug={`space-launch-single/${gigi.id}`}
         imageUrl={gigi.image}
         description={`${gigi.mission.description}`}
       />
