@@ -9,13 +9,13 @@ function NasaLive() {
       <SEO
         cano="si"
         slug="nasa-live"
-        title="Nasa Live "
+        title="Nasa Live TV"
         description="NASA TV broadcasts a variety of regularly scheduled and pre-recorded educational and public relations programs 24 hours a day on its various channels. The network also provides a variety of live programs, such as coverage of missions, events (space walks, media interviews, educational broadcasts), press conferences and rocket launches."
       />
       <div className="px-4  max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
           <h2 className="text-4xl font-bold text-yellow-600 font-display mt-8 mx-auto mb-6">
-            La TV della NASA
+           NASA Live TV
           </h2>
           <iframe
             style={{ width: "100%" }}

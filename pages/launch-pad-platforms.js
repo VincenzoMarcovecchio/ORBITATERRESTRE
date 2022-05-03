@@ -85,15 +85,15 @@ function Piattaforme({ pad }) {
                       {pa.name}
                     </h1>
                     <p className="mt-2 text-lg">
-                      <b>Launch count:&nbsp;</b>
+                      <b className="font-extrabold">Launch count:&nbsp;</b>
                       {pa.total_launch_count}
                     </p>
                     <p className=" text-lg ">
-                      <b>Latitude:&nbsp;</b>
+                      <b className="font-extrabold">Latitude:&nbsp;</b>
                       {pa.latitude}
                     </p>
                     <p className="text-lg ">
-                      <b>Longitude:&nbsp;</b>
+                      <b className="font-extrabold">Longitude:&nbsp;</b>
                       {pa.longitude}
                     </p>
 
