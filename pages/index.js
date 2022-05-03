@@ -1,6 +1,5 @@
 import React from "react";
 import { Lanci } from "../components/common/Lanci";
-import NextImage from '../utils/NextImage'
 import {  SEO } from "@components/common";
 
 
