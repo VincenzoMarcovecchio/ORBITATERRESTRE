@@ -11,8 +11,8 @@ function Primala({ sta, pageNumber }) {
       <SEO
       cano="si"
       slug={`single-reusable-core/${pageNumber}`}
-        description="We monitor the early stages of the rocket when a launch vehicle can be used more than once such as the Falcon 9 cores used by SpaceX"
-        title="Reusable launchers"
+        description={sta.launcher_config.description}
+        title= {sta.launcher_config.full_name}
         imageUrl={sta.image_url ? sta.image_url : ""}
       />
 
