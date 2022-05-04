@@ -18,7 +18,7 @@ function MarsNEws({ results }) {
             <div className="px-4 max-w-screen-2xl md:flex ">
                 <section className="w-full ">
                     {results.title.map((item, index) => {
-                        console.log(results.link[index].substring(21))
+                    //    console.log(results.link[index].substring(21))
                         return (
                             <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                                 key={index}>

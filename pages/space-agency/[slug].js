@@ -2,7 +2,7 @@ import { SEO } from "@components/common";
 import Image from 'next/image'
 
 function Pagetwo({ agenciesDatatwo,sluga }) {
-  console.log(agenciesDatatwo)
+  //console.log(agenciesDatatwo)
   return (
     <>
       <SEO      

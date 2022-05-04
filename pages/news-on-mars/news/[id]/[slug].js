@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export async function getServerSideProps(context) {
 
-  console.log(context.resolvedUrl.substring(13))
+ // console.log(context.resolvedUrl.substring(13))
 
   const { data } = await axios.get(`https://mars.nasa.gov${context.resolvedUrl.substring(13)}`);
   const $ = cheerio.load(data);
@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
 
 function MarsSingle({ title, image, description, content, date, lastScraped, path }) {
 
-  console.log(content)
+ // console.log(content)
 
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")

@@ -4,7 +4,7 @@ import axios from "axios";
 
 export async function getServerSideProps(context) {
 
-  console.log(context.query.id)
+ // console.log(context.query.id)
 
   const { data } = await axios.get(`https://svs.gsfc.nasa.gov/${context.query.id}`);
   const $ = cheerio.load(data);
@@ -22,7 +22,7 @@ export async function getServerSideProps(context) {
 }
 
 function MarsSingles({ title, description, content, credit, date, lastScraped, path }) {
-  console.log(content)
+ // console.log(content)
   return (
     <>
       <style>

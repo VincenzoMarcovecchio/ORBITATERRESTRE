@@ -4,7 +4,7 @@ import {  SEO } from "@components/common";
  function NoBueno() {
   return (
     <>
-      <SEO title="Oops qualcosa e' andato storto" />
+      <SEO title="Oops something went wrong" description={`Oops something went wrong`} />
 
       <div className="bg-gradient-to-r from-purple-300 to-blue-200">
         <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
@@ -12,7 +12,7 @@ import {  SEO } from "@components/common";
             <div className="border-t border-gray-200 text-center pt-8">
               <h1 className="text-9xl font-bold text-purple-400">404</h1>
               <h1 className="text-6xl font-medium py-8 text-purple-800">
-                oops! Qualcosa è andato storto
+                oops! Something went wrong
               </h1>
               <p className="text-2xl text-purple-800 pb-8 px-12 font-medium">
                 Oops! The page you are looking for does not exist. It might have

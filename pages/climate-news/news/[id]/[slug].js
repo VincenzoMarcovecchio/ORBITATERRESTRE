@@ -6,7 +6,7 @@ import React from "react";
 
 export async function getServerSideProps(context) {
 
-  console.log(context.resolvedUrl)
+ // console.log(context.resolvedUrl)
 
   const { data } = await axios.get(`https://climate.nasa.gov${context.resolvedUrl.substring(13)}`);
   const $ = cheerio.load(data);
@@ -23,7 +23,7 @@ export async function getServerSideProps(context) {
 
 function MarsSingle({ title, test, description, content, image, date, lastScraped, path }) {
 
-  console.log(test)
+ // console.log(test)
 
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")

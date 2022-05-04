@@ -8,7 +8,7 @@ module.exports = {
       { userAgent: "*", allow: "/" },
     ],
     additionalSitemaps: [
-      `${siteUrl}/news-on-mars.xml`,
+      `https://orbitaterrestre.com/news-on-mars.xml`,
 
     ],
   },

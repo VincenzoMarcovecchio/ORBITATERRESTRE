@@ -3,7 +3,7 @@ import cheerio from "cheerio";
 import axios from "axios";
 
 export async function getServerSideProps(context) {
-console.log(context.query.slug)
+//console.log(context.query.slug)
   const { data } = await axios.get(`https://mars.nasa.gov${context.query.slug}`);
   const $ = cheerio.load(data);
   const title = $(".article_title").innerText();
@@ -14,7 +14,7 @@ console.log(context.query.slug)
 }
 
 function MarsSingle({ title, lastScraped,context }) {
-  console.log(context)
+ // console.log(context)
   return (
     <>
       <SEO
