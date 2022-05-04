@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
-function MarsNEws({ results }) {
+function MarsNEwsa({ results }) {
 
 
     return (
@@ -65,7 +65,7 @@ function MarsNEws({ results }) {
     );
 }
 
-export default MarsNEws;
+export default MarsNEwsa;
 
 export async function getStaticProps() {
     const { data } = await axios.get(
