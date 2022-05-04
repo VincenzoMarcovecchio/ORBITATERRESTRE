@@ -171,8 +171,9 @@ const NavBar = () => {
                       </div>
                     </a>
                     <a
+                     onClick={handleClose}
                       style={{ textDecoration: "none" }}
-                      href="/visualizzazione-orbita-terrestre-bassa-in-tempo-reale/"
+                      href="/climate-news/"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       {/* Heroicon name: outline/shield-check */}
@@ -192,9 +193,9 @@ const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Cyber space</p>
+                        <p className="text-base font-medium ">Earth safety</p>
                         <p className="mt-1 text-sm innerlink ">
-                          work in progress
+                          Gathering of information from events affecting our planet
                         </p>
                       </div>
                     </a>

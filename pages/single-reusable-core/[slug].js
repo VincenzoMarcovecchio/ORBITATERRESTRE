@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 
 function Primala({ sta, pageNumber }) {
-
+console.log(sta)
 
   return (
     <>
@@ -42,11 +42,11 @@ function Primala({ sta, pageNumber }) {
             </p>
             <p className="">
               <b className="font-extrabold">Succesfull Landings:&nbsp;</b>
-              {sta.succesfull_landings || "nessun risultato"}
+              {sta.succesfull_landings || "no results"}
             </p>
-            <p>
-              <b >Launcher configs:</b>
-            </p>
+            <hr />
+            <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">Configuration
+            </h2>
             <p >
               <b className="font-extrabold">Name:&nbsp;</b>
               {sta.launcher_config.full_name}
@@ -60,11 +60,72 @@ function Primala({ sta, pageNumber }) {
               {sta.launcher_config.total_launch_count}
             </p>
             <p>
-              <b className="font-extrabold">Succesfull launches:&nbsp;</b>
+              <b className="font-extrabold">Consecutive Succesful launches:&nbsp;</b>
 
-              {sta.launcher_config.succesfull_launches || "nothing"}
+              {sta.launcher_config.consecutive_successful_launches || "nothing"}
 
             </p>
+            <p>
+              <b className="font-extrabold">GTO capacity:&nbsp;</b>
+
+              {sta.launcher_config.gto_capacity || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Family:&nbsp;</b>
+
+              {sta.launcher_config.family || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Diameter:&nbsp;</b>
+
+              {sta.launcher_config.diameter || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Apogee:&nbsp;</b>
+
+              {sta.launcher_config.apogee || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Maiden flight:&nbsp;</b>
+
+              {sta.launcher_config.maiden_flight || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Launch cost:&nbsp;</b>
+
+              {sta.launcher_config.launch_cost || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Launch mass:&nbsp;</b>
+
+              {sta.launcher_config.launch_mass || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Length:&nbsp;</b>
+
+              {sta.launcher_config.length || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Serial number:&nbsp;</b>
+
+              {sta.serial_number || "nothing"}
+
+            </p>
+            <p>
+              <b className="font-extrabold">Info url:&nbsp;</b>
+
+             <a href={sta.launcher_config.info_url} target="_blank" rel="canonical noopener noreferrer">{sta.launcher_config.info_url || "nothing"}</a> 
+
+            </p>
+           
           </figcaption>
 
         </figure>

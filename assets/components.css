@@ -101,7 +101,12 @@ input[type='range']:focus::-ms-fill-upper {
   color: rgba(107, 114, 128, var(--tw-text-opacity));
 
 }
-
+.inline_figure, .inline_figure > a {
+  margin: 1.5rem auto;
+}
+.author {
+  margin-bottom: 1rem;
+}
 .linko   {
   text-decoration: none !important;
 }

@@ -10,10 +10,10 @@ function MarsNEws({ results }) {
         <>
             <SEO
                 cano="si"
-                slug="news-on-mars"
+                slug="climate-news"
                 imageUrl={results.image[1]}
-                title="All about Mars"
-                description="All news from NASA latest discoveries"
+                title="Climate Change: Vital Signs of the Planet"
+                description="Vital Signs of the Planet: Global Climate Change and Global Warming. Current news and data streams about global warming and climate change from NASA."
             />
             <div className="px-4 max-w-screen-2xl md:flex ">
                 <section className="w-full ">
@@ -43,7 +43,7 @@ function MarsNEws({ results }) {
                                     <Link
                                         className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded"
 
-                                        href={`/news-on-mars/news${results.link[index].substring(26).trim()}`}
+                                        href={`/climate-news/news${results.link[index].substring(29).trim()}`}
                                         rel="noopener noreferrer canonical"
                                     ><a className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a></Link>
                                 </div>
@@ -69,7 +69,7 @@ export default MarsNEws;
 
 export async function getStaticProps() {
     const { data } = await axios.get(
-        "https://nassa.herokuapp.com/2");
+        "https://nassa.herokuapp.com/climate");
 
     return {
         props: { results: data.results },

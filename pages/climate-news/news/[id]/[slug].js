@@ -2,14 +2,13 @@ import { SEO } from "@components/common";
 import cheerio from "cheerio";
 import axios from "axios";
 import React from "react";
-import Image from 'next/image'
 
 
 export async function getServerSideProps(context) {
 
-  console.log(context.resolvedUrl.substring(13))
+  console.log(context.resolvedUrl)
 
-  const { data } = await axios.get(`https://mars.nasa.gov${context.resolvedUrl.substring(13)}`);
+  const { data } = await axios.get(`https://climate.nasa.gov${context.resolvedUrl.substring(13)}`);
   const $ = cheerio.load(data);
   const title = $(".article_title").first().text();
   const date = $(".release_date").first().text();
@@ -17,21 +16,20 @@ export async function getServerSideProps(context) {
   const content = $(".clearfix").first().html();
   const lastScraped = new Date().toISOString();
   const image = $(".main_image").attr("src");
-
   return {
-    props: { title, image, lastScraped, content, description, date, path: context.resolvedUrl.substring(13) },
+    props: { title, test: context.resolvedUrl, lastScraped,image : image ? image : "", content, description, date, path: context.resolvedUrl.substring(13) },
   };
 }
 
-function MarsSingle({ title, image, description, content, date, lastScraped, path }) {
+function MarsSingle({ title, test, description, content, image, date, lastScraped, path }) {
 
-  console.log(content)
+  console.log(test)
 
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")
     ciao.forEach((io, i) => {
       if (io.src.includes("https://www.orbitaterrestre.com")) {
-        io.src.replace("https://www.orbitaterrestre.com", "https://mars.nasa.gov")
+        io.src.replace("https://www.orbitaterrestre.com", "https://climate.nasa.gov")
 
       }
     })
@@ -41,10 +39,10 @@ function MarsSingle({ title, image, description, content, date, lastScraped, pat
     <>
       <SEO
         cano="si"
-        slug={`news-on-mars${path}`}
+        slug={`climate-news${path}`}
         title={title}
         description={description}
-        imageUrl={"https://mars.nasa.gov" + image}
+        imageUrl={"https://climate.nasa.gov" + image}
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
         <section className="w-full mt-8 md:max-w-screen-lg">
@@ -56,16 +54,9 @@ function MarsSingle({ title, image, description, content, date, lastScraped, pat
               <time dateTime={date.substring(2)} className="text-sm">
                 {date.substring(2)}
               </time>
-              <Image
-                src={"https://mars.nasa.gov" + image}
-                alt={title}
-                width={450}
-                height={450}
-                layout="responsive"
-              />
-
-
-            </header>
+             {image &&  <img
+                alt={title} height="350" width="350" src={"https://climate.nasa.gov" + image} />
+              } </header>
             <div dangerouslySetInnerHTML={{ __html: content }}></div>
 
           </article>
