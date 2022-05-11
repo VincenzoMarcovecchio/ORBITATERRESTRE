@@ -30,7 +30,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         property="og:image"
         content={`${
           (imageUrl && imageUrl.includes("apod")) ||
-          (imageUrl && imageUrl.includes("spacelaunchnow"))
+          (imageUrl && imageUrl.includes("spacelaunchnow"))||
+          (imageUrl && imageUrl.includes("mars"))
             ? `${imageUrl}`
             : imageUrl
             ? `https://orbitaterrestre.com/${imageUrl}`

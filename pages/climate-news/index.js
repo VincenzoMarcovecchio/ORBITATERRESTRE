@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
 function MarsNEwsa({ results }) {
-console.log(results)
 
     return (
         <>
