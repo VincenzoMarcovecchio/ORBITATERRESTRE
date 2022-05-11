@@ -7,3 +7,5 @@ Host: https://orbitaterrestre.com
 
 # Sitemaps
 Sitemap: https://orbitaterrestre.com/sitemap.xml
+Sitemap: https://orbitaterrestre.com/news-on-mars.xml
+Sitemap: https://orbitaterrestre.com/space-x.xml

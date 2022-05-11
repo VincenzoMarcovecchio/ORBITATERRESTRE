@@ -9,6 +9,7 @@ module.exports = {
     ],
     additionalSitemaps: [
       `https://orbitaterrestre.com/news-on-mars.xml`,
+      `https://orbitaterrestre.com/space-x.xml`,
 
     ],
   },
