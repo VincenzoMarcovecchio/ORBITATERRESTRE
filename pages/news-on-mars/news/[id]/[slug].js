@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
   const description = $("figcaption").first().html();
   const content = $(".clearfix").first().html();
   const lastScraped = new Date().toISOString();
-  const image = $(".main_image").attr("src");
+  const image = $("#main_image").first().attr("src");
 
   return {
     props: { title, image, lastScraped, content, description, date, path: context.resolvedUrl.substring(13) },
@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
 
 function MarsSingle({ title, image, description, content, date, lastScraped, path }) {
 
- // console.log(content)
+  console.log(image)
 
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")
@@ -56,7 +56,7 @@ function MarsSingle({ title, image, description, content, date, lastScraped, pat
               <time dateTime={date.substring(2)} className="text-sm">
                 {date.substring(2)}
               </time>
-              <Image
+              <img
                 src={"https://mars.nasa.gov" + image}
                 alt={title}
                 width={450}

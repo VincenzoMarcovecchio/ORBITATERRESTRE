@@ -12,6 +12,11 @@ export default class MyDocument extends Document {
         <body className="bg-gray-50">
           <Main />
           <NextScript />
+          <script
+        class="3758abc"
+       
+        src="https://github.com/kevin-powell/Mars-Weather-App/blob/master/scripts/index.js"
+        data-encoded="1234sdkljfeiASD9A"></script>
         </body>
 
    

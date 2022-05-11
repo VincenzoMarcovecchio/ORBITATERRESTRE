@@ -54,8 +54,8 @@ function Page({ agenciesData, pageNumber }) {
             .map((data) => {
               return (
                 <figure
-                  className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                  key={data.id}
+                className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                key={data.id}
                 >
                   {data.image_url ? (
                     <Image
@@ -164,7 +164,7 @@ function Page({ agenciesData, pageNumber }) {
                 .map((data) => {
                   return (
                     <figure
-                      className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                    className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
                       key={data.id}
                     >
                       {data.image_url ? (
@@ -223,8 +223,8 @@ function Page({ agenciesData, pageNumber }) {
                       <>
                         {data.id && (
                           <figure
-                            className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                            key={data.id}
+                          className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                          key={data.id}
                           >
                             {data.image_url ? (
                               <Image
@@ -281,8 +281,8 @@ function Page({ agenciesData, pageNumber }) {
                     .map((data) => {
                       return (
                         <figure
-                          className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                          key={data.id}
+                        className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                        key={data.id}
                         >
                           {data.image_url ? (
                             <Image
@@ -334,8 +334,8 @@ function Page({ agenciesData, pageNumber }) {
                   : agenciesData.results.map((data) => {
                     return (
                       <figure
-                        className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
-                        key={data.id}
+                      className="sm:grid md:flex sm:flex-col md:flex-row max-w-full mb-12 shadow-lg rounded-lg overflow-hidden"
+                      key={data.id}
                       >
                         {data.image_url ? (
                           <Image

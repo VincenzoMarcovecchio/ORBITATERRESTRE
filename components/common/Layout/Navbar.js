@@ -271,7 +271,7 @@ const NavBar = () => {
                   </div>
                   <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                     <div className="flow-root">
-                      <Link as="nasa-live" href="/nasa-live-tv">
+                      <Link as="nasa-live-tv" href="/nasa-live-tv">
                         <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100">
                           <svg
                             className="flex-shrink-0 h-6 w-6 "
@@ -787,7 +787,7 @@ const NavBar = () => {
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/posizione-dell-ISS-in-tempo-reale/"
+                  href="/ISS-live-position/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   ISS Live

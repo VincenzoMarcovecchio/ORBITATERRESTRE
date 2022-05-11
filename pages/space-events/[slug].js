@@ -1,6 +1,7 @@
 import { SEO } from "@components/common";
 
 function Slugt({ curiosity, pageNumber }) {
+  console.log(curiosity)
   return (
     <>
       <SEO cano="si"
@@ -24,7 +25,7 @@ function Slugt({ curiosity, pageNumber }) {
         />
 
         <p className="mt-4">
-          <b className="font-extrabold">Descriptions:</b>&nbsp;{curiosity.results[0]?.description}
+          <b className="font-extrabold">Description:</b>&nbsp;{curiosity.results[0]?.description}
         </p>
         <p >
           <b className="font-extrabold">An event of type:</b>&nbsp;{curiosity.results[0]?.type.name}

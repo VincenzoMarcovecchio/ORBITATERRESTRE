@@ -40,10 +40,10 @@ function Eventit({ eventi }) {
                     />
 
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
-                      <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
-                        {lol.name}
+                      <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
+                        {lol.name} 
                       </h1>
-                      <span className="px-3 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+                      <span className="px-3 mb-9 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                         {moment(lol.date).format("DD-MM-YYYY")}
                       </span>
                       <p className="mt-4" >

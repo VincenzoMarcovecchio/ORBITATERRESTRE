@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
 function MarsNEwsa({ results }) {
-
+console.log(results)
 
     return (
         <>
@@ -73,6 +73,5 @@ export async function getStaticProps() {
 
     return {
         props: { results: data.results },
-        revalidate: false, // rerun after 10 seconds
     };
 }

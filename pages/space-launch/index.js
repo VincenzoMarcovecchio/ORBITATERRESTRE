@@ -11,7 +11,7 @@ const LanciIndex = () => {
   const router = useRouter();
   useEffect(() => {
     fetch(
-      `https://ll.thespacedevs.com/2.2.0/launch/?mode=list&search=${name}&is_crewed=${crewed}&limit=50&offset=50&include_suborbital=true&related=false`
+      `https://ll.thespacedevs.com/2.2.0/launch/?mode=list&search=${name}&is_crewed=${crewed}&limit=50&offset=50&include_suborbital=true`
     )
       .then((data) => data.json())
       .then((res) => setLancid(res));

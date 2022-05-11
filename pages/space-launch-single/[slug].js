@@ -3,6 +3,7 @@ import { SEO } from "@components/common";
 import { Countdown } from "../../utils/countdown";
 
 function Polpo({ gigi }) {
+  console.log(gigi)
   return (
     <React.Fragment>
       <SEO
@@ -66,8 +67,12 @@ function Polpo({ gigi }) {
               </a>
             </p>
             <p className="mb-2">
-              <b className="font-extrabold">Part of the program:</b>&nbsp;
-              {gigi.program}
+              <b className="font-extrabold">Mission:</b>&nbsp;
+              {gigi.mission.description}
+            </p>
+            <p className="mb-2">
+              <b className="font-extrabold">Orbit:</b>&nbsp;
+              {gigi.mission.orbit.name}
             </p>
             <hr />
             <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">      Missile configuration
@@ -77,6 +82,10 @@ function Polpo({ gigi }) {
               {gigi.rocket.configuration.full_name}
             </p>
             <p>
+              <b className="font-extrabold">Description:&nbsp;</b>
+              {gigi.rocket.configuration.description}
+            </p>
+            <p>
               <b className="font-extrabold">Successful launches:&nbsp;</b>
               {gigi.rocket.configuration.consecutive_successful_launches}
             </p>
@@ -84,10 +93,7 @@ function Polpo({ gigi }) {
               <b className="font-extrabold">Failed launches:&nbsp;</b>
               {gigi.rocket.configuration.failed_launches}
             </p>
-            <p>
-              <b className="font-extrabold">Description:&nbsp;</b>
-              {gigi.rocket.configuration.description}
-            </p>
+
             <p>
               <b className="font-extrabold">Diameter:&nbsp;</b>
               {gigi.rocket.configuration.diameter}
