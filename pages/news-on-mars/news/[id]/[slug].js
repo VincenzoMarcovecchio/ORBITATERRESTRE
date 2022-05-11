@@ -35,7 +35,7 @@ function MarsSingle({ title, image, description, content, date, lastScraped, pat
 
       }
     })
-
+    
     let ciaoa = document.querySelectorAll("a")
     ciaoa.forEach((io, i) => {
       if (io.href.includes("https://www.orbitaterrestre.com")) {
