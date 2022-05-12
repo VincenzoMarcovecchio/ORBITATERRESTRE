@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import tz from "moment-timezone";
 
 export class Countdown extends React.Component {
   state = {
@@ -12,7 +13,8 @@ export class Countdown extends React.Component {
   componentDidMount() {
     this.interval = setInterval(() => {
       const { timeTillDate, timeFormat } = this.props;
-      const then = moment(timeTillDate);
+   
+      const then = moment(timeTillDate)
       const now = moment();
       const countdown = moment(then - now);
       const days = countdown.format("D");
@@ -22,7 +24,9 @@ export class Countdown extends React.Component {
 
       this.setState({ days, hours, minutes, seconds });
     }, 1000);
+    console.log(this.props);
   }
+   
 
   componentWillUnmount() {
     if (this.interval) {

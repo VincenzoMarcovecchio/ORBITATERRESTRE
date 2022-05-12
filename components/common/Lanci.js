@@ -11,7 +11,7 @@ export function Lanci() {
     "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming?limit=20";
 
   const { data, error } = useSWR(url, fetcher);
-
+  console.log(data)
   return (
     <div className="md:px-4 flex flex-col mio">
       {data && data.results !== undefined ? (
@@ -35,7 +35,7 @@ export function Lanci() {
                 <div className="flex justify-between items-center ml-4 pr-8">
                   <div className="bg-indigo-500 bg-opacity-95 text-grey-darker bg-opacity-95 shadow px-2 py-1 flex items-center font-bold text-xs rounded">
                     <Countdown
-                      timeTillDate={la.window_start}
+                      timeTillDate={la.window_end}
                       timeFormat={"YYYY MM DD, h:mm a"}
                     />
                   </div>

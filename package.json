@@ -23,6 +23,7 @@
     "lodash.debounce": "^4.0.8",
     "lqip-loader": "^2.2.1",
     "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
     "next": "^10.2.3",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",

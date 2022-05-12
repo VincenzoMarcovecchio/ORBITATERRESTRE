@@ -17,23 +17,28 @@ function Polpo({ gigi }) {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <article className="flex flex-col max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden">
           <figure
-            className="flex mb-8 flex-col justify-between max-w-72 h-96 md:mr-4 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
+            className="flex mb-8 relative flex-col justify-between max-w-72 h-96 md:mr-4 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer w-full"
             style={{
               backgroundImage: `url(${gigi.image})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="flex justify-between items-center ml-4 pr-8">
+            <div className="flex  justify-between items-center ml-4 pr-8">
               <div className="bg-indigo-500 bg-opacity-95 text-grey-darker bg-opacity-95 shadow px-2 py-1 flex items-center font-bold text-xs rounded">
                 <Countdown
-                  timeTillDate={gigi.window_start}
+                  timeTillDate={gigi.window_end}
                   timeFormat={"YYYY MM DD, h:mm a"}
                 />
               </div>
               <small className="bg-white bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-red-400 ">
-                {gigi.mission.type || "non specificato"}
+                {gigi.mission.type || "non specified"}
               </small>
+             
+              <small className=" absolute  bottom-0 left-0 t-4 bg-red-400 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-white-400 ">
+                {gigi.status.description || "non specified"}
+              </small>
+              
             </div>
             <figcaption></figcaption>
           </figure>
@@ -66,7 +71,7 @@ function Polpo({ gigi }) {
                 {gigi.launch_service_provider.name}
               </a>
             </p>
-            <p className="mb-2">
+            <p>
               <b className="font-extrabold">Mission:</b>&nbsp;
               {gigi.mission.description}
             </p>
