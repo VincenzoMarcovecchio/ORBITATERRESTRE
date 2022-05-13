@@ -11,6 +11,7 @@ export class Countdown extends React.Component {
   };
 
   componentDidMount() {
+    
     this.interval = setInterval(() => {
       const { timeTillDate, timeFormat } = this.props;
    
@@ -24,7 +25,8 @@ export class Countdown extends React.Component {
 
       this.setState({ days, hours, minutes, seconds });
     }, 1000);
-    console.log(this.props);
+
+
   }
    
 

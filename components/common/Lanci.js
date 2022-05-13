@@ -11,7 +11,7 @@ export function Lanci() {
     "https://mimmofranco.herokuapp.com/https://lldev.thespacedevs.com/2.2.0/launch/upcoming?limit=20";
 
   const { data, error } = useSWR(url, fetcher);
-  console.log(data)
+  
   return (
     <div className="md:px-4 flex flex-col mio">
       {data && data.results !== undefined ? (

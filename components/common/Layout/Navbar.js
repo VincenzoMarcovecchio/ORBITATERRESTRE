@@ -14,9 +14,12 @@ const NavBar = () => {
     setFlyer(false);
     setFlyerTwo(false);
   });
-  const handleClose = useCallback(() => {
-    setOpen(!open);
-  });
+  
+  const handleClose = () => {
+    setFlyer(false);
+    setFlyerTwo(false);
+  };
+  
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -251,19 +254,19 @@ const NavBar = () => {
                           d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                         />
                       </svg>
-                      <div className="ml-4">
+                      <div onClick={handleClose} className="ml-4">
                         <Link
-                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
-                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          as="/Starlink-Availability-Map"
+                          href="/Starlink-Availability-Map"
                         >
-                          <p className="text-base font-medium ">Telescopi</p>
+                          <p className="text-base font-medium ">Starlink Coverage Map</p>
                         </Link>
                         <Link
-                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
-                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          as="/Starlink-Availability-Map"
+                          href="/Starlink-Availability-Map"
                         >
                           <p className="mt-1 text-sm innerlink ">
-                            Esoplanets exploration
+                            Starlink Coverage Map
                           </p>
                         </Link>
                       </div>

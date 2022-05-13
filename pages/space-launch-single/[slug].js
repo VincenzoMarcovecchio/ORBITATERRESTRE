@@ -3,7 +3,7 @@ import { SEO } from "@components/common";
 import { Countdown } from "../../utils/countdown";
 
 function Polpo({ gigi }) {
-  console.log(gigi)
+
   return (
     <React.Fragment>
       <SEO
@@ -34,19 +34,24 @@ function Polpo({ gigi }) {
               <small className="bg-white bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-red-400 ">
                 {gigi.mission.type || "non specified"}
               </small>
-             
+
               <small className=" absolute  bottom-0 left-0 t-4 bg-red-400 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-white-400 ">
                 {gigi.status.description || "non specified"}
               </small>
-              
+           
+
             </div>
             <figcaption></figcaption>
           </figure>
 
           <div className="sm:w-full px-2">
-            <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-              Launch {gigi.name}
-            </h1>
+           
+            <h1 className="mt-8 mb-8 text-4xl  font-bold text-yellow-600 font-display">
+             {gigi.name}   
+            </h1> 
+            <small className=" mb-8 left-0 t-4 bg-indigo-300 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-white-400 ">
+                <a rel="canonical noopener noreferrer" target="__blank" href={`${gigi.flightclub_url}`}>Trajectory &rarr;</a>
+              </small>
             <p>
               <b className="font-extrabold">Type of launch:</b>&nbsp;
               {gigi.mission.type}
@@ -123,7 +128,39 @@ function Polpo({ gigi }) {
                 {gigi.rocket.configuration.manufacturer.name}
               </a>
             </p>
+            <hr />
+            <h2 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display"> Updates </h2>
+
+
+            <div style={{
+              overflowY: "auto", maxHeight: "20rem", overflowX: "hidden"
+            }} className="space-y-4 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-1 gap-8 mb-4 px-4">
+              {console.log(gigi.updates)}
+              {gigi.updates.map((ida) => {
+                return (
+                  <div className="relative mt-4 ">
+
+                    <div className="">
+                      <div className="flex mt-4 h-8 w-full rounded-t-lg border-b-2 border-slate-300 bg-slate-100 pl-[90px] shadow-lg">
+                        <small className="mx-auto mt-2 items-center text-xs font-light tracking-tight text-slate-400">Author: {ida.created_by}</small>
+                      </div>
+                    </div>
+
+                    <div className="flex p-4 w-full rounded-lg bg-white pl-[98px] shadow-xl">
+                      <p className="mx-auto mt-8 text-slate-700">{ida.comment}</p>
+                    </div>
+                    <div className="flex px-4 py-2 w-full rounded-lg bg-white pl-[98px] shadow-xl">
+                      <a href={ida.info_url} rel="canonical noopener noreferre" target="__blank" className="mx-auto text-slate-700">{ida.info_url}</a>
+                    </div>
+                    <div className="absolute  top-2 left-6 top-2 h-16 w-16 rounded-full border-2 border-white shadow-md">
+                      <img className="h-18 w-18 rounded-full object-cover object-center" src={ida.profile_image} alt={ida.comment} />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
+
         </article>
       </div>
     </React.Fragment>
