@@ -68,7 +68,7 @@ export async function getStaticProps() {
         "https://nassa.herokuapp.com/svs");
 
     return {
-        props: { results: data.results },
-        revalidate: false, // rerun after 10 seconds
+        props: { results: data.results }
+      
     };
 }

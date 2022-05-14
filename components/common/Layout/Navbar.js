@@ -14,12 +14,16 @@ const NavBar = () => {
     setFlyer(false);
     setFlyerTwo(false);
   });
-  
+
   const handleClose = () => {
     setFlyer(false);
     setFlyerTwo(false);
   };
-  
+
+  const handleCloseButt = () => {
+    setOpen(!open)
+  }
+
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -174,7 +178,7 @@ const NavBar = () => {
                       </div>
                     </a>
                     <a
-                     onClick={handleClose}
+                      onClick={handleClose}
                       style={{ textDecoration: "none" }}
                       href="/climate-news/"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -360,7 +364,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
-                      onClick={handleClose}
+                        onClick={handleClose}
                         style={{ textDecoration: "none" }}
                         href="/space-agencies/10"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -578,7 +582,7 @@ const NavBar = () => {
                   <button
                     type="button"
                     className="bg-white flyer-container rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    onClick={handleClose}
+                    onClick={handleCloseButt}
                   >
                     <span className="sr-only">Close menu</span>
                     {/* Heroicon name: outline/x */}
@@ -706,7 +710,7 @@ const NavBar = () => {
                         d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-             
+
                     <Link
                       onClick={handleClose}
                       replace
