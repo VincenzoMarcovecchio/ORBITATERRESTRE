@@ -14,16 +14,9 @@ const NavBar = () => {
     setFlyer(false);
     setFlyerTwo(false);
   });
-
-  const handleClose = () => {
-    setFlyer(false);
-    setFlyerTwo(false);
-  };
-
-  const handleCloseButt = () => {
-    setOpen(!open)
-  }
-
+  const handleClose = useCallback(() => {
+    setOpen(!open);
+  });
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -100,7 +93,6 @@ const NavBar = () => {
                 <span className="px-1">From Space </span>
                 {/*
               Heroicon name: solid/chevron-down
-
               Item active: "text-gray-600", Item inactive: "text-gray-400"
             */}
                 <svg
@@ -178,9 +170,8 @@ const NavBar = () => {
                       </div>
                     </a>
                     <a
-                      onClick={handleClose}
                       style={{ textDecoration: "none" }}
-                      href="/climate-news/"
+                      href="/visualizzazione-orbita-terrestre-bassa-in-tempo-reale/"
                       className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       {/* Heroicon name: outline/shield-check */}
@@ -200,9 +191,9 @@ const NavBar = () => {
                         />
                       </svg>
                       <div className="ml-4">
-                        <p className="text-base font-medium ">Earth safety</p>
+                        <p className="text-base font-medium ">Cyber space</p>
                         <p className="mt-1 text-sm innerlink ">
-                          Gathering of information from events affecting our planet
+                          work in progress
                         </p>
                       </div>
                     </a>
@@ -258,19 +249,19 @@ const NavBar = () => {
                           d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                         />
                       </svg>
-                      <div onClick={handleClose} className="ml-4">
+                      <div className="ml-4">
                         <Link
-                          as="/Starlink-Availability-Map"
-                          href="/Starlink-Availability-Map"
+                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
                         >
-                          <p className="text-base font-medium ">Starlink Coverage Map</p>
+                          <p className="text-base font-medium ">Telescopi</p>
                         </Link>
                         <Link
-                          as="/Starlink-Availability-Map"
-                          href="/Starlink-Availability-Map"
+                          as="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
+                          href="/telescopi-e-metodi-utilizzati-per-lesplorazione-di-esopianeti"
                         >
                           <p className="mt-1 text-sm innerlink ">
-                            Starlink Coverage Map
+                            Esoplanets exploration
                           </p>
                         </Link>
                       </div>
@@ -278,7 +269,7 @@ const NavBar = () => {
                   </div>
                   <div className="px-5 py-5 bg-gray-50 dark:bg-gray-700 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                     <div className="flow-root">
-                      <Link as="nasa-live-tv" href="/nasa-live-tv">
+                      <Link as="nasa-live" href="/nasa-live-tv">
                         <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100">
                           <svg
                             className="flex-shrink-0 h-6 w-6 "
@@ -323,7 +314,6 @@ const NavBar = () => {
                 <span className="px-1">Missions</span>
                 {/*
               Heroicon name: solid/chevron-down
-
               Item active: "text-gray-600", Item inactive: "text-gray-400"
             */}
                 <svg
@@ -364,7 +354,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
-                        onClick={handleClose}
+                      onClick={handleClose}
                         style={{ textDecoration: "none" }}
                         href="/space-agencies/10"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -542,7 +532,6 @@ const NavBar = () => {
 
         {/*
     Mobile menu, show/hide based on mobile menu state.
-
     Entering: "duration-200 ease-out"
       From: ""
       To: ""
@@ -582,7 +571,7 @@ const NavBar = () => {
                   <button
                     type="button"
                     className="bg-white flyer-container rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    onClick={handleCloseButt}
+                    onClick={handleClose}
                   >
                     <span className="sr-only">Close menu</span>
                     {/* Heroicon name: outline/x */}
@@ -710,7 +699,7 @@ const NavBar = () => {
                         d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-
+             
                     <Link
                       onClick={handleClose}
                       replace
@@ -794,7 +783,7 @@ const NavBar = () => {
                 <Link
                   onClick={handleClose}
                   replace
-                  href="/ISS-live-position/"
+                  href="/posizione-dell-ISS-in-tempo-reale/"
                   className="text-base font-medium  hover:text-gray-700"
                 >
                   ISS Live
