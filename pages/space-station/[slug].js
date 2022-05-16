@@ -20,41 +20,41 @@ function StazioneSpaziale({ sta }) {
               {sta.name}
             </h1>
             <div className="flex">
-              <b>Persone a bordo:&nbsp;</b>
+              <b>People on board:&nbsp;</b>
               <p>{sta.onboard_crew}</p>
             </div>
             <div className="flex">
-              <b>Tipo:&nbsp;</b>
+              <b>Type:&nbsp;</b>
               <p>{sta.type.name}</p>
             </div>
             <div className="flex">
-              <b>Altezza:&nbsp;</b>
+              <b>Height:&nbsp;</b>
               <p>
                 {sta.height}
-                &nbsp;Metri
+                &nbsp;Meters
               </p>
             </div>
             <div className="flex">
               <b>Volume:&nbsp;</b>
               <p>
                 {sta.volume}
-                &nbsp;Massa
+                &nbsp;Mass
               </p>
             </div>
             <div className="flex">
-              <b>Larghezza:&nbsp;</b>
+              <b>Length:&nbsp;</b>
               <p>
                 {sta.width}
-                &nbsp;Metri
+                &nbsp;Meters
               </p>
             </div>
             <div className="flex">
-              <b>Fondata nel:&nbsp;</b>
+              <b>Founded:&nbsp;</b>
               <p>{sta.founded}</p>
             </div>
             <div className="flex flex-col">
              
-              <b>Descrizione:&nbsp;</b>
+              <b>Description:&nbsp;</b>
               <p>{sta.description}</p>
             </div>
           </div>

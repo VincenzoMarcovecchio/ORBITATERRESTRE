@@ -49,7 +49,7 @@ function Polpo({ gigi }) {
             <h1 className="mt-8 mb-8 text-4xl  font-bold text-yellow-600 font-display">
              {gigi.name}   
             </h1> 
-            <small className=" mb-8 left-0 t-4 bg-indigo-300 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-white-400 ">
+            <small className=" mb-8 left-0 t-4 bg-indigo-100 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-black-400 ">
                 <a rel="canonical noopener noreferrer" target="__blank" href={`${gigi.flightclub_url}`}>Trajectory &rarr;</a>
               </small>
             <p>
@@ -138,7 +138,7 @@ function Polpo({ gigi }) {
               {console.log(gigi.updates)}
               {gigi.updates.map((ida) => {
                 return (
-                  <div className="relative mt-4 ">
+                  <div className="relative mt-4 shadow-xl">
 
                     <div className="">
                       <div className="flex mt-4 h-8 w-full rounded-t-lg border-b-2 border-slate-300 bg-slate-100 pl-[90px] shadow-lg">
@@ -146,10 +146,10 @@ function Polpo({ gigi }) {
                       </div>
                     </div>
 
-                    <div className="flex p-4 w-full rounded-lg bg-white pl-[98px] shadow-xl">
+                    <div className="flex p-4 w-full rounded-lg  pl-[98px] ">
                       <p className="mx-auto mt-8 text-slate-700">{ida.comment}</p>
                     </div>
-                    <div className="flex px-4 py-2 w-full rounded-lg bg-white pl-[98px] shadow-xl">
+                    <div className="flex px-4 py-2 w-full rounded-lg  pl-[98px] ">
                       <a href={ida.info_url} rel="canonical noopener noreferre" target="__blank" className="mx-auto text-slate-700">{ida.info_url}</a>
                     </div>
                     <div className="absolute  top-2 left-6 top-2 h-16 w-16 rounded-full border-2 border-white shadow-md">
