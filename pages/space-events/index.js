@@ -2,6 +2,7 @@ import { SEO } from "@components/common";
 import { useRouter } from "next/router";
 import moment from "moment";
 import Link from "next/link";
+import { EventJsonLd } from 'next-seo';
 
 function Eventit({ eventi }) {
   const router = useRouter();
@@ -17,9 +18,42 @@ function Eventit({ eventi }) {
         description="A list of future space events"
       />
 
+      {eventi.results?.map((lol) => {
+        <EventJsonLd
+          name={lol.name}
+          startDate={moment(lol.date).format("DD-MM-YYYY")}
+          endDate={moment(lol.date).format("DD-MM-YYYY")}
+          location={{
+            name: `${lol.name}`,
+            sameAs: `https://orbitaterrestre.com/space-events/${lol.slug}`,
+            address: {
+              streetAddress: `${lol.location}`,
+              addressLocality: `${lol.location}`,
+              addressRegion: `${lol.location}`,
+              postalCode: `${lol.location}`,
+              addressCountry: 'US',
+            },
+          }}
+          url={`https://orbitaterrestre.com/space-events/${lol.slug}`}
+          images={[`${lol.feature_image}`]}
+          description={`${lol.description}`}
+          offers={[
+
+          ]}
+          performers={[
+            {
+              name: `${lol.program[0]?.name}`,
+            },
+            {
+              name: `${lol.program[0]?.name}`,
+            },
+          ]}
+        />
+      })}
+      
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         <h1 className="mt-8 mb-8 text-4xl font-bold text-yellow-600 font-display">
-         Next Events
+          Next Events
         </h1>
         <div>
           <div className=" max-w-7xl mx-auto  md:px-4 display flex flex-col items-start">
@@ -41,7 +75,7 @@ function Eventit({ eventi }) {
 
                     <div className="sm:w-full md:w-2/3 px-4  py-6 ">
                       <h1 className="text-3xl mb-4 font-bold text-yellow-600 font-display">
-                        {lol.name} 
+                        {lol.name}
                       </h1>
                       <span className="px-3 mb-9 cursor-pointer py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                         {moment(lol.date).format("DD-MM-YYYY")}
@@ -60,10 +94,10 @@ function Eventit({ eventi }) {
                       </p>
                       &nbsp;
                       <Link
-                       href={`/space-events/${lol.slug}`}
+                        href={`/space-events/${lol.slug}`}
                         target="_blank"
                         rel="noopener noreferrer canonical"
-                      ><a className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a></Link>                                    
+                      ><a className="px-3  py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a></Link>
                     </div>
                   </article>
                 );

@@ -1,17 +1,56 @@
 import { SEO } from "@components/common";
 import Image from 'next/image'
+import { OrganizationJsonLd } from 'next-seo';
 
-function Pagetwo({ agenciesDatatwo,sluga }) {
+function Pagetwo({ agenciesDatatwo, sluga }) {
   //console.log(agenciesDatatwo)
   return (
     <>
-      <SEO      
-      cano="si"
-      slug={`space-agency/${sluga}`}
-      description={agenciesDatatwo.description} 
-      title={`${agenciesDatatwo.name}`} 
-      imageUrl={agenciesDatatwo.logo_url ? agenciesDatatwo.logo_url : "" }
+      <SEO
+        cano="si"
+        slug={`space-agency/${sluga}`}
+        description={agenciesDatatwo.description}
+        title={`${agenciesDatatwo.name}`}
+        imageUrl={agenciesDatatwo.logo_url ? agenciesDatatwo.logo_url : ""}
       />
+      <OrganizationJsonLd
+        type={agenciesDatatwo.type}
+        id={`space-agency/${sluga}#`}
+        logo={agenciesDatatwo.logo_url}
+        legalName={agenciesDatatwo.name}
+        name={agenciesDatatwo.name}
+        address={{
+          streetAddress: `${agenciesDatatwo.country_code}`,
+          addressLocality: `${agenciesDatatwo.country_code}`,
+          addressRegion: `${agenciesDatatwo.country_code}`,
+          postalCode: `${agenciesDatatwo.country_code}`,
+          addressCountry: `${agenciesDatatwo.country_code}`,
+        }}
+        contactPoint={[
+          {
+            telephone: '+1-401-555-1212',
+            contactType: 'customer service',
+            areaServed: 'US',
+            availableLanguage: ['English', 'Spanish', 'French'],
+          },
+          {
+            telephone: '+1-877-746-0909',
+            contactType: 'customer service',
+            contactOption: 'TollFree',
+            availableLanguage: 'English',
+          },
+          {
+            telephone: '+1-877-453-1304',
+            contactType: 'technical support',
+            contactOption: 'TollFree',
+            areaServed: ['US', 'CA'],
+            availableLanguage: ['English', 'French'],
+          },
+        ]}
+        sameAs={[`https://orbitaterrestre.com/space-agency/${sluga}`]}
+        url="https://www.orbitaterrestre.com/"
+      />
+
 
       <div className=" max-w-7xl mt-12 mx-auto px-4 sm:px-6 sm:px-6 display flex flex-col items-start">
         {agenciesDatatwo ? (
@@ -20,18 +59,18 @@ function Pagetwo({ agenciesDatatwo,sluga }) {
               <h1 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
                 {agenciesDatatwo.name}
               </h1>
-              {agenciesDatatwo.logo_url ? 
-               <Image
-               className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
-               src={agenciesDatatwo.logo_url}
-               alt={agenciesDatatwo.name}
-               width="150"
-               height="150"
-               layout="intrinsic"
-             />
-            : ""
-            }
-           
+              {agenciesDatatwo.logo_url ?
+                <Image
+                  className="mb-4 emma sm:h-full md:h-5/6 object-cover flex"
+                  src={agenciesDatatwo.logo_url}
+                  alt={agenciesDatatwo.name}
+                  width="150"
+                  height="150"
+                  layout="intrinsic"
+                />
+                : ""
+              }
+
 
               <figcaption>
                 <p className="mt-14">
@@ -104,7 +143,7 @@ bg-gray-800 text-white text-xs font-bold uppercase rounded
 
           </>
         ) : (
-         agenciesDatatwo.detail
+          agenciesDatatwo.detail
         )}
       </div>
     </>
@@ -123,7 +162,7 @@ export const getServerSideProps = async (pageContext) => {
   return {
     props: {
       agenciesDatatwo: datap,
-      sluga:pageNumber
+      sluga: pageNumber
     },
   };
 };
