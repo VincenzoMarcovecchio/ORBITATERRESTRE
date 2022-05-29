@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://orbitaterrestre.com",
+  siteUrl: "https://firststepintospace.com",
   changefreq: 'daily',
   generateRobotsTxt: true,
   robotsTxtOptions: {
@@ -8,8 +8,8 @@ module.exports = {
       { userAgent: "*", allow: "/" },
     ],
     additionalSitemaps: [
-      `https://orbitaterrestre.com/news-on-mars.xml`,
-      `https://orbitaterrestre.com/space-x.xml`,
+      `https://firststepintospace.com/news-on-mars.xml`,
+      `https://firststepintospace.com/space-x.xml`,
 
     ],
   },

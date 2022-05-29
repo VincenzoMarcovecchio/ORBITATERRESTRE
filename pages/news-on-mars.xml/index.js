@@ -7,7 +7,7 @@ export const getServerSideProps = async (ctx) => {
     const postListo = await eventio.json()
 
     return getServerSideSitemap(ctx, postListo.link.map((capsule) => ({
-        loc: `https://www.orbitaterrestre.com/news-on-mars${capsule}`,
+        loc: `https://www.firststepintospace.com/news-on-mars${capsule}`,
         lastmod: new Date().toISOString(),
         changefreq: `hourly`,
         priority: 0.8

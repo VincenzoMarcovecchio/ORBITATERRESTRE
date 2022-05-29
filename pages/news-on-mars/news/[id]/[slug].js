@@ -30,16 +30,16 @@ function MarsSingle({ title, image, description, content, date, lastScraped, pat
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")
     ciao.forEach((io, i) => {
-      if (io.src.includes("https://www.orbitaterrestre.com")) {
-        io.src.replace("https://www.orbitaterrestre.com", "https://mars.nasa.gov")
+      if (io.src.includes("https://www.firststepintospace.com")) {
+        io.src.replace("https://www.firststepintospace.com", "https://mars.nasa.gov")
 
       }
     })
     
     let ciaoa = document.querySelectorAll("a")
     ciaoa.forEach((io, i) => {
-      if (io.href.includes("https://www.orbitaterrestre.com")) {
-        io.href.replace("https://www.orbitaterrestre.com", "https://mars.nasa.gov")
+      if (io.href.includes("https://www.firststepintospace.com")) {
+        io.href.replace("https://www.firststepintospace.com", "https://mars.nasa.gov")
 
       }
     })

@@ -47,8 +47,8 @@ function Pagetwo({ agenciesDatatwo, sluga }) {
             availableLanguage: ['English', 'French'],
           },
         ]}
-        sameAs={[`https://orbitaterrestre.com/space-agency/${sluga}`]}
-        url="https://www.orbitaterrestre.com/"
+        sameAs={[`https://firststepintospace.com/space-agency/${sluga}`]}
+        url="https://www.firststepintospace.com/"
       />
 
 

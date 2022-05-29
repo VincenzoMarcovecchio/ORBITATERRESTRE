@@ -28,8 +28,8 @@ function MarsSingle({ title, test, description, content, image, date, lastScrape
   React.useEffect(() => {
     let ciao = document.querySelectorAll("img")
     ciao.forEach((io, i) => {
-      if (io.src.includes("https://www.orbitaterrestre.com")) {
-        io.src.replace("https://www.orbitaterrestre.com", "https://climate.nasa.gov")
+      if (io.src.includes("https://www.firststepintospace.com")) {
+        io.src.replace("https://www.firststepintospace.com", "https://climate.nasa.gov")
 
       }
     })

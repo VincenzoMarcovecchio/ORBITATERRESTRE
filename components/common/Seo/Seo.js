@@ -20,10 +20,10 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         rel="canonical"
         href={`${
           imageUrl && cano
-            ? `https://orbitaterrestre.com/${sluga}`
+            ? `https://firststepintospace.com/${sluga}`
             : imageUrl && !cano
-            ? `https://orbitaterrestre.com/post/${sluga}`
-            : `https://orbitaterrestre.com/`
+            ? `https://firststepintospace.com/post/${sluga}`
+            : `https://firststepintospace.com/`
         }`}
       />
       <meta
@@ -35,8 +35,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
           (imageUrl && imageUrl.includes("starlinkinternetbroadband"))
             ? `${imageUrl}`
             : imageUrl
-            ? `https://orbitaterrestre.com/${imageUrl}`
-            : `https://orbitaterrestre.com/`
+            ? `https://firststepintospace.com/${imageUrl}`
+            : `https://firststepintospace.com/`
         }`}
       />
 
@@ -45,10 +45,10 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
         property="og:url"
         content={`${
           imageUrl && cano
-            ? `https://orbitaterrestre.com/${sluga}`
+            ? `https://firststepintospace.com/${sluga}`
             : imageUrl && !cano
-            ? `https://orbitaterrestre.com/post/${sluga}`
-            : `https://orbitaterrestre.com/`
+            ? `https://firststepintospace.com/post/${sluga}`
+            : `https://firststepintospace.com/`
         }`}
       />
       <meta name="twitter:card" content="summary" />
@@ -62,8 +62,8 @@ export function SEO({ title, imageUrl, slug, cano, description }) {
           (imageUrl && imageUrl.includes("spacelaunchnow"))
             ? `${imageUrl}`
             : imageUrl
-            ? `https://orbitaterrestre.com/${imageUrl}`
-            : `https://orbitaterrestre.com/`
+            ? `https://firststepintospace.com/${imageUrl}`
+            : `https://firststepintospace.com/`
         }`}
       />
       <meta name="twitter:card" content="summary_large_image" />

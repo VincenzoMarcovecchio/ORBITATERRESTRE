@@ -25,7 +25,7 @@ function Eventit({ eventi }) {
           endDate={moment(lol.date).format("DD-MM-YYYY")}
           location={{
             name: `${lol.name}`,
-            sameAs: `https://orbitaterrestre.com/space-events/${lol.slug}`,
+            sameAs: `https://firststepintospace.com/space-events/${lol.slug}`,
             address: {
               streetAddress: `${lol.location}`,
               addressLocality: `${lol.location}`,
@@ -34,7 +34,7 @@ function Eventit({ eventi }) {
               addressCountry: 'US',
             },
           }}
-          url={`https://orbitaterrestre.com/space-events/${lol.slug}`}
+          url={`https://firststepintospace.com/space-events/${lol.slug}`}
           images={[`${lol.feature_image}`]}
           description={`${lol.description}`}
           offers={[
