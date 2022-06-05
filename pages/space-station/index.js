@@ -70,7 +70,7 @@ function StazioneSpazialeIndex({ sta }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const apiResponse = await fetch(
     `https://ll.thespacedevs.com/2.0.0/spacestation/?format=json&name=&orbit=&ordering=id&owners__abbrev=&owners__name=&status=&type=`
   );

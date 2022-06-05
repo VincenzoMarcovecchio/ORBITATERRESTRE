@@ -49,7 +49,7 @@ function Polpo({ gigi }) {
             <h1 className="mt-8 mb-8 text-4xl  font-bold text-yellow-600 font-display">
              {gigi.name}   
             </h1> 
-            <small className=" mb-8 left-0 t-4 bg-indigo-100 bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-black-400 ">
+            <small className=" mb-8 left-0 t-4  bg-opacity-95 p-2 w-auto h-auto shadow flex flex-col-reverse text-center font-bold text-black-400 ">
                 <a rel="canonical noopener noreferrer" target="__blank" href={`${gigi.flightclub_url}`}>Trajectory &rarr;</a>
               </small>
             <p>

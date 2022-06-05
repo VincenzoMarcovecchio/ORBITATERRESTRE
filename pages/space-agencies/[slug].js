@@ -324,13 +324,14 @@ function Page({ agenciesData, pageNumber }) {
                             <Link
                     href={`/space-agency/${data.id}`}
                   
-                    >
+                    >                         
+
                       <a  className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Find out more</a>
                     </Link>
                           </figcaption>
                         </figure>
                       );
-                    })
+                    })    
                   : agenciesData.results.map((data) => {
                     return (
                       <figure
