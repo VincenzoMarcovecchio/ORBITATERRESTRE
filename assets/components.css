@@ -94,7 +94,10 @@ input[type='range']:focus::-ms-fill-lower {
 input[type='range']:focus::-ms-fill-upper {
   background: #367ebd;
 }
-
+.wysiwyg_content  p > b {
+  margin: 2rem auto 2rem 0;
+  font-size: 2rem;
+}
 .newsletter_cta_module {
   display:none;
 }

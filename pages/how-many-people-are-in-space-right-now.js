@@ -66,7 +66,7 @@ function Newsz({ newsdatal }) {
   );
 }
 
-export async function getServerSideProps () {
+export async function getServerSideProps() {
   const res = await fetch("http://api.open-notify.org/astros.json");
 
   const news = await res.json();

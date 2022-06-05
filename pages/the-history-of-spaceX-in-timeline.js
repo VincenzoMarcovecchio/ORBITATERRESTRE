@@ -76,7 +76,7 @@ function SpaceXTimeline({data}) {
 
 export default SpaceXTimeline;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://api.spacexdata.com/v4/history");
 
   const news = await res.json();
