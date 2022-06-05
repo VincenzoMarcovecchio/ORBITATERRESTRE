@@ -40,7 +40,7 @@ function Piattaformalo({ pad }) {
           />
         </div>
       ) : (
-        "error"
+       <p>Request was throttled</p>
       )}
     </>
   );

@@ -95,7 +95,13 @@ input[type='range']:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
+.newsletter_cta_module {
+  display:none;
+}
+.inline_figure {
 
+  margin: 2rem auto;
+}
 .innerlink {
 
   color: rgba(107, 114, 128, var(--tw-text-opacity));

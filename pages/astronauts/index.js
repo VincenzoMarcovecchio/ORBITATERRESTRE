@@ -6,7 +6,7 @@ function Paginax() {
 
   const [defaultResults, setDefaultResults] = useState([]);
   const [name, setName] = useState("");
-  const [nationality, setNationality] = useState("American");
+  const [nationality, setNationality] = useState("All");
   const [loading, SetLoading] = useState(true);
  
 
@@ -25,7 +25,7 @@ function Paginax() {
 
 
     fetch(
-      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=${nationality}`
+      `https://ll.thespacedevs.com/2.1.0/astronaut/?search=${name}&nationality=all`
     )
       .then((res) => res.json())
       .then((data) => setDefaultResults(data.results))

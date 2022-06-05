@@ -41,7 +41,7 @@ function MarsSingle({ title, test, description, content, image, date, lastScrape
         cano="si"
         slug={`climate-news${path}`}
         title={title}
-        description={description}
+        description={description.date.substring(3)}
         imageUrl={"https://climate.nasa.gov" + image}
       />
       <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">

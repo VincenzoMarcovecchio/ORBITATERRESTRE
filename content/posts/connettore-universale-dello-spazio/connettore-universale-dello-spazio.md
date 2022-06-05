@@ -51,15 +51,20 @@ Abbiamo cercato missioni di rifornimento esistenti, raccontano i partecipanti - 
 
 
 
+
+
 <blockquote>
 Demo del progetto:
 youtu.be/l7BzFrY0YKI <br/>
 Codice del progetto
-https://github.com/giver0/space_socket <br/>
+<a href="https://github.com/giver0/space_socket" rel="canonical noopener noreferrer" >GitHub</a> <br/>
 Dati e risorse
-Esempio di missioni di rifornimento spaziale esistenti: https://www.nasa.gov/feature/robotic-tool-operations-bring-in-space-refueling-closer-to-reality
-nexis.gsfc.nasa.gov/rrm_refueling_task.html <br/>
+Esempio di missioni di rifornimento spaziale esistenti:<a href="https://www.nasa.gov/feature/robotic-tool-operations-bring-in-space-refueling-closer-to-reality
+nexis.gsfc.nasa.gov/rrm_refueling_task.html" rel="canonical noopener noreferrer" > https://www.nasa.gov/feature/robotic-tool-operations-bring-in-space-refueling-closer-to-reality
+nexis.gsfc.nasa.gov/rrm_refueling_task.html</a> <br/>
 Tipi di carburante nei satelliti:
+<a href="www.nasa.gov/mission_pages/kepler/overview/index.html
+Materiali di tenuta, istallati nello spazio: www.spacematdb.com/spacemat/datasearch.php?name=Viton%20B910" rel="canonical noopener noreferrer" >
 www.nasa.gov/mission_pages/kepler/overview/index.html
-Materiali di tenuta, istallati nello spazio: www.spacematdb.com/spacemat/datasearch.php?name=Viton%20B910
+Materiali di tenuta, istallati nello spazio: www.spacematdb.com/spacemat/datasearch.php?name=Viton%20B910</a>
 </blockquote>

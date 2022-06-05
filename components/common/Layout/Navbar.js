@@ -355,7 +355,7 @@ const NavBar = () => {
                     <div className="-m-3 p-3 dark:bg-gray-700 flex items-start rounded-lg hover:bg-gray-50">
                       {/* Heroicon name: outline/support */}
                       <a
-                      onClick={handleClose}
+                    
                         style={{ textDecoration: "none" }}
                         href="/space-agencies/10"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
