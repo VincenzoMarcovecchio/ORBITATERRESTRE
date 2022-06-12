@@ -3,12 +3,14 @@ import axios from "axios";
 import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
-function MarsNEws({ results }) {
-
+function MarsNEws() {
 
     return (
         <>
-            <SEO
+        <h1>NAMMELO</h1>
+        </>
+    )}
+            {/* <SEO
                 title="National Aeronautics and Space Administration"
                 description="NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research."
             />
@@ -71,4 +73,4 @@ export async function getStaticProps() {
         props: { results: data.results }
       
     };
-}
+} */}
