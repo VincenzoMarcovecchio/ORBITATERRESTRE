@@ -73,21 +73,21 @@ function Pagetwo({ agenciesDatatwo, sluga }) {
 
 
               <figcaption>
-                <p className="mt-14">
+                <p className="mt-14 mb-2">
                   <b className="font-extrabold">Founded:</b>&nbsp;{agenciesDatatwo.founding_year}
                 </p>
-                <p >
+                <p className="mb-2" >
                   <b className="font-extrabold">Type:</b>&nbsp;{agenciesDatatwo.type}
                 </p>
-                <p >
+                <p className="mb-2" >
                   <b className="font-extrabold">Total launch count:</b>&nbsp;{agenciesDatatwo.totale_launch_count}
                 </p>
-                <p>
+                <p className="mb-2" >
                   < b className="font-extrabold">Administrator:</b>&nbsp;
                   {agenciesDatatwo.administrator ||
                     "none"}
                 </p>
-                <p>
+                <p className="mb-2" >
                   <b className="font-extrabold">Nationality:</b>&nbsp;{agenciesDatatwo.country_code}
                 </p>
                 <p>
@@ -98,9 +98,7 @@ function Pagetwo({ agenciesDatatwo, sluga }) {
               </figcaption>
             </figure>
             <hr />
-            <h2 className="text-3xl mb-8 font-bold text-yellow-600 font-display">
-              Launcher List
-            </h2>
+            {console.log(agenciesDatatwo.launcher_list)}
             {agenciesDatatwo.launcher_list.map((item) => {
 
               <div className="accordion" id="accordionExample">
