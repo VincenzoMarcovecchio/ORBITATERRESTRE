@@ -3,20 +3,18 @@ import axios from "axios";
 import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
-function MarsNEws() {
+function MarsNEws({ results }) {
+
 
     return (
         <>
-        <h1>NAMMELO</h1>
-        </>
-    )}
-            {/* <SEO
+            <SEO
                 title="National Aeronautics and Space Administration"
                 description="NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research."
             />
             <div className="px-4 max-w-screen-2xl md:flex ">
                 <section className="w-full ">
-                    {results.title.map((item, index) => {
+                    {results.title ? results.title.map((item, index) => {
                         return (
                             <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
                                 key={index}>
@@ -47,7 +45,7 @@ function MarsNEws() {
                                 </div>
                             </article>
                         )
-                    })}
+                    }) : "error"}
                 </section>
                 <hr />
                 <section className="flex">
@@ -73,4 +71,4 @@ export async function getStaticProps() {
         props: { results: data.results }
       
     };
-} */}
+}
