@@ -4,11 +4,8 @@ import {  SEO } from "@components/common";
 
 
 function Home({ datas }) {
-
-
   return (
     <React.Fragment>
-   
         <SEO title="Home" description="A simplified space guide for us ordinary humans" />
         <div className="px-4 sm:px-6 max-w-screen-2xl md:flex ">
           <section className="w-full md:max-w-screen-lg">
@@ -78,13 +75,13 @@ export async function getStaticProps() {
       },
     }
   );
+
   const datas = await resat.json();
 
   return {
     props: {
       datas,
-    },
-    revalidate: 46400,
+    }
   };
 }
 
