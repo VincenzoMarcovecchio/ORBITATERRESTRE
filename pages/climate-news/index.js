@@ -66,7 +66,7 @@ function MarsNEwsa({ results }) {
 
 export default MarsNEwsa;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const { data } = await axios.get(
         "https://nassa.herokuapp.com/climate");
 

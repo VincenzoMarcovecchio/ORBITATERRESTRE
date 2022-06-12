@@ -67,7 +67,7 @@ function MarsNEws({ results }) {
 
 export default MarsNEws;
 
-export async function getServerSideProps () {
+export async function getStaticProps () {
     const { data } = await axios.get(
         "https://nassa.herokuapp.com/2");
 
