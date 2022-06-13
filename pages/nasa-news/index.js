@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link"
 import { Lanci } from "../../components/common/Lanci";
 
-function MarsNEws({ results }) {
+function MarsNEws( ) {
 
 
     return (
@@ -13,7 +13,7 @@ function MarsNEws({ results }) {
                 description="NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research."
             />
             <div className="px-4 max-w-screen-2xl md:flex ">
-                <section className="w-full ">
+                {/* <section className="w-full ">
                     {results.title ? results.title.map((item, index) => {
                         return (
                             <article className="sm:grid md:flex sm:flex-col md:flex-row max-w-full  mt-6 mb-8 shadow-lg rounded-lg overflow-hidden"
@@ -55,7 +55,7 @@ function MarsNEws({ results }) {
                         </h2>
                         <Lanci />
                     </aside>
-                </section>
+                </section> */}
             </div>
         </>
     );
@@ -63,12 +63,12 @@ function MarsNEws({ results }) {
 
 export default MarsNEws;
 
-export async function getStaticProps() {
-    const { data } = await axios.get(
-        "https://nassa.herokuapp.com/svs");
+// export async function getStaticProps() {
+//     const { data } = await axios.get(
+//         "https://nassa.herokuapp.com/svs");
 
-    return {
-        props: { results: data.results }
+//     return {
+//         props: { results: data.results }
       
-    };
-}
+//     };
+// }
