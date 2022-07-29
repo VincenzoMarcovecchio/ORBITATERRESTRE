@@ -8,7 +8,9 @@ export default class MyDocument extends Document {
 
     return (
       <Html lang={siteMetadata.language}>
-        <Head></Head>
+        <Head>
+      <meta name="google-site-verification" content="4-ituOXVzOpj_KU4wvfnoc3wVaNNkK67J4abuZT4WbY">   
+      </Head>
         <body className="bg-gray-50">
           <Main />
           <NextScript />
