@@ -4,11 +4,11 @@
   "description": "A guide to space for humans",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "serve": "next serve"
+    "serve": "export SET NODE_OPTIONS=--openssl-legacy-provider && next serve"
   },
   "dependencies": {
     "axios": "^0.24.0",
