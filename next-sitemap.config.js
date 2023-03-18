@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://firststepintospace.com",
+  siteUrl: "https://orbitaterrestre.vercel.app/",
   changefreq: 'daily',
   generateRobotsTxt: true,
   robotsTxtOptions: {
@@ -7,11 +7,7 @@ module.exports = {
       { userAgent: "*", disallow: "/secret" },
       { userAgent: "*", allow: "/" },
     ],
-    additionalSitemaps: [
-      `https://firststepintospace.com/news-on-mars.xml`,
-      `https://firststepintospace.com/space-x.xml`,
 
-    ],
   },
   exclude: ["/secret"],
 };
