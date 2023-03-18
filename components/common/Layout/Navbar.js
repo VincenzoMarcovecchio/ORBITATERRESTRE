@@ -520,11 +520,13 @@ const NavBar = () => {
                 </div>
               </div>
             </div>
+            {/*
             <div className="relative items-center flex">
               <Link href={"/blog"} as={`/blog`}>
                 Blog
               </Link>
             </div>
+                */}
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Header />
